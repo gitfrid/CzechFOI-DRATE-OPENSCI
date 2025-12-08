@@ -18,7 +18,7 @@ Description
 -----------
 This script simulates individual-level COVID-19 vaccination and death data 
 based on real vaccination sequences, to evaluate potential biases in hazard 
-ratio estimation. The workflow generates synthetic death events while preserving 
+ratio estimation methodes. The workflow generates synthetic death events while preserving 
 observed vaccination schedules and allows comparison between simulated and 
 real dose patterns.
 
@@ -50,16 +50,20 @@ Notes
 # ==============================================================================
 # CONFIGURATION
 # ==============================================================================
-INPUT_FOLDER = r"C:\CzechFOI-DRATE-OPENSCI\Terra"
-OUTPUT_FOLDER = r"C:\CzechFOI-DRATE-OPENSCI\Terra"
-PLOT_OUTPUT_FOLDER = os.path.join(OUTPUT_FOLDER, "Plot Results","AA) simulate deaths doseschedule and bias")
+INPUT_FOLDER = r"C:\github\CzechFOI-DRATE-OPENSCI\Terra"
+OUTPUT_FOLDER = r"C:\github\CzechFOI-DRATE-OPENSCI\Terra"
+PLOT_OUTPUT_FOLDER = r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AA) simulate deaths doseschedule and bias"
 
 START_DATE = pd.Timestamp('2020-01-01')
 DOSE_DATE_COLS = [f'Datum_{i}' for i in range(1, 8)]  # columns for vaccine doses
 NEEDED_COLS = ['Rok_narozeni', 'DatumUmrti'] + DOSE_DATE_COLS
 BASE_RNG_SEED = 42
-AGES = range(0, 114)  # AG0 to AG113
+# AGES = range(0, 114)  # AG0 to AG113
+AGES = [70]
 np.random.seed(BASE_RNG_SEED)
+
+# Create folder if it doesn't exist
+os.makedirs(PLOT_OUTPUT_FOLDER, exist_ok=True)
 
 # ==============================================================================
 # UTILITY FUNCTIONS

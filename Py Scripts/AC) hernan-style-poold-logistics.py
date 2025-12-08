@@ -43,10 +43,10 @@ from joblib import Parallel, delayed
 
 AGE = 70
 
-#INPUT = Path(fr"C:\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
-#OUTPUT_BASE = Path(fr"C:\CzechFOI-DRATE-OPENSCI\Plot Results\AC) HERNAN_poold_logistics_RMST\AC) HERNAN_poold_logistics_RMST_SIM")
-INPUT = Path(fr"C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv")
-OUTPUT_BASE = Path(fr"C:\CzechFOI-DRATE-OPENSCI\Plot Results\AC) HERNAN_poold_logistics_RMST\AC) HERNAN_poold_logistics_RMST")
+#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
+#OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) HERNAN_poold_logistics_RMST\AC) HERNAN_poold_logistics_RMST_SIM")
+INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv")
+OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) HERNAN_poold_logistics_RMST\AC) HERNAN_poold_logistics_RMST")
 
 STUDY_START = pd.Timestamp("2020-01-01")
 AGE_REF_YEAR = 2023
