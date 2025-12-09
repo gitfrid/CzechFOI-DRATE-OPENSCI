@@ -10,13 +10,14 @@ import pandas as pd
 from lifelines import CoxTimeVaryingFitter
 from scipy.integrate import simpson
 import plotly.graph_objects as go
-from joblib import Parallel, delayed
+import warnings
+from statsmodels.tools.sm_exceptions import ConvergenceWarning
 
 """
 Title: Hernán-Style RMST Estimation Using Cox Time-Varying Model with ID-Level Bootstrap
 Author: [drifting]
 Date: 2025-12
-Version: 2
+Version: 5
 
 Description
 -----------
@@ -30,7 +31,7 @@ Features:
     • CoxTimeVaryingFitter for marginal hazard estimation
     • Survival curve reconstruction from baseline hazard
     • Restricted Mean Survival Time (RMST) via Simpson integration
-    • ID-level Bootstrap CI for ΔRMST
+    • ID-level Bootstrap CI for ΔRMST (sequential, safe)
     • Epidemiological crude summaries (rates, RR, VE)
 """
 
@@ -47,11 +48,13 @@ OUTPUT_BASE = Path(fr"C:\CzechFOI-DRATE-OPENSCI\Plot Results\AC) HERNAN_Cox_Time
 
 STUDY_START = pd.Timestamp("2020-01-01")
 AGE_REFERENCE_YEAR = 2023
-N_BOOT = 25         # Bootstrap iterations for CI
+
+# Bootstrap settings
+N_BOOT_REFIT = 5
 RANDOM_SEED = 12345
 SAFETY_BUFFER_DAYS = 30
-N_CORES = -1        # All CPU cores for parallel bootstrap
 
+# Seed RNGs
 random.seed(RANDOM_SEED)
 np.random.seed(RANDOM_SEED)
 
@@ -71,13 +74,13 @@ def log(msg: str):
 # ======================================================================
 
 def compute_rmst(times: np.ndarray, surv: np.ndarray) -> float:
-    """Compute restricted mean survival time (RMST) via Simpson integration."""
+    """Compute RMST via Simpson integration."""
     if len(times) <= 1:
         return 0.0
     return float(simpson(surv, x=np.asarray(times)))
 
 def summarize_rates(pt_u, ev_u, pt_v, ev_v):
-    """Compute crude rates, rate ratio, VE, and log summary."""
+    """Compute crude rates, RR, VE."""
     rate_u = ev_u / pt_u if pt_u > 0 else np.nan
     rate_v = ev_v / pt_v if pt_v > 0 else np.nan
     rr = rate_v / rate_u if rate_u > 0 else np.nan
@@ -89,7 +92,7 @@ def summarize_rates(pt_u, ev_u, pt_v, ev_v):
     return dict(rate_unvacc=rate_u, rate_vacc=rate_v, rr=rr, ve=ve)
 
 def annotate_effect(fig, label, value, ci=None, ve=None):
-    """Add ΔRMST and CI annotation to Plotly figure."""
+    """Add ΔRMST annotation to Plotly figure."""
     txt = f"{label} = {value:.2f} days"
     if ci is not None and all(np.isfinite(ci)):
         txt += f"<br>95% CI: {ci[0]:.2f}–{ci[1]:.2f}"
@@ -106,7 +109,7 @@ def annotate_effect(fig, label, value, ci=None, ve=None):
     )
 
 def marginal_survival(tv_df: pd.DataFrame, ctv: CoxTimeVaryingFitter, treat_val: int):
-    """Compute marginal survival curve under fixed vaccination strategy."""
+    """Compute marginal survival curve for a fixed vaccination strategy."""
     tv_copy = tv_df.copy()
     tv_copy['vaccinated'] = treat_val
     lp = np.zeros(len(tv_copy))
@@ -206,42 +209,41 @@ log(str(ctv.summary))
 times_u, Su = marginal_survival(tv, ctv, 0)
 times_v, Sv = marginal_survival(tv, ctv, 1)
 
-common_times = np.union1d(times_u, times_v)
+common_times = np.arange(FIRST_VAX_DAY, LAST_OBS_DAY + 1)
 Su = np.interp(common_times, times_u, Su)
 Sv = np.interp(common_times, times_v, Sv)
-
-mask_window = (common_times >= FIRST_VAX_DAY) & (common_times <= LAST_OBS_DAY)
-common_times = common_times[mask_window]
-Su = Su[mask_window]
-Sv = Sv[mask_window]
 
 delta_rmst = compute_rmst(common_times, Sv - Su)
 log(f"ΔRMST (Vaccinated – Unvaccinated, Cox TV) = {delta_rmst:.2f} days")
 
 # ======================================================================
-# ID-Level Bootstrap ΔRMST 
+# Sequential ID-Level Bootstrap ΔRMST (safe, no parallel refit)
 # ======================================================================
 
-id_groups = {pid: df for pid, df in tv.groupby("id")}
-ids = np.array(list(id_groups.keys()))
+# Weekly thinned grid
+common_times_weekly = np.arange(FIRST_VAX_DAY, LAST_OBS_DAY + 1, 7)
+ids = tv['id'].unique()
 
-def bootstrap_iteration(_):
-    """Bootstrap ΔRMST for a resampled set of IDs."""
+boot_refit = []
+for _ in range(N_BOOT_REFIT):
     sample_ids = np.random.choice(ids, size=len(ids), replace=True)
-    df_b = pd.concat([id_groups[sid] for sid in sample_ids], ignore_index=True)
-    times_u_b, Su_b = marginal_survival(df_b, ctv, 0)
-    times_v_b, Sv_b = marginal_survival(df_b, ctv, 1)
-    Su_b = np.interp(common_times, times_u_b, Su_b)
-    Sv_b = np.interp(common_times, times_v_b, Sv_b)
-    return compute_rmst(common_times, Sv_b - Su_b)
+    df_b = pd.concat([tv[tv['id']==sid] for sid in sample_ids], ignore_index=True)
+    # Compute ΔRMST using original Cox fit (safe)
+    t_u, Su_b = marginal_survival(df_b, ctv, 0)
+    t_v, Sv_b = marginal_survival(df_b, ctv, 1)
+    Su_b = np.interp(common_times_weekly, t_u, Su_b)
+    Sv_b = np.interp(common_times_weekly, t_v, Sv_b)
+    boot_refit.append(compute_rmst(common_times_weekly, Sv_b - Su_b))
 
-boot_rmst = Parallel(n_jobs=N_CORES)(delayed(bootstrap_iteration)(i) for i in range(N_BOOT))
-boot_valid = np.array(boot_rmst)[np.isfinite(boot_rmst)]
-if len(boot_valid) > 0:
-    ci_low, ci_high = np.percentile(boot_valid, [2.5, 97.5])
+boot_refit = np.array(boot_refit, float)
+valid_refit = boot_refit[np.isfinite(boot_refit)]
+
+if valid_refit.size:
+    ci_low, ci_high = np.percentile(valid_refit, [2.5, 97.5])
 else:
-    ci_low = ci_high = np.nan
-log(f"ΔRMST 95% bootstrap CI: [{ci_low:.2f}, {ci_high:.2f}]")
+    ci_low, ci_high = np.nan, np.nan
+
+log(f"ΔRMST 95% CI (sequential bootstrap, weekly grid): [{ci_low:.2f}, {ci_high:.2f}]")
 
 # ======================================================================
 # Survival Plot
