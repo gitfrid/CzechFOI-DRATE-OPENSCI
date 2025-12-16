@@ -23,6 +23,6 @@ This is a descriptive, empirical analysis - dosen't use covariants - not causal!
 **Author:** AI / Drifitng  
 **Date:** 2025-11-02  
 **Environment:** Python ≥ 3.10  
-**Dataset:** Vesely_106_202403141131_AG70.csv (~136k individuals Czech-FOI)
+**Raw Dataset used:** Vesely_106_202403141131_AG10.csv (~136k individuals Czech-FOI 1.9 GB)
 
 ## 
