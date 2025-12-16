@@ -59,7 +59,7 @@ DOSE_DATE_COLS = [f'Datum_{i}' for i in range(1, 8)]  # columns for vaccine dose
 NEEDED_COLS = ['Rok_narozeni', 'DatumUmrti'] + DOSE_DATE_COLS
 BASE_RNG_SEED = 42
 # AGES = range(0, 114)  # AG0 to AG113
-AGES = [70]
+AGES = [10]
 np.random.seed(BASE_RNG_SEED)
 
 # Create folder if it doesn't exist

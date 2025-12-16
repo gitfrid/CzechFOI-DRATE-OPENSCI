@@ -1,0 +1,21 @@
+2025-12-14 19:22:59,850 | Loading input: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2025-12-14 19:23:00,148 | Subjects: 136530
+2025-12-14 19:23:00,148 | Follow-up days: 704
+2025-12-14 19:23:11,762 | Fitting pooled logistic model
+2025-12-14 19:23:13,893 | Running bootstrap: 40
+2025-12-14 19:27:35,180 | ----------------------------------------------------------------------
+2025-12-14 19:27:35,180 | Preprint-ready epidemiological summary
+2025-12-14 19:27:35,180 | Age: 70
+2025-12-14 19:27:35,180 | Study start: 2020-01-01
+2025-12-14 19:27:35,180 | First eligibility day: 361
+2025-12-14 19:27:35,180 | Last observation day: 1065
+2025-12-14 19:27:35,180 | Safety buffer (days): 30
+2025-12-14 19:27:35,180 | Total subjects: 136530
+2025-12-14 19:27:35,180 | Total vaccinated: 113641
+2025-12-14 19:27:35,180 | Total deaths: 7837
+2025-12-14 19:27:35,180 | Person-time vaccinated (days): 64,012,574.0
+2025-12-14 19:27:35,180 | Person-time unvaccinated (days): 28,424,023.0
+2025-12-14 19:27:35,180 | ΔRMST (days): +14.96
+2025-12-14 19:27:35,180 | VE(t) at last day: +0.6%
+2025-12-14 19:27:35,180 | Relative RMST (%) at last day: +2.21
+2025-12-14 19:27:35,180 | ----------------------------------------------------------------------

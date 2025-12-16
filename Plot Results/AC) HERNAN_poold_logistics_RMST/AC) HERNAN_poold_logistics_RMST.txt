@@ -1,0 +1,42 @@
+2025-12-14 20:28:30,544 | Loading input: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2025-12-14 20:28:30,846 | Subjects: 136530
+2025-12-14 20:28:30,846 | Follow-up days: 734
+2025-12-14 20:28:32,752 | Fitting pooled logistic model
+2025-12-14 20:28:33,498 | Running bootstrap: 100
+2025-12-14 20:28:50,111 | ----------------------------------------------------------------------
+2025-12-14 20:28:50,111 | Preprint-ready epidemiological summary
+2025-12-14 20:28:50,111 | Age: 70
+2025-12-14 20:28:50,111 | Study start: 2020-01-01
+2025-12-14 20:28:50,111 | First eligibility day: 361
+2025-12-14 20:28:50,111 | Last observation day: 1095
+2025-12-14 20:28:50,111 | Safety buffer (days): 0
+2025-12-14 20:28:50,111 | Total subjects: 136530
+2025-12-14 20:28:50,118 | Total vaccinated: 113641
+2025-12-14 20:28:50,118 | Total deaths: 7837
+2025-12-14 20:28:50,118 | Person-time vaccinated (days): 67,344,329.0
+2025-12-14 20:28:50,118 | Person-time unvaccinated (days): 28,961,951.0
+2025-12-14 20:28:50,118 | ΔRMST (days): +16.16 CI [13.70, 18.16]
+2025-12-14 20:28:50,118 | VE(t) at last day: +57.2%
+2025-12-14 20:28:50,118 | Relative RMST (%) at last day: +2.29
+2025-12-14 20:28:50,118 | ----------------------------------------------------------------------
+2025-12-14 20:30:08,329 | Loading input: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2025-12-14 20:30:08,645 | Subjects: 136530
+2025-12-14 20:30:08,645 | Follow-up days: 734
+2025-12-14 20:30:11,728 | Fitting pooled logistic model
+2025-12-14 20:30:12,615 | Running bootstrap: 100
+2025-12-14 20:30:29,985 | ----------------------------------------------------------------------
+2025-12-14 20:30:29,985 | Preprint-ready epidemiological summary
+2025-12-14 20:30:29,985 | Age: 70
+2025-12-14 20:30:29,985 | Study start: 2020-01-01
+2025-12-14 20:30:29,985 | First eligibility day: 361
+2025-12-14 20:30:29,985 | Last observation day: 1095
+2025-12-14 20:30:29,985 | Safety buffer (days): 0
+2025-12-14 20:30:29,985 | Total subjects: 136530
+2025-12-14 20:30:29,985 | Total vaccinated: 113641
+2025-12-14 20:30:29,985 | Total deaths: 7837
+2025-12-14 20:30:29,985 | Person-time vaccinated (days): 67,344,329.0
+2025-12-14 20:30:29,985 | Person-time unvaccinated (days): 28,961,951.0
+2025-12-14 20:30:29,985 | ΔRMST (days): +16.16 CI [13.70, 18.16]
+2025-12-14 20:30:29,985 | VE(t) at last day: +57.2%
+2025-12-14 20:30:29,985 | Relative RMST (%) at last day: +2.29
+2025-12-14 20:30:29,985 | ----------------------------------------------------------------------

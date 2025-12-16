@@ -1,0 +1,44 @@
+2025-12-16 00:47:18,704 | Loading input: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG20.csv
+2025-12-16 00:47:18,906 | Subjects: 95921
+2025-12-16 00:47:18,906 | Landmark window: 365..1056 (692 days)
+2025-12-16 00:47:18,906 | Evaluating landmarks every 30 days (24 landmarks)
+2025-12-16 00:47:18,932 | Computing empirical ΔRMST(t) over landmarks...
+2025-12-16 00:47:18,948 | Landmark 365: N_v=1, N_u=95894, events_v=0, events_u=72, rmst_v=690.00, rmst_u=689.78, ΔRMST=+0.22, horizon=691
+2025-12-16 00:47:18,948 | Landmark 395: N_v=57, N_u=95837, events_v=0, events_u=71, rmst_v=660.00, rmst_u=659.79, ΔRMST=+0.21, horizon=661
+2025-12-16 00:47:18,948 | Landmark 425: N_v=129, N_u=95761, events_v=0, events_u=67, rmst_v=630.00, rmst_u=629.81, ΔRMST=+0.19, horizon=631
+2025-12-16 00:47:18,948 | Landmark 455: N_v=409, N_u=95479, events_v=2, events_u=63, rmst_v=597.85, rmst_u=599.84, ΔRMST=-1.99, horizon=601
+2025-12-16 00:47:18,948 | Landmark 485: N_v=979, N_u=94909, events_v=4, events_u=61, rmst_v=568.63, rmst_u=569.84, ΔRMST=-1.21, horizon=571
+2025-12-16 00:47:18,948 | Landmark 515: N_v=2081, N_u=93805, events_v=5, events_u=58, rmst_v=539.22, rmst_u=539.85, ΔRMST=-0.63, horizon=541
+2025-12-16 00:47:18,948 | Landmark 545: N_v=23664, N_u=72217, events_v=9, events_u=49, rmst_v=509.88, rmst_u=509.86, ΔRMST=+0.02, horizon=511
+2025-12-16 00:47:18,954 | Landmark 575: N_v=41420, N_u=54459, events_v=16, events_u=40, rmst_v=479.90, rmst_u=479.86, ΔRMST=+0.05, horizon=481
+2025-12-16 00:47:18,954 | Landmark 605: N_v=49092, N_u=46783, events_v=16, events_u=36, rmst_v=449.92, rmst_u=449.87, ΔRMST=+0.06, horizon=451
+2025-12-16 00:47:18,955 | Landmark 635: N_v=52260, N_u=43613, events_v=16, events_u=34, rmst_v=419.93, rmst_u=419.87, ΔRMST=+0.06, horizon=421
+2025-12-16 00:47:18,955 | Landmark 665: N_v=54917, N_u=40954, events_v=14, events_u=34, rmst_v=389.95, rmst_u=389.86, ΔRMST=+0.09, horizon=391
+2025-12-16 00:47:18,956 | Landmark 695: N_v=64134, N_u=31736, events_v=18, events_u=29, rmst_v=359.95, rmst_u=359.85, ΔRMST=+0.10, horizon=361
+2025-12-16 00:47:18,958 | Landmark 725: N_v=67147, N_u=28719, events_v=18, events_u=25, rmst_v=329.96, rmst_u=329.86, ΔRMST=+0.10, horizon=331
+2025-12-16 00:47:18,958 | Landmark 755: N_v=68496, N_u=27367, events_v=17, events_u=23, rmst_v=299.97, rmst_u=299.87, ΔRMST=+0.10, horizon=301
+2025-12-16 00:47:18,960 | Landmark 785: N_v=68863, N_u=26997, events_v=16, events_u=21, rmst_v=269.98, rmst_u=269.89, ΔRMST=+0.09, horizon=271
+2025-12-16 00:47:18,961 | Landmark 815: N_v=68979, N_u=26878, events_v=15, events_u=19, rmst_v=239.98, rmst_u=239.91, ΔRMST=+0.07, horizon=241
+2025-12-16 00:47:18,961 | Landmark 845: N_v=69070, N_u=26782, events_v=13, events_u=16, rmst_v=209.99, rmst_u=209.93, ΔRMST=+0.05, horizon=211
+2025-12-16 00:47:18,963 | Landmark 875: N_v=69144, N_u=26705, events_v=12, events_u=14, rmst_v=179.99, rmst_u=179.95, ΔRMST=+0.04, horizon=181
+2025-12-16 00:47:18,963 | Landmark 905: N_v=69182, N_u=26665, events_v=11, events_u=13, rmst_v=149.99, rmst_u=149.95, ΔRMST=+0.04, horizon=151
+2025-12-16 00:47:18,963 | Landmark 935: N_v=69212, N_u=26629, events_v=9, events_u=9, rmst_v=119.99, rmst_u=119.97, ΔRMST=+0.02, horizon=121
+2025-12-16 00:47:18,963 | Landmark 965: N_v=69254, N_u=26583, events_v=8, events_u=6, rmst_v=90.00, rmst_u=89.99, ΔRMST=+0.01, horizon=91
+2025-12-16 00:47:18,965 | Landmark 995: N_v=69280, N_u=26553, events_v=6, events_u=4, rmst_v=60.00, rmst_u=59.99, ΔRMST=+0.01, horizon=61
+2025-12-16 00:47:18,965 | Landmark 1025: N_v=69298, N_u=26530, events_v=5, events_u=0, rmst_v=30.00, rmst_u=30.00, ΔRMST=-0.00, horizon=31
+2025-12-16 00:47:18,966 | Landmark 1055: N_v=69307, N_u=26518, events_v=2, events_u=0, rmst_v=0.00, rmst_u=0.00, ΔRMST=+0.00, horizon=1
+2025-12-16 00:47:18,971 | Saved per-landmark results CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_AG20.csv
+2025-12-16 00:47:18,971 | Landmarks computed: 24
+2025-12-16 00:47:19,957 | Saved interactive HTML: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_AG20.html
+2025-12-16 00:47:19,957 | --------------------------------------------------------------------------
+2025-12-16 00:47:19,957 | Empirical Landmark RMST summary (non-parametric, unbiased)
+2025-12-16 00:47:19,957 | Total subjects: 95921
+2025-12-16 00:47:19,957 | Landmark window: 365..1056 (692 days)
+2025-12-16 00:47:19,958 | Total vaccinated (any time): 69384
+2025-12-16 00:47:19,958 | Total deaths: 98
+2025-12-16 00:47:19,958 | Landmarks computed (valid risk sets): 24
+2025-12-16 00:47:19,958 | Median ΔRMST: +0.05 days
+2025-12-16 00:47:19,958 | Mean ΔRMST: -0.10 days
+2025-12-16 00:47:19,958 | Median N_v: 65640; Median N_u: 30228
+2025-12-16 00:47:19,958 | Median events_v: 10; Median events_u: 27
+2025-12-16 00:47:19,958 | --------------------------------------------------------------------------

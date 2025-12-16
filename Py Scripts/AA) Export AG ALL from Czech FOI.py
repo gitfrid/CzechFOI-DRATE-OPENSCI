@@ -12,7 +12,7 @@ for downstream empirical survival analysis.
 """
 
 # === CONFIGURATION ===
-INPUT_CSV = r"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv"
+INPUT_CSV = r"C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv"
 OUTPUT_DIR = r"C:\github\CzechFOI-DRATE-OPENSCI\Terra"
 REFERENCE_YEAR = 2023
 DOSE_DATE_COLS = [f'Datum_{i}' for i in range(1, 8)]
@@ -50,7 +50,8 @@ def filter_and_save_all_ages():
     #ages = [70]  # Only process age 70
     #print(f"🔎 Processing only Age {ages[0]}")
 
-    for age in sorted(ages):
+    #for age in sorted(ages):
+    for age in [10]:
         df_age = df[df["Age"] == age].copy()
         df_age = format_dates_for_csv(df_age)
 

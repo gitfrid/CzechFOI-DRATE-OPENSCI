@@ -1,0 +1,19 @@
+2025-12-14 23:40:41,846 | Loading input: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2025-12-14 23:40:42,198 | Subjects: 136530
+2025-12-14 23:40:42,198 | Landmark window: 361..1095 (735 days)
+2025-12-14 23:40:42,254 | Computing empirical ΔRMST(t) over landmarks...
+2025-12-14 23:40:42,677 | Saved results (with overall): C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_RMST.csv
+2025-12-14 23:40:43,493 | Saved plot: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_RMST.html
+2025-12-14 23:40:43,493 | ----------------------------------------------------------------------
+2025-12-14 23:40:43,493 | Empirical landmark RMST summary (no modeling)
+2025-12-14 23:40:43,493 | Age: 70; Study start: 2020-01-01
+2025-12-14 23:40:43,493 | First eligibility day: 361; Last observation day: 1095
+2025-12-14 23:40:43,493 | Safety buffer (days): 0
+2025-12-14 23:40:43,493 | Total subjects: 136530
+2025-12-14 23:40:43,495 | Total vaccinated (any time): 113641
+2025-12-14 23:40:43,495 | Total deaths: 7837
+2025-12-14 23:40:43,495 | Landmarks computed: 734
+2025-12-14 23:40:43,495 | Median ΔRMST: +1.44 days
+2025-12-14 23:40:43,495 | Overall ΔRMST (baseline landmark): -1.86 days
+2025-12-14 23:40:43,495 | Weighted-average ΔRMST across landmarks: +2.81 days
+2025-12-14 23:40:43,495 | ----------------------------------------------------------------------
