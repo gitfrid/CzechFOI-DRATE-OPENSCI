@@ -6,7 +6,7 @@ Hypothesis: The only purely factual, empirical analysis is conditional on surviv
 
 Goal is to measure the empirical, observed survival benefit after vaccination
 <br>— That is not the same as the average causal effect from a common baseline (modell based)
-<br>— It answers: From the real individual vaccination date, how much longer did vaccinated individuals live compared to their unvaccinated counterfactual starting at that same point (avoid immortal time bias).
+<br>— It answers: Observed difference in restricted mean survival time between individuals vaccinated by the landmark and those not yet vaccinated, conditional on survival to the landmark
 
 
 **Author:** Drifitng  
