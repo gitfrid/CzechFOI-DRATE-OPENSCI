@@ -1,5 +1,5 @@
 # 🧬 Under Construction
-Data driven empirical landmark analysis Analysis
+Data driven empirical landmark analysis
 
 Hypothesis: The only purely factual, empirical analysis is conditional on survival to vaccination (or to a landmark day). 
 <br>Everything else requires counterfactual modeling.
