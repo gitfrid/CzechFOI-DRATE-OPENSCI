@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Gold-standard empirical landmark analysis
+Data driven empirical landmark analysis
 Outputs:
 - CSV with per-landmark ΔRMST(t) and summaries
 - Plotly HTML figure:
@@ -89,7 +89,7 @@ raw["vax_day"]   = (raw["Datum_1"]     - STUDY_START).dt.days
 raw.loc[raw["death_day"] < 0, "death_day"] = np.nan
 raw.loc[raw["vax_day"]   < 0, "vax_day"]   = np.nan
 
-# Study window from observed data (gold standard: data-driven)
+# Study window from observed data (data-driven)
 first_dose_min = raw["Datum_1"].min(skipna=True)
 last_dose_max = raw[[c for c in raw.columns if c.startswith("Datum_") and c != "DatumUmrti"]].max().max(skipna=True)
 last_death = raw["DatumUmrti"].max(skipna=True)
@@ -356,7 +356,7 @@ fig.update_yaxes(title_text="Survival probability (empirical)", range=[0,1], row
 fig.update_xaxes(title_text="Days since landmark", row=2, col=1)
 
 fig.update_layout(
-    title="Gold-standard Empirical Landmark: ΔRMST(t) and Survival Curves (shaded ΔRMST area)",
+    title="Data driven Empirical Landmark: ΔRMST(t) and Survival Curves (shaded ΔRMST area)",
     template="plotly_white",
     hovermode="x unified",
     legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1.0)
