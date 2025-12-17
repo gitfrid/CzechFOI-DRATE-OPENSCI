@@ -17,7 +17,7 @@ Confidence intervals were obtained via nonparametric bootstrap resampling of ind
 **Scope and limitations:**
 This is a descriptive, empirical analysis. It does not estimate a causal effect from a common baseline and does not adjust for time‑varying confounding. Results are conditional on survival to each landmark and may reflect selection and calendar‑time composition.
 
-**AE) empirical_landmark_rmst_bootstrap**
+**AE) empirical_landmark_rmst_bootstrap.py**
 a descriptive, empirical analysis - dosen't use covariants - not causal! 
 
 **Author:** AI / Drifitng  
