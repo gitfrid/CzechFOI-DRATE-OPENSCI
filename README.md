@@ -10,6 +10,8 @@ Estimates empirical differences in restricted mean survival time (ΔRMST) betwee
 For each landmark t, constructed risk sets of survivors, computed daily hazards as observed deaths divided by those at risk, obtained survival via the product‑limit estimator, and integrated survival over a fixed horizon τ to obtain RMST. 
 Report ΔRMST = RMST(vaccinated by t) − RMST(not yet vaccinated by t).
 
+ΔRMST (restricted mean survival time) = difference in RMST between vaccinated vs. unvaccinated at each landmark day. It measures how many extra days of survival, on average, occur within the observation window for vaccinated individuals conditional on surviving to the landmark.
+
 **Inference:**
 
 Confidence intervals were obtained via nonparametric bootstrap resampling of individuals without parametric modeling assumptions.
@@ -25,6 +27,7 @@ A descriptive, empirical analysis - doesn't fully remove all biases - don't use 
 **Author:** AI / Drifitng  
 **Date:** 2025-11-02  
 **Environment:** Python ≥ 3.10  
-**Raw Dataset used:** Vesely_106_202403141131_AG10.csv (~136k individuals Czech-FOI 1.9 GB)
+**Raw Dataset used:** Vesely_106_202403141131_AG10.csv (~136k individuals Czech-FOI 1.9 GB). 
+<br>True science must be reproducible, which requires the code and the data. Otherwise it is dogmatic. 
 
 ## 
