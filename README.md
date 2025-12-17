@@ -8,7 +8,7 @@ Data driven empirical landmark analysis
 
 Estimates empirical differences in restricted mean survival time (ΔRMST) between individuals vaccinated by each landmark day and those not yet vaccinated, conditional on survival to the landmark. 
 For each landmark t, constructed risk sets of survivors, computed daily hazards as observed deaths divided by those at risk, obtained survival via the product‑limit estimator, and integrated survival over a fixed horizon τ to obtain RMST. 
-Report ΔRMST = RMST(vaccinated by t) − RMST(not yet vaccinated by t).
+<br>Report ΔRMST = RMST(vaccinated by t) − RMST(not yet vaccinated by t).
 
 **Inference:**
 
