@@ -37,7 +37,7 @@ BOOTSTRAP_REPS = 200
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST")
 
-# real data with hypothetical 20% uvx deaths reclassified as vx to test missclassifcation sensitify
+# real data with hypothetical 20% uvx deaths reclassified as vx (sensitivity test for missclassifcation)
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_uvx_as_vx_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_RECLASSIFIED")
 
