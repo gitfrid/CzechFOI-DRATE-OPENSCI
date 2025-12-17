@@ -28,6 +28,6 @@ A descriptive, empirical analysis - doesn't fully remove all biases - don't use 
 **Date:** 2025-11-02  
 **Environment:** Python ≥ 3.10  
 **Raw Dataset used:** Vesely_106_202403141131_AG10.csv (~136k individuals Czech-FOI 1.9 GB). 
-<br>True science must be reproducible, which requires the code and the data.  
+<br>True science must be reproducible, which requires the code and the data. Otherwise it is dogmatic. 
 
 ## 
