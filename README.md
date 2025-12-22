@@ -3,7 +3,7 @@
 This repository contains scripts, datasets, logs, and plots for analyzing Czech FOI mortality data, with a focus on evaluating vaccine effectiveness (VE) and identifying potential biases.
 
 **Main Goal:**  
-The project aims to fairly compare the survival time of vaccinated (VX) and unvaccinated (UVX) individuals during the study period using **RMST (Restricted Mean Survival Time)**. The scripts explore how vaccine effectiveness is calculated, detect data biases, and use simulations to test the robustness of statistical methods.
+The project aims to fairly compare the survival time of vaccinated (VX) and unvaccinated (UVX) individuals during the study period using **RMST (Restricted Mean Survival Time)**. The scripts explore how vaccine effectiveness is calculated, detect biases, and use simulations to test statistical methods.
 
 ---
 
