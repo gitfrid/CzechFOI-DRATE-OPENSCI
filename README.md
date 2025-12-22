@@ -23,7 +23,7 @@ When comparing groups, RMST shows the average difference in survival days per pe
 
 ## Repository Structure
 
-### Scripts
+### Python Scripts
 All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts):
 
 - [AA) Export AG ALL from Czech FOI.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20Export%20AG%20ALL%20from%20Czech%20FOI.py)  
