@@ -16,7 +16,7 @@ RMST measures the average survival time within a fixed follow-up period (for exa
 - Differences in RMST show how many additional (or fewer) days, on average, one group survived compared to another.  
 
 **Simple analogy:**  
-“On average, how many days did each person live during the study period?”  
+On average, how many days did each person live during the study period?  
 When comparing groups, RMST shows the average difference in survival days per person.
 
 ---
@@ -49,13 +49,10 @@ Input and processed datasets are stored in the [Terra folder](https://github.com
 
 ### Plots & Logs
 Interactive plots and detailed epidemiological audit logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
-These visualize vaccination timing, synthetic dose assignments, exposure durations, and cumulative person-time curves.
 
 ---
 
-**Author:** AI / Drifting  
+**Author:** AI / Drifting Date: 2025  
 **Environment:** Python ≥ 3.10  
-**Raw Dataset (not included):** `Vesely_106_202403141131.csv` (~1.9 GB)  
-[Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
-
+**Raw Dataset (not included):** Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)  
 **Disclaimer:** This repository is for exploration and methodological demonstration only and is not intended for making causal claims.
