@@ -2,15 +2,20 @@
 Stochastic Sensitivity Analysis for Vaccine Effectiveness
 PROJECT: Czech FOI (Freedom of Information) Mortality Data Analysis
 
+PURPOSE:
+This script creates a dataset in which a percentage of unvaccinated (UVX) deaths 
+are reclassified as vaccinated (VX). It performs a sensitivity analysis to explore 
+the impact of this reclassification on estimates of vaccine effectiveness (VE) 
+and Restricted Mean Survival Time (RMST).
+
 SCIENTIFIC SPECIFICATIONS:
-- Method: Mortality-Conditioned Stochastic Imputation (MCSI).
-- Strategy Tracking: Empirical (Local) vs. Fallback assignments.
-- Exposure Audit: Mean and Quantile (25th, 50th, 75th) comparisons.
-- Cumulative person-time curves normalized for transparency.
-- Robustness: Deprecation-safe .astype('int64') for KS-Divergence.
+- Method: Mortality-Conditioned Stochastic Imputation (MCSI)
+- Strategy Tracking: Empirical (Local) vs. Fallback assignments
+- Exposure Audit: Mean and Quantile (25th, 50th, 75th)
+- Cumulative person-time curves normalized for transparency
+- Robustness: Deprecation-safe `.astype('int64')` for KS-Divergence
 
-
-Author: AI / drifting Date: 2025-12-22 Version: 1
+Author: AI / Drifting Date: 12.2025 Version: 1.0
 """
 
 import pandas as pd
