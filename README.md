@@ -12,7 +12,7 @@ The project aims to fairly compare the survival time of vaccinated (VX) and unva
 RMST measures the average survival time within a fixed follow-up period (for example, 2 years).
 
 - It provides the **average number of days a person survived** during the study period.  
-- It allows fair comparison between groups even when follow-up times differ.  
+- It allows comparison between groups even when follow-up times differ.  
 - Differences in RMST show how many additional (or fewer) days, on average, one group survived compared to another.  
 
 **Simple analogy:**  
