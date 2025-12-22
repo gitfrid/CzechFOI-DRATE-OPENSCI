@@ -55,4 +55,6 @@ Interactive plots and detailed epidemiological audit logs are stored in the [Plo
 **Author:** AI / Drifting Date: 2025  
 **Environment:** Python ≥ 3.10  
 **Raw Dataset (not included):** Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)  
+Science that does not share anonymized data or used code, risks becoming dogmatic.  
 **Disclaimer:** This repository is for exploration and methodological demonstration only and is not intended for making causal claims.
+
