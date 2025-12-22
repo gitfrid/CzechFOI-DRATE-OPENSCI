@@ -1,4 +1,4 @@
-# Czech FOI Mortality Data Analysis – Overview <img src="https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/under%20construction.png" width="50"> 
+# <img src="https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/under%20construction.png" width="40"> Czech FOI Mortality Data Analysis – Overview 
 
 This repository contains scripts, datasets, logs, and plots for analyzing Czech FOI mortality data, with a focus on evaluating vaccine effectiveness (VE) and identifying potential biases.
 
