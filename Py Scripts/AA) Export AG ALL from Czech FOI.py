@@ -47,11 +47,11 @@ def filter_and_save_all_ages():
     ages = df["Age"].dropna().unique()
     print(f"🔎 Found {len(ages)} unique ages: {sorted(ages)}")
 
-    #ages = [70]  # Only process age 70
-    #print(f"🔎 Processing only Age {ages[0]}")
+    ages = [70]  # Only process age 70
+    print(f"🔎 Processing only Age {ages[0]}")
 
     #for age in sorted(ages):
-    for age in [10]:
+    for age in [70]:
         df_age = df[df["Age"] == age].copy()
         df_age = format_dates_for_csv(df_age)
 

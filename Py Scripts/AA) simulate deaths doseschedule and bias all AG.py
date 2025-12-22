@@ -9,10 +9,12 @@ from plotly.subplots import make_subplots
 from lifelines import CoxTimeVaryingFitter
 
 """
-Title: Simulation of COVID-19 Vaccine Doses and Deaths with Bias Assessment
-Author: [drifting]
-Date: 2025-12
-Version: 1.1
+Simulation of Czech-FOI Vaccine Doses and Deaths with Bias Assessment
+
+Purpose
+-----------
+Generates a Dataset per AG with constant Deathrate HR=1 and simulated real dose schedule
+Used to check if the scientific RMST-Methodes eliminate biases correct
 
 Description
 -----------
@@ -45,6 +47,8 @@ Notes
 - Ages processed: 0–113 (AG0 to AG113).
 - Uses fixed random seed for reproducibility.
 - Designed for exploratory analysis and bias evaluation, not causal inference.
+
+Author: AI / drifting Date: 2025-12 Version: 1
 """
 
 # ==============================================================================
@@ -59,7 +63,7 @@ DOSE_DATE_COLS = [f'Datum_{i}' for i in range(1, 8)]  # columns for vaccine dose
 NEEDED_COLS = ['Rok_narozeni', 'DatumUmrti'] + DOSE_DATE_COLS
 BASE_RNG_SEED = 42
 # AGES = range(0, 114)  # AG0 to AG113
-AGES = [10]
+AGES = [70]
 np.random.seed(BASE_RNG_SEED)
 
 # Create folder if it doesn't exist
