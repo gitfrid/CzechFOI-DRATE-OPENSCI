@@ -1,33 +1,47 @@
-# 🧬 Under Construction
-Data driven empirical landmark analysis
+# 🧬 Under Construction  Czech FOI Mortality Data Analysis – Overview
 
-**Hypothesis:** The only purely factual, empirical analysis is conditional on survival to vaccination (or to a landmark day). 
-<br>Everything else requires counterfactual modeling.
+This repository contains scripts, datasets, and plots for analyzing Czech-FOI mortality data, with a focus on understanding vaccine effectiveness (VE) while accounting for biases in the data.  
 
-**Estimand and design:**
+**Main Goal:**  
+To obtain **unbiased and fair comparisons** between vaccinated (VX) and unvaccinated (UVX) individuals using RMST (Restricted Mean Survival Time).  
+The scripts explore how vaccine effectiveness can be estimated, check for biases in the Methodes analysing the data, and simulate different scenarios.
 
-Estimates empirical differences in restricted mean survival time (ΔRMST) between individuals vaccinated by each landmark day and those not yet vaccinated, conditional on survival to the landmark. 
-For each landmark t, constructed risk sets of survivors, computed daily hazards as observed deaths divided by those at risk, obtained survival via the product‑limit estimator, and integrated survival over a fixed horizon τ to obtain RMST. 
-Report ΔRMST = RMST(vaccinated by t) − RMST(not yet vaccinated by t).
+---
 
-ΔRMST (restricted mean survival time) = difference in RMST between vaccinated vs. unvaccinated at each landmark day. It measures how many extra days of survival, on average, occur within the observation window for vaccinated individuals conditional on surviving to the landmark.
+## Key Concept: RMST (Restricted Mean Survival Time)
 
-**Inference:**
+RMST is a way to measure **how long people survive during a fixed follow-up period**.  
 
-Confidence intervals were obtained via nonparametric bootstrap resampling of individuals without parametric modeling assumptions.
+- It calculates the **average survival time** up to a cutoff (e.g., 2 years).  
+- It allows fair comparison between groups even if follow-up times differ.  
+- The difference in RMST shows how much longer, on average, one group survives compared to another.  
 
-**Scope and limitations:**
+Simple analogy: “RMST tells us the average number of days people survived during the study period. Comparing RMST between groups shows how much longer, on average, one group lived compared to another
 
-This is a descriptive, empirical analysis. It does not estimate a causal effect from a common baseline and does not adjust for time‑varying confounding. Results are conditional on survival to each landmark and may reflect selection and calendar‑time composition.
+---
 
-**AE) empirical_landmark_rmst_bootstrap.py**
+## Repository Structure
 
-A descriptive, empirical analysis - doesn't fully remove all biases - don't use covariants or causal modelling! 
+### Scripts  
+All scripts are in the [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts):
+
+| Script | Purpose |
+|--------|---------|
+| `AA) Export AG ALL from Czech FOI.py` | Exports raw age-group-specific mortality data from the Czech FOI dataset. |
+| `AA) real_data_sim_dose_reclassified_uvx_as_vx.py` | Performs **Mortality-Conditioned Stochastic Imputation (MCSI)** to simulate reclassification of unvaccinated deaths as vaccinated and generates diagnostic plots. |
+| `AA) simulate deaths doseschedule and bias all AG.py` | Simulates death and vaccination schedules across age groups to explore potential biases. |
+| `AC) hernan_style_poold_logistics_RMST.py` | Implements RMST analysis using pooled logistic regression (Hernán-style approach). |
+| `AE) Empirical_dynamic_CC_RMST.py` | Computes RMST in an **empirical case-control framework**, dynamically adjusting for covariates. |
+| `AF) Empirical vs causal comparison RMST.py` | Compares RMST estimates using empirical versus causal methods to assess bias. |
+
+### Data  
+The input datasets are in the [Terra folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Terra) and contain age-specific CSV mortality files used by the scripts.  
+
+### Plots & Logs  
+All interactive plots and detailed epidemiological audit logs are in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results). These visualize vaccination timing, synthetic assignments, exposure durations, and cumulative person-time curves.
 
 **Author:** AI / Drifitng  
 **Date:** 2025-11-02  
 **Environment:** Python ≥ 3.10  
 **Raw Dataset used:** Vesely_106_202403141131_AG10.csv (~136k individuals Czech-FOI 1.9 GB). 
 <br>True science must be reproducible, which requires the code and the data. Otherwise it is dogmatic. 
-
-## 
