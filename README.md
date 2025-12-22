@@ -1,13 +1,13 @@
 # <img src="https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Plot%20Results/under%20construction.png" width="40"> Czech FOI Mortality Data Analysis – Overview 
 
-This repository contains scripts, datasets, logs, and plots for analyzing Czech FOI mortality data, with a focus on evaluating vaccine effectiveness (VE) and identifying potential biases.
+This repository contains scripts, datasets, logs, and plots for analyzing Czech FOI mortality data, with a focus on vaccine effectiveness (VE) and potential biases.
 
-**Main Goal:**  
-The project aims to fairly compare the survival time of vaccinated (VX) and unvaccinated (UVX) individuals during the study period using **RMST (Restricted Mean Survival Time)**. The scripts explore how vaccine effectiveness is calculated, detect biases, and use simulations to test statistical methods.
+**Main Goal:**
+The project compares survival times of vaccinated (VX) and unvaccinated (UVX) individuals using Restricted Mean Survival Time (RMST). It examines how vaccine effectiveness is estimated and generates simulated datasets to identify biases and evaluate the sensitivity of the statistical methods applied.
 
 ---
 
-## Key Concept: RMST (Restricted Mean Survival Time)
+## Concept: RMST (Restricted Mean Survival Time)
 
 RMST measures the average survival time within a fixed follow-up period (for example, 2 years).
 
