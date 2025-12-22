@@ -46,7 +46,6 @@ Notes
 - Assumes START_DATE = 2020-01-01 as reference.
 - Ages processed: 0–113 (AG0 to AG113).
 - Uses fixed random seed for reproducibility.
-- Designed for exploratory analysis and bias evaluation, not causal inference.
 
 Author: AI / drifting Date: 2025-12 Version: 1
 """
