@@ -22,7 +22,7 @@ Simulations (per Age Group) — creates bias-check and misclassification-sensiti
     ↓  
 RMST Estimation (Empirical and Causal) — applied to all datasets  
     ↓  
-Comparison of Methods and Results — across all datasets  
+Comparison of emprical vs causal Methods and Results — across all datasets  
     ↓  
 Plots, Logs, Interpretation
 
@@ -60,7 +60,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   Empirical RMST estimation with dynamic covariate adjustment.
 
 - [AF) Empirical vs causal comparison RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AF%29%20Empirical%20vs%20causal%20comparison%20RMST.py)  
-  Compares empirical and causal RMST - what Historical happend - estimates.
+  Compares empirical and causal RMST **- what Historical happend -** estimates.
 
 ---
 
