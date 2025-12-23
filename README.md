@@ -2,7 +2,7 @@
 
 This repository analyzes Czech FOI mortality data to evaluate vaccine effectiveness (VE) and potential biases using Restricted Mean Survival Time (RMST). The project compares survival times of vaccinated (VX) and unvaccinated (UVX) individuals and uses simulations to examine how data structure and assumptions may influence results.  
 
-Empirical approaches estimate VE directly from observed data, while causal models emulate hypothetical scenarios to adjust for confounding. RMST measures the average survival time within a fixed follow‑up period and expresses differences in days lived between groups.
+Empirical approaches estimate VE directly from observed data, while causal models emulate hypothetical scenarios and can adjust for confounding. RMST measures the average survival time within a fixed follow‑up period and expresses differences in days lived between groups.
 
 ---
 
