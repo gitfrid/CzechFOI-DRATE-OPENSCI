@@ -104,3 +104,4 @@ AI/Drifting - 2025
 
 **Disclaimer:**  
 This repository is for methodological exploration only and is not intended for making causal claims.
+May contain subtle errors of a methodological, logical, mathematical, or coding nature.
