@@ -22,3 +22,4 @@ Survival at τ=703: S_v=0.9739, S_u=0.9296
 Cumulative incidence at τ=703: CI_v=0.0261, CI_u=0.0704
 Vaccine effectiveness VE(τ=703): +62.877%
 NNT per life-year gained (τ=703): 21.07
+Starting bootstrap (30 replications, subsample=0.40)
