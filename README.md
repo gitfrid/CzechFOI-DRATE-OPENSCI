@@ -59,7 +59,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 - [AE) Empirical_dynamic_CC_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AE%29%20Empirical_dynamic_CC_RMST.py)  
   Empirical RMST estimation with dynamic covariate adjustment.
 
-- [AF) Empirical vs causal comparison RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AF%29%20Empirical%20vs%20causal%20comparison%20RMST.py)  
+- [AF) Empirical vs causal - what Historical happend - comparison RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AF%29%20Empirical%20vs%20causal%20comparison%20RMST.py)  
   Compares empirical and causal RMST estimates.
 
 ---
