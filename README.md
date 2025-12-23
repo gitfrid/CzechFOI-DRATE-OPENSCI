@@ -74,6 +74,19 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   It asks how survival differed in reality under time-varying vaccination exposure, how that difference changes when empirical selection biases are reduced via clone–censor methods,
   and how both compare to explicit counterfactual causal estimates. The resulting ΔΔRMST decompositions quantify the contributions of selection bias and causal modeling assumptions.
 
+### Experimental RMST Scripts
+
+- [AE) empirical_landmark_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20empirical_landmark_RMST.py)  
+  Empirical RMST estimation using a fixed‑time landmark approach.
+  
+  Asking the descriptive question: How did survival differ between vaccinated and unvaccinated individuals when exposure status is frozen at a chosen landmark day, avoiding time‑varying classification?
+  
+- [AE) C.S. Peirce evidence weighted rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20C.S.%20Pierce%20evidence%20weighted%20rmst.py)  
+  Evidence‑weighted RMST estimation inspired by C. S. Peirce’s concept of statistical “surprisingness.”
+  
+  Asking the methodological question: How much of the observed survival difference is supported by strong, non‑random evidence when daily RMST contributions are weighted by their statistical significance?
+
+
 ---
 
 ### Data
