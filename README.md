@@ -66,7 +66,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 - [AF) Empirical vs causal comparison RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AF%29%20Empirical%20vs%20causal%20comparison%20RMST.py)  
   Compares empirical and causal RMST estimates.
 
-  This script compares observed, bias-minimized, and causal estimates of survival differences between vaccinated and unvaccinated individuals using RMST.
+  This script compares emperical observed, bias-minimized, and causal estimates of survival differences between vaccinated and unvaccinated individuals using RMST.
   It asks how survival differed in reality under time-varying vaccination exposure, how that difference changes when empirical selection biases are reduced via clone–censor methods,
   and how both compare to explicit counterfactual causal estimates. The resulting ΔΔRMST decompositions quantify the contributions of selection bias and causal modeling assumptions.
 
