@@ -77,7 +77,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 ### Experimental RMST Scripts
 
 - [AE) empirical_landmark_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20empirical_landmark_RMST.py)  
-  Empirical RMST estimation using a fixed‑time landmark approach.
+  Empirical RMST estimation using a fixed‑time landmark approach. Results seems strongly biasd.
   
   Asking the descriptive question: How did survival differ between vaccinated and unvaccinated individuals when exposure status is frozen at a chosen landmark day, avoiding time‑varying classification?
   
