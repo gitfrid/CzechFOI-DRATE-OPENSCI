@@ -25,7 +25,7 @@ observed vaccination schedules and allows comparison between simulated and
 real dose patterns.
 
 Methods
--------
+--------
 1. Loads real vaccination and death dates for each age group.
 2. Estimates crude death rates for simulation.
 3. Simulates death days under HR=1 assumption using a Bernoulli process.
