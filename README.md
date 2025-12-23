@@ -55,12 +55,20 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
   RMST analysis using pooled logistic regression (Target Trial emulation).
+  
+  Estimates the causal effect of vaccination on survival by asking a counterfactual question: What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
 
 - [AE) Empirical_dynamic_CC_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AE%29%20Empirical_dynamic_CC_RMST.py)  
-  Empirical RMST estimation with dynamic covariate adjustment.
+  Empirical RMST estimation with dynamic exposure classification.
+  
+  Asking a descriptive question: What survival difference was observed under real-world vaccination rollout with time-varying exposure, using purely descriptive empirical data?
 
 - [AF) Empirical vs causal comparison RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AF%29%20Empirical%20vs%20causal%20comparison%20RMST.py)  
-  Compares empirical and causal RMST **- what Historical happend -** estimates.
+  Compares empirical and causal RMST estimates.
+
+  This script compares observed, bias-minimized, and causal estimates of survival differences between vaccinated and unvaccinated individuals using RMST.
+  It asks how survival differed in reality under time-varying vaccination exposure, how that difference changes when empirical selection biases are reduced via clone–censor methods,
+  and how both compare to explicit counterfactual causal estimates. The resulting ΔΔRMST decompositions quantify the contributions of selection bias and causal modeling assumptions.
 
 ---
 
