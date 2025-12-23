@@ -40,7 +40,7 @@ Analogy: *“On average, how many days did each person live during the study?”
 
 ---
 
-### DataScripts & Data Overview
+### Scripts Overview
 
 All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts):
 
@@ -83,9 +83,9 @@ These include age‑specific CSV mortality files created by the scripts.
 
 ---
 
-### Plots & Logs
+### Results Plots & Logs
 
-Plots and audit logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
+Plots and epidemiological logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
 They visualize vaccination timing, synthetic dose assignments, exposure durations, and cumulative person‑time curves.
 
 ---
