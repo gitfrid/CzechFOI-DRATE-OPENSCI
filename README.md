@@ -60,7 +60,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
   Causal model based RMST analysis using pooled logistic regression (Target Trial emulation).
   
-  Estimates the causal effect of vaccination on survival by asking a causal counterfactual question: What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
+  Estimates the causal effect of vaccination on survival by asking a counterfactual question: What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
 
 - [AE) Empirical_dynamic_CC_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AE%29%20Empirical_dynamic_CC_RMST.py)  
   Empirical RMST estimation with dynamic exposure classification.
