@@ -1,0 +1,336 @@
+=== Peircean Evidence-Weighted RMST Analysis ===
+Loading CSV: C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_PTC5_uvx_as_vx_AG70.csv
+Subjects after age filter: 136530
+Deaths: 7837, Vaccinated: 113777
+Total clone intervals: 247808
+  Vaccinated intervals:   113720
+  Unvaccinated intervals: 134088
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   64,017,778 person-days
+Person-time (unvaccinated): 28,418,819 person-days
+Deaths (vaccinated):        2673
+Deaths (unvaccinated):      2535
+
+=== Computing Peircean empirical strategy-based RMST ===
+Final ΔRMST_empirical_peircean(T): -8.048 days
+Final ΔRMST_weighted_peircean(T): -4.575 (days × evidence)
+
+=== Bootstrap CIs for Peirce survival and ΔRMST curves ===
+Total clone intervals: 247808
+  Vaccinated intervals:   113720
+  Unvaccinated intervals: 134088
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   64,017,778 person-days
+Person-time (unvaccinated): 28,418,819 person-days
+Deaths (vaccinated):        2673
+Deaths (unvaccinated):      2535
+Total clone intervals: 82068
+  Vaccinated intervals:   37692
+  Unvaccinated intervals: 44376
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,219,942 person-days
+Person-time (unvaccinated): 9,376,990 person-days
+Deaths (vaccinated):        864
+Deaths (unvaccinated):      833
+Total clone intervals: 81720
+  Vaccinated intervals:   37453
+  Unvaccinated intervals: 44267
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,086,963 person-days
+Person-time (unvaccinated): 9,429,221 person-days
+Deaths (vaccinated):        868
+Deaths (unvaccinated):      846
+Total clone intervals: 81698
+  Vaccinated intervals:   37456
+  Unvaccinated intervals: 44242
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,070,179 person-days
+Person-time (unvaccinated): 9,421,020 person-days
+Deaths (vaccinated):        912
+Deaths (unvaccinated):      828
+Total clone intervals: 81793
+  Vaccinated intervals:   37547
+  Unvaccinated intervals: 44246
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,126,949 person-days
+Person-time (unvaccinated): 9,367,299 person-days
+Deaths (vaccinated):        915
+Deaths (unvaccinated):      824
+Total clone intervals: 81526
+  Vaccinated intervals:   37376
+  Unvaccinated intervals: 44150
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,042,226 person-days
+Person-time (unvaccinated): 9,370,756 person-days
+Deaths (vaccinated):        892
+Deaths (unvaccinated):      890
+Total clone intervals: 81811
+  Vaccinated intervals:   37573
+  Unvaccinated intervals: 44238
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,138,100 person-days
+Person-time (unvaccinated): 9,351,287 person-days
+Deaths (vaccinated):        906
+Deaths (unvaccinated):      842
+Total clone intervals: 81995
+  Vaccinated intervals:   37677
+  Unvaccinated intervals: 44318
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,201,774 person-days
+Person-time (unvaccinated): 9,348,729 person-days
+Deaths (vaccinated):        874
+Deaths (unvaccinated):      840
+Total clone intervals: 81609
+  Vaccinated intervals:   37464
+  Unvaccinated intervals: 44145
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,062,784 person-days
+Person-time (unvaccinated): 9,372,225 person-days
+Deaths (vaccinated):        924
+Deaths (unvaccinated):      807
+Total clone intervals: 81620
+  Vaccinated intervals:   37452
+  Unvaccinated intervals: 44168
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,072,095 person-days
+Person-time (unvaccinated): 9,338,966 person-days
+Deaths (vaccinated):        898
+Deaths (unvaccinated):      878
+Total clone intervals: 81537
+  Vaccinated intervals:   37357
+  Unvaccinated intervals: 44180
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,034,873 person-days
+Person-time (unvaccinated): 9,410,918 person-days
+Deaths (vaccinated):        911
+Deaths (unvaccinated):      837
+Total clone intervals: 81514
+  Vaccinated intervals:   37387
+  Unvaccinated intervals: 44127
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,044,653 person-days
+Person-time (unvaccinated): 9,375,953 person-days
+Deaths (vaccinated):        865
+Deaths (unvaccinated):      849
+Total clone intervals: 81938
+  Vaccinated intervals:   37644
+  Unvaccinated intervals: 44294
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,199,660 person-days
+Person-time (unvaccinated): 9,343,804 person-days
+Deaths (vaccinated):        898
+Deaths (unvaccinated):      825
+Total clone intervals: 81649
+  Vaccinated intervals:   37487
+  Unvaccinated intervals: 44162
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,097,605 person-days
+Person-time (unvaccinated): 9,348,783 person-days
+Deaths (vaccinated):        902
+Deaths (unvaccinated):      827
+Total clone intervals: 81895
+  Vaccinated intervals:   37587
+  Unvaccinated intervals: 44308
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,146,946 person-days
+Person-time (unvaccinated): 9,387,084 person-days
+Deaths (vaccinated):        890
+Deaths (unvaccinated):      841
+Total clone intervals: 81709
+  Vaccinated intervals:   37503
+  Unvaccinated intervals: 44206
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,067,990 person-days
+Person-time (unvaccinated): 9,382,892 person-days
+Deaths (vaccinated):        933
+Deaths (unvaccinated):      852
+Total clone intervals: 81700
+  Vaccinated intervals:   37526
+  Unvaccinated intervals: 44174
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,121,625 person-days
+Person-time (unvaccinated): 9,341,019 person-days
+Deaths (vaccinated):        872
+Deaths (unvaccinated):      816
+Total clone intervals: 81780
+  Vaccinated intervals:   37534
+  Unvaccinated intervals: 44246
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,138,620 person-days
+Person-time (unvaccinated): 9,381,841 person-days
+Deaths (vaccinated):        850
+Deaths (unvaccinated):      825
+Total clone intervals: 81552
+  Vaccinated intervals:   37413
+  Unvaccinated intervals: 44139
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,049,558 person-days
+Person-time (unvaccinated): 9,352,277 person-days
+Deaths (vaccinated):        891
+Deaths (unvaccinated):      870
+Total clone intervals: 81691
+  Vaccinated intervals:   37475
+  Unvaccinated intervals: 44216
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,096,968 person-days
+Person-time (unvaccinated): 9,385,338 person-days
+Deaths (vaccinated):        877
+Deaths (unvaccinated):      835
+Total clone intervals: 81646
+  Vaccinated intervals:   37428
+  Unvaccinated intervals: 44218
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,055,849 person-days
+Person-time (unvaccinated): 9,426,244 person-days
+Deaths (vaccinated):        872
+Deaths (unvaccinated):      834
+Total clone intervals: 81700
+  Vaccinated intervals:   37487
+  Unvaccinated intervals: 44213
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,103,393 person-days
+Person-time (unvaccinated): 9,364,182 person-days
+Deaths (vaccinated):        866
+Deaths (unvaccinated):      856
+Total clone intervals: 81691
+  Vaccinated intervals:   37487
+  Unvaccinated intervals: 44204
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,097,021 person-days
+Person-time (unvaccinated): 9,381,019 person-days
+Deaths (vaccinated):        907
+Deaths (unvaccinated):      821
+Total clone intervals: 81744
+  Vaccinated intervals:   37542
+  Unvaccinated intervals: 44202
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,132,783 person-days
+Person-time (unvaccinated): 9,353,522 person-days
+Deaths (vaccinated):        876
+Deaths (unvaccinated):      814
+Total clone intervals: 81615
+  Vaccinated intervals:   37456
+  Unvaccinated intervals: 44159
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,079,980 person-days
+Person-time (unvaccinated): 9,362,105 person-days
+Deaths (vaccinated):        863
+Deaths (unvaccinated):      846
+Total clone intervals: 81625
+  Vaccinated intervals:   37473
+  Unvaccinated intervals: 44152
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,104,877 person-days
+Person-time (unvaccinated): 9,332,303 person-days
+Deaths (vaccinated):        875
+Deaths (unvaccinated):      863
+Total clone intervals: 82070
+  Vaccinated intervals:   37708
+  Unvaccinated intervals: 44362
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,233,258 person-days
+Person-time (unvaccinated): 9,358,838 person-days
+Deaths (vaccinated):        888
+Deaths (unvaccinated):      833
+Total clone intervals: 81953
+  Vaccinated intervals:   37608
+  Unvaccinated intervals: 44345
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,158,480 person-days
+Person-time (unvaccinated): 9,409,111 person-days
+Deaths (vaccinated):        872
+Deaths (unvaccinated):      831
+Total clone intervals: 81695
+  Vaccinated intervals:   37530
+  Unvaccinated intervals: 44165
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,129,280 person-days
+Person-time (unvaccinated): 9,326,028 person-days
+Deaths (vaccinated):        877
+Deaths (unvaccinated):      838
+Total clone intervals: 81788
+  Vaccinated intervals:   37582
+  Unvaccinated intervals: 44206
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,152,854 person-days
+Person-time (unvaccinated): 9,303,186 person-days
+Deaths (vaccinated):        892
+Deaths (unvaccinated):      841
+Total clone intervals: 81551
+  Vaccinated intervals:   37385
+  Unvaccinated intervals: 44166
+FIRST_VAX_DAY: 361
+last_obs: 1065.0
+Analysis window length: 704 days
+Person-time (vaccinated):   21,050,814 person-days
+Person-time (unvaccinated): 9,392,049 person-days
+Deaths (vaccinated):        866
+Deaths (unvaccinated):      845
+Bootstrap successful replicates: 30/30
+Saved survival plot: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) C.S. Pierce evidence weighted RMST\AE) C.S. Pierce evidence weighted RMST_RECLASSIFIED_AG70_PeirceSurvival_CI.html
+Saved RMST plot: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) C.S. Pierce evidence weighted RMST\AE) C.S. Pierce evidence weighted RMST_RECLASSIFIED_AG70_PeirceRMST_CI.html
+Saved summary CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) C.S. Pierce evidence weighted RMST\AE) C.S. Pierce evidence weighted RMST_RECLASSIFIED_AG70_summary.csv
+
+=== Finished Peircean Evidence-Weighted RMST Analysis ===

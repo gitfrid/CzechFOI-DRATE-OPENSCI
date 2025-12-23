@@ -1,0 +1,2 @@
+AGE,FIRST_VAX_DAY,last_obs,window_days,tau,Delta_RMST_empirical_final,Delta_RMST_empirical_95CI_low,Delta_RMST_empirical_95CI_high,Delta_RMST_weighted_final,Delta_RMST_weighted_95CI_low,Delta_RMST_weighted_95CI_high
+70,361,1065.0,704,703,-8.047660954549485,-25.48293643836231,4.711961134222273,-4.57488751727811,-4.332656463468429,0.6745132270705775
