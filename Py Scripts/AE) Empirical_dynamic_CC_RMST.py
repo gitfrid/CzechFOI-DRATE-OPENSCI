@@ -85,8 +85,8 @@ RANDOM_SEED = 12345
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST")
 
-# --- real data with 20% UVX→VX reclassification (sensitivity) ---
-#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_uvx_as_vx_AG{AGE}.csv")
+# --- real data with 5% UVX→VX reclassification (sensitivity) ---
+#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_PTC5_uvx_as_vx_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_RECLASSIFIED")
 
 # --- simulated HR=1 null dataset ---
