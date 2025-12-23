@@ -83,7 +83,7 @@ These include age‑specific CSV mortality files created by the scripts.
 
 ---
 
-### Results Plots & Logs
+### Result Plots & Logs
 
 Plots and epidemiological logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
 They visualize vaccination timing, synthetic dose assignments, exposure durations, and cumulative person‑time curves.
