@@ -14,7 +14,7 @@ Simulations complement this by testing how misclassification, timing artifacts, 
 
 ---
 ## Workflow Overview
-Raw FOI Data  
+Raw FOI Data (all Age Goups)  
     ↓  
 Data Export (per Age Group) — creates the real‑world dataset  
     ↓  
@@ -40,7 +40,7 @@ Analogy: *“On average, how many days did each person live during the study?”
 
 ---
 
-### DataScripts & Data Overview
+### Scripts Overview
 
 All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts):
 
@@ -49,12 +49,16 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
 - [AA) real_data_sim_dose_reclassified_uvx_as_vx.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20real_data_sim_dose_reclassified_uvx_as_vx.py)  
   Performs Mortality‑Conditioned Stochastic Imputation (MCSI) to test misclassification sensitivity.
+  
+  It answers the question: What happens to VE and RMST estimates when a small fraction of unvaccinated deaths are plausibly reclassified as vaccinated based on the observed rollout?
 
 - [AA) simulate deaths doseschedule and bias all AG.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20simulate%20deaths%20doseschedule%20and%20bias%20all%20AG.py)  
   Simulates deaths and vaccination schedules to explore potential biases.
 
+  It answers the question: Do RMST and survival-analysis methods falsely detect vaccine effects when deaths are simulated under a true null effect (HR = 1) but real vaccination schedules are retained?
+
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
-  RMST analysis using pooled logistic regression (Target Trial emulation).
+  Causal model based RMST analysis using pooled logistic regression (Target Trial emulation).
   
   Estimates the causal effect of vaccination on survival by asking a counterfactual question: What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
 
@@ -79,9 +83,9 @@ These include age‑specific CSV mortality files created by the scripts.
 
 ---
 
-### Plots & Logs
+### Result Plots & Logs
 
-Plots and audit logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
+Plots and epidemiological logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
 They visualize vaccination timing, synthetic dose assignments, exposure durations, and cumulative person‑time curves.
 
 ---
