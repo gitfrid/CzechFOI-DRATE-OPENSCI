@@ -23,3 +23,18 @@ Cumulative incidence at τ=703: CI_v=0.0261, CI_u=0.0704
 Vaccine effectiveness VE(τ=703): +62.877%
 NNT per life-year gained (τ=703): 21.07
 Starting bootstrap (30 replications, subsample=0.40)
+Bootstrap successful replicates: 30/30
+ΔRMST(τ=703) 95% CI: [15.13, 19.55] days
+VE(τ=703) 95% CI:     [58.148%, 66.668%]
+NNT per life-year gained 95% CI: [18.67, 24.16]
+Figure 1. Cumulative difference in restricted mean survival time, ΔRMST(t), between vaccination and no-vaccination strategies over follow-up time. The solid line shows the point estimate from a pooled logistic regression with spline-based time-varying effects; the shaded area denotes the 95% bootstrap confidence band based on cluster resampling of individuals. The horizontal dashed line at zero corresponds to no difference in RMST.
+Figure 2. Restricted mean survival time curves, RMST_v(t) and RMST_u(t), for vaccination and no-vaccination strategies. Solid lines denote the point estimates obtained from the pooled logistic model; shaded bands represent 95% bootstrap confidence intervals based on cluster resampling. These curves describe the cumulative expected survival time under each strategy, without directly displaying their difference.
+Figure 3. Standardized survival curves for vaccination and no-vaccination strategies, obtained from a pooled logistic regression with spline-based time-varying effects. Solid lines show the estimated marginal survival probabilities under each strategy; shaded areas correspond to 95% bootstrap confidence bands with cluster resampling. These curves are descriptive and complement the causal contrast shown in Figure 1.
+Summary:
+  ΔRMST(τ=703 days) = 17.32 days [95% CI: 15.13, 19.55]
+  VE(τ=703 days)    = +62.9% [95% CI: 58.1%, 66.7%]
+  NNT (per life-year) = 21.07 [95% CI: 18.67, 24.16]
+Finished. Three HTML plots generated:
+  1) ΔRMST(t):    C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_AG70_DeltaRMST_t.html
+  2) RMST_v/u(t): C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_AG70_RMST_vu_t.html
+  3) Survival CI: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_AG70_Survival_CI.html
