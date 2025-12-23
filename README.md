@@ -58,7 +58,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   It answers the question: Do RMST and survival-analysis methods falsely detect vaccine effects when deaths are simulated under a true null effect (HR = 1) but real vaccination schedules are retained?
 
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
-  RMST analysis using pooled logistic regression (Target Trial emulation).
+  Causal model based RMST analysis using pooled logistic regression (Target Trial emulation).
   
   Estimates the causal effect of vaccination on survival by asking a counterfactual question: What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
 
