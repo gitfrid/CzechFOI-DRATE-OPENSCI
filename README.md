@@ -97,5 +97,10 @@ Science that does not share anonymized data or the used code risks becoming dogm
 
 ---
 
+**Author:**  
+AI/Drifting :2025 
+
+---
+
 **Disclaimer:**  
 This repository is for methodological exploration only and is not intended for making causal claims.
