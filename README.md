@@ -13,17 +13,16 @@ Traditional VE metrics (such as hazard ratios) rely on strong assumptions and ca
 Simulations complement this by testing how misclassification, timing artifacts, or structural biases could influence RMST‑based estimates.
 
 ---
-
 ## Workflow Overview
 Raw FOI Data  
     ↓  
-Raw Data Export (per Age Groups)  
+Data Export (per Age Group) — creates the real‑world dataset  
     ↓  
-Simulation of Dataset / Bias Checks / Misclassification Sensitivity  
+Simulations (per Age Group) — creates bias check dataset and misclassification sensitivity dataset 
     ↓  
-RMST Estimation (Empirical and Causal)  
+RMST Estimation (Empirical and Causal) — applied to all datasets  
     ↓  
-Comparison of Methods and Results  
+Comparison of Methods and Results — across all datasets  
     ↓  
 Plots, Logs, Interpretation
 
