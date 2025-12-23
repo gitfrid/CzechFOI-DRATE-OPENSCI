@@ -18,7 +18,7 @@ Raw FOI Data
     ↓  
 Data Export (per Age Group) — creates the real‑world dataset  
     ↓  
-Simulations (per Age Group) — creates bias check dataset and misclassification sensitivity dataset 
+Simulations (per Age Group) — creates bias-check and misclassification-sensitivity dataset  
     ↓  
 RMST Estimation (Empirical and Causal) — applied to all datasets  
     ↓  
