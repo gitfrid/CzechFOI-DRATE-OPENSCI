@@ -82,10 +82,12 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   Asking the descriptive question: How did survival differ between vaccinated and unvaccinated individuals when exposure status is frozen at a chosen landmark day, avoiding time‑varying classification?
   
 - [AE) C.S. Peirce evidence weighted rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20C.S.%20Pierce%20evidence%20weighted%20rmst.py)  
-  Exploratory: Evidence‑weighted RMST estimation - New Idea inspired by C. S. Peirce’s concept of statistical “surprisingness.”
-
-  Asking the methodological question: How much of the observed survival difference is supported by strong, non‑random evidence when daily RMST contributions are weighted by their statistical significance?
-
+  This script uses a Surprisal-Filter to separate real survival signals from statistical noise.
+  While standard models treat every day of data as equal, this script weights daily results by their statistical certainty (I(t)=−log10​p).
+  By prioritizing high-evidence days over sparse-data flukes.
+  
+  It answers the question: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
+  
   **Related Wiki Pages:**  [Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-(simple-Explanation))  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-Estimator-(experimental))
 
 ---
