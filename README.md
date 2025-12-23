@@ -14,7 +14,7 @@ Simulations complement this by testing how misclassification, timing artifacts, 
 
 ---
 ## Workflow Overview
-Raw FOI Data  
+Raw FOI Data  (all Age Goups)
     ↓  
 Data Export (per Age Group) — creates the real‑world dataset  
     ↓  
