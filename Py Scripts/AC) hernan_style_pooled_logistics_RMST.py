@@ -61,12 +61,12 @@ STUDY_START = pd.Timestamp("2020-01-01")
 # Input / Output paths (adapt to your local environment)
 
 # real world Czech-FOI data
-#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv")
-#OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST")
+INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv")
+OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST")
 
 # simulated dataset HR=1 with simulated real dose schedule (sensitivity test if the used methode is bias free - null hypothesis)
-INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
-OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_SIM")
+#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
+#OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_SIM")
 
 # real data with hypothetical 5% uvx deaths reclassified as vx (sensitivity test for missclassifcation)
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_PTC1_uvx_as_vx_AG{AGE}.csv")
