@@ -98,7 +98,7 @@ Science that does not share anonymized data or the used code risks becoming dogm
 ---
 
 **Author:**  
-AI/Drifting :2025 
+AI/Drifting - 2025 
 
 ---
 
