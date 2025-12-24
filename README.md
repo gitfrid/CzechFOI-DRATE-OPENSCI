@@ -83,7 +83,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   
 - [AE) C.S. Peirce evidence weighted rmst.py (Exploratory)](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20C.S.%20Pierce%20evidence%20weighted%20directional%20rmst.py)  
   C.S. Peirce inspired Evidence-Weighted RMST Script uses an Information-Theoretic Surprisal-Filter to separate real survival signals from statistical noise.
-  While standard models treat every day of data as equal, this script weights daily results by their statistical certainty (I(t)=−log10​p), prioritizing high-evidence days over sparse-data flukes.
+  While standard models treat every day of data as equal, this script weights daily results by their statistical certainty $$I(t) = \text{sign}(\Delta S(t)) \times -\ln(p(t))$$, prioritizing high-evidence days over sparse-data flukes.
 
   It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
 
