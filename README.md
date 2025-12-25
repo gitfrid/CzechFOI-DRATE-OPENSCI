@@ -49,7 +49,8 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
 - [AA) real_data_sim_dose_reclassified_uvx_as_vx.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20real_data_sim_dose_reclassified_uvx_as_vx.py)  
   Performs Mortality‑Conditioned Stochastic Imputation (MCSI) to test misclassification sensitivity.
-  The script identifies everyone currently labeled as unvaccinated (where Datum_1 -> first dose is missing). It then randomly selects a fixed percentage (e.g., 5%) of these individuals—regardless of whether they lived or died—to be "imputed" as vaccinated.
+  This script simulates conservative, calendar-consistent reclassification of a fixed fraction of “unvaccinated” individuals whose dose dates are missing, 
+  in order to test how sensitive VE and RMST estimates are to plausible exposure misclassification—without introducing immortal time bias or negative exposure artifacts.
   It answers the question: What happens to VE and RMST estimates when a small fraction of unvaccinated are plausibly reclassified as vaccinated based on the observed rollout?
 
 - [AA) simulate deaths doseschedule and bias all AG.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20simulate%20deaths%20doseschedule%20and%20bias%20all%20AG.py)  
