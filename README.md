@@ -99,9 +99,14 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
 ### Data
 
-Input and processed datasets are stored in the [Terra folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Terra).  
-These include age‑specific CSV mortality files created by the scripts.
+All primary input and processed datasets are hosted in the [Terra folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Terra). 
 
+The repository includes three distinct datafiles (for each Age-Group) used as input for the methodes:
+
+* **Real-World Data:** Age-specific mortality CSV files containing the raw, official Czech FOI data.
+* **Null Hypothesis (HR=1) Simulation:** A synthetic dataset with a constant Hazard Ratio of 1.0 and simulated real dose schedule , used to validate that the methodologies do not produce false-positive signals.
+* **Stress-Test (Bias Simulation):** The reclassified real dataset where **5% of the Unvaccinated (UVX)** cohort is intentionally shifted to the **Vaccinated (VX)** cohort to measure the impact (sensitivity) of potential misclassification bias.
+  
 ---
 
 ### Result Plots & Logs
@@ -111,7 +116,9 @@ They visualize vaccination timing, synthetic dose assignments, exposure duration
 
 
 
-**Related Wiki Pages:**  [Age 70 Mortality Analysis Results](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Age-70-Mortality-Analysis-Results) 
+**Related Wiki Pages:**  
+[Age 70 Mortality Analysis Results](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Age-70-Mortality-Analysis-Results) -> 
+[Result-Files](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Statistical-Analysis-Result-Files-AG70) -> 
 [Plot-Files preview](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/HTML-Plot-Files-shown-as-PNG)
 
 ---
