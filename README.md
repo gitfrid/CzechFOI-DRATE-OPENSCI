@@ -20,7 +20,7 @@ Data Export (per Age Group) — creates the real‑world dataset
     ↓  
 Simulations (per Age Group) — creates a HR=1 bias-check and a misclassification-sensitivity dataset  
     ↓  
-RMST Estimation (per Age Group) - using scientific Empirical or Causal Methodes or experimental Methodes — applied to all three datasets  
+RMST Estimation (per Age Group) - using scientific empirical or causal Methodes or experimental Methodes — applied to all three datasets  
     ↓  
 Comparison of emprical vs causal Methods and Results — across all three datasets  
     ↓  
