@@ -56,9 +56,9 @@ SAFETY_BUFFER = 30
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) C.S. Pierce evidence weighted RMST\AE) C.S. Pierce evidence weighted RMST_SIM")
 
-# simulated dataset real data with 5% uvx deaths reclassified as vx
-INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_PTC5_uvx_as_vx_AG{AGE}.csv")
-OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) C.S. Pierce evidence weighted RMST\AE) C.S. Pierce evidence weighted RMST_RECLASSIFIED")
+# simulated dataset real data with 5% uvx death or alive reclassified as vx
+INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{AGE}.csv")
+OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) C.S. Pierce evidence weighted RMST\AE) C.S. Pierce evidence weighted RMST_DeathOrAlive_RECLASSIFIED")
 
 # Bootstrap settings
 N_BOOT = 5

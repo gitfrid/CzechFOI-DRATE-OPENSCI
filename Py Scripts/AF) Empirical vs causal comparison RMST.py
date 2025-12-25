@@ -51,8 +51,8 @@ IMMUNITY_LAG = 0    # Optional: lag vaccinated start
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AF) Empirical_vs_causal_comparison_RMST\AF) Empirical_vs_causal_comparison_SIM")
 
-# real data with hypothetical 5% uvx deaths reclassified as vx (sensitivity test for missclassifcation)
-INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_PTC5_uvx_as_vx_AG{AGE}.csv")
+# real data with hypothetical 5% uvx death or alive reclassified as vx (sensitivity test for missclassifcation)
+INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{AGE}.csv")
 OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AF) Empirical_vs_causal_comparison_RMST\AF) Empirical_vs_causal_comparison_RECLASSIFIED")
 
 OUTPUT_BASE.parent.mkdir(parents=True, exist_ok=True)

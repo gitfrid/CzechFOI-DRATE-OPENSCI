@@ -2,67 +2,27 @@
 # -*- coding: utf-8 -*-
 
 """
-Historical vs Clone–Censor RMST Analysis (Descriptive + Bias Diagnostic)
-======================================================================
+Empirical Time-to-Event Comparison Using Historical Switching
+and Clone–Censor Design (RMST-Based Diagnostic Analysis)
+================================================================
+Key rules (December 2025 – strict version):
+- Time 0 = day of FIRST vaccination in the entire cohort
+- Absolute study end = last_obs = last relevant event date - SAFETY_BUFFER
+- NOTHING is calculated, plotted or considered after last_obs
+- No extrapolation, no padding, no late tail analysis
 
-This script performs a fully empirical time-to-event analysis using 
-individual-level data to compute and compare three distinct quantities:
-
-1) Historical (Naive) ΔRMST
-   -------------------------
-   A purely descriptive estimate of what ACTUALLY happened historically. 
-   Individuals contribute person-time to the unvaccinated pool until the 
-   day of vaccination, then transition to the vaccinated pool. 
-   
-   Reflects real-world behavior, rollout timing, frailty selection, 
-   and immortal time effects exactly as they occurred in the population.
-
-2) Clone–Censor (CC) ΔRMST
-   -----------------------
-   A bias-minimized empirical association estimate constructed via 
-   cloning and artificial censoring at protocol deviation. 
-
-   Approximates a hypothetical per-protocol comparison using observed 
-   hazards, effectively mitigating immortal time bias by ensuring 
-   treatment assignment is fixed at t=0 of the rollout.
-
-3) ΔΔRMST(t) = CC ΔRMST − Historical ΔRMST
-   ----------------------------------------
-   A diagnostic quantity measuring the magnitude and timing of 
-   selection bias (e.g., healthy vaccinee effects). 
-   
-   Quantifies the "bias gap": the distance between the observed historical 
-   association and the bias-minimized construction.
-
-4) Hazard Ratio (HR) Diagnostic
-   ----------------------------
-   A daily smoothed (7-day rolling) empirical Hazard Ratio comparison. 
-   Used to identify if bias is concentrated during specific phases 
-   (e.g., early rollout vs. late follow-up).
-
-Outputs:
---------
-• CSV: Detailed daily survival curves, RMST, ΔRMST, and ΔΔRMST.
-• HTML (Interactive Plotly):
-    - ΔRMST Comparison (Historical vs. CC with 95% CI)
-    - Survival Curves (CC Model)
-    - ΔΔRMST (Bias Diagnostic Magnitude)
-    - Daily Hazard Ratio (7-day Smoothed Diagnostic)
-• LOG: High-fidelity summary of person-days, deaths, and VE(τ).
-
-Author:  drifting + AI Date:    2025-12-22 Version: 1
+Author: AI-assisted / gitfried   Version: 1.8   Date: Dec 2025
 """
 
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from scipy.integrate import simpson
 from tqdm import tqdm
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 import logging
 import multiprocessing
 from concurrent.futures import ProcessPoolExecutor
+from itertools import repeat
 
 # =====================================================================
 # Configuration
@@ -73,23 +33,23 @@ AGE_REF_YEAR = 2023
 
 IMMUNITY_LAG = 0
 SAFETY_BUFFER = 30
-SPARSE_RISK_THRESHOLD = 10
-BOOTSTRAP_REPS = 30
+BOOTSTRAP_REPS = 100
 RANDOM_SEED = 12345
+SPARSE_RISK_THRESHOLD = 10
 
 # =====================================================================
 # INPUT / OUTPUT
 # =====================================================================
 
-# --- real Czech FOI data ---
+# --- real Czech FOI dataset per AG  ---
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST")
 
-# --- real data with 5% UVX→VX reclassification (sensitivity) ---
-#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_PTC5_uvx_as_vx_AG{AGE}.csv")
-#OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_RECLASSIFIED")
+# --- simulated dataset - real data with 5% death or alive UVX→VX reclassification (sensitivity) ---
+#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{AGE}.csv")
+#OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_DeathOrAlive_RECLASSIFIED")
 
-# --- simulated HR=1 null dataset ---
+# --- simulated null dataset - HR=1 with simulated real dose schedule  ---
 INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
 OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_SIM")
 
@@ -104,178 +64,240 @@ PLOT_DIFF  = OUT_BASE.with_name(f"{OUT_BASE.name}_DeltaDelta_RMST.html")
 PLOT_HR    = OUT_BASE.with_name(f"{OUT_BASE.name}_Hazard_Ratio.html")
 
 # =====================================================================
-# Logging Setup
+# Top-Level Functions (Required for Windows multiprocessing spawn)
 # =====================================================================
-def setup_logger(path):
-    lg = logging.getLogger("rmst_analysis")
-    lg.setLevel(logging.INFO)
-    lg.handlers = []
-    fh = logging.FileHandler(path, mode="w", encoding="utf-8")
-    fh.setFormatter(logging.Formatter("%(asctime)s | %(message)s"))
-    lg.addHandler(fh)
-    return lg
 
-logger = setup_logger(LOG_OUT)
-
-def log(msg):
-    print(msg)
-    logger.info(msg)
-
-# =====================================================================
-# Core Computational Functions (Untouched)
-# =====================================================================
-def rmst_curve(S, t):
-    out = np.zeros_like(t, dtype=float)
-    for i in range(1, len(t)):
-        out[i] = simpson(S[: i + 1], x=t[: i + 1])
-    return out
+def compute_discrete_rmst(S):
+    """Calculates cumulative sum of survival for daily RMST."""
+    return np.cumsum(S)
 
 def compute_daily_events(df, start_day, end_day):
-    window = int(end_day - start_day)
+    """Efficiently counts daily risk and events using difference arrays."""
+    window = int(end_day - start_day) + 1
     events = np.zeros(window, dtype=int)
     diff = np.zeros(window + 1, dtype=int)
+
     si = np.clip((df["start"].values - start_day).astype(int), 0, window)
     ei = np.clip((df["stop"].values - start_day).astype(int), 0, window)
+
     np.add.at(diff, si, 1)
     np.add.at(diff, ei, -1)
     risk = np.cumsum(diff)[:window]
-    ev_idx = ei[df["event"].values.astype(bool)] - 1
-    ev_idx = ev_idx[(ev_idx >= 0) & (ev_idx < window)]
-    np.add.at(events, ev_idx, 1)
+
+    ev_mask = df["event"].values.astype(bool)
+    ev_idx = ei[ev_mask] - 1
+    valid = (ev_idx >= 0) & (ev_idx < window)
+    np.add.at(events, ev_idx[valid], 1)
+
     return events, risk
 
-def preprocess_raw(raw):
-    raw = raw.copy()
-    raw.columns = raw.columns.str.strip()
-    for c in ["DatumUmrti"] + [c for c in raw.columns if c.startswith("Datum_")]:
-        raw[c] = pd.to_datetime(raw[c], errors="coerce")
-    raw["age"] = AGE_REF_YEAR - pd.to_numeric(raw["Rok_narozeni"], errors="coerce")
-    raw = raw[raw["age"] == AGE].reset_index(drop=True)
-    raw["death_day"] = (raw["DatumUmrti"] - STUDY_START).dt.days
-    raw["vax_day"] = (raw["Datum_1"] - STUDY_START).dt.days
-    raw.loc[raw["death_day"] < 0, "death_day"] = np.nan
-    raw.loc[raw["vax_day"] < 0, "vax_day"] = np.nan
-    return raw
+def build_clones_and_time(raw):
+    """Refined clone building with strict time-zero anchoring."""
+    FIRST = int(raw["vax_day"].dropna().min())
+    death_max = raw["death_day"].dropna().max()
+    vax_max   = raw["vax_day"].dropna().max()
+    last_relevant = min(x for x in [death_max, vax_max] if pd.notna(x))
+    last_obs = last_relevant - SAFETY_BUFFER
 
-def build_clones(raw):
-    FIRST = int(raw["vax_day"].min(skipna=True))
-    last_obs = min(x for x in [raw["death_day"].max(skipna=True), raw["vax_day"].max(skipna=True)] if pd.notna(x)) - SAFETY_BUFFER
-    if last_obs <= FIRST: raise ValueError("Insufficient follow-up window")
-    t = np.arange(int(last_obs - FIRST))
+    if last_obs <= FIRST:
+        raise ValueError(f"No follow-up after safety buffer (FIRST={FIRST}, last_obs={last_obs})")
+
+    t = np.arange(FIRST, int(last_obs) + 1)
     clones = []
-    for _, r in raw.iterrows():
-        d, f = r["death_day"], r["vax_day"]
-        su, eu = FIRST, min(x for x in [f, d, last_obs] if pd.notna(x))
-        if eu > su: clones.append((0, su, eu, int(pd.notna(d) and d <= eu)))
+    for r in raw.itertuples():
+        d, f = r.death_day, r.vax_day
+        # Unvaccinated clone (Historical source)
+        eu = min(x for x in [f, d, last_obs] if pd.notna(x))
+        if eu > FIRST:
+            clones.append((0, FIRST, eu, int(pd.notna(d) and d <= eu)))
+        # Vaccinated clone
         if pd.notna(f):
-            sv, ev = max(f + IMMUNITY_LAG, FIRST), min(x for x in [d, last_obs] if pd.notna(x))
-            if ev > sv: clones.append((1, sv, ev, int(pd.notna(d) and sv <= d <= ev)))
+            sv = max(f + IMMUNITY_LAG, FIRST)
+            ev = min(x for x in [d, last_obs] if pd.notna(x))
+            if ev > sv:
+                clones.append((1, sv, ev, int(pd.notna(d) and sv <= d <= ev)))
+
     clones_df = pd.DataFrame(clones, columns=["vaccinated", "start", "stop", "event"])
-    return clones_df.astype({"vaccinated": "int8", "event": "int8"}), t, FIRST, last_obs
+    return clones_df.astype({"vaccinated":"int8", "event":"int8"}), t, FIRST, last_obs
 
-def compute_cc_rmst(clones, t, FIRST, last_obs):
-    ev_v, r_v = compute_daily_events(clones[clones.vaccinated == 1], FIRST, last_obs)
-    ev_u, r_u = compute_daily_events(clones[clones.vaccinated == 0], FIRST, last_obs)
-    haz_v = np.where(r_v > SPARSE_RISK_THRESHOLD, ev_v / r_v, 0.0)
-    haz_u = np.where(r_u > SPARSE_RISK_THRESHOLD, ev_u / r_u, 0.0)
-    S_v, S_u = np.cumprod(1 - haz_v), np.cumprod(1 - haz_u)
-    RMST_v, RMST_u = rmst_curve(S_v, t), rmst_curve(S_u, t)
-    return S_v, S_u, RMST_v, RMST_u, RMST_v - RMST_u, r_v, r_u, haz_v, haz_u
+def compute_rmst_components(data, t_full, FIRST, is_historical=False):
+    """Core hazard and RMST engine."""
+    end_day = t_full[-1]
+    if is_historical:
+        n_days = len(t_full)
+        r_v, r_u, ev_v, ev_u = np.zeros(n_days), np.zeros(n_days), np.zeros(n_days), np.zeros(n_days)
+        vax_days, death_days = data["vax_day"].values, data["death_day"].values
+        for i, day in enumerate(t_full):
+            alive = np.isnan(death_days) | (death_days >= day)
+            r_v[i] = np.sum((vax_days <= day) & alive)
+            r_u[i] = np.sum(((np.isnan(vax_days)) | (vax_days > day)) & alive)
+            ev_v[i] = np.sum((vax_days <= day) & (death_days == day))
+            ev_u[i] = np.sum(((np.isnan(vax_days)) | (vax_days > day)) & (death_days == day))
+    else:
+        ev_v, r_v = compute_daily_events(data[data.vaccinated==1], FIRST, end_day)
+        ev_u, r_u = compute_daily_events(data[data.vaccinated==0], FIRST, end_day)
 
-def compute_historical_rmst(raw, FIRST, last_obs, t):
-    days = np.arange(FIRST, int(last_obs))
-    n_days = len(days)
-    r_v, r_u, ev_v, ev_u = np.zeros(n_days), np.zeros(n_days), np.zeros(n_days), np.zeros(n_days)
-    vax_days, death_days = raw["vax_day"].values, raw["death_day"].values
-    for i, day in enumerate(days):
-        r_v[i] = np.sum((vax_days <= day) & ((np.isnan(death_days)) | (death_days > day)))
-        r_u[i] = np.sum(((np.isnan(vax_days)) | (vax_days > day)) & ((np.isnan(death_days)) | (death_days > day)))
-        ev_v[i] = np.sum((vax_days <= day) & (death_days == day))
-        ev_u[i] = np.sum(((np.isnan(vax_days)) | (vax_days > day)) & (death_days == day))
-    haz_v, haz_u = np.where(r_v > SPARSE_RISK_THRESHOLD, ev_v / r_v, 0.0), np.where(r_u > SPARSE_RISK_THRESHOLD, ev_u / r_u, 0.0)
-    S_v, S_u = np.cumprod(1 - haz_v), np.cumprod(1 - haz_u)
-    RMST_v, RMST_u = rmst_curve(S_v, t), rmst_curve(S_u, t)
-    return S_v, S_u, RMST_v, RMST_u, RMST_v - RMST_u, r_v, r_u, haz_v, haz_u
+    haz_v = np.full_like(r_v, np.nan, dtype=float)
+    haz_u = np.full_like(r_u, np.nan, dtype=float)
+    mask_v = r_v > SPARSE_RISK_THRESHOLD
+    mask_u = r_u > SPARSE_RISK_THRESHOLD
+    
+    haz_v[mask_v] = ev_v[mask_v] / r_v[mask_v]
+    haz_u[mask_u] = ev_u[mask_u] / r_u[mask_u]
 
-def bootstrap_once(i, raw):
+    S_v = np.minimum(np.cumprod(np.where(np.isnan(haz_v), 1.0, 1.0 - haz_v)), 1.0)
+    S_u = np.minimum(np.cumprod(np.where(np.isnan(haz_u), 1.0, 1.0 - haz_u)), 1.0)
+
+    RMST_v = compute_discrete_rmst(S_v)
+    RMST_u = compute_discrete_rmst(S_u)
+
+    return S_v, S_u, RMST_v, RMST_u, (RMST_v - RMST_u), r_v, r_u, haz_v, haz_u
+
+def bootstrap_survival_and_delta(args):
+    """Worker function for cluster bootstrap."""
+    i, raw, t_full, FIRST, global_trunc_limit = args
     np.random.seed(RANDOM_SEED + i)
-    raw_b = raw.sample(frac=1, replace=True).reset_index(drop=True)
-    clones_b, t_b, FIRST_b, last_obs_b = build_clones(raw_b)
-    res = compute_cc_rmst(clones_b, t_b, FIRST_b, last_obs_b)
-    return res[4] # Delta_cc
+    indices = np.random.choice(len(raw), len(raw), replace=True)
+    raw_b = raw.iloc[indices].reset_index(drop=True)
+    try:
+        clones_b, _, _, _ = build_clones_and_time(raw_b)
+        Sv_b, Su_b, _, _, delta_b, *_ = compute_rmst_components(clones_b, t_full, FIRST, is_historical=False)
+        return (Sv_b[:global_trunc_limit], 
+                Su_b[:global_trunc_limit], 
+                delta_b[:global_trunc_limit])
+    except:
+        return None
 
 # =====================================================================
-# Main Execution
+# Main execution
 # =====================================================================
 if __name__ == "__main__":
     multiprocessing.freeze_support()
 
-    log("=== INITIALIZING EPIDEMIOLOGICAL BIAS DIAGNOSTIC ===")
-    raw = preprocess_raw(pd.read_csv(INPUT, low_memory=False))
-    
-    clones, t, FIRST, last_obs = build_clones(raw)
-    S_v_cc, S_u_cc, RMST_v_cc, RMST_u_cc, Delta_cc, r_v_cc, r_u_cc, h_v_cc, h_u_cc = compute_cc_rmst(clones, t, FIRST, last_obs)
-    S_v_hist, S_u_hist, RMST_v_hist, RMST_u_hist, Delta_hist, r_v_hist, r_u_hist, h_v_hist, h_u_hist = compute_historical_rmst(raw, FIRST, last_obs, t)
+    def setup_logger(path):
+        lg = logging.getLogger("rmst_analysis")
+        lg.setLevel(logging.INFO)
+        lg.handlers = []
+        fh = logging.FileHandler(path, mode="w", encoding="utf-8-sig")
+        fh.setFormatter(logging.Formatter("%(asctime)s | %(message)s"))
+        lg.addHandler(fh)
+        return lg
 
-    Delta_diff = Delta_cc - Delta_hist
-    VE_cc = 1 - (1 - S_v_cc[-1]) / (1 - S_u_cc[-1]) if S_u_cc[-1] < 1 else np.nan
+    logger = setup_logger(LOG_OUT)
+    def log(msg): print(msg); logger.info(msg)
 
-    # Calculate Empirical HR (7-day smoothed)
-    def smooth_hr(h_v, h_u):
-        hv_s = pd.Series(h_v).rolling(7, center=True).mean()
-        hu_s = pd.Series(h_u).rolling(7, center=True).mean()
-        return hv_s / hu_s
+    log("STARTING STRICT RMST BIAS DIAGNOSTIC ANALYSIS WITH PLOTS")
+    log(f"Age group: {AGE} | Safety buffer: {SAFETY_BUFFER} | Bootstrap reps: {BOOTSTRAP_REPS}")
 
-    hr_cc = smooth_hr(h_v_cc, h_u_cc)
-    hr_hist = smooth_hr(h_v_hist, h_u_hist)
+    def preprocess_raw(raw):
+        raw = raw.copy()
+        raw.columns = raw.columns.str.strip()
+        for c in ["DatumUmrti"] + [c for c in raw.columns if c.startswith("Datum_")]:
+            raw[c] = pd.to_datetime(raw[c], errors="coerce")
+        raw["age"] = AGE_REF_YEAR - pd.to_numeric(raw["Rok_narozeni"], errors="coerce")
+        raw = raw[raw["age"] == AGE].reset_index(drop=True)
+        raw["death_day"] = (raw["DatumUmrti"] - STUDY_START).dt.days
+        raw["vax_day"]   = (raw["Datum_1"]     - STUDY_START).dt.days
+        raw.loc[raw["death_day"] < 0, "death_day"] = np.nan
+        raw.loc[raw["vax_day"]   < 0, "vax_day"]   = np.nan
+        return raw
+
+    df_raw = preprocess_raw(pd.read_csv(INPUT, low_memory=False))
+    clones, t_full, FIRST, last_obs = build_clones_and_time(df_raw)
+
+    log("Computing main analysis arms...")
+    S_v_cc, S_u_cc, R_v_cc, R_u_cc, Delta_cc_full, rv_cc, ru_cc, hv_cc, hu_cc = compute_rmst_components(clones, t_full, FIRST, False)
+    S_v_hi, S_u_hi, R_v_hi, R_u_hi, Delta_hi_full, rv_hi, ru_hi, hv_hi, hu_hi = compute_rmst_components(df_raw, t_full, FIRST, True)
+
+    trunc_cc = np.argmax(np.minimum(rv_cc, ru_cc) <= SPARSE_RISK_THRESHOLD) or len(t_full)
+    trunc_hi = np.argmax(np.minimum(rv_hi, ru_hi) <= SPARSE_RISK_THRESHOLD) or len(t_full)
+    g_idx = min(trunc_cc, trunc_hi)
+    log(f"Global truncation at index {g_idx} (CC@{trunc_cc}, Hist@{trunc_hi})")
+
+    t_days = t_full[:g_idx] - FIRST
+    Delta_cc = Delta_cc_full[:g_idx]
+    Delta_hi = Delta_hi_full[:g_idx]
+    Sv_cc_p, Su_cc_p = S_v_cc[:g_idx], S_u_cc[:g_idx]
+    Sv_hi_p, Su_hi_p = S_v_hi[:g_idx], S_u_hi[:g_idx]
+    hv_cc_p, hu_cc_p = hv_cc[:g_idx], hu_cc[:g_idx]
+    hv_hi_p, hu_hi_p = hv_hi[:g_idx], hu_hi[:g_idx]
 
     log(f"Running bootstrap ({BOOTSTRAP_REPS} reps)...")
-    with ProcessPoolExecutor() as ex:
-        boots = list(tqdm(ex.map(bootstrap_once, range(BOOTSTRAP_REPS), [raw]*BOOTSTRAP_REPS), total=BOOTSTRAP_REPS))
-    boot_arr = np.array(boots)
-    lo, hi = np.nanpercentile(boot_arr, 2.5, axis=0), np.nanpercentile(boot_arr, 97.5, axis=0)
+    with ProcessPoolExecutor() as executor:
+        boot_results = list(tqdm(executor.map(bootstrap_survival_and_delta, 
+                                             zip(range(BOOTSTRAP_REPS), repeat(df_raw), repeat(t_full), repeat(FIRST), repeat(g_idx))), 
+                                 total=BOOTSTRAP_REPS))
+    
+    boot_results = [r for r in boot_results if r is not None]
+    b_Sv = np.array([r[0] for r in boot_results])
+    b_Su = np.array([r[1] for r in boot_results])
+    b_D  = np.array([r[2] for r in boot_results])
 
-    # ------------------ Final summary logging ------------------
-    log("\n" + "="*74)
-    log(f"EPIDEMIOLOGICAL SUMMARY: AG{AGE}")
-    log("="*74)
-    log(f"Historical ΔRMST: {Delta_hist[-1]:+.2f} days")
-    log(f"Clone-Censor ΔRMST: {Delta_cc[-1]:+.2f} days (95% CI: {lo[-1]:.2f}, {hi[-1]:.2f})")
-    log(f"Bias Diagnostic (ΔΔRMST): {Delta_diff[-1]:+.2f} days")
-    log("="*74)
+    Sv_lo, Sv_hi = np.nanpercentile(b_Sv, [2.5, 97.5], axis=0)
+    Su_lo, Su_hi = np.nanpercentile(b_Su, [2.5, 97.5], axis=0)
+    D_lo, D_hi_ci = np.nanpercentile(b_D, [2.5, 97.5], axis=0)
 
-    # ------------------ Plotly Visualizations ------------------
-    # Plot 1: Delta RMST Comparison
-    fig1 = go.Figure()
-    fig1.add_trace(go.Scatter(x=t, y=Delta_hist, name="Historical (Reality)", line=dict(color='gray', dash='dash')))
-    fig1.add_trace(go.Scatter(x=t, y=Delta_cc, name="CC (Bias-Minimized)", line=dict(color='blue', width=3)))
-    fig1.add_trace(go.Scatter(x=t, y=hi, fill=None, mode='lines', line_color='rgba(0,0,255,0)', showlegend=False))
-    fig1.add_trace(go.Scatter(x=t, y=lo, fill='tonexty', mode='lines', line_color='rgba(0,0,255,0)', fillcolor='rgba(0,0,255,0.1)', name="95% CI"))
-    fig1.update_layout(template="plotly_white", title=f"AG{AGE}: Accumulated Life-Days Gained/Lost", xaxis_title="Days since Start", yaxis_title="ΔRMST (Days)")
-    fig1.write_html(PLOT_DRMST)
+    log("Generating Plotly visualisations...")
+    # 1. Survival Plot
+    fig_surv = go.Figure()
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Sv_hi_p, name="Vacc (Hist)", line=dict(dash='dash', color='lightgreen')))
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Su_hi_p, name="Unvax (Hist)", line=dict(dash='dash', color='lightcoral')))
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Sv_hi, mode='lines', line_color='rgba(0,0,0,0)', showlegend=False))
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Sv_lo, fill='tonexty', fillcolor='rgba(0,128,0,0.1)', line_color='rgba(0,0,0,0)', name="Vacc CC 95% CI"))
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Sv_cc_p, name="Vacc (CC)", line=dict(color='green', width=3)))
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Su_hi, mode='lines', line_color='rgba(0,0,0,0)', showlegend=False))
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Su_lo, fill='tonexty', fillcolor='rgba(200,0,0,0.1)', line_color='rgba(0,0,0,0)', name="Unvax CC 95% CI"))
+    fig_surv.add_trace(go.Scatter(x=t_days, y=Su_cc_p, name="Unvax (CC)", line=dict(color='red', width=3)))
+    fig_surv.update_layout(title=f"Survival AG{AGE}: Historical vs Clone-Censor", template="plotly_white", yaxis_range=[0.8, 1.01])
+    fig_surv.write_html(PLOT_SURV)
 
-    # Plot 2: Survival Curves
-    fig2 = go.Figure()
-    fig2.add_trace(go.Scatter(x=t, y=S_u_cc, name="Unvax (CC)", line=dict(color='red')))
-    fig2.add_trace(go.Scatter(x=t, y=S_v_cc, name="Vax (CC)", line=dict(color='green')))
-    fig2.update_layout(template="plotly_white", title=f"AG{AGE}: Survival Probabilities (CC Model)", yaxis_range=[S_u_cc.min()*0.99, 1.0])
-    fig2.write_html(PLOT_SURV)
+    # 2. Delta RMST Plot
+    fig_delta = go.Figure()
+    fig_delta.add_trace(go.Scatter(x=t_days, y=D_hi_ci, mode='lines', line_color='rgba(0,0,0,0)', showlegend=False))
+    fig_delta.add_trace(go.Scatter(x=t_days, y=D_lo, fill='tonexty', fillcolor='rgba(0,0,255,0.1)', line_color='rgba(0,0,0,0)', name="CC 95% CI"))
+    fig_delta.add_trace(go.Scatter(x=t_days, y=Delta_hi, name="Historical ΔRMST", line=dict(dash='dash', color='gray')))
+    fig_delta.add_trace(go.Scatter(x=t_days, y=Delta_cc, name="Clone-Censor ΔRMST", line=dict(color='blue', width=3)))
+    fig_delta.update_layout(title=f"Delta RMST AG{AGE}: Days Gained (Empirical)", template="plotly_white")
+    fig_delta.write_html(PLOT_DRMST)
 
-    # Plot 3: Bias Diagnostic
-    fig3 = go.Figure()
-    fig3.add_trace(go.Scatter(x=t, y=Delta_diff, fill='tozeroy', name="ΔΔRMST Bias", line=dict(color='purple')))
-    fig3.update_layout(template="plotly_white", title=f"AG{AGE}: Selection Bias Magnitude Over Time", yaxis_title="Difference (Days)")
-    fig3.write_html(PLOT_DIFF)
+    # 3. Bias Diagnostic (Delta-Delta)
+    fig_bias = go.Figure()
+    fig_bias.add_trace(go.Scatter(x=t_days, y=Delta_cc - Delta_hi, fill='tozeroy', name="Bias (ΔΔRMST)", line=dict(color='purple')))
+    fig_bias.update_layout(title=f"Bias Diagnostic: Clone-Censor vs Historical AG{AGE}", template="plotly_white")
+    fig_bias.write_html(PLOT_DIFF)
 
-    # Plot 4: Hazard Ratio Diagnostic
-    fig4 = go.Figure()
-    fig4.add_trace(go.Scatter(x=t, y=hr_hist, name="Historical HR", line=dict(color='gray', dash='dot')))
-    fig4.add_trace(go.Scatter(x=t, y=hr_cc, name="Clone-Censor HR", line=dict(color='black', width=2)))
-    fig4.add_hline(y=1.0, line_dash="dash", line_color="red")
-    fig4.update_layout(template="plotly_white", title=f"AG{AGE}: Daily Hazard Ratio (7-day Smooth)", yaxis_type="log", yaxis_title="Hazard Ratio (V vs U)")
-    fig4.write_html(PLOT_HR)
+    # 4. Hazard Ratio Plot (Smoothed)
+    hr_cc = pd.Series(hv_cc_p).rolling(7, center=True).mean() / pd.Series(hu_cc_p).rolling(7, center=True).mean()
+    fig_hr = go.Figure()
+    fig_hr.add_trace(go.Scatter(x=t_days, y=hr_cc, name="Smoothed CC HR", line=dict(color='black', width=2)))
+    fig_hr.add_hline(y=1.0, line_dash="dash", line_color="red")
+    fig_hr.update_layout(title=f"Hazard Ratio (7-day window) AG{AGE}", template="plotly_white", yaxis_type="log")
+    fig_hr.write_html(PLOT_HR)
 
-    # Save Data
-    results_df = pd.DataFrame({"t": t, "Delta_hist": Delta_hist, "Delta_CC": Delta_cc, "Delta_diff": Delta_diff, "HR_CC": hr_cc})
-    results_df.to_csv(CSV_OUT, index=False)
-    log(f"Results saved to {CSV_OUT}")
+    # --- ADVANCED EPIDEMIOLOGICAL SUMMARY ---
+    log("\n" + "="*90)
+    log("EXTENDED EPIDEMIOLOGICAL & METHODOLOGICAL SUMMARY")
+    log("="*90)
+    n_total = len(df_raw)
+    n_vax = df_raw["vax_day"].notna().sum()
+    n_deaths = df_raw["death_day"].notna().sum()
+    
+    log(f"Cohort size (age group {AGE}):           {n_total:,d} individuals")
+    log(f"Ever vaccinated (≥1 dose):               {n_vax:,d} ({n_vax/n_total:6.1%})")
+    log(f"Total deaths observed:                   {n_deaths:,d} ({n_deaths/n_total:6.1%})")
+    
+    final_day = int(t_days[-1])
+    log(f"\nResults at day {final_day} since first vaccination in cohort:")
+    log(f"  Historical ΔRMST:                        {Delta_hi[-1]:+8.2f} days")
+    log(f"  Clone–Censor ΔRMST:                      {Delta_cc[-1]:+8.2f} days")
+    log(f"    95% bootstrap CI (n={BOOTSTRAP_REPS}):          [{D_lo[-1]:+6.2f}, {D_hi_ci[-1]:+6.2f}] days")
+    log(f"  ΔΔRMST (Bias/Selection Diagnostic):      {Delta_cc[-1]-Delta_hi[-1]:+8.2f} days")
+
+    inc_v = 1 - Sv_cc_p[-1]
+    inc_u = 1 - Su_cc_p[-1]
+    ve = (1 - (inc_v / inc_u)) if inc_u > 0 else 0
+    log(f"\nCrude Analysis (CC Design at day {final_day}):")
+    log(f"  Crude Vaccine Effectiveness (1-RR):      {ve:+8.1%}")
+    log(f"  Risk set (Vaccinated arm):               {rv_cc[g_idx-1]:6.0f}")
+    log(f"  Risk set (Unvaccinated arm):             {ru_cc[g_idx-1]:6.0f}")
+    log("="*90)

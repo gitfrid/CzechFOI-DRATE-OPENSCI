@@ -68,9 +68,10 @@ STUDY_START = pd.Timestamp("2020-01-01")
 #INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_SIM")
 
-# real data with hypothetical 5% uvx deaths reclassified as vx (sensitivity test for missclassifcation)
-INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_reclassified_PTC5_uvx_as_vx_AG{AGE}.csv")
-OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_RECLASSIFIED")
+# real data with hypothetical 5% uvx death or alive reclassified as vx (sensitivity test for missclassifcation)
+INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{AGE}.csv")
+OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan_style_poold_logistics_RMST\AC) hernan_style_poold_logistics_RMST_DeathOrAlive_RECLASSIFIED")
+
 
 N_BOOT = 30               # number of bootstrap replications
 BOOT_SUBSAMPLE = 0.4      # fraction of subjects per bootstrap sample
