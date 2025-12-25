@@ -59,16 +59,17 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   It answers the question: Do RMST and survival-analysis methods falsely detect vaccine effects when deaths are simulated under a true null effect (HR = 1) but real vaccination schedules are retained?
 
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
-  Causal model based RMST analysis using pooled logistic regression  
-  **(Target Trial emulation - scientific Gold Standard - but no covariates are used.)**.
+  Causal model based RMST analysis using pooled logistic regression (Hernan style)  
+  **Target Trial emulation - scientific Gold Standard - but no covariates are used.**.
   
   Estimates the causal effect of vaccination on survival by asking the Hypothetical counterfactual question:  
   What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
 
 - [AE) Empirical_dynamic_CC_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AE%29%20Empirical_dynamic_CC_RMST.py)  
   Empirical RMST estimation with dynamic exposure classification and clone–censor design.  
-  This script computes non-parametric, empirical time-to-event summaries using individual-level data and discrete-time hazards.  
   **Descriptional no regression models, parametric assumptions, or covariates are used.**
+  
+  This script computes non-parametric, empirical time-to-event summaries using individual-level data and discrete-time hazards.  
 
   It addresses two complementary descriptive questions:  
   What survival difference was observed under real-world vaccination rollout with time-varying exposure?  
