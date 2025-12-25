@@ -4,6 +4,10 @@ This repository analyzes Czech FOI mortality data to evaluate vaccine effectiven
 
 Empirical approaches estimate VE directly from observed data, while causal models emulate hypothetical scenarios and can adjust for confounding. RMST measures the average survival time within a fixed follow‑up period and expresses differences in days lived between groups.
 
+
+**Results see Related:**  [WiKi](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+
+
 ---
 
 ## Scientific Motivation
