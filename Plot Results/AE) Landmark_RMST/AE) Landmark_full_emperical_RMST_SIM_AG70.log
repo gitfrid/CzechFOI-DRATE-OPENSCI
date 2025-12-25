@@ -1,0 +1,531 @@
+2025-12-23 04:55:52,790 | MainProcess | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:52,857 | MainProcess | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:52,861 | MainProcess | Starting bootstrap...
+2025-12-23 04:55:55,243 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:55,417 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:55,489 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:55,821 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:55,834 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:56,068 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:56,106 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:56,231 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:56,386 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:56,484 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:56,528 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:56,736 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:56,740 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:56,917 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:56,986 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:57,145 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:57,183 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:57,333 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:57,347 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:57,484 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:57,615 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:57,787 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:57,802 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:57,977 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:58,061 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:58,241 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:58,250 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:58,432 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:58,491 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:58,667 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:58,677 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:58,805 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:58,884 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:59,094 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:59,109 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:59,355 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:59,407 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:59,610 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:55:59,687 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:59,880 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:55:59,936 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:00,213 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:00,226 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:00,657 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:00,881 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:01,372 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:01,604 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:02,188 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:02,280 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:02,527 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:02,539 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:02,699 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:02,825 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:02,936 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:03,008 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:03,126 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:03,219 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:03,355 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:03,495 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:03,628 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:03,851 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:04,232 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:04,284 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:04,493 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:04,542 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:04,699 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:04,739 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:04,874 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:04,958 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:05,095 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:05,196 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:05,431 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:05,476 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:05,718 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:05,779 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:05,969 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:06,018 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:06,184 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:06,234 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:06,464 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:06,647 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:06,820 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:06,824 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:06,983 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:07,052 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:07,330 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:07,385 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:07,890 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:07,960 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:08,071 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:08,205 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:08,327 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:08,386 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:08,511 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:08,607 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:08,744 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:08,828 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:08,937 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:09,065 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:09,234 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:09,274 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:09,458 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:09,478 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:09,634 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:09,684 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:09,828 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:09,919 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:10,072 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:10,105 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:10,247 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:10,325 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:10,453 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:10,514 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:10,638 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:10,793 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:10,968 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:10,997 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:11,184 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:11,186 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:11,328 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:11,417 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:11,540 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:11,615 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:11,744 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:11,837 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:12,009 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:12,002 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:12,164 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:12,287 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:12,457 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:12,474 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:12,606 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:12,695 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:12,871 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:12,890 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:13,037 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:13,132 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:13,323 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:13,327 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:13,460 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:13,583 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:13,699 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:13,797 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:13,944 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:14,007 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:14,178 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:14,197 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:14,394 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:14,456 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:14,653 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:14,662 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:14,891 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:14,902 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:15,051 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:15,161 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:15,436 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:15,496 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:15,605 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:15,620 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:15,739 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:15,806 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:15,941 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:16,084 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:16,231 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:16,264 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:16,400 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:16,477 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:16,601 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:16,703 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:16,844 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:16,939 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:17,132 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:17,200 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:17,407 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:17,434 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:17,593 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:17,632 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:17,738 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:17,874 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:18,069 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:18,119 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:18,271 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:18,296 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:18,475 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:18,606 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:18,772 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:18,802 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:18,997 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:19,005 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:19,195 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:19,291 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:19,446 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:19,486 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:19,614 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:19,696 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:19,840 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:19,877 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:20,032 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:20,154 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:20,300 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:20,366 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:20,543 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:20,580 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:20,734 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:20,823 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:21,001 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:21,015 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:21,180 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:21,280 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:21,497 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:21,562 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:21,682 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:21,775 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:21,896 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:22,024 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:22,344 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:22,400 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:22,604 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:22,642 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:22,770 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:22,781 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:22,941 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:23,052 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:23,202 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:23,285 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:23,480 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:23,533 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:23,651 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:23,747 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:24,008 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:24,086 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:24,212 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:24,308 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:24,497 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:24,666 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:24,753 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:24,755 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:24,895 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:25,033 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:25,185 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:25,268 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:25,445 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:25,511 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:25,645 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:25,685 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:25,837 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:25,863 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:26,018 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:26,136 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:26,302 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:26,341 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:26,516 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:26,545 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:26,696 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:26,748 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:26,882 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:27,002 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:27,185 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:27,216 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:27,404 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:27,431 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:27,621 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:27,654 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:27,784 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:27,856 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:28,047 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:28,077 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:28,217 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:28,303 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:28,419 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:28,522 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:28,687 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:28,737 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:28,908 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:28,933 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:29,120 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:29,142 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:29,445 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:29,545 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:29,669 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:29,757 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:29,825 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:29,878 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:30,014 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:30,104 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:30,239 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:30,320 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:30,440 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:30,557 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:30,726 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:30,737 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:30,883 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:30,935 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:31,084 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:31,181 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:31,306 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:31,390 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:31,519 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:31,616 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:31,937 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:31,956 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:32,386 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:32,493 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:33,419 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:33,651 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:34,287 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:34,358 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:34,542 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:34,650 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:34,814 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:34,894 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:35,044 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:35,109 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:35,250 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:35,331 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:35,455 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:35,596 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:35,746 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:35,886 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:36,043 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:36,222 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:36,347 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:36,451 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:36,579 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:36,635 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:36,757 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:36,858 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:36,989 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:37,078 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:37,238 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:37,329 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:37,487 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:37,568 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:37,718 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:37,826 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:37,947 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:38,035 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:38,202 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:38,329 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:38,517 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:38,596 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:39,048 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:39,262 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:39,512 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:39,598 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:39,866 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:39,921 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:40,079 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:40,130 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:40,256 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:40,390 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:40,519 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:40,589 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:40,793 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:40,834 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:40,995 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:41,059 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:41,228 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:41,279 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:41,440 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:41,495 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:41,720 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:41,746 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:41,983 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:42,050 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:42,243 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:42,300 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:42,513 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:42,558 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:42,792 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:42,797 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:43,136 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:43,197 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:43,370 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:43,453 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:43,642 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:43,648 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:44,081 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:44,167 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:44,447 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:44,516 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:44,721 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:44,796 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:45,065 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:45,100 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:45,284 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:45,310 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:45,493 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:45,538 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:45,698 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:45,858 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:46,043 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:46,079 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:46,194 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:46,196 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:46,323 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:46,359 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:46,469 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:46,537 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-23 04:56:46,646 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-23 04:56:47,262 | MainProcess | Bootstrap CI added and CSV updated: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv
+2025-12-23 04:56:49,773 | MainProcess | ΔRMST plot saved: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_ΔRMST_AG70.html
+2025-12-23 04:56:50,154 | MainProcess | Survival plot saved: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_Survival_AG70.html
+2025-12-23 04:56:50,156 | MainProcess | --------------------------------------------------------------------------
+2025-12-23 04:56:50,156 | MainProcess | Empirical Landmark RMST summary (non-parametric, unbiased)
+2025-12-23 04:56:50,156 | MainProcess | Total subjects: 136530
+2025-12-23 04:56:50,158 | MainProcess | Total vaccinated (any time): 110661
+2025-12-23 04:56:50,158 | MainProcess | Total deaths: 7834
+2025-12-23 04:56:50,158 | MainProcess | Landmarks computed: 24
+2025-12-23 04:56:50,162 | MainProcess | Median ΔRMST: +0.02 days
+2025-12-23 04:56:50,164 | MainProcess | Mean ΔRMST: +0.70 days
+2025-12-23 04:56:50,164 | MainProcess | Median N_v: 107278; Median N_u: 23528
+2025-12-23 04:56:50,164 | MainProcess | --------------------------------------------------------------------------
+2025-12-25 01:18:10,220 | MainProcess | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:10,283 | MainProcess | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:10,286 | MainProcess | Starting bootstrap...
+2025-12-25 01:18:12,390 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:12,445 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:12,560 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:12,654 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:12,805 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:12,924 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:13,001 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:13,125 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:13,224 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:13,353 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:13,426 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:13,556 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:13,626 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:13,755 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:13,874 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:14,139 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:14,171 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:14,428 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:14,580 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:14,700 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:14,731 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:14,895 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:14,954 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:15,097 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:15,213 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:15,357 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:15,427 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:15,532 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:15,626 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:15,885 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:15,959 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:16,112 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:16,167 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:16,344 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:16,344 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:16,552 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:16,579 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:16,781 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:16,789 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:17,002 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:17,019 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:17,275 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:17,375 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:17,523 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:17,548 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:17,664 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:17,737 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:17,862 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:17,965 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:18,146 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:18,221 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:18,408 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:18,420 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:18,553 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:18,653 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:18,850 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:18,862 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:19,064 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:19,083 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:19,318 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:19,360 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:19,542 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:19,569 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:19,759 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:19,792 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:19,973 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:20,046 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:20,180 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:20,321 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:20,329 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:20,410 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:20,528 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:20,620 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:20,756 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:20,818 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:21,016 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:21,024 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:21,230 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:21,252 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:21,457 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:21,489 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:21,804 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:21,830 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:22,022 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:22,040 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:22,235 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:22,270 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:22,464 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:22,504 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:22,656 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:22,704 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:22,840 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:22,971 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:23,196 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:23,204 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:23,457 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:23,538 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:23,596 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:23,740 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:23,832 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:24,017 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:24,267 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:24,295 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:24,497 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:24,687 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:24,800 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:24,858 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:25,107 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:25,126 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:25,777 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 01:18:25,841 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_SIM_AG70.csv | Landmarks computed: 24
+2025-12-25 01:18:26,073 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24

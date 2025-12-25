@@ -1,0 +1,25 @@
+﻿2025-12-25 01:29:25,806 | STARTING STRICT RMST BIAS DIAGNOSTIC ANALYSIS WITH PLOTS
+2025-12-25 01:29:25,806 | Age group: 70 | Safety buffer: 30 | Bootstrap reps: 100
+2025-12-25 01:29:27,513 | Computing main analysis arms...
+2025-12-25 01:29:28,316 | Global truncation at index 704 (CC@704, Hist@705)
+2025-12-25 01:29:28,316 | Running bootstrap (100 reps)...
+2025-12-25 01:30:47,401 | Generating Plotly visualisations...
+2025-12-25 01:30:48,346 | 
+==========================================================================================
+2025-12-25 01:30:48,346 | EXTENDED EPIDEMIOLOGICAL & METHODOLOGICAL SUMMARY
+2025-12-25 01:30:48,360 | ==========================================================================================
+2025-12-25 01:30:48,363 | Cohort size (age group 70):           136,530 individuals
+2025-12-25 01:30:48,364 | Ever vaccinated (≥1 dose):               113,641 ( 83.2%)
+2025-12-25 01:30:48,364 | Total deaths observed:                   7,837 (  5.7%)
+2025-12-25 01:30:48,366 | 
+Results at day 703 since first vaccination in cohort:
+2025-12-25 01:30:48,366 |   Historical ΔRMST:                          +15.04 days
+2025-12-25 01:30:48,367 |   Clone–Censor ΔRMST:                        +14.80 days
+2025-12-25 01:30:48,367 |     95% bootstrap CI (n=100):          [+12.63, +16.68] days
+2025-12-25 01:30:48,368 |   ΔΔRMST (Bias/Selection Diagnostic):         -0.24 days
+2025-12-25 01:30:48,368 | 
+Crude Analysis (CC Design at day 703):
+2025-12-25 01:30:48,369 |   Crude Vaccine Effectiveness (1-RR):        +57.5%
+2025-12-25 01:30:48,371 |   Risk set (Vaccinated arm):               111053
+2025-12-25 01:30:48,374 |   Risk set (Unvaccinated arm):              17861
+2025-12-25 01:30:48,374 | ==========================================================================================

@@ -1,0 +1,416 @@
+2025-12-25 04:54:54,141 | MainProcess | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:54,201 | MainProcess | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:54,203 | MainProcess | Starting bootstrap...
+2025-12-25 04:54:56,910 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:57,209 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:57,217 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:57,472 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:57,520 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:57,778 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:57,844 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:58,080 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:58,138 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:58,316 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:58,356 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:58,516 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:58,676 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:58,915 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:59,042 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:59,318 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:59,387 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:59,548 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:59,654 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:54:59,813 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:54:59,867 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:00,046 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:00,184 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:00,364 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:00,435 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:00,638 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:00,684 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:00,885 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:01,070 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:01,353 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:01,368 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:01,562 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:01,635 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:01,758 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:01,827 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:01,987 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:02,070 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:02,209 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:02,305 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:02,506 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:02,600 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:02,893 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:02,915 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:03,205 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:03,221 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:03,360 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:03,458 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:03,656 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:03,667 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:03,786 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:03,914 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:04,040 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:04,117 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:04,245 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:04,369 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:04,636 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:04,702 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:04,986 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:04,988 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:05,190 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:05,278 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:05,419 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:05,530 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:05,654 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:05,734 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:05,857 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:05,998 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:06,124 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:06,202 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:06,353 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:06,463 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:06,590 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:06,695 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:06,827 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:06,945 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:07,081 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:07,174 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:07,300 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:07,401 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:07,531 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:07,684 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:07,816 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:07,900 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:08,056 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:08,156 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:08,382 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:08,425 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:08,720 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:08,745 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:09,066 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:09,084 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:09,424 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:09,456 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:09,782 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:09,805 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:09,956 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:10,021 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:10,160 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:10,226 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:10,362 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:10,472 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:10,591 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:10,699 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:10,822 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:10,916 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:11,041 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:11,118 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:11,247 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:11,398 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:11,528 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:11,653 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:11,831 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:11,860 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:12,024 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:12,211 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:12,450 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:12,553 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:12,828 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:12,950 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:13,117 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:13,230 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:13,464 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:13,496 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:13,726 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:13,757 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:13,892 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:13,987 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:14,232 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:14,288 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:14,428 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:14,462 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:14,619 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:14,798 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:14,929 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:15,035 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:15,161 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:15,260 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:15,389 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:15,486 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:15,824 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:15,846 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:16,089 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:16,185 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:16,356 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:16,499 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:16,635 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:16,729 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:16,872 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:16,964 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:17,096 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:17,185 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:17,324 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:17,428 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:17,540 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:17,656 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:17,826 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:17,983 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:18,240 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:18,291 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:18,555 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:18,627 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:18,836 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:18,871 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:19,029 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:19,093 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:19,268 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:19,318 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:19,468 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:19,535 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:19,664 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:19,767 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:19,892 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:20,000 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:20,212 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:20,337 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:20,462 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:20,557 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:20,857 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:20,910 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:21,226 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:21,289 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:21,561 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:21,601 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:21,941 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:22,014 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:22,255 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:22,310 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:22,542 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:22,600 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:22,869 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:22,904 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:23,112 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:23,170 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:23,405 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:23,523 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:23,700 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:23,810 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:24,005 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:24,068 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:24,289 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:24,392 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:24,674 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:24,681 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:24,851 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:24,966 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:25,102 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:25,195 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:25,478 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:25,532 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:25,714 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:25,798 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:25,925 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:26,065 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:26,210 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:26,238 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:26,394 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:26,488 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:26,699 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:26,772 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:27,020 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:27,046 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:27,215 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:27,344 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:27,491 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:27,548 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:27,716 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:27,797 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:28,008 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:28,031 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:28,183 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:28,297 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:28,480 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:28,512 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:28,736 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:28,827 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:28,946 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:29,043 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:29,202 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:29,296 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:29,500 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:29,518 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:29,708 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:29,731 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:29,883 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:29,976 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:30,113 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:30,194 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:30,316 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:30,412 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:30,543 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:30,616 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:30,748 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:30,890 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:31,031 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:31,112 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:31,238 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:31,358 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:31,484 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:31,576 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:31,704 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:31,801 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:31,938 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:32,060 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:32,198 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:32,284 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:32,452 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:32,514 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:32,650 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:32,777 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:32,904 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:32,992 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:33,124 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:33,220 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:33,352 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:33,406 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:33,546 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:33,721 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:33,965 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:33,970 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:34,158 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:34,300 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:34,574 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:34,587 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:34,946 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:35,009 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:35,158 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:35,262 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:35,413 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:35,450 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:35,586 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:35,678 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:35,809 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:35,902 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:36,021 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:36,185 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:36,315 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:36,491 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:36,775 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:36,859 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:37,386 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:37,423 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:37,647 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:37,724 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:37,971 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:38,016 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:38,236 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:38,280 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:38,422 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:38,576 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:38,804 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:38,846 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:39,178 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:39,224 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:39,618 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:39,648 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:40,027 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:40,071 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:40,451 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:40,521 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:40,688 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:40,742 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:40,854 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:40,962 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:41,186 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:41,204 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:41,350 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:41,464 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:41,589 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:41,684 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:41,856 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:41,906 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:42,029 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:42,112 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:42,235 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:42,352 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:42,478 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:42,562 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:42,691 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:42,791 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:42,922 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:43,041 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:43,163 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:43,502 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:43,747 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:43,829 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:44,158 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:44,214 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:44,492 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:44,532 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:44,743 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:45,030 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:45,366 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:45,478 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:45,652 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:45,703 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:45,860 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:45,986 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:46,118 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:46,228 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:46,363 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:46,459 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:46,634 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:46,795 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:47,025 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:47,153 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:47,432 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:47,454 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:47,626 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:47,713 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:47,902 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:47,957 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:48,160 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:48,176 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:48,321 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:48,398 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:48,534 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:48,618 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:48,752 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:48,829 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:49,030 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:49,188 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:49,494 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:49,598 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:49,826 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:49,913 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:50,067 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:50,128 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:50,247 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:50,359 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:50,523 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:50,600 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:50,750 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:50,816 | SpawnProcess-1 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:50,963 | SpawnProcess-1 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:51,127 | SpawnProcess-4 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:51,225 | SpawnProcess-4 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:51,292 | SpawnProcess-2 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:51,397 | SpawnProcess-2 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:51,434 | SpawnProcess-3 | Subjects: 136530 | Landmark window: 361-1065 (705 days) | Landmarks: 24
+2025-12-25 04:55:51,534 | SpawnProcess-3 | Saved CSV: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv | Landmarks computed: 24
+2025-12-25 04:55:51,870 | MainProcess | Bootstrap CI added and CSV updated: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_AG70.csv
+2025-12-25 04:55:53,270 | MainProcess | ΔRMST plot saved: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_ΔRMST_AG70.html
+2025-12-25 04:55:53,419 | MainProcess | Survival plot saved: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST\AE) Landmark_full_emperical_RMST_DeathOrALive_RECLASSIFIED_Survival_AG70.html
+2025-12-25 04:55:53,419 | MainProcess | --------------------------------------------------------------------------
+2025-12-25 04:55:53,419 | MainProcess | Empirical Landmark RMST summary (non-parametric, unbiased)
+2025-12-25 04:55:53,419 | MainProcess | Total subjects: 136530
+2025-12-25 04:55:53,419 | MainProcess | Total vaccinated (any time): 114667
+2025-12-25 04:55:53,421 | MainProcess | Total deaths: 7837
+2025-12-25 04:55:53,421 | MainProcess | Landmarks computed: 24
+2025-12-25 04:55:53,421 | MainProcess | Median ΔRMST: +1.23 days
+2025-12-25 04:55:53,421 | MainProcess | Mean ΔRMST: -0.30 days
+2025-12-25 04:55:53,423 | MainProcess | Median N_v: 111752; Median N_u: 19058
+2025-12-25 04:55:53,423 | MainProcess | --------------------------------------------------------------------------
