@@ -46,12 +46,12 @@ SPARSE_RISK_THRESHOLD = 10
 #OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST")
 
 # --- simulated dataset - real data with 5% death or alive UVX→VX reclassification (sensitivity) ---
-#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{AGE}.csv")
-#OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_DeathOrAlive_RECLASSIFIED")
+INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{AGE}.csv")
+OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_DeathOrAlive_RECLASSIFIED")
 
 # --- simulated null dataset - HR=1 with simulated real dose schedule  ---
-INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
-OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_SIM")
+#INPUT = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv")
+#OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) emperical_dynamic_CC_RMST\AE emperical_dynamic_CC_RMST_SIM")
 
 OUT_BASE = OUTPUT_BASE.with_name(f"{OUTPUT_BASE.name}_AG{AGE}")
 OUT_BASE.parent.mkdir(parents=True, exist_ok=True)

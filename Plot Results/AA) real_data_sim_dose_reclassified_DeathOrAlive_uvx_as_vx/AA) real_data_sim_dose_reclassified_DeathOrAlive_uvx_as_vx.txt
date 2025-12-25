@@ -1,13 +1,27 @@
-2025-12-25 01:09:57,897 | ==========================================================================================
-2025-12-25 01:09:57,897 | EXPOSURE MISCLASSIFICATION AUDIT — AGE 70
-2025-12-25 01:09:57,897 | Misclassification fraction: 5.0%
-2025-12-25 01:09:57,897 | Total cohort size:          136530
-2025-12-25 01:09:57,897 | Reclassified individuals:   136
-2025-12-25 01:09:57,897 | Assignment strategies:      {'Empirical': 136}
-2025-12-25 01:09:57,897 | Mean exposure (real/synth): 307.5 / 40.4 days
-2025-12-25 01:09:57,915 | Quantiles real (25/50/75):  166 / 304 / 456
-2025-12-25 01:09:57,915 | Quantiles synth (25/50/75): 14 / 32 / 58
-2025-12-25 01:09:57,915 |   Empirical exposure (25/50/75): 14 / 32 / 58
-2025-12-25 01:09:57,916 | Injected person-days:       5500
-2025-12-25 01:09:57,916 | KS divergence (dose dates): 0.2368 (p=6.94e-07)
-2025-12-25 01:09:57,916 | ==========================================================================================
+2025-12-25 03:44:37,196 | --- Extended Epidemiological Outputs (Imputed) ---
+2025-12-25 03:44:37,196 | Imputed individuals (N):       1026
+2025-12-25 03:44:37,196 |   Deaths (imputed)            : 141
+2025-12-25 03:44:37,199 |   Survivors (imputed)         : 885
+2025-12-25 03:44:37,199 |   Exposure (Deaths) mean/median/25-75%: 135.6 / 62.0 / 17.0-214.0 days
+2025-12-25 03:44:37,201 |   Exposure (Survivors) mean/median/25-75%: 598.6 / 611.0 / 593.0-619.0 days
+2025-12-25 03:44:37,201 | Total person-time (imputed) ~ 1502.8 person-years (mean 1.465 per imputed individual)
+2025-12-25 03:44:37,215 | Imputed weekly vaccination rate (first 3 weeks):
+2025-12-25 03:44:37,215 |   Week 2020-12-21/2020-12-27: 0.0000 of cohort
+2025-12-25 03:44:37,215 |   Week 2020-12-28/2021-01-03: 0.0001 of cohort
+2025-12-25 03:44:37,216 |   Week 2021-01-04/2021-01-10: 0.0001 of cohort
+2025-12-25 03:44:37,216 | Imputed weekly vaccination rate (last 3 weeks):
+2025-12-25 03:44:37,216 |   Week 2021-12-06/2021-12-12: 0.0000 of cohort
+2025-12-25 03:44:37,216 |   Week 2021-12-13/2021-12-19: 0.0000 of cohort
+2025-12-25 03:44:37,217 |   Week 2021-12-27/2022-01-02: 0.0000 of cohort
+2025-12-25 03:44:37,235 | ==========================================================================================
+2025-12-25 03:44:37,235 | POPULATION-WIDE EXPOSURE MISCLASSIFICATION AUDIT — AGE 70
+2025-12-25 03:44:37,235 | Misclassification fraction: 5.0%
+2025-12-25 03:44:37,236 | Total cohort size:          136530
+2025-12-25 03:44:37,236 | Reclassified individuals:   1026 (Alive + Dead)
+2025-12-25 03:44:37,237 | Assignment strategies:      {'Empirical': 1026}
+2025-12-25 03:44:37,238 | Mean exposure (real deaths / all synth): 311.7 / 535.0 days
+2025-12-25 03:44:37,238 | Quantiles real (25/50/75): 174 / 306 / 458
+2025-12-25 03:44:37,239 | Quantiles synth (25/50/75): 562 / 606 / 618
+2025-12-25 03:44:37,239 |   Empirical exposure (25/50/75): 562 / 606 / 618
+2025-12-25 03:44:37,240 | KS divergence (Dose_1 dates, days since obs_start): 0.0636 (p=5.12e-04)
+2025-12-25 03:44:37,242 | ==========================================================================================
