@@ -128,7 +128,7 @@ They visualize vaccination timing, synthetic dose assignments, exposure duration
 **Raw Dataset (not included):**  
 Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)    
 
-Science that does not share anonymized data or the used code risks becoming dogmatic.
+**Science that does not share anonymized data or the used code risks becoming dogmatic.**
 
 ---
 
@@ -139,4 +139,4 @@ AI/Drifting - 2025
 
 **Disclaimer:**  
 This repository is for methodological exploration only and is not intended for making causal claims.
-May contain subtle errors of a methodological, logical, mathematical, or coding nature.
+<br>May contain subtle errors of a methodological, logical, mathematical, or coding nature.
