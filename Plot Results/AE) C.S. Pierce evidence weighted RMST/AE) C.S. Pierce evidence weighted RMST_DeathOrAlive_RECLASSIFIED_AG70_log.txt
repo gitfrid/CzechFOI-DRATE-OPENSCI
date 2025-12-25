@@ -1,0 +1,78 @@
+Logger initialized. Saving to: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) C.S. Pierce evidence weighted RMST\AE) C.S. Pierce evidence weighted RMST_DeathOrAlive_RECLASSIFIED_AG70_log.txt
+=== Peircean RMST Analysis v1.2 – Full Directional Pipeline ===
+Loading CSV: C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG70.csv
+Subjects after age filter: 136530
+Deaths: 7837, Vaccinated: 114667
+Vacc: 62,930,711 days, 2621 deaths
+Unvax: 27,901,748 days, 2532 deaths
+
+Computing Directional Peircean Core...
+Final Empirical ΔRMST: -0.688 days
+Final Weighted ΔRMST:  -0.747 days
+
+Running 5 bootstrap iterations...
+Vacc: 50,275,362 days, 2133 deaths
+Unvax: 22,360,212 days, 2018 deaths
+Vacc: 50,387,988 days, 2096 deaths
+Unvax: 22,330,768 days, 1969 deaths
+Vacc: 50,386,563 days, 2077 deaths
+Unvax: 22,349,540 days, 2007 deaths
+Vacc: 50,325,253 days, 2137 deaths
+Unvax: 22,325,217 days, 2096 deaths
+Vacc: 50,290,851 days, 2097 deaths
+Unvax: 22,325,599 days, 2105 deaths
+Vacc: 50,193,355 days, 2117 deaths
+Unvax: 22,444,712 days, 2047 deaths
+Vacc: 50,401,335 days, 2060 deaths
+Unvax: 22,329,662 days, 1984 deaths
+Vacc: 50,323,027 days, 2067 deaths
+Unvax: 22,357,636 days, 2030 deaths
+Vacc: 50,294,370 days, 2090 deaths
+Unvax: 22,301,425 days, 2012 deaths
+Vacc: 50,386,961 days, 2089 deaths
+Unvax: 22,270,105 days, 2071 deaths
+Vacc: 50,298,110 days, 2122 deaths
+Unvax: 22,357,312 days, 1968 deaths
+Vacc: 50,364,910 days, 1994 deaths
+Unvax: 22,273,579 days, 2124 deaths
+Vacc: 50,283,641 days, 2098 deaths
+Unvax: 22,343,206 days, 2130 deaths
+Vacc: 50,256,364 days, 2111 deaths
+Unvax: 22,387,302 days, 1952 deaths
+Vacc: 50,450,599 days, 2103 deaths
+Unvax: 22,231,023 days, 2066 deaths
+
+Generating Evidence-Weighted Diagnostic Plots...
+High surprise days detected: 395
+Survival plot saved.
+RMST diagnostic plot saved.
+
+Generating Abduction Diagnostics...
+
+[Top 15 Abductive Surprises]
+calendar_date  surprisal_It          Interpretation    DeltaS
+   2020-05-31    -23.570323 Evidence favoring Unvax -0.017995
+   2020-10-23    -22.300879 Evidence favoring Unvax -0.007728
+   2020-05-30    -21.568172 Evidence favoring Unvax -0.018102
+   2020-06-17    -19.955022 Evidence favoring Unvax -0.016721
+   2020-12-25    -19.832047 Evidence favoring Unvax -0.000394
+   2020-12-19    -19.752057 Evidence favoring Unvax -0.001147
+   2021-05-09     19.628245      Strong Vax Benefit  0.011200
+   2020-12-23    -19.097525 Evidence favoring Unvax -0.000467
+   2020-05-27    -18.940899 Evidence favoring Unvax -0.018275
+   2020-10-22    -18.839009 Evidence favoring Unvax -0.007849
+   2020-05-29    -18.785026 Evidence favoring Unvax -0.018221
+   2021-05-06     18.525488      Strong Vax Benefit  0.010878
+   2021-05-08     17.737536      Strong Vax Benefit  0.011108
+   2020-12-22    -17.372910 Evidence favoring Unvax -0.000608
+   2020-05-28    -17.045739 Evidence favoring Unvax -0.018261
+
+=== Monthly Peircean Cluster Analysis ===
+  month          Interpretation  surprise_count
+2020-05 Evidence favoring Unvax               5
+2020-06 Evidence favoring Unvax               1
+2020-10 Evidence favoring Unvax               2
+2020-12 Evidence favoring Unvax               4
+2021-05      Strong Vax Benefit               3
+
+=== Analysis Complete. Check output folder for HTML diagnostics. ===
