@@ -2,7 +2,7 @@ import os
 import asyncio
 from playwright.async_api import async_playwright
 
-ROOT_DIR = r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results"
+ROOT_DIR = r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AE) Landmark_RMST"
 
 async def convert_html_to_png(browser, html_path):
     # Strictly change .html to .png for the output path
