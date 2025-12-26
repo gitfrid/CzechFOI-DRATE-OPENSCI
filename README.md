@@ -91,12 +91,19 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 ### Experimental RMST Scripts
 
 - [AE) empirical_landmark_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20empirical_landmark_RMST.py)  
-  Empirical RMST estimation using a fixed‑time landmark approach. (Results could be biasd)
+  Empirical Landmark-Conditional ΔRMST
   
-  Asking the descriptive question: How did survival differ between vaccinated and unvaccinated individuals when exposure status is frozen at a chosen landmark day, avoiding time‑varying classification?
+  Empirical landmark-conditional difference in restricted mean survival time (ΔRMST).
+  Design: Sequential target-trial emulation with eligibility defined by survival to each landmark.
+  Primary analysis ia ITT-like (no post-landmark censoring). Sensitivity analysis is Per-protocol censoring at crossover (uncorrected for informative censoring).
+  
+  Answers the question: Among people who have survived to day t, what is the difference in expected remaining survival between those already vaccinated and those not yet vaccinated (post-landmark prognosis)?
+  
   
 - [AE) C.S. Peirce evidence weighted rmst.py (Exploratory)](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20C.S.%20Pierce%20evidence%20weighted%20directional%20rmst.py)  
-  C.S. Peirce inspired Evidence-Weighted RMST Script uses an Information-Theoretic Surprisal-Filter to separate real survival signals from statistical noise.
+  C.S. Peirce inspired Evidence-Weighted RMST
+  
+  Uses an Information-Theoretic Surprisal-Filter to separate real survival signals from statistical noise.
   While standard models treat every day of data as equal, this script weights daily results by their statistical certainty $$I(t) = \text{sign}(\Delta S(t)) \times -\ln(p(t))$$, prioritizing high-evidence days over sparse-data flukes.
 
   It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
