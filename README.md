@@ -7,6 +7,8 @@ Empirical approaches estimate VE directly from observed data, while causal model
 
 **Results see Related:**  [WiKi](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
 
+**The scripts can be easily modified to obtain results for all age groups 0-113.
+<br>If you download Vesely_106_202403141131.csv (~1.9 GB) from link below.**
 
 ---
 
@@ -20,7 +22,7 @@ Simulations complement this by testing how misclassification, timing artifacts, 
 ## Workflow Overview
 Raw FOI Data (all Age Goups)  
     ↓  
-Data Export (per Age Group) — creates the real‑world dataset  
+Data Export (one file per Age Group) — creates the real‑world dataset  
     ↓  
 Simulations (per Age Group) — creates a HR=1 bias-check and a misclassification-sensitivity dataset  
     ↓  
@@ -107,7 +109,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
 All primary input and processed datasets are hosted in the [Terra folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Terra). 
 
-The repository includes three distinct datafiles (for each Age-Group) used as input for the methodes:
+This repository includes three distinct datafiles (only for Age-Group 70) used as input for the methodes:
 
 * **Real-World Data:** Age-specific mortality CSV files containing the raw, official Czech FOI data.
 * **Null Hypothesis (HR=1) Simulation:** A synthetic dataset with a constant Hazard Ratio of 1.0 and simulated real dose schedule , used to validate that the methodologies do not produce false-positive signals.
@@ -130,7 +132,7 @@ They visualize vaccination timing, synthetic dose assignments, exposure duration
 ---
 
 **Raw Dataset (not included):**  
-Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)    
+Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) 
 
 **Science that does not share anonymized data or the used code risks becoming dogmatic.**
 
