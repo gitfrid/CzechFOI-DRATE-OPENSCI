@@ -129,7 +129,7 @@ This repository includes three distinct datafiles (only for Age-Group 70) used a
 Plots and epidemiological logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
 They visualize vaccination timing, synthetic dose assignments, exposure durations, and cumulative person‑time curves.
 
-
+While raw data tracking begins on 2020-01-01, each individual's active observation period begins at Observation Start (the date of the first dose administered within the age cohort) and concludes at Observation End (the final record date minus a 30-day safety buffer). This window establishes the stable interval used to evaluate vaccination strategies and survival outcomes while ensuring data completeness and stability
 
 **Related Wiki Pages:**  
 [Age 70 Mortality Analysis Results](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Age-70-Mortality-Analysis-Results) -> 
