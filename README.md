@@ -66,7 +66,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
   Causal model based RMST analysis using pooled logistic regression (Hernan style)  
-  **Target Trial emulation - scientific Gold Standard - but no covariates are used.**.
+  **Target Trial emulation - scientific Gold Standard - except covariates are not used by design**.
   
   Estimates the causal effect of vaccination on survival by asking the Hypothetical counterfactual question:  
   What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
