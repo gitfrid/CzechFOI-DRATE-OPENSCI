@@ -1,0 +1,12 @@
+Package              | Version        
+----------------------------------------
+Python               | 3.12.5
+numpy                | 2.2.0
+pandas               | 2.2.3
+statsmodels          | 0.14.6
+scipy                | 1.16.3
+joblib               | 1.4.2
+tqdm                 | 4.67.1
+plotly               | 5.23.0
+tqdm-joblib          | 0.0.5
+----------------------------------------
