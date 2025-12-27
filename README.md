@@ -146,7 +146,8 @@ Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information reque
 ---
 
 **Author:**  
-AI/Drifting - 2025 
+AI/Drifting - 2025  
+To reproduce the analysis environment, install the dependencies listed in the [requirements.txt](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/tool%20scripts/Version%20Verification.txt) file. 
 
 ---
 
