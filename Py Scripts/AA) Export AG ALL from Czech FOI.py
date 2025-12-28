@@ -51,7 +51,7 @@ def filter_and_save_all_ages():
     print(f"🔎 Processing only Age {ages[0]}")
 
     #for age in sorted(ages):
-    for age in [70]:
+    for age in [50]:
         df_age = df[df["Age"] == age].copy()
         df_age = format_dates_for_csv(df_age)
 
