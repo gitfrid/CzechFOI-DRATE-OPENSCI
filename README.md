@@ -122,40 +122,71 @@ All scripts are located in the
 
 ### Data Preparation & Simulation
 
-- [AA) Export AG ALL from Czech FOI.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20Export%20AG%20ALL%20from%20Czech%20FOI.py)**  
+- **[AA) Export AG ALL from Czech FOI.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20Export%20AG%20ALL%20from%20Czech%20FOI.py)**  
   Exports raw age-group-specific mortality data into individual CSV files.
 
-- [AA) real_data_sim_dose_reclassified_DeathOrAlive_uvx_as_vx.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20real_data_sim_dose_reclassified_DeathOrAlive_uvx_as_vx.py)**  
-  Simulates conservative, calendar-consistent reclassification of a fixed fraction of individuals recorded as unvaccinated whose dose dates are missing.
+- **[AA) real_data_sim_dose_reclassified_DeathOrAlive_uvx_as_vx.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20real_data_sim_dose_reclassified_DeathOrAlive_uvx_as_vx.py)**  
+  Simulates conservative, calendar-consistent reclassification of a fixed fraction of individuals recorded as unvaccinated whose dose dates are missing.  
   Designed to test sensitivity of VE and RMST estimates to plausible exposure misclassification without introducing immortal-time or negative-exposure artifacts.
 
-  Question addressed:  
-  How do VE and RMST estimates change if a small fraction of unvaccinated individuals are plausibly reclassified as vaccinated based on the observed rollout?
+  **Question addressed:**  
+  *How do VE and RMST estimates change if a small fraction of unvaccinated individuals are plausibly reclassified as vaccinated based on the observed rollout?*
 
-- [AA) simulate deaths doseschedule and bias all AG.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20simulate%20deaths%20doseschedule%20and%20bias%20all%20AG.py)**  
+- **[AA) simulate deaths doseschedule and bias all AG.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20simulate%20deaths%20doseschedule%20and%20bias%20all%20AG.py)**  
   Simulates deaths and vaccination schedules under a true null effect (HR = 1) while preserving real rollout timing.
 
-  Question addressed:
-  Do RMST and survival-analysis methods falsely detect vaccine effects when no causal effect exists?
+  **Question addressed:**  
+  *Do RMST and survival-analysis methods falsely detect vaccine effects when no causal effect exists?*
 
 ---
 
 ### Causal & Empirical RMST Estimation
 
-- [AC) hernan_style_pooled_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)**  
+- **[AC) hernan_style_pooled_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)**  
   Causal RMST estimation using pooled logistic regression (Hernán style).  
   **Target-Trial emulation — methodological gold standard**, except that covariates are intentionally omitted by design.
 
-  Estimates the counterfactual contrast:  
-  What would the average survival time have been if everyone had been vaccinated versus if no one had been vaccinated?
+  **Counterfactual question:**  
+  *What would the average survival time have been if everyone had been vaccinated versus if no one had been vaccinated?*
 
-- [AE) Empirical_dynamic_CC_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AE%29%20Empirical_dynamic_CC_RMST.py)**  
+- **[AE) Empirical_dynamic_CC_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AE%29%20Empirical_dynamic_CC_RMST.py)**  
   Empirical RMST estimation using dynamic exposure classification and a clone–censor design.  
   **Purely descriptive:** no regression models, parametric assumptions, or covariates.
 
   Addresses two complementary questions:  
   - What survival difference was observed under real-world rollout with time-varying exposure?  
   - How does this compare to a protocol-fixed clone–censor construction that removes immortal time by design?
+
+---
+
+### Experimental RMST Scripts
+
+- **[AE) empirical_landmark_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20empirical_landmark_RMST.py)**  
+  **Empirical Landmark-Conditional ΔRMST**
+
+  Empirical landmark-conditional difference in restricted mean survival time (ΔRMST).  
+  Design: sequential target-trial emulation with eligibility defined by survival to each landmark.
+
+  Primary analysis is ITT-like (no post-landmark censoring).  
+  Sensitivity analysis applies per-protocol censoring at crossover (uncorrected for informative censoring).
+
+  **Question addressed:**  
+  *Among individuals who have survived to day t, what is the difference in expected remaining survival between those already vaccinated and those not yet vaccinated (post-landmark prognosis)?*
+
+- **[AE) C.S. Peirce evidence-weighted RMST.py (Exploratory)](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20C.S.%20Pierce%20evidence%20weighted%20directional%20rmst.py)**  
+  **C.S. Peirce-inspired Evidence-Weighted RMST**
+
+  Applies an information-theoretic surprisal filter to separate robust survival signals from statistical noise.  
+  Daily contributions are weighted by statistical certainty: I(t) = sign(ΔS(t)) × -ln(p(t))
+
+  High-evidence days dominate the estimate, reducing sensitivity to sparse-data fluctuations.
+
+  **Question addressed:**  
+  *How much of the observed survival benefit represents a robust signal rather than a statistical coincidence?*
+
+  **Related Wiki Pages:**  
+  - [Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  
+  - [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
 
 ---
 
