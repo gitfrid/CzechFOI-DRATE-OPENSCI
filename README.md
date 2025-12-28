@@ -221,8 +221,7 @@ Vesely_106_202403141131.csv (~1.9 GB)
 ---
 
 **Author:** AI / Drifting 2025-12  
-Environment details in  
-[requirements.txt](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/tool%20scripts/Version%20Verification.txt)
+Environment details in [requirements.txt](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/tool%20scripts/Version%20Verification.txt)
 
 ---
 
