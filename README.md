@@ -44,7 +44,7 @@ The dataset provides age-specific mortality records used for RMST gain calculati
 
 #### 2. Temporal Sensitivity and Residual Signals
 - **Observation:** Introducing a lag period (0 → 42 days) reduces RMST gains substantially across most age groups.  
-- **Interpretation:** The bias signal is particularly strong in the **immediate post-vaccination period** (first days to weeks), when no biological vaccine effect on mortality is plausible, yet apparent survival advantages are largest — a classic hallmark of **Healthy Vaccinee Bias**. Residual positive signals after lag adjustment remain smaller, heterogeneous, and **cannot be assumed causal** without further independent validation.
+- **Interpretation:** The bias signal is particularly strong in the **immediate post-vaccination period** (first days to weeks), when no biological vaccine effect on mortality is plausible, yet apparent survival advantages are largest — a classic hallmark of **Healthy Vaccinee Bias**. Residual positive signals after lag adjustment remain smaller, heterogeneous, and attenuated, and **cannot be assumed causal** without further independent validation.
 
 ---
 
