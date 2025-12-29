@@ -1,0 +1,53 @@
+INITIATING FORENSIC ANALYSIS | TIMESTAMPT: 20251228_224832
+
+Evaluating Sensitivity Lag: 0 days...
+  [Cohort 40+] Gain: 1.54h | BG-Mortality: 0.000008
+  [Cohort 50+] Gain: 4.95h | BG-Mortality: 0.000024
+  [Cohort 60+] Gain: 19.45h | BG-Mortality: 0.000071
+  [Cohort 70+] Gain: 50.11h | BG-Mortality: 0.000186
+  [Cohort 80+] Gain: 116.63h | BG-Mortality: 0.000472
+  [Cohort 90+] Gain: 117.04h | BG-Mortality: 0.000812
+  [Cohort 100+] Gain: -78.06h | BG-Mortality: 0.000569
+
+Evaluating Sensitivity Lag: 14 days...
+  [Cohort 40+] Gain: 1.41h | BG-Mortality: 0.000008
+  [Cohort 50+] Gain: 3.70h | BG-Mortality: 0.000024
+  [Cohort 60+] Gain: 16.53h | BG-Mortality: 0.000071
+  [Cohort 70+] Gain: 41.23h | BG-Mortality: 0.000186
+  [Cohort 80+] Gain: 99.80h | BG-Mortality: 0.000472
+  [Cohort 90+] Gain: 92.19h | BG-Mortality: 0.000812
+  [Cohort 100+] Gain: -78.39h | BG-Mortality: 0.000569
+
+Evaluating Sensitivity Lag: 28 days...
+  [Cohort 40+] Gain: 1.41h | BG-Mortality: 0.000008
+  [Cohort 50+] Gain: 4.45h | BG-Mortality: 0.000024
+  [Cohort 60+] Gain: 13.71h | BG-Mortality: 0.000071
+  [Cohort 70+] Gain: 34.62h | BG-Mortality: 0.000186
+  [Cohort 80+] Gain: 81.80h | BG-Mortality: 0.000472
+  [Cohort 90+] Gain: 78.36h | BG-Mortality: 0.000812
+  [Cohort 100+] Gain: -58.38h | BG-Mortality: 0.000569
+
+Evaluating Sensitivity Lag: 42 days...
+  [Cohort 40+] Gain: 1.18h | BG-Mortality: 0.000008
+  [Cohort 50+] Gain: 3.76h | BG-Mortality: 0.000024
+  [Cohort 60+] Gain: 11.05h | BG-Mortality: 0.000071
+  [Cohort 70+] Gain: 28.72h | BG-Mortality: 0.000186
+  [Cohort 80+] Gain: 63.64h | BG-Mortality: 0.000472
+  [Cohort 90+] Gain: 65.09h | BG-Mortality: 0.000812
+  [Cohort 100+] Gain: -66.46h | BG-Mortality: 0.000569
+
+======================================================================
+SCIENTIFIC SUMMARY: BIAS EROSION TABLE
+======================================================================
+| Age Group | Raw Gain (Lag 0) | Clean Gain (Lag 42) | Erosion Rate (%) |
+| :---      | :---:            | :---:               | :---:            |
+| 40+       |     1.54h       |     1.18h        |   23.0%       |
+| 50+       |     4.95h       |     3.76h        |   24.2%       |
+| 60+       |    19.45h       |    11.05h        |   43.2%       |
+| 70+       |    50.11h       |    28.72h        |   42.7%       |
+| 80+       |   116.63h       |    63.64h        |   45.4%       |
+| 90+       |   117.04h       |    65.09h        |   44.4%       |
+| 100+       |   -78.06h       |   -66.46h        |    0.0%       |
+======================================================================
+
+[COMPLETE] Analysis results and plots archived to: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AG) metrological calibration\scientific_forensic_analysis_20251228_224832.png
