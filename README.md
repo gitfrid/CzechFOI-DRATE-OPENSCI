@@ -9,6 +9,8 @@ This repository is divided into two complementary domains:
 
 ## PART I: Data Integrity Audit & Bias Quantification
 
+# **Update note: "Model update in progress: Implementing Poisson rate-modeling and time-varying covariate alignment to further eliminate immortal time bias (v10.0 coming soon)."**
+
 This is a **forensic data audit**, not a vaccine efficacy study.  
 Its purpose is to evaluate whether large survival advantages in early Czech population comparisons reflect **true biological protection** or are predominantly explained by **systematic cohort-selection bias (Healthy Vaccinee Bias, HVB)**.
 
