@@ -31,6 +31,13 @@ The central test is a *bias-detection hypothesis*:
 - **Primary Script:**  
   **[AG) metrological calibration.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20metrological%20calibration.py)**
 
+### Access to Input Data
+
+The script reads the Czech-FOI (Freedom of Information request) raw mortality dataset Vesely_106_202403141131.csv directly:
+[Download Link](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
+This dataset provides the age-group-specific mortality records that underpin the RMST gain calculations and bias detection analyses.
+
+
 ---
 
 ### Primary Forensic Findings
@@ -121,75 +128,7 @@ RMST Estimation (Empirical, Causal, or Experimental methods)
 Comparison of Results (Empirical vs. Causal ΔΔRMST)
       ↓
 Plots, Logs, & Interpretation
-
----
-
-### Primary Forensic Evidence
-
-#### 1. The Smoking Gun — Linearity
-
-- **Finding:** RMST gains scale proportionally with baseline mortality.  
-- **Interpretation:** This pattern is characteristic of the **Healthy Vaccinee Effect (HVE)**, where individuals at lower baseline risk are preferentially vaccinated.
-
----
-
-#### 2. Windmill Decay — Signal Erosion
-
-- **Finding:** Increasing the imposed immunity lag from 0 to 42 days causes the apparent survival benefit to disappear.  
-- **Interpretation:** The signal is concentrated in the early post-vaccination window, consistent with time-dependent cohort misclassification.
-
----
-
-#### 3. Bias Erosion Summary
-
-| Age Group | Raw Gain (Lag 0) | Clean Gain (Lag 42) | Erosion Rate |
-| :---      | :---:            | :---:               | :---:        |
-| 60+       | [Value] h        | [Value] h           | [X] %        |
-| 90+       | [Value] h        | [Value] h           | [X] %        |
-
-> **Detailed analysis:**  
-> For full methodological breakdowns and biological plausibility checks, see the  
-> **[Technical Forensic Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)**.
-
-> The script reads the data directly from the Czech-FOI csv raw dataset (download link below).
-
----
-
-## PART II: RMST Research & Methodological Comparisons
-
-### Scientific Motivation
-
-While **Part I audits the data**, **Part II examines how different mathematical models interpret that data**.
-
-This section compares real-world empirical observations with **Target-Trial causal emulations**.
-
-Traditional vaccine-effectiveness metrics (e.g., hazard ratios) rely on strong assumptions and are sensitive to unequal follow-up.  
-**Restricted Mean Survival Time (RMST)** provides a more intuitive alternative by summarizing **how long individuals lived**, on average, within a fixed time window.
-
-Simulations are used to test how misclassification, timing artifacts, and structural bias influence RMST-based estimates.
-
-> **Note:**  
-> Scripts can be easily adapted to generate results for all age groups (0–113).
-
-**Results:** see the related **[Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)**
-
----
-
-## Workflow Overview
-
-Raw FOI data (all age groups)  
-↓  
-Data export (one file per age group) — real-world dataset  
-↓  
-Simulations (per age group) — HR = 1 null test and misclassification sensitivity  
-↓  
-RMST estimation (per age group) — empirical, causal, or experimental methods  
-↓  
-Comparison of empirical vs. causal results — across all datasets  
-↓  
-Plots, logs, and interpretation
-
----
+```
 
 ## Concept: Restricted Mean Survival Time (RMST)
 
