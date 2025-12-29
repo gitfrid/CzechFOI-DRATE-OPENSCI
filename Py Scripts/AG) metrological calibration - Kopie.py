@@ -3,15 +3,21 @@
 """
 RESEARCH SUITE: METROLOGICAL QUANTIFICATION OF SELECTION BIAS
 Project: Forensic Analysis of Czech National Vaccination Data
-Module: RMST Trajectory & Background Mortality Correlation (RMST-Gain)
+Module: RMST Trajectory & Background Mortality Correlation (Smoking Gun)
 Version: 7.1 (Scientific Release)
 
 ABSTRACT:
 This suite implements a Restricted Mean Survival Time (RMST) analysis to 
 differentiate between genuine biological vaccine efficacy and the Healthy 
 Vaccinee Effect (HVE). By sweeping the 'Immunity Lag' (0-42 days), the script 
-quantifies the erosion of apparent benefits. The "erosion" is identified 
+quantifies the erosion of apparent benefits. The "Smoking Gun" is identified 
 via the linear correlation between RMST gain and background mortality rates.
+
+METHODOLOGY:
+1. Dynamic Landmark Cohort Selection.
+2. Sensitivity analysis via progressive immunity lag implementation.
+3. GLM-based Hazard Modeling with Cubic Spline basis functions.
+4. Parametric Bootstrap (N=100) for uncertainty quantification.
 
 AUTHOR: AI/drifting 12.2025
 """
@@ -44,23 +50,13 @@ TIME_DF = 6
 LAG_SWEEP = [0, 14, 28, 42, 56, 70, 84, 98, 112, 126, 140 ]  
 AGE_BINS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 MIN_RISK_THRESHOLD = 30
-N_BOOTSTRAP = 100            # Increased for publication-grade CIs
+N_BOOTSTRAP = 100             # Increased for publication-grade CIs
 N_JOBS = 4                   # Parallel execution cores
 RIDGE_ALPHA = 0.01           # Regularization for GLM stability
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-log_file = OUTPUT_DIR / f"forensic_log_{timestamp}.txt"
-
-# Configure logging to both console and file
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(message)s',
-    handlers=[
-        logging.FileHandler(log_file),
-        logging.StreamHandler()
-    ]
-)
+logging.basicConfig(level=logging.INFO, format='%(message)s')
 log = logging.info
 
 # ==================== FORENSIC COMPUTATION ENGINE ====================
@@ -76,7 +72,7 @@ class ForensicEngine:
         has_vax = df["vax_day"].notna().values
 
         if is_vax:
-            # Entry point shifted by immunity lag to test Decay
+            # Entry point shifted by immunity lag to test 'Windmill' decay
             entry = np.where(has_vax, v_rel + 1 + lag, time_length)
             mask = has_vax & (d_rel >= entry) & (d_rel < time_length)
             r_entry, r_exit = np.clip(entry, 0, time_length), np.clip(d_rel, 0, time_length)
@@ -123,7 +119,6 @@ class ForensicEngine:
 # ==================== MAIN EXECUTION BLOCK ====================
 if __name__ == "__main__":
     log(f"INITIATING FORENSIC ANALYSIS | TIMESTAMPT: {timestamp}")
-    log(f"LOG FILE: {log_file}")
     
     # Data Loading and Feature Engineering
     master = pd.read_csv(MASTER_FILE, low_memory=False)
@@ -142,9 +137,6 @@ if __name__ == "__main__":
         for b in AGE_BINS:
             df_bin = master[(master["age"] >= b) & (master["age"] < b+10)].copy()
             v_times = df_bin["vax_day"].dropna().sort_values()
-            
-            if len(v_times) == 0: continue
-            
             # 25th percentile landmark entry
             L0 = int(v_times.iloc[int(len(v_times) * 0.25)])
             
@@ -172,7 +164,7 @@ if __name__ == "__main__":
             if len(curves) > 0:
                 mean_gain = np.nanmean(curves, axis=0)[-1]
                 final_results.append({"lag": lag, "age": b, "gain": mean_gain, "bg_mort": bg_mortality})
-                log(f"   [Cohort {b}+] Gain: {mean_gain:.2f}h | BG-Mortality: {bg_mortality:.6f}")
+                log(f"  [Cohort {b}+] Gain: {mean_gain:.2f}h | BG-Mortality: {bg_mortality:.6f}")
 
     # ==================== DATA EXPORT & VISUALIZATION ====================
     df_res = pd.DataFrame(final_results)
@@ -184,36 +176,33 @@ if __name__ == "__main__":
     log("| Age Group | Raw Gain (Lag 0) | Clean Gain (Lag 42) | Erosion Rate (%) |")
     log("| :---      | :---:            | :---:               | :---:            |")
     for b in AGE_BINS:
-        try:
-            val0 = df_res[(df_res["age"] == b) & (df_res["lag"] == 0)]["gain"].values[0]
-            val42 = df_res[(df_res["age"] == b) & (df_res["lag"] == 42)]["gain"].values[0]
-            erosion_pct = ((val0 - val42) / val0) * 100 if val0 > 0 else 0
-            log(f"| {b}+       | {val0:>8.2f}h       | {val42:>8.2f}h        | {erosion_pct:>6.1f}%       |")
-        except IndexError:
-            continue
+        val0 = df_res[(df_res["age"] == b) & (df_res["lag"] == 0)]["gain"].values[0]
+        val42 = df_res[(df_res["age"] == b) & (df_res["lag"] == 42)]["gain"].values[0]
+        erosion_pct = ((val0 - val42) / val0) * 100 if val0 > 0 else 0
+        log(f"| {b}+       | {val0:>8.2f}h       | {val42:>8.2f}h        | {erosion_pct:>6.1f}%       |")
     log("="*70)
 
     # Visualization Generation
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 8))
     sns.set_style("whitegrid")
 
-    # Plot A: RMST-Gain (RMST Gain vs. Background Mortality)
+    # Plot A: Smoking Gun (RMST Gain vs. Background Mortality)
+    # The linear slope is a metrological indicator for Healthy Vaccinee Bias.
     for lag_val in LAG_SWEEP:
         sub = df_res[df_res["lag"] == lag_val]
-        if len(sub) > 1:
-            sns.regplot(x="bg_mort", y="gain", data=sub, ax=ax1, label=f"Lag {lag_val}d", 
-                        scatter_kws={'s':120, 'alpha':0.7}, line_kws={'linestyle':'--'})
-    ax1.set_title("RMST Gain vs. Background Mortality\n(Linearity indicates persistent selection bias)", fontsize=14)
+        sns.regplot(x="bg_mort", y="gain", data=sub, ax=ax1, label=f"Lag {lag_val}d", 
+                    scatter_kws={'s':120, 'alpha':0.7}, line_kws={'linestyle':'--'})
+    ax1.set_title("SMOKING GUN: RMST Gain vs. Background Mortality\n(Linearity indicates persistent selection bias)", fontsize=14)
     ax1.set_xlabel("Background Mortality (Deaths per Person-Day)")
     ax1.set_ylabel("Restricted Mean Survival Time Gain @ 180d (Hours)")
     ax1.legend(title="Immunity Lag")
 
-    # Plot B: Decay (Erosion of signal over time)
+    # Plot B: Windmill Decay (Erosion of signal over time)
+    # Asymptotic approach to zero proves signal is primarily an artifact.
     for b in AGE_BINS:
         sub = df_res[df_res["age"] == b]
-        if not sub.empty:
-            ax2.plot(sub["lag"], sub["gain"], 'o-', linewidth=3, markersize=10, label=f"Age {b}+")
-    ax2.set_title("DECAY: Signal Erosion vs. Lag Implementation\n(Decay to zero proves selection artifact dominance)", fontsize=14)
+        ax2.plot(sub["lag"], sub["gain"], 'o-', linewidth=3, markersize=10, label=f"Age {b}+")
+    ax2.set_title("WINDMILL DECAY: Signal Erosion vs. Lag Implementation\n(Decay to zero proves selection artifact dominance)", fontsize=14)
     ax2.set_xlabel("Immunity Lag (Days)")
     ax2.set_ylabel("RMST Gain @ 180d (Hours)")
     ax2.legend()
@@ -221,4 +210,4 @@ if __name__ == "__main__":
     plt.tight_layout()
     plot_path = OUTPUT_DIR / f"scientific_forensic_analysis_{timestamp}.png"
     plt.savefig(plot_path, dpi=300)
-    log(f"\n[COMPLETE] Analysis results and plots archived to: {OUTPUT_DIR}")
+    log(f"\n[COMPLETE] Analysis results and plots archived to: {plot_path}")

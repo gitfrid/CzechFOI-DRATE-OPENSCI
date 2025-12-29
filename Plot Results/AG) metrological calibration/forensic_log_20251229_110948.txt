@@ -1,0 +1,32 @@
+INITIATING FORENSIC ANALYSIS | TIMESTAMPT: 20251229_110948
+LOG FILE: C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AG) metrological calibration\forensic_log_20251229_110948.txt
+
+Evaluating Sensitivity Lag: 0 days...
+   [Cohort 10+] Gain: -0.00h | BG-Mortality: 0.000001
+   [Cohort 20+] Gain: 0.27h | BG-Mortality: 0.000002
+   [Cohort 30+] Gain: 0.32h | BG-Mortality: 0.000003
+   [Cohort 40+] Gain: 1.52h | BG-Mortality: 0.000008
+   [Cohort 50+] Gain: 4.80h | BG-Mortality: 0.000024
+   [Cohort 60+] Gain: 19.36h | BG-Mortality: 0.000071
+   [Cohort 70+] Gain: 50.15h | BG-Mortality: 0.000186
+   [Cohort 80+] Gain: 116.64h | BG-Mortality: 0.000472
+   [Cohort 90+] Gain: 116.77h | BG-Mortality: 0.000812
+   [Cohort 100+] Gain: -81.10h | BG-Mortality: 0.000569
+
+Evaluating Sensitivity Lag: 14 days...
+   [Cohort 10+] Gain: -0.00h | BG-Mortality: 0.000001
+   [Cohort 20+] Gain: 0.25h | BG-Mortality: 0.000002
+   [Cohort 30+] Gain: 0.38h | BG-Mortality: 0.000003
+   [Cohort 40+] Gain: 1.41h | BG-Mortality: 0.000008
+   [Cohort 50+] Gain: 3.74h | BG-Mortality: 0.000024
+   [Cohort 60+] Gain: 16.57h | BG-Mortality: 0.000071
+   [Cohort 70+] Gain: 41.25h | BG-Mortality: 0.000186
+   [Cohort 80+] Gain: 99.44h | BG-Mortality: 0.000472
+   [Cohort 90+] Gain: 91.89h | BG-Mortality: 0.000812
+   [Cohort 100+] Gain: -77.46h | BG-Mortality: 0.000569
+
+Evaluating Sensitivity Lag: 28 days...
+   [Cohort 10+] Gain: -0.00h | BG-Mortality: 0.000001
+   [Cohort 20+] Gain: 0.19h | BG-Mortality: 0.000002
+   [Cohort 30+] Gain: 0.60h | BG-Mortality: 0.000003
+   [Cohort 40+] Gain: 1.41h | BG-Mortality: 0.000008
