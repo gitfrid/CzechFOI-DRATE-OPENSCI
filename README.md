@@ -94,7 +94,7 @@ Any remaining residual signal after bias correction should be interpreted cautio
 ---
 
 > **Further Technical Detail:**  
-> A full breakdown of model assumptions, robustness checks, and biological plausibility constraints is available in the  
+> A full breakdown of model assumptions, robustness checks, and biological plausibility constraints is available in the
 > **[Technical Forensic Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)**.
 
 <br>
