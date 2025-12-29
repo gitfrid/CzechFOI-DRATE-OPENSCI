@@ -83,74 +83,151 @@ Residual positive RMST differences remain, but their magnitude is smaller, incon
 
 ---
 
+---
+
+
 ## PART II: RMST Research & Methodological Comparisons
 
-This section examines **how mathematical models interpret observed mortality data** and compares empirical estimates to target-trial emulations.
+## Scientific Motivation
 
-### Scientific Motivation
+While Part I audits the *data*, Part II analyzes how different **mathematical models** interpret that data. This section compares "real-world" empirical observations against "Target Trial" causal emulations.
 
-- RMST summarizes **average survival time** over a fixed horizon (e.g., 180 days)  
-- Provides **absolute survival differences** in hours or days  
-- Less sensitive to model assumptions than hazard ratios  
-- Enables direct bias quantification
+Traditional VE metrics (such as hazard ratios) rely on strong assumptions and can be distorted when follow‑up differs between groups. RMST provides a more intuitive alternative by summarizing **how long people lived**, on average, during a fixed period. This makes comparisons clearer and less sensitive to model assumptions.
 
-*Full Wiki Results:* [Scientific Metrological Forensic Analysis (Parts I–III)](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+Simulations complement this by testing how misclassification, timing artifacts, or structural biases could influence RMST‑based estimates.
+**The scripts can be easily modified to obtain results for all age groups 0-113.
+
+**Results see Related:**  [WiKi](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+
+
+---
+## Workflow Overview
+Raw FOI Data (all Age Goups)  
+    ↓  
+Data Export (one file per Age Group) — creates the real‑world dataset  
+    ↓  
+Simulations (per Age Group) — creates a HR=1 bias-check and a misclassification-sensitivity dataset  
+    ↓  
+RMST Estimation (per Age Group) - using scientific empirical or causal Methodes or experimental Methodes — applied to all three datasets  
+    ↓  
+Comparison of emprical vs causal Methods and Results — across all three datasets  
+    ↓  
+Plots, Logs, Interpretation - for all three datasets
 
 ---
 
-### RMST Concept
+## Concept: RMST (Restricted Mean Survival Time)
 
-- Measures **average survival time** during fixed follow-up  
-- Robust to unequal follow-up  
-- Differences reflect absolute hours/days gained or lost  
+RMST measures the average survival time during a fixed study period (e.g., 2 years).  
 
-**Analogy:** "How many hours, on average, did each person survive during the observation period?"
+- Shows the average number of days a person lived during follow‑up  
+- Works even when follow‑up differs between groups  
+- RMST differences represent how many more (or fewer) days one group survived on average  
+
+Analogy: *“On average, how many days did each person live during the study?”*
 
 ---
 
 ### Scripts Overview
 
-- [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts)  
+All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts):
 
-**Key Analysis Scripts:**
+- [AA) Export AG ALL from Czech FOI.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20Export%20AG%20ALL%20from%20Czech%20FOI.py)  
+  Exports raw age‑group‑specific mortality data into individual CSV files.
 
-- Data preparation & simulation: AA) scripts  
-- Empirical & causal RMST estimation: AC) and AE) scripts  
-- Experimental approaches: Peircean evidence-weighted RMST  
+- [AA) real_data_sim_dose_reclassified_DeathOrAlive_uvx_as_vx.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20real_data_sim_dose_reclassified_DeathOrAlive_uvx_as_vx.py)  
+  This script simulates conservative, calendar-consistent reclassification of a fixed fraction of “unvaccinated” individuals whose dose dates are missing, 
+  in order to test how sensitive VE and RMST estimates are to plausible exposure misclassification—without introducing immortal time bias or negative exposure artifacts.
 
-**Peircean RMST:** separates robust survival signal from statistical noise, weighting daily contributions by certainty.  
+  It answers the question: What happens to VE and RMST estimates when a small fraction of unvaccinated are plausibly reclassified as vaccinated based on the observed rollout?
 
-Related Wiki pages:  
-- [Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  
-- [Method Paper](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
+- [AA) simulate deaths doseschedule and bias all AG.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20simulate%20deaths%20doseschedule%20and%20bias%20all%20AG.py)  
+  Simulates deaths and vaccination schedules to explore potential biases.
+
+  It answers the question: Do RMST and survival-analysis methods falsely detect vaccine effects when deaths are simulated under a true null effect (HR = 1) but real vaccination schedules are retained?
+
+- [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
+  Causal model based RMST analysis using pooled logistic regression (Hernan style)  
+  **Target Trial emulation - scientific Gold Standard - except covariates are not used by design**.
+  
+  Estimates the causal effect of vaccination on survival by asking the Hypothetical counterfactual question:  
+  What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
+
+- [AE) Empirical_dynamic_CC_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AE%29%20Empirical_dynamic_CC_RMST.py)  
+  Empirical RMST estimation with dynamic exposure classification and clone–censor design.  
+  **Descriptional no regression models, parametric assumptions, or covariates are used.**
+  
+  This script computes non-parametric, empirical time-to-event summaries using individual-level data and discrete-time hazards.  
+
+  It addresses two complementary descriptive questions:  
+  What survival difference was observed under real-world vaccination rollout with time-varying exposure?  
+  How does this observed historical difference compare to a protocol-fixed (clone–censor) construction that removes immortal time by design?
+
+
+### Experimental RMST Scripts
+
+- [AE) empirical_landmark_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20empirical_landmark_RMST.py)  
+  Empirical Landmark-Conditional ΔRMST
+  
+  Empirical landmark-conditional difference in restricted mean survival time (ΔRMST).
+  Design: Sequential target-trial emulation with eligibility defined by survival to each landmark.
+  Primary analysis ia ITT-like (no post-landmark censoring). Sensitivity analysis is Per-protocol censoring at crossover (uncorrected for informative censoring).
+  
+  Answers the question: Among people who have survived to day t, what is the difference in expected remaining survival between those already vaccinated and those not yet vaccinated (post-landmark prognosis)?
+  
+  
+- [AE) C.S. Peirce evidence weighted rmst.py (Exploratory)](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/experimental/AE%29%20C.S.%20Pierce%20evidence%20weighted%20directional%20rmst.py)  
+  C.S. Peirce inspired Evidence-Weighted RMST
+  
+  Uses an Information-Theoretic Surprisal-Filter to separate real survival signals from statistical noise.
+  While standard models treat every day of data as equal, this script weights daily results by their statistical certainty $$I(t) = \text{sign}(\Delta S(t)) \times -\ln(p(t))$$, prioritizing high-evidence days over sparse-data flukes.
+
+  It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
+
+  **Related Wiki Pages:**  [Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
 
 ---
 
 ### Data
 
-Primary and processed datasets stored in [Terra folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Terra)  
+All primary input and processed datasets are hosted in the [Terra folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Terra). 
 
-- Real-world Czech FOI mortality data  
-- Null-effect simulations (HR=1)  
-- Bias stress-tests (5% unvaccinated → vaccinated reclassification)
+This repository includes three distinct datafiles (only for Age-Group 70) used as input for the methodes:
 
+* **Real-World Data:** Age-specific mortality CSV files containing the raw, official Czech FOI data.
+* **Null Hypothesis (HR=1) Simulation:** A synthetic dataset with a constant Hazard Ratio of 1.0 and simulated real dose schedule , used to validate that the methodologies do not produce false-positive signals.
+* **Stress-Test (Bias Simulation):** The reclassified real dataset where **5% of the Unvaccinated (UVX)** cohort is intentionally shifted to the **Vaccinated (VX)** cohort to measure the impact (sensitivity) of potential misclassification bias.
+  
 ---
 
 ### Result Plots & Logs
 
-Stored in [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results)  
+Plots and epidemiological logs are stored in the [Plot Results folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Plot%20Results).  
+They visualize vaccination timing, synthetic dose assignments, exposure durations, and cumulative person‑time curves.
 
-Observation windows defined for **completeness and stability**.
+While raw data tracking begins on 2020-01-01, each individual's active observation period begins at Observation Start (the date of the first dose administered within the age cohort) and concludes at Observation End (the final record date minus a 30-day safety buffer). This window establishes the stable interval used to evaluate vaccination strategies and survival outcomes while ensuring data completeness and stability
+
+**Related Wiki Pages:**  
+[Age 70 Mortality Analysis Results](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Age-70-Mortality-Analysis-Results) -> 
+[Result-Files](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Statistical-Analysis-Result-Files-AG70) -> 
+[Plot-Files preview](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/HTML-Plot-Files-shown-as-PNG)
 
 ---
 
-**Raw dataset (~1.9 GB):** Vesely_106_202403141131.csv  
-[Request via FOI](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
+**Raw Dataset (not included):**  
+Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) 
+
+**Science that does not share anonymized data or the used code risks becoming dogmatic.**
 
 ---
 
-**Author:** AI / Drifting 2025-12  
-**Environment:** [requirements.txt](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/tool%20scripts/Version%20Verification.txt)
+**Author:** AI/Drifting 2025-12   
+To reproduce the analysis environment, install the dependencies listed in the [requirements.txt](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/tool%20scripts/Version%20Verification.txt) file. 
 
+---
+
+**Disclaimer:**  
+This repository is for methodological exploration only and is not intended for making causal claims.
+<br>May contain subtle errors of a methodological, logical, mathematical, or coding nature.
 **Disclaimer:**  
 Methodological exploration only; no causal claims. May contain coding, mathematical, or logical limitations.
