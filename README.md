@@ -64,6 +64,8 @@ Core forensic engine and automated lag-sweep analysis:
 > For full methodological breakdowns and biological plausibility checks, see the  
 > **[Technical Forensic Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)**.
 
+> The script reads the data directly from the Czech-FOI csv raw dataset (download link below).
+
 ---
 
 ## PART II: RMST Research & Methodological Comparisons
