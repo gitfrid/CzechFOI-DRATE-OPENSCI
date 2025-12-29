@@ -1,4 +1,4 @@
-# <img src="https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Plot%20Results/under%20construction.png" width="40"> Czech FOI Mortality Data Analysis
+# Czech FOI Mortality Data Analysis
 
 This repository is divided into two complementary domains:
 
