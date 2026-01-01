@@ -140,6 +140,8 @@ Analogy: *“On average, how many days did each person live during the study?”
 
 All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts):
 
+### Helper Scripts
+
 - [AA) Export AG ALL from Czech FOI.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20Export%20AG%20ALL%20from%20Czech%20FOI.py)  
   Exports raw age‑group‑specific mortality data into individual CSV files.
 
@@ -153,6 +155,8 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   Simulates deaths and vaccination schedules to explore potential biases.
 
   It answers the question: Do RMST and survival-analysis methods falsely detect vaccine effects when deaths are simulated under a true null effect (HR = 1) but real vaccination schedules are retained?
+
+### Scientific RSTM Scripts
 
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
   Causal model based RMST analysis using pooled logistic regression (Hernan style)  
@@ -205,7 +209,14 @@ This repository includes three distinct datafiles (only for Age-Group 70) used a
 * **Real-World Data:** Age-specific mortality CSV files containing the raw, official Czech FOI data.
 * **Null Hypothesis (HR=1) Simulation:** A synthetic dataset with a constant Hazard Ratio of 1.0 and simulated real dose schedule , used to validate that the methodologies do not produce false-positive signals.
 * **Stress-Test (Bias Simulation):** The reclassified real dataset where **5% of the Unvaccinated (UVX)** cohort is intentionally shifted to the **Vaccinated (VX)** cohort to measure the impact (sensitivity) of potential misclassification bias.
-  
+
+---
+
+**Raw Czech-FOI Dataset (not included repository):**  
+Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) 
+
+**Science that does not share anonymized data or the used code risks becoming dogmatic. - Thank's for request**
+
 ---
 
 ### Result Plots & Logs
@@ -220,12 +231,6 @@ While raw data tracking begins on 2020-01-01, each individual's active observati
 [Result-Files](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Statistical-Analysis-Result-Files-AG70) -> 
 [Plot-Files preview](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/HTML-Plot-Files-shown-as-PNG)
 
----
-
-**Raw Dataset (not included):**  
-Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) 
-
-**Science that does not share anonymized data or the used code risks becoming dogmatic.**
 
 ---
 
