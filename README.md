@@ -30,6 +30,8 @@ The pipeline implements a scientific, modern, bias‑resistant framework for est
 
 All steps are deterministic, reproducible, and age‑stratified.
 
+- [AG) HVE Target Trial RMST Diagnostic Core.py]()  
+
 ---
 
 ## Input Data
@@ -86,7 +88,8 @@ The script converts these into aligned day‑indexed variables (death_day, first
 > **Further Detail:** Full methodology, robustness checks, and assumptions are in the  
 > [Technical Forensic Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
 
----
+<br>
+<br>
 
 ---
 
