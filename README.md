@@ -76,10 +76,10 @@ constitute evidence against the null model and indicate dominant selection effec
 
 ---
 
-### Audit Conclusion
+### Conclusion
 
 
-> **Further Detail:** Full methodology, robustness checks are in the  
+> **Further Detail:** Full methodology, robustness checks see:  
 > [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
 
 <br>
