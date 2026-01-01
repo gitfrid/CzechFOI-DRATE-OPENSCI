@@ -53,40 +53,34 @@ The script converts these into aligned day‑indexed variables (death_day, first
 
 ---
 
-### Primary Forensic Findings
+### Null model Hypothesis 
 
-#### 1. Linearity Between RMST Gain and Background Mortality
-- **Observation:** 
-- **Interpretation:** 
+Null model (no selection, no biological effect)
 
-#### 2. Temporal Sensitivity and Residual Signals
-- **Observation:** 
-- **Interpretation:** 
-
----
-
-### Visual Evidence
-
-![Scientific Forensic Analysis]()
+Under the null hypothesis that:
+Vaccination timing is independent of future mortality conditional on age, sex, and calendar time, and
+Vaccination has no biological effect on mortality,
+we expect:
+No systematic pre-vaccination mortality differences
 
 
----
+**Diagnostic logic**
 
-### Bias Erosion Summary (Lag Sensitivity Analysis)
+Violations of these expectations — particularly:
 
-| Age Group | Raw Gain (Lag 0) | Clean Gain (Lag 42) | Signal Erosion |
-|-----------|-----------------|-------------------|----------------|
+- mortality imbalance prior to vaccination
+- strong dependence of ΔRMST(ℓ) on ℓ
+- replication of early mortality differences under placebo exposure
 
-**Reproducible Output:**  
-[Plain-text scientific forensic summary](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Plot%20Results/AG%29%20metrological%20calibration/scientific_metrological_forensic_analysis.txt)
+constitute evidence against the null model and indicate dominant selection effects.
 
 ---
 
 ### Audit Conclusion
 
 
-> **Further Detail:** Full methodology, robustness checks, and assumptions are in the  
-> [Technical Forensic Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
+> **Further Detail:** Full methodology, robustness checks are in the  
+> [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
 
 <br>
 <br>
