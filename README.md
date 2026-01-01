@@ -7,7 +7,7 @@ This repository is divided into two complementary domains:
 
 ---
 
-## PART I: Data Integrity Audit & Bias Quantification
+## PART I: methodological bias-diagnostic / falsification study
 
 
 
