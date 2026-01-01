@@ -9,32 +9,41 @@ This repository is divided into two complementary domains:
 
 ## PART I: Data Integrity Audit & Bias Quantification
 
-# **Update note: "Model update in progress: Implementing Poisson rate-modeling and time-varying covariate alignment to further eliminate immortal time bias (v10.0 coming soon)."**
+# Robust Target Trial Emulation (TTE) Engine  
+**RMST‑based causal inference with full bias diagnostics, placebo validation, and bootstrap uncertainty**
 
-This is a **forensic data audit**, not a vaccine efficacy study.  
-Its purpose is to evaluate whether large survival advantages in early Czech population comparisons reflect **true biological protection** or are predominantly explained by **systematic cohort-selection bias (Healthy Vaccinee Bias, HVB)**.
+This repository contains a fully refactored Python engine **Target Trial Emulation (TTE)** using Czech national mortality data.  
+The pipeline implements a scientific, modern, bias‑resistant framework for estimating **Restricted Mean Survival Time (RMST) gains** after vaccination, including:
 
-The analysis provides strong evidence that **a substantial fraction—likely the majority—of initially reported survival gains arises from selection bias**, not causal mortality reduction.
+- Daily marginal and sex‑specific conditional vaccination propensities  
+- Weighted control construction with strict time alignment  
+- Pooled logistic regression for hazard estimation  
+- Survival curve and RMST computation  
+- Placebo‑date analysis for bias detection  
+- Healthy‑Vaccinee Effect (HVE) diagnostics  
+- Bootstrap confidence intervals  
+- Full CSV exports and Plotly HTML visualizations  
 
-### Audit Objective
+All steps are deterministic, reproducible, and age‑stratified.
 
-To distinguish biological effects from **metrological artifacts** introduced by cohort construction, timing, and baseline health differences.
+---
 
-**Bias-detection hypothesis:**
+## Input Data
 
-> If estimated survival gains scale linearly with an age group’s **background mortality**, the signal reflects cohort selection rather than biological efficacy.
+The engine uses a single FOIA‑released Czech mortality dataset:
 
-### Access to Reproducible Code
+- **File:** `Vesely_106_202403141131.csv`  
+- **Download:** https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz
 
-- **Primary Script:**  
-  [AG) metrological calibration.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20metrological%20calibration.py)
+This dataset provides individual‑level records of:
 
-### Access to Input Data
+- Date of birth  
+- Date of death  
+- Date of first vaccine dose  
+- Sex  
+- Administrative timestamps  
 
-- Czech FOI raw mortality dataset: Vesely_106_202403141131.csv  
-[Download Link](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)  
-
-The dataset provides age-specific mortality records used for RMST gain calculations and bias detection analyses.
+The script converts these into aligned day‑indexed variables (death_day, first_dose_day, age, sex) used for all TTE computations.
 
 ---
 
