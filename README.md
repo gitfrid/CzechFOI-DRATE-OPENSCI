@@ -50,20 +50,19 @@ The script converts these into aligned day‑indexed variables (death_day, first
 ### Primary Forensic Findings
 
 #### 1. Linearity Between RMST Gain and Background Mortality
-- **Observation:** RMST gains increase nearly linearly with age-specific background mortality.  
-- **Interpretation:** Absolute gains scaling with baseline mortality is a hallmark of **Healthy Vaccinee Bias**, reflecting pre-existing frailty differences rather than causal protection.
+- **Observation:** 
+- **Interpretation:** 
 
 #### 2. Temporal Sensitivity and Residual Signals
-- **Observation:** Introducing a lag period (0 → 42 days) reduces RMST gains substantially across most age groups.  
-- **Interpretation:** The bias signal is particularly strong in the **immediate post-vaccination period** (first days to weeks), when no biological vaccine effect on mortality is plausible, yet apparent survival advantages are largest — a classic hallmark of **Healthy Vaccinee Bias**. Residual positive signals after lag adjustment remain smaller, heterogeneous, and **cannot be assumed causal** without further independent validation.
+- **Observation:** 
+- **Interpretation:** 
 
 ---
 
 ### Visual Forensic Evidence
 
-![Scientific Forensic Analysis](https://raw.githubusercontent.com/gitfrid/CzechFOI-DRATE-OPENSCI/main/Plot%20Results/AG%29%20metrological%20calibration/scientific_forensic_analysis_20251228_224832.png)
+![Scientific Forensic Analysis]()
 
-*(Left: RMST gain vs. background mortality · Right: RMST gain as a function of lag period by age group)*
 
 ---
 
@@ -71,10 +70,6 @@ The script converts these into aligned day‑indexed variables (death_day, first
 
 | Age Group | Raw Gain (Lag 0) | Clean Gain (Lag 42) | Signal Erosion |
 |-----------|-----------------|-------------------|----------------|
-| 60+       | 19.45 h         | 11.05 h           | 43.2%          |
-| 70+       | 50.11 h         | 28.72 h           | 42.7%          |
-| 80+       | 116.63 h        | 63.64 h           | 45.4%          |
-| 90+       | 117.04 h        | 65.09 h           | 44.4%          |
 
 **Reproducible Output:**  
 [Plain-text scientific forensic summary](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Plot%20Results/AG%29%20metrological%20calibration/scientific_metrological_forensic_analysis.txt)
@@ -83,9 +78,6 @@ The script converts these into aligned day‑indexed variables (death_day, first
 
 ### Audit Conclusion
 
-The linear mortality scaling and substantial lag-induced erosion provide **convergent evidence** that most of the apparent survival advantage arises from **Healthy Vaccinee Bias**.  
-
-Residual positive RMST differences remain, but their magnitude is smaller, inconsistent across age strata, and **cannot be interpreted as causal** without independent validation.
 
 > **Further Detail:** Full methodology, robustness checks, and assumptions are in the  
 > [Technical Forensic Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
