@@ -9,7 +9,9 @@ This repository is divided into two complementary domains:
 
 ## PART I: Data Integrity Audit & Bias Quantification
 
-# Robust Target Trial Emulation (TTE) Engine  
+
+
+# <img src="https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Plot%20Results/under%20construction.png" width="120" alt="Under Construction Icon">Robust Target Trial Emulation (TTE) Engine  
 **RMST‑based causal inference with full bias diagnostics, placebo validation, and bootstrap uncertainty**
 
 This repository contains a fully refactored Python engine **Target Trial Emulation (TTE)** using Czech national mortality data.  
