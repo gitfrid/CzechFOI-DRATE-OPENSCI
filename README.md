@@ -65,7 +65,7 @@ The script converts these into aligned day‑indexed variables (death_day, first
 
 ---
 
-### Visual Forensic Evidence
+### Visual Evidence
 
 ![Scientific Forensic Analysis]()
 
