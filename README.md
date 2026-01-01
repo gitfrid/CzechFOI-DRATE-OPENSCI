@@ -34,8 +34,8 @@ All steps are deterministic, reproducible, and age‑stratified.
 
 The engine uses a single FOIA‑released Czech mortality dataset:
 
-- **File:** `Vesely_106_202403141131.csv`  
-- **Download:** https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz
+- **File Download:** [Vesely_106_202403141131.csv](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
+
 
 This dataset provides individual‑level records of:
 
