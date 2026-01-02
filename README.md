@@ -2,7 +2,7 @@
 
 This repository is divided into two complementary domains:
 
-- **Metrological Forensic Auditing** — assesses data integrity and quantifies structural bias  
+- **Robust bias-diagnostic target trial emulation** - test compatibility of observed mortality patterns
 - **RMST Methodological Research** — evaluates and compares survival estimation techniques
 
 ---
@@ -48,7 +48,7 @@ All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitf
 
 ## PART II: RMST Research & Methodological Comparisons
 
-## Scientific Motivation
+## Motivation
 
 While Part I audits the *data*, Part II analyzes how different **mathematical models** interpret that data. This section compares "real-world" empirical observations against "Target Trial" causal emulations.
 
