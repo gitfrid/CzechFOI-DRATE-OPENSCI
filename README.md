@@ -7,77 +7,35 @@ This repository is divided into two complementary domains:
 
 ---
 
-## PART I: methodological bias-diagnostic / falsification study
+## PART I: Robust Target Trial Emulation Diagnostics – Czech Mortality Data
 
 
+**Framework**: Modern Hernán-style target trial emulation using restricted mean survival time (RMST)  
+**Data**: Czech national administrative mortality records (age, sex, death date, first-dose date)  
+**Primary goal**: Test compatibility of observed mortality patterns with a **sharp null** (no causal effect of first-dose vaccination on all-cause mortality, conditional on age and sex)
 
-# <img src="https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Plot%20Results/under%20construction.png" width="120" alt="Under Construction Icon">Robust Target Trial Emulation (TTE) Engine  
-**RMST‑based causal inference with full bias diagnostics, placebo validation, and bootstrap uncertainty**
+**Key features of the pipeline**:
+- Daily marginal & sex-specific propensity scores
+- Overlap weighting for balance
+- Pooled logistic regression for discrete-time hazards
+- Restricted Mean Survival Time (RMST) at 180 days
+- Placebo-date falsification (null-preserving)
+- Negative-control lags (–28, –14, –7 days) for selection bias check
+- Extensive null & confounding simulation calibration
+- Bootstrap confidence intervals
+- Full reproducibility with deterministic seeding
 
-This repository contains a fully refactored Python engine **Target Trial Emulation (TTE)** using Czech national mortality data.
-The pipeline implements a scientific, modern, bias‑resistant framework for estimating 
-
-**Restricted Mean Survival Time (RMST) gains** after vaccination, including:
-
-- Daily marginal and sex‑specific conditional vaccination propensities  
-- Weighted control construction with strict time alignment  
-- Pooled logistic regression for hazard estimation  
-- Survival curve and RMST computation  
-- Placebo‑date analysis for bias detection  
-- Healthy‑Vaccinee Effect (HVE) diagnostics  
-- Bootstrap confidence intervals  
-- Full CSV exports and Plotly HTML visualizations  
-
-All steps are deterministic, reproducible, and age‑stratified.
-
-- [AG) HVE Target Trial RMST Diagnostic Core.py]()  
+All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20HVE%20Target%20Trial%20RMST%20Diagnostic%20Core.py)
 
 ---
 
-## Input Data
+## Main Findings – Real Data (Ages 60–90, 180-day RMST)
 
-The engine uses a single FOIA‑released Czech mortality dataset:
+**Adjusted ΔRMST (overlap-weighted, bias-adjusted)**  
+*Positive values indicate longer survival in the vaccinated group*
 
-- **File Download:** [Vesely_106_202403141131.csv](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
-
-
-This dataset provides individual‑level records of:
-
-- Date of birth  
-- Date of death  
-- Date of first vaccine dose  
-- Sex  
-- Administrative timestamps  
-
-The script converts these into aligned day‑indexed variables (death_day, first_dose_day, age, sex) used for all TTE computations.
 
 ---
-
-### Null model Hypothesis 
-
-Null model (no selection, no biological effect)
-
-Under the null hypothesis that:
-Vaccination timing is independent of future mortality conditional on age, sex, and calendar time, and
-Vaccination has no biological effect on mortality,
-we expect:
-No systematic pre-vaccination mortality differences
-
-
-**Diagnostic logic**
-
-Violations of these expectations — particularly:
-
-- mortality imbalance prior to vaccination
-- strong dependence of ΔRMST(ℓ) on ℓ
-- replication of early mortality differences under placebo exposure
-
-constitute evidence against the null model and indicate dominant selection effects.
-
----
-
-### Conclusion
-
 
 > **Further Detail:** Full methodology, robustness checks see:  
 > [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
