@@ -1,16 +1,38 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Target Trial Emulation (TTE) Core 
-- Fixed all major flaws: Symmetric unvax aggregation, constant treatment effect, applied overlap weights, time-varying sex dist, null-preserving placebo, bootstrap CIs.
-- Added null_sim mode for calibration: Generates synthetic null data, runs pipeline, produces plots/CSVs showing flat ΔRMST.
-- Vectorized where possible for performance; parallelized ages/lags/boots/sims with joblib (2 cores).
-- Outputs all results to CSVs (deltas with CIs, pre-vax, sim means/SD, balance SMD, weights stats).
-- Plots with CIs; null calibration plots (mean/SD ΔRMST by lag), PS hist.
-- Configurable via CONFIG only; kept core stable, structured, readable.
-- Assumptions: No unmeasured confounding, positivity, no competing risks, binary sex.
-- Refinements: True binomial likelihood, joint bootstrap, hazard wave in sims, weight truncation, positivity diagnostics, robust SE option (fixed), first=0 alignment, expanded sim scenarios (null/confound/censor).
-- Deep fixes: Deterministic per-worker & per-bootstrap RNG seeding, bootstrap success logging & vector saving, safe index/clipping, inclusive day ranges, eligibility > day check.
+Robust Target Trial Emulation (TTE) Core
+===============================================================================
+A modern, bias-resistant pipeline for restricted mean survival time (RMST)
+estimation using Czech national mortality data (age + sex only).
+
+Implements Hernán-style target trial emulation with extensive diagnostics:
+- Daily marginal & sex-specific propensity scores
+- Overlap weighting for balance
+- Pooled logistic regression for discrete-time hazards
+- RMST computation at 180 days
+- Placebo-date falsification
+- Negative-control lags for selection bias testing
+- Bootstrap confidence intervals
+- Null, confounding, and strong-confounding simulation calibration
+
+Key methodological safeguards:
+- Fixed symmetric unvaccinated aggregation & immortal time bias
+- Deterministic per-worker & per-bootstrap RNG seeding
+- Safe temporal alignment (first=0, inclusive ranges, eligibility > day)
+- Configurable weight truncation & ESS reporting
+- Full bootstrap vector saving for reproducibility
+
+Outputs:
+- CSV: ΔRMST estimates + CIs, pre-vaccination mortality, balance SMD, weights stats
+- Interactive Plotly HTML: lag-sweep plots, PS distributions, null calibration
+
+Intended use:
+Diagnostic evaluation of mortality patterns around first-dose vaccination.
+Results are exploratory due to limited confounding control (age + sex only).
+
+Author: AI / Drifting assistence   Date: January 2026
+===============================================================================
 """
 
 from __future__ import annotations
