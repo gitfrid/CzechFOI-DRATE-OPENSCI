@@ -111,32 +111,30 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 ### Scientific RSTM Scripts (only Prototypes)
 
 
--  [AC) hernan style sequential trial tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20sequential%20trial%20tte%20pooled%20logistic%20rmst.py)  (Advanced replacement for AC) hernan_style_poold_logistics_RMST.py)
-
-   It is implementing a sequential (multi-time-zero) target trial emulation using pooled logistic regression to estimate the RMST difference. (Hernán style) 
+-  [AC) hernan style sequential trial tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20sequential%20trial%20tte%20pooled%20logistic%20rmst.py)   
+   It is implementing a sequential (multi-time-zero) target trial emulation using pooled logistic regression to estimate the RMST difference.
+   (Hernán style) **except covariates are not used by design**
 
    Instead of picking just one starting day, this script imagines we **re-check eligibility every single day** throughout the whole time period.  
    Each day can be a new possible "start" for vaccination.  
-   We ask:  
-   *"If everyone had gotten their first vaccine as soon as they became eligible (on whatever day that happened), versus if nobody ever got vaccinated — how much longer would people have lived on average?"*
+   We ask:*"If everyone had gotten their first vaccine as soon as they became eligible (on whatever day that happened), versus if nobody ever got vaccinated — how much longer would people have lived on average?"*
 
    → This is more realistic for real-world vaccination programs where people become eligible at different times.
 
    
 -  [AC) hernan style tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20tte%20pooled%20logistic%20rmst.py)  
-   Classic single-time-zero target trial emulation using pooled logistic regression for RMST estimation. (Hernán style)
-
+   Classic single-time-zero target trial emulation using pooled logistic regression for RMST estimation.
+   (Hernán style) **except covariates are not used by design**
+   
    Imagine we pick **one single day** at the beginning as the starting point for everyone.  
    We ask:
    "If everyone had started their first vaccine dose on that one day (versus nobody ever getting vaccinated), how much longer would people have lived on average?"
 
    → This is the classic, straightforward way to do this kind of analysis.
 
-
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
-  Causal model based RMST analysis using pooled logistic regression (Hernán style)  
-  **Target Trial emulation - scientific Gold Standard - except covariates are not used by design**.
-  
+  Causal model based RMST analysis using pooled logistic regression (Hernán style)  **Contains flaws replaced by AC) hernan style sequential trial tte pooled logistic rmst.py above!**
+    
   Estimates the causal effect of vaccination on survival by asking the Hypothetical counterfactual question:  
   What would the average survival time have been if everyone in the study population had been vaccinated versus if no one had been vaccinated?
 
