@@ -120,7 +120,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
      
    We ask:*"If everyone had gotten their first vaccine as soon as they became eligible (on whatever day that happened), versus if nobody ever got vaccinated — how much longer would people have lived on average?"*
 
-   → This is more realistic for real-world vaccination programs where people become eligible at different times.
+   → This is more realistic for real-world vaccination programs where people become eligible at different times (causal model based).
 
    
 -  [AC) hernan style tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20tte%20pooled%20logistic%20rmst.py)  
@@ -131,7 +131,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
      
    We ask:"If everyone had started their first vaccine dose on that one day (versus nobody ever getting vaccinated), how much longer would people have lived on average?"
 
-   → This is the classic, straightforward way to do this kind of analysis.
+   → This is the classic, straightforward way to do this kind of analysis (causal model based).
 
 - [AC) hernan_style_poold_logistics_RMST.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan_style_pooled_logistics_RMST.py)  
   Causal model based RMST analysis using pooled logistic regression (Hernán style)
