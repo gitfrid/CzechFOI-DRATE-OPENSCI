@@ -27,6 +27,8 @@ This repository is divided into two complementary domains:
 
 All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20HVE%20Target%20Trial%20RMST%20Diagnostic%20Core.py)
 
+Input: [Czech-FOI Dataset Vesely_106_202403141131.csv](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) ~1.9 GB not included in this repository.
+
 ---
 
 > **Further Detail:** Full methodology, robustness checks see:  
