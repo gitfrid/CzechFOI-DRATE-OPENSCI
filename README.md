@@ -1,4 +1,4 @@
-# Czech FOI Mortality Data Analysis
+# Czech FOI Mortality Data Analysis (scripts are only Prototypes)
 
 This repository is divided into two complementary domains:
 
@@ -128,7 +128,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
   It answers the question: Do RMST and survival-analysis methods falsely detect vaccine effects when deaths are simulated under a true null effect (HR = 1) but real vaccination schedules are retained?
 
-### Scientific RSTM Scripts (only Prototypes)
+### Scientific RSTM Scripts (prototypes)
 
 
 -  [AC) hernan style sequential trial tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20sequential%20trial%20tte%20pooled%20logistic%20rmst.py)   
