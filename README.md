@@ -29,14 +29,6 @@ All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitf
 
 ---
 
-## Main Findings – Real Data (Ages 60–90, 180-day RMST)
-
-**Adjusted ΔRMST (overlap-weighted, bias-adjusted)**  
-*Positive values indicate longer survival in the vaccinated group*
-
-
----
-
 > **Further Detail:** Full methodology, robustness checks see:  
 > [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
 
@@ -47,19 +39,8 @@ All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitf
 
 ## PART I-I: IPW RMST Validation — Stress-Test Script
 
-- **Scenarios**: Null (HR ≈ 1) and Protective (HR ≈ 0.7)  
-- **Realistic DGP**: Calendar mortality waves, age/sex rollout prioritization, latent health confounder  
-- **Method**: Clone-Censor-Weighting with strategy-specific IPCW  
-- **Modeling**: Calendar-time + relative-time B-splines in propensity and hazard models  
-- **Weights**: Stabilized, clipped factors before cumprod, percentile truncation  
-- **Outcome**: Pooled logistic (CLogLog link) on person-day rows with frequency weights  
-- **Inference**: Bootstrap CIs + placebo falsification (sampled from numerator inside each replicate)  
-- **Aggregation**: Weighted averaging over t₀ grid by n_eligible(t₀)  
-- **Diagnostics**: ESS, standardized mean differences (SMDs), positivity violations, censoring rates, GLM convergence flags
-
-All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20Clone%20Censor%20weight%20RMST%20Stress-Test%20simulation.py)
-
-This script implements a rigorous simulation-based stress test of a **clone-censor-weighting (CCW)** restricted mean survival time (RMST) pipeline under realistic violations of target trial emulation assumptions. It evaluates the numerical robustness, directional fidelity, weight stability, and diagnostic performance of the method when sequential ignorability is challenged by:
+This script implements a simulation-based stress test of a **clone-censor-weighting (CCW)** restricted mean survival time (RMST) pipeline under realistic violations of target trial emulation assumptions. 
+It evaluates the numerical robustness, directional fidelity, weight stability, and diagnostic performance of the method when sequential ignorability is challenged by:
 
 - Calendar-time mortality waves and phased vaccination rollout
 - Age/sex prioritization
@@ -71,7 +52,9 @@ Two scenarios are tested:
 
 The pipeline uses strategy-specific IPCW, calendar- + relative-time B-splines in both propensity and hazard models, stabilized weights with clipping and truncation, pooled logistic regression (CLogLog link) on person-day rows, bootstrapped confidence intervals, and placebo falsification sampled from the numerator model. Results are aggregated over a t₀ grid weighted by eligibility size.
 
-The stress test demonstrates that CCW-RMST **fails gracefully** (directionally informative, stable diagnostics, negative lags ≈ 0, placebo centered near 0) under epidemiologically plausible departures from ideal conditions — providing strong support for its use as a diagnostic tool in observational vaccine effectiveness studies with limited measured confounders.
+The stress test demonstrates if CCW-RMST **fails gracefully** (directionally informative, stable diagnostics, negative lags ≈ 0, placebo centered near 0) under epidemiologically plausible departures from ideal conditions — providing strong support for its use as a diagnostic tool in observational vaccine effectiveness studies with limited measured confounders.
+
+Full code: [AG) Clone Censor weight RMST Stress-Test simulation.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20Clone%20Censor%20weight%20RMST%20Stress-Test%20simulation.py)
 
 <br>
 <br>
