@@ -56,6 +56,8 @@ The stress test demonstrates if CCW-RMST **fails gracefully** (directionally inf
 
 Full code: [AG) Clone Censor weight RMST Stress-Test simulation.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20Clone%20Censor%20weight%20RMST%20Stress-Test%20simulation.py)
 
+> [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test).
+
 <br>
 <br>
 
