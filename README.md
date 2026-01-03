@@ -1,4 +1,4 @@
-# Czech FOI Mortality Data Analysis (Scripts are Prototypes)
+# Czech FOI Mortality Data Analysis (Scripts are prototypes)
 
 This repository is divided into two complementary domains:
 
