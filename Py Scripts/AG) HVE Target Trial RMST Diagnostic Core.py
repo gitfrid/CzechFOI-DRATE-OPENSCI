@@ -31,7 +31,7 @@ Intended use:
 Diagnostic evaluation of mortality patterns around first-dose vaccination.
 Results are exploratory due to limited confounding control (age + sex only).
 
-Author: AI / Drifting assistence   Date: January 2026
+Author: AI / Drifting assistence   Date: January 2026 Version 1.0
 ===============================================================================
 """
 
@@ -105,14 +105,14 @@ RUN_MODE = "null_sim" # coose -> full/quick/null_sim
 
 if RUN_MODE == "quick":
     CONFIG.update({
-        "single_ages": [60],                       # only 1 age
-        "lag_sweep": [-14, 0, 28],                 # only 3 lags
-        "n_null_sims": 3,                          # only 3 simulations per scenario
-        "n_boot": 50,                              # very few bootstraps
-        "n_subj_sim": 500,                         # much smaller synthetic cohorts
-        "time_df": 3,                              # very simple spline
-        "glm_maxiter": 1000,
-        "ridge_alphas": [0.0, 0.1],                # only 2 alphas to speed up
+        "single_ages": list(range(60, 91, 5)),      # every 5 years: 60,65,...,90 → 7 ages
+        "lag_sweep": [-28, -14, -7, 0, 14, 28, 42, 56, 70],  # negative controls + main lags
+        "n_null_sims": 20,                          # 20 simulations per scenario → solid calibration
+        "n_boot": 200,                              # 300 bootstraps → decent CIs
+        "n_subj_sim": 2000,                         # 2000 subjects per age → good precision
+        "time_df": 4,                               # reasonable spline complexity
+        "glm_maxiter": 3000,
+        "ridge_alphas": [0.0, 0.001, 0.01, 0.1],    # fewer alphas → faster fitting
     })
     print("!!! QUICK TEST MODE ACTIVE !!!")
 elif RUN_MODE == "test":

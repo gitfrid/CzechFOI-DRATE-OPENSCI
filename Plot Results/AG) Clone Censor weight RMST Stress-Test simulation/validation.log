@@ -1,0 +1,3 @@
+2026-01-03 20:51:32,000 - Generating synthetic data (A null, B protective)
+2026-01-03 20:51:37,902 - Scenario A N_age60=2000; Scenario B N_age60=2000
+2026-01-03 20:51:37,926 - A_null t0_grid: [86, 117, 140, 150, 150]
