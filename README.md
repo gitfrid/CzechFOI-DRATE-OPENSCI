@@ -14,16 +14,6 @@ This repository is divided into two complementary domains:
 **Data**: Czech national administrative mortality records (age, sex, death date, first-dose date)  
 **Primary goal**: Test compatibility of observed mortality patterns with a **sharp null** (no causal effect of first-dose vaccination on all-cause mortality, conditional on age and sex)
 
-**Key features of the pipeline**:
-- Daily marginal & sex-specific propensity scores
-- Overlap weighting for balance
-- Pooled logistic regression for discrete-time hazards
-- Restricted Mean Survival Time (RMST) at 180 days
-- Placebo-date falsification (null-preserving)
-- Negative-control lags (–28, –14, –7 days) for selection bias check
-- Extensive null & confounding simulation calibration
-- Bootstrap confidence intervals
-- Full reproducibility with deterministic seeding
 
 All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20HVE%20Target%20Trial%20RMST%20Diagnostic%20Core.py)
 
