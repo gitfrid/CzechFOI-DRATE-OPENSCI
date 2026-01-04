@@ -1,50 +1,38 @@
-# Czech FOI Mortality Data Analysis
+# <img src="https://raw.githubusercontent.com/gitfrid/CzechFOI-DRATE-OPENSCI/main/Plot%20Results/under%20construction.png" width="36" /> Czech FOI Mortality Data Analysis (Scripts are prototypes)
 
 This repository is divided into two complementary domains:
 
-- **Robust bias-diagnostic target trial emulation** - test compatibility of observed mortality patterns
+- **Bias-diagnostic target trial emulation** - test compatibility of observed mortality patterns
 - **RMST Methodological Research** — evaluates and compares survival estimation techniques
 
 ---
 
-## PART I: Robust Target Trial Emulation Diagnostics – Czech Mortality Data
+## PART I: Sequential Target-Trial–Inspired Mortality Diagnostics
 
+**Framework**: Sequential trial emulation with pooled logistic regression and restricted mean survival time (RMST)  
+**Data**: Czech national mortality registry (age, death date, first-dose date)  
+**Core Goal**: Diagnose all-cause mortality patterns around first-dose vaccination dates and assess compatibility with the **sharp null hypothesis** of no causal effect under minimal adjustment.
 
-**Framework**: Modern Hernán-style target trial emulation using restricted mean survival time (RMST)  
-**Data**: Czech national administrative mortality records (age, sex, death date, first-dose date)  
-**Primary goal**: Test compatibility of observed mortality patterns with a **sharp null** (no causal effect of first-dose vaccination on all-cause mortality, conditional on age and sex)
+Calendar-time trials compare vaccination initiation at day \( t \) versus non-initiation. Artificial censoring induced by the sequential design is handled via inverse probability weighting, and survival differences are summarized using RMST up to horizon \( \tau \).
 
-**Key features of the pipeline**:
-- Daily marginal & sex-specific propensity scores
-- Overlap weighting for balance
-- Pooled logistic regression for discrete-time hazards
-- Restricted Mean Survival Time (RMST) at 180 days
-- Placebo-date falsification (null-preserving)
-- Negative-control lags (–28, –14, –7 days) for selection bias check
-- Extensive null & confounding simulation calibration
-- Bootstrap confidence intervals
-- Full reproducibility with deterministic seeding
+Both **positive-lag (post-vaccination)** and **negative-lag (pre-vaccination)** mortality patterns are examined. Negative lags act as a **falsification diagnostic**: under the sharp null, pre-vaccination mortality should not differ systematically between future vaccinees and non-vaccinees. Non-null negative-lag effects indicate residual selection bias (e.g., healthy-vaccinee or frailty effects).
 
-All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20HVE%20Target%20Trial%20RMST%20Diagnostic%20Core.py)
+**Important Note**: This analysis is **exploratory and non-causal**. No adjustment is made for comorbidities or time-varying health status beyond basic time trends; post-vaccination contrasts are descriptive only.
 
----
+All code:  
+[Hernán-style Sequential Trial RMST Diagnostic Script](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI)
 
-## Main Findings – Real Data (Ages 60–90, 180-day RMST)
+Data source:  
+[Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
 
-**Adjusted ΔRMST (overlap-weighted, bias-adjusted)**  
-*Positive values indicate longer survival in the vaccinated group*
+Further details:  
+[Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
 
-
----
-
-> **Further Detail:** Full methodology, robustness checks see:  
-> [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
 
 <br>
 <br>
 
 ---
-
 
 ## PART II: RMST Research & Methodological Comparisons
 
@@ -108,20 +96,18 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
   It answers the question: Do RMST and survival-analysis methods falsely detect vaccine effects when deaths are simulated under a true null effect (HR = 1) but real vaccination schedules are retained?
 
-### Scientific RSTM Scripts (only Prototypes)
+### Scientific RSTM Scripts (prototypes)
 
-
--  [AC) hernan style sequential trial tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20sequential%20trial%20tte%20pooled%20logistic%20rmst.py)   
-   It is implementing a sequential (multi-time-zero) target trial emulation using pooled logistic regression to estimate the RMST difference.
-   (Hernán style) **except covariates are not used by design**
-
-   Instead of picking just one starting day, this script imagines we **re-check eligibility every single day** throughout the whole time period.  
-   Each day can be a new possible "start" for vaccination.
      
-   We ask:*"If everyone had gotten their first vaccine as soon as they became eligible (on whatever day that happened), versus if nobody ever got vaccinated — how much longer would people have lived on average?"*
-
-   → This is more realistic for real-world vaccination programs where people become eligible at different times (causal model based).
-
+-  [AC) hernan style sequential trial tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20sequential%20trial%20tte%20pooled%20logistic%20rmst.py)  
+   Implements a sequential (multi-time-zero) target trial emulation using pooled logistic regression to estimate the RMST difference (Hernán style) **except covariates (HVE-adjustment) are not used by design**.
+   
+   Instead of picking just one starting day, the script re-checks eligibility **every single day** throughout the entire time period.
+   Each day can be a new possible "start" for vaccination. It estimates the **pooled average effect** of initiating vaccination on a given eligible calendar day t versus not initiating exactly on that day (but possibly later),
+   averaged across all observed eligible days t in the data.
+   
+   → This provides a causal contrast under the real-world observed timing and delays of vaccination initiation, while avoiding immortal time bias.
+   
    
 -  [AC) hernan style tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20tte%20pooled%20logistic%20rmst.py)  
    Classic single-time-zero target trial emulation using pooled logistic regression for RMST estimation.
@@ -170,8 +156,30 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   While standard models treat every day of data as equal, this script weights daily results by their statistical certainty $$I(t) = \text{sign}(\Delta S(t)) \times -\ln(p(t))$$, prioritizing high-evidence days over sparse-data flukes.
 
   It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
+  <br>[Wiki -> Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
 
-  **Related Wiki Pages:**  [Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
+
+
+- [AG) Clone Censor weight RMST Stress-Test simulation.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20Clone%20Censor%20weight%20RMST%20Stress-Test%20simulation.py)   
+  IPW RMST Validation Simulation Stress-Test
+
+  This script implements a simulation-based stress test of a **clone-censor-weighting (CCW)** restricted mean survival time (RMST) pipeline under realistic violations of target trial emulation assumptions.
+  It evaluates the numerical robustness, directional fidelity, weight stability, and diagnostic performance of the method when sequential ignorability is challenged by:
+  - Calendar-time mortality waves and phased vaccination rollout
+  - Age/sex prioritization
+  - Latent unmeasured health confounding affecting both treatment timing and outcome hazard
+
+  Two scenarios are tested:
+  - **Null** (true HR ≈ 1) — checks for absence of spurious signals
+  - **Protective** (true HR ≈ 0.7) — assesses recovery of a true negative effect
+  
+  The pipeline uses strategy-specific IPCW, calendar- + relative-time B-splines in both propensity and hazard models, stabilized weights with clipping and truncation,
+  pooled logistic regression (CLogLog link) on person-day rows, bootstrapped confidence intervals, and placebo falsification sampled from the numerator model.
+  Results are aggregated over a t₀ grid weighted by eligibility size.
+
+  The stress test demonstrates if CCW-RMST **fails gracefully** (directionally informative, stable diagnostics, negative lags ≈ 0, placebo centered near 0)
+  under epidemiologically plausible departures from ideal conditions — providing strong support for its use as a diagnostic tool in observational vaccine effectiveness studies with limited measured confounders.
+  [Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test)
 
 ---
 
@@ -185,12 +193,10 @@ This repository includes three distinct datafiles (only for Age-Group 70) used a
 * **Null Hypothesis (HR=1) Simulation:** A synthetic dataset with a constant Hazard Ratio of 1.0 and simulated real dose schedule , used to validate that the methodologies do not produce false-positive signals.
 * **Stress-Test (Bias Simulation):** The reclassified real dataset where **5% of the Unvaccinated (UVX)** cohort is intentionally shifted to the **Vaccinated (VX)** cohort to measure the impact (sensitivity) of potential misclassification bias.
 
----
-
 **Raw Czech-FOI Dataset (not included repository):**  
 Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) 
 
-**Science that does not share anonymized data or the used code risks becoming dogmatic. - Thank's for request**
+**Science that does not share anonymized data or the used code risks becoming dogmatic.**
 
 ---
 
@@ -217,5 +223,3 @@ To reproduce the analysis environment, install the dependencies listed in the [r
 **Disclaimer:**  
 This repository is for methodological exploration only and is not intended for making causal claims.
 <br>May contain subtle errors of a methodological, logical, mathematical, or coding nature.
-**Disclaimer:**  
-Methodological exploration only; no causal claims. May contain coding, mathematical, or logical limitations.
