@@ -1,4 +1,4 @@
-# Czech FOI Mortality Data Analysis (Scripts are prototypes)
+# <img src="https://raw.githubusercontent.com/gitfrid/CzechFOI-DRATE-OPENSCI/main/Plot%20Results/under%20construction.png" width="36" /> Czech FOI Mortality Data Analysis (Scripts are prototypes)
 
 This repository is divided into two complementary domains:
 
