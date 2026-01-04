@@ -143,7 +143,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
    
 -  [AC) hernan style tte pooled logistic rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AC%29%20hernan%20style%20tte%20pooled%20logistic%20rmst.py)  
    Classic single-time-zero target trial emulation using pooled logistic regression for RMST estimation.
-   <br>(Hernán style) **except covariates are not used by design**
+   <br>(Hernán style) **except covariates (HVE adjustment) are not used by design**
    
    Imagine we pick **one single day** at the beginning as the starting point for everyone.
      
