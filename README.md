@@ -7,21 +7,27 @@ This repository is divided into two complementary domains:
 
 ---
 
-## PART I: Explorative Target Trial Emulation Diagnostics – Czech Mortality Data (Age & Sex Only)
+## PART I: Sequential Target-Trial–Inspired Mortality Diagnostics
 
-**Framework**: Hernán-style target trial emulation with restricted mean survival time (RMST) estimation  
-**Data**: Czech national mortality registry (age, sex, death date, first-dose date)  
-**Core Goal**: Perform rigorous diagnostic testing of observed all-cause mortality patterns around first-dose vaccination dates, specifically to evaluate whether the data are compatible with the **sharp null hypothesis** — i.e., no causal effect of vaccination on overall mortality (conditional on age and sex).
+**Framework**: Sequential trial emulation with pooled logistic regression and restricted mean survival time (RMST)  
+**Data**: Czech national mortality registry (age, death date, first-dose date)  
+**Core Goal**: Diagnose all-cause mortality patterns around first-dose vaccination dates and assess compatibility with the **sharp null hypothesis** of no causal effect under minimal adjustment.
 
-The pipeline systematically investigates both **positive lags** (post-vaccination mortality patterns) and **negative lags** (pre-vaccination mortality patterns). Negative lags serve as a powerful falsification test: under the sharp null, mortality patterns before the actual vaccination date should show no systematic difference compared to placebo-matched or simulated controls. Any significant deviation in negative lags strongly suggests residual selection bias (e.g., healthy vaccinee effect) rather than a true vaccine effect.
+Calendar-time trials compare vaccination initiation at day \( t \) versus non-initiation. Artificial censoring induced by the sequential design is handled via inverse probability weighting, and survival differences are summarized using RMST up to horizon \( \tau \).
 
-**Important Note**: This is purely an exploratory diagnostic tool — results are not causal estimates due to limited confounding control (age & sex only). Strong deviations in negative lags indicate the presence of unmeasured confounding and undermine causal interpretation of any positive-lag findings.
+Both **positive-lag (post-vaccination)** and **negative-lag (pre-vaccination)** mortality patterns are examined. Negative lags act as a **falsification diagnostic**: under the sharp null, pre-vaccination mortality should not differ systematically between future vaccinees and non-vaccinees. Non-null negative-lag effects indicate residual selection bias (e.g., healthy-vaccinee or frailty effects).
 
-All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20HVE%20Target%20Trial%20RMST%20Diagnostic%20Core.py)  
-Data source: [Czech-FOI Dataset Vesely_106_202403141131.csv](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) (~1.9 GB, not included in repo)
+**Important Note**: This analysis is **exploratory and non-causal**. No adjustment is made for comorbidities or time-varying health status beyond basic time trends; post-vaccination contrasts are descriptive only.
 
-Further methodology, robustness checks, and interpretation:  
+All code:  
+[Hernán-style Sequential Trial RMST Diagnostic Script](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI)
+
+Data source:  
+[Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
+
+Further details:  
 [Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+
 
 <br>
 <br>
