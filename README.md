@@ -160,8 +160,8 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
 
 
-- [AG) Clone Censor weight RMST Stress-Test simulation.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20Clone%20Censor%20weight%20RMST%20Stress-Test%20simulation.py)
-  IPW RMST Validation — Stress-Test Script
+- [AG) Clone Censor weight RMST Stress-Test simulation.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20Clone%20Censor%20weight%20RMST%20Stress-Test%20simulation.py)   
+  IPW RMST Validation Simulation Stress-Test
 
   This script implements a simulation-based stress test of a **clone-censor-weighting (CCW)** restricted mean survival time (RMST) pipeline under realistic violations of target trial emulation assumptions.
   It evaluates the numerical robustness, directional fidelity, weight stability, and diagnostic performance of the method when sequential ignorability is challenged by:
@@ -179,13 +179,12 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
   The stress test demonstrates if CCW-RMST **fails gracefully** (directionally informative, stable diagnostics, negative lags ≈ 0, placebo centered near 0)
   under epidemiologically plausible departures from ideal conditions — providing strong support for its use as a diagnostic tool in observational vaccine effectiveness studies with limited measured confounders.
+  [Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test)
 
-
-
-> [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test).
 
 <br>
 <br>
+
 ---
 
 ### Data
@@ -203,7 +202,7 @@ This repository includes three distinct datafiles (only for Age-Group 70) used a
 **Raw Czech-FOI Dataset (not included repository):**  
 Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) 
 
-**Science that does not share anonymized data or the used code risks becoming dogmatic. - Thank's for request**
+**Science that does not share anonymized data or the used code risks becoming dogmatic.**
 
 ---
 
