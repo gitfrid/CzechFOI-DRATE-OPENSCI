@@ -1,0 +1,1019 @@
+2026-01-04 02:56:01+00:00  Starting Hernán-style target trial emulation (fixed version)
+2026-01-04 02:56:01+00:00  Dataset: real | Age: 70 | Grace: 0 days
+2026-01-04 02:56:01+00:00  Loading CSV: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2026-01-04 02:56:02+00:00  Subjects after age filter: 136530
+2026-01-04 02:56:02+00:00  Deaths: 7837, Vaccinated: 113641
+2026-01-04 02:56:02+00:00  Study window: first=361, last_obs=1065.0
+2026-01-04 02:56:03+00:00  Computed marginal p_init for IPW
+2026-01-04 02:56:22+00:00  Person-time V: 64,012,574.00 | U: 13,865,206,433.33
+2026-01-04 02:56:22+00:00  Deaths V: 2,539.00 | U: 1,449,093.07
+2026-01-04 02:56:22+00:00  Crude rate V: 3.97 | U: 10.45 per 100,000 pd
+2026-01-04 02:56:22+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 02:56:22+00:00  GLM rows: 1408, predictors: 18
+2026-01-04 02:56:22+00:00  GLM converged: True
+2026-01-04 02:56:22+00:00  Main results: ΔRMST(τ=703) = 16.79 days
+2026-01-04 02:56:22+00:00  VE(τ=703): +57.327%
+2026-01-04 02:56:22+00:00  Starting bootstrap (200 reps, subsample=1.00)
+2026-01-04 03:01:43+00:00  Person-time V: 64,002,654.00 | U: 13,875,708,567.67
+2026-01-04 03:01:43+00:00  Deaths V: 2,578.00 | U: 1,520,656.93
+2026-01-04 03:01:43+00:00  Crude rate V: 4.03 | U: 10.96 per 100,000 pd
+2026-01-04 03:01:43+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:01:43+00:00  Bootstrap rep 3: GLM converged=True
+2026-01-04 03:01:44+00:00  Person-time V: 63,881,623.00 | U: 13,900,942,493.77
+2026-01-04 03:01:44+00:00  Deaths V: 2,482.00 | U: 1,374,340.31
+2026-01-04 03:01:44+00:00  Crude rate V: 3.89 | U: 9.89 per 100,000 pd
+2026-01-04 03:01:44+00:00  Person-time V: 63,874,903.00 | U: 13,897,527,147.75
+2026-01-04 03:01:44+00:00  Deaths V: 2,535.00 | U: 1,483,452.56
+2026-01-04 03:01:44+00:00  Crude rate V: 3.97 | U: 10.67 per 100,000 pd
+2026-01-04 03:01:44+00:00  Person-time V: 63,993,194.00 | U: 13,877,530,672.79
+2026-01-04 03:01:44+00:00  Deaths V: 2,508.00 | U: 1,436,817.32
+2026-01-04 03:01:44+00:00  Crude rate V: 3.92 | U: 10.35 per 100,000 pd
+2026-01-04 03:01:44+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:01:44+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:01:44+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:01:44+00:00  Bootstrap rep 2: GLM converged=True
+2026-01-04 03:01:44+00:00  Bootstrap rep 1: GLM converged=True
+2026-01-04 03:01:44+00:00  Bootstrap rep 0: GLM converged=True
+2026-01-04 03:06:56+00:00  Person-time V: 63,935,947.00 | U: 13,876,432,039.65
+2026-01-04 03:06:56+00:00  Deaths V: 2,522.00 | U: 1,438,272.62
+2026-01-04 03:06:56+00:00  Crude rate V: 3.94 | U: 10.36 per 100,000 pd
+2026-01-04 03:06:57+00:00  IPW diagnostics: mean=2.59, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:06:57+00:00  Bootstrap rep 4: GLM converged=True
+2026-01-04 03:06:59+00:00  Person-time V: 64,025,907.00 | U: 13,847,309,100.64
+2026-01-04 03:06:59+00:00  Deaths V: 2,531.00 | U: 1,412,622.29
+2026-01-04 03:06:59+00:00  Crude rate V: 3.95 | U: 10.20 per 100,000 pd
+2026-01-04 03:06:59+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:06:59+00:00  Bootstrap rep 5: GLM converged=True
+2026-01-04 03:06:59+00:00  Person-time V: 64,032,318.00 | U: 13,854,395,843.24
+2026-01-04 03:06:59+00:00  Deaths V: 2,568.00 | U: 1,438,318.57
+2026-01-04 03:06:59+00:00  Crude rate V: 4.01 | U: 10.38 per 100,000 pd
+2026-01-04 03:06:59+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:06:59+00:00  Person-time V: 63,902,924.00 | U: 13,879,933,364.35
+2026-01-04 03:06:59+00:00  Deaths V: 2,591.00 | U: 1,412,180.60
+2026-01-04 03:06:59+00:00  Crude rate V: 4.05 | U: 10.17 per 100,000 pd
+2026-01-04 03:06:59+00:00  Bootstrap rep 6: GLM converged=True
+2026-01-04 03:06:59+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:06:59+00:00  Bootstrap rep 7: GLM converged=True
+2026-01-04 03:12:11+00:00  Person-time V: 64,100,796.00 | U: 13,833,896,674.06
+2026-01-04 03:12:11+00:00  Deaths V: 2,457.00 | U: 1,458,532.86
+2026-01-04 03:12:11+00:00  Crude rate V: 3.83 | U: 10.54 per 100,000 pd
+2026-01-04 03:12:11+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:12:11+00:00  Bootstrap rep 8: GLM converged=True
+2026-01-04 03:12:16+00:00  Person-time V: 64,039,477.00 | U: 13,879,263,758.98
+2026-01-04 03:12:16+00:00  Deaths V: 2,522.00 | U: 1,425,957.26
+2026-01-04 03:12:16+00:00  Crude rate V: 3.94 | U: 10.27 per 100,000 pd
+2026-01-04 03:12:16+00:00  Person-time V: 64,150,281.00 | U: 13,854,400,914.95
+2026-01-04 03:12:16+00:00  Deaths V: 2,562.00 | U: 1,445,703.94
+2026-01-04 03:12:16+00:00  Crude rate V: 3.99 | U: 10.43 per 100,000 pd
+2026-01-04 03:12:16+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:12:16+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:12:16+00:00  Bootstrap rep 9: GLM converged=True
+2026-01-04 03:12:16+00:00  Person-time V: 64,001,139.00 | U: 13,867,785,875.39
+2026-01-04 03:12:16+00:00  Deaths V: 2,520.00 | U: 1,492,829.30
+2026-01-04 03:12:16+00:00  Crude rate V: 3.94 | U: 10.76 per 100,000 pd
+2026-01-04 03:12:16+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:12:16+00:00  Bootstrap rep 10: GLM converged=True
+2026-01-04 03:12:16+00:00  Bootstrap rep 11: GLM converged=True
+2026-01-04 03:17:22+00:00  Person-time V: 63,983,465.00 | U: 13,874,552,726.21
+2026-01-04 03:17:22+00:00  Deaths V: 2,526.00 | U: 1,433,847.40
+2026-01-04 03:17:22+00:00  Crude rate V: 3.95 | U: 10.33 per 100,000 pd
+2026-01-04 03:17:22+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:17:22+00:00  Bootstrap rep 12: GLM converged=True
+2026-01-04 03:17:30+00:00  Person-time V: 64,098,671.00 | U: 13,854,675,011.06
+2026-01-04 03:17:30+00:00  Deaths V: 2,613.00 | U: 1,385,726.68
+2026-01-04 03:17:30+00:00  Crude rate V: 4.08 | U: 10.00 per 100,000 pd
+2026-01-04 03:17:30+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:17:30+00:00  Bootstrap rep 13: GLM converged=True
+2026-01-04 03:17:31+00:00  Person-time V: 64,053,502.00 | U: 13,812,229,916.30
+2026-01-04 03:17:31+00:00  Deaths V: 2,470.00 | U: 1,509,723.86
+2026-01-04 03:17:31+00:00  Crude rate V: 3.86 | U: 10.93 per 100,000 pd
+2026-01-04 03:17:31+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:17:31+00:00  Person-time V: 63,976,732.00 | U: 13,877,652,182.53
+2026-01-04 03:17:31+00:00  Deaths V: 2,546.00 | U: 1,353,111.82
+2026-01-04 03:17:31+00:00  Crude rate V: 3.98 | U: 9.75 per 100,000 pd
+2026-01-04 03:17:31+00:00  Bootstrap rep 15: GLM converged=True
+2026-01-04 03:17:31+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:17:31+00:00  Bootstrap rep 14: GLM converged=True
+2026-01-04 03:22:37+00:00  Person-time V: 64,013,755.00 | U: 13,843,246,163.35
+2026-01-04 03:22:37+00:00  Deaths V: 2,521.00 | U: 1,418,029.56
+2026-01-04 03:22:37+00:00  Crude rate V: 3.94 | U: 10.24 per 100,000 pd
+2026-01-04 03:22:37+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:22:37+00:00  Bootstrap rep 16: GLM converged=True
+2026-01-04 03:22:42+00:00  Person-time V: 63,937,148.00 | U: 13,885,878,648.03
+2026-01-04 03:22:42+00:00  Deaths V: 2,445.00 | U: 1,467,705.20
+2026-01-04 03:22:42+00:00  Crude rate V: 3.82 | U: 10.57 per 100,000 pd
+2026-01-04 03:22:42+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:22:43+00:00  Bootstrap rep 17: GLM converged=True
+2026-01-04 03:22:47+00:00  Person-time V: 63,953,656.00 | U: 13,883,776,264.18
+2026-01-04 03:22:47+00:00  Deaths V: 2,501.00 | U: 1,412,466.70
+2026-01-04 03:22:47+00:00  Crude rate V: 3.91 | U: 10.17 per 100,000 pd
+2026-01-04 03:22:47+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:22:47+00:00  Bootstrap rep 18: GLM converged=True
+2026-01-04 03:22:47+00:00  Person-time V: 63,960,810.00 | U: 13,929,564,573.87
+2026-01-04 03:22:47+00:00  Deaths V: 2,484.00 | U: 1,381,401.00
+2026-01-04 03:22:47+00:00  Crude rate V: 3.88 | U: 9.92 per 100,000 pd
+2026-01-04 03:22:47+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:22:47+00:00  Bootstrap rep 19: GLM converged=True
+2026-01-04 03:27:43+00:00  Person-time V: 64,037,343.00 | U: 13,838,327,784.67
+2026-01-04 03:27:43+00:00  Deaths V: 2,595.00 | U: 1,457,029.97
+2026-01-04 03:27:43+00:00  Crude rate V: 4.05 | U: 10.53 per 100,000 pd
+2026-01-04 03:27:44+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:27:44+00:00  Bootstrap rep 20: GLM converged=True
+2026-01-04 03:27:54+00:00  Person-time V: 63,949,885.00 | U: 13,879,757,292.19
+2026-01-04 03:27:54+00:00  Deaths V: 2,563.00 | U: 1,441,615.55
+2026-01-04 03:27:54+00:00  Crude rate V: 4.01 | U: 10.39 per 100,000 pd
+2026-01-04 03:27:54+00:00  Person-time V: 64,062,122.00 | U: 13,892,271,782.81
+2026-01-04 03:27:54+00:00  Deaths V: 2,478.00 | U: 1,439,727.47
+2026-01-04 03:27:54+00:00  Crude rate V: 3.87 | U: 10.36 per 100,000 pd
+2026-01-04 03:27:54+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:27:54+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:27:54+00:00  Bootstrap rep 21: GLM converged=True
+2026-01-04 03:27:54+00:00  Bootstrap rep 22: GLM converged=True
+2026-01-04 03:27:54+00:00  Person-time V: 64,033,828.00 | U: 13,842,672,242.13
+2026-01-04 03:27:54+00:00  Deaths V: 2,571.00 | U: 1,448,922.42
+2026-01-04 03:27:54+00:00  Crude rate V: 4.02 | U: 10.47 per 100,000 pd
+2026-01-04 03:27:54+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:27:54+00:00  Bootstrap rep 23: GLM converged=True
+2026-01-04 03:32:34+00:00  Person-time V: 63,917,120.00 | U: 13,892,997,123.90
+2026-01-04 03:32:34+00:00  Deaths V: 2,584.00 | U: 1,529,550.17
+2026-01-04 03:32:34+00:00  Crude rate V: 4.04 | U: 11.01 per 100,000 pd
+2026-01-04 03:32:34+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:32:34+00:00  Bootstrap rep 24: GLM converged=True
+2026-01-04 03:32:42+00:00  Person-time V: 64,081,463.00 | U: 13,865,863,196.44
+2026-01-04 03:32:42+00:00  Deaths V: 2,529.00 | U: 1,415,281.09
+2026-01-04 03:32:42+00:00  Crude rate V: 3.95 | U: 10.21 per 100,000 pd
+2026-01-04 03:32:42+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:32:42+00:00  Bootstrap rep 25: GLM converged=True
+2026-01-04 03:32:45+00:00  Person-time V: 63,891,786.00 | U: 13,859,322,606.17
+2026-01-04 03:32:45+00:00  Deaths V: 2,614.00 | U: 1,442,903.55
+2026-01-04 03:32:45+00:00  Crude rate V: 4.09 | U: 10.41 per 100,000 pd
+2026-01-04 03:32:45+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:32:45+00:00  Bootstrap rep 26: GLM converged=True
+2026-01-04 03:32:46+00:00  Person-time V: 63,890,558.00 | U: 13,898,062,055.45
+2026-01-04 03:32:46+00:00  Deaths V: 2,485.00 | U: 1,378,266.47
+2026-01-04 03:32:46+00:00  Crude rate V: 3.89 | U: 9.92 per 100,000 pd
+2026-01-04 03:32:46+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:32:46+00:00  Bootstrap rep 27: GLM converged=True
+2026-01-04 03:37:27+00:00  Person-time V: 64,157,248.00 | U: 13,822,846,706.75
+2026-01-04 03:37:27+00:00  Deaths V: 2,551.00 | U: 1,466,681.42
+2026-01-04 03:37:27+00:00  Crude rate V: 3.98 | U: 10.61 per 100,000 pd
+2026-01-04 03:37:27+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:37:27+00:00  Bootstrap rep 28: GLM converged=True
+2026-01-04 03:37:34+00:00  Person-time V: 64,168,430.00 | U: 13,841,679,565.10
+2026-01-04 03:37:34+00:00  Deaths V: 2,558.00 | U: 1,446,651.60
+2026-01-04 03:37:34+00:00  Crude rate V: 3.99 | U: 10.45 per 100,000 pd
+2026-01-04 03:37:35+00:00  IPW diagnostics: mean=2.62, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:37:35+00:00  Bootstrap rep 29: GLM converged=True
+2026-01-04 03:37:37+00:00  Person-time V: 64,091,718.00 | U: 13,834,067,212.34
+2026-01-04 03:37:37+00:00  Deaths V: 2,621.00 | U: 1,521,461.48
+2026-01-04 03:37:37+00:00  Crude rate V: 4.09 | U: 11.00 per 100,000 pd
+2026-01-04 03:37:37+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:37:38+00:00  Bootstrap rep 30: GLM converged=True
+2026-01-04 03:37:39+00:00  Person-time V: 63,944,515.00 | U: 13,930,844,411.45
+2026-01-04 03:37:39+00:00  Deaths V: 2,467.00 | U: 1,428,728.96
+2026-01-04 03:37:39+00:00  Crude rate V: 3.86 | U: 10.26 per 100,000 pd
+2026-01-04 03:37:39+00:00  IPW diagnostics: mean=2.58, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:37:39+00:00  Bootstrap rep 31: GLM converged=True
+2026-01-04 03:42:40+00:00  Person-time V: 64,040,650.00 | U: 13,818,970,115.92
+2026-01-04 03:42:40+00:00  Deaths V: 2,592.00 | U: 1,473,148.46
+2026-01-04 03:42:40+00:00  Crude rate V: 4.05 | U: 10.66 per 100,000 pd
+2026-01-04 03:42:41+00:00  IPW diagnostics: mean=2.62, median=1.34, max=7.1e+00, % trimmed=0.0%
+2026-01-04 03:42:41+00:00  Bootstrap rep 32: GLM converged=True
+2026-01-04 03:42:45+00:00  Person-time V: 63,892,165.00 | U: 13,889,602,888.01
+2026-01-04 03:42:45+00:00  Deaths V: 2,443.00 | U: 1,490,248.37
+2026-01-04 03:42:45+00:00  Crude rate V: 3.82 | U: 10.73 per 100,000 pd
+2026-01-04 03:42:45+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:42:45+00:00  Bootstrap rep 33: GLM converged=True
+2026-01-04 03:42:53+00:00  Person-time V: 64,089,461.00 | U: 13,863,429,679.79
+2026-01-04 03:42:53+00:00  Deaths V: 2,599.00 | U: 1,412,077.58
+2026-01-04 03:42:53+00:00  Crude rate V: 4.06 | U: 10.19 per 100,000 pd
+2026-01-04 03:42:53+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:42:53+00:00  Bootstrap rep 34: GLM converged=True
+2026-01-04 03:42:54+00:00  Person-time V: 63,988,801.00 | U: 13,853,164,809.66
+2026-01-04 03:42:54+00:00  Deaths V: 2,582.00 | U: 1,466,866.50
+2026-01-04 03:42:54+00:00  Crude rate V: 4.04 | U: 10.59 per 100,000 pd
+2026-01-04 03:42:54+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:42:54+00:00  Bootstrap rep 35: GLM converged=True
+2026-01-04 03:47:55+00:00  Person-time V: 64,069,148.00 | U: 13,871,354,782.07
+2026-01-04 03:47:55+00:00  Deaths V: 2,520.00 | U: 1,401,727.17
+2026-01-04 03:47:55+00:00  Crude rate V: 3.93 | U: 10.11 per 100,000 pd
+2026-01-04 03:47:55+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:47:55+00:00  Bootstrap rep 36: GLM converged=True
+2026-01-04 03:48:01+00:00  Person-time V: 64,103,605.00 | U: 13,827,828,727.34
+2026-01-04 03:48:01+00:00  Deaths V: 2,667.00 | U: 1,454,645.50
+2026-01-04 03:48:01+00:00  Crude rate V: 4.16 | U: 10.52 per 100,000 pd
+2026-01-04 03:48:01+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:48:01+00:00  Bootstrap rep 37: GLM converged=True
+2026-01-04 03:48:08+00:00  Person-time V: 64,003,180.00 | U: 13,840,826,822.82
+2026-01-04 03:48:08+00:00  Deaths V: 2,620.00 | U: 1,439,645.25
+2026-01-04 03:48:08+00:00  Crude rate V: 4.09 | U: 10.40 per 100,000 pd
+2026-01-04 03:48:08+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:48:08+00:00  Bootstrap rep 39: GLM converged=True
+2026-01-04 03:48:09+00:00  Person-time V: 63,921,476.00 | U: 13,909,719,916.92
+2026-01-04 03:48:09+00:00  Deaths V: 2,614.00 | U: 1,447,484.75
+2026-01-04 03:48:09+00:00  Crude rate V: 4.09 | U: 10.41 per 100,000 pd
+2026-01-04 03:48:09+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:48:09+00:00  Bootstrap rep 38: GLM converged=True
+2026-01-04 03:53:07+00:00  Person-time V: 64,067,772.00 | U: 13,852,086,245.23
+2026-01-04 03:53:07+00:00  Deaths V: 2,501.00 | U: 1,421,084.45
+2026-01-04 03:53:07+00:00  Crude rate V: 3.90 | U: 10.26 per 100,000 pd
+2026-01-04 03:53:07+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:53:07+00:00  Bootstrap rep 40: GLM converged=True
+2026-01-04 03:53:13+00:00  Person-time V: 63,854,810.00 | U: 13,918,458,374.22
+2026-01-04 03:53:13+00:00  Deaths V: 2,532.00 | U: 1,472,943.31
+2026-01-04 03:53:13+00:00  Crude rate V: 3.97 | U: 10.58 per 100,000 pd
+2026-01-04 03:53:13+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:53:13+00:00  Bootstrap rep 41: GLM converged=True
+2026-01-04 03:53:20+00:00  Person-time V: 64,026,283.00 | U: 13,849,213,443.80
+2026-01-04 03:53:20+00:00  Deaths V: 2,638.00 | U: 1,481,516.58
+2026-01-04 03:53:20+00:00  Crude rate V: 4.12 | U: 10.70 per 100,000 pd
+2026-01-04 03:53:20+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:53:20+00:00  Bootstrap rep 43: GLM converged=True
+2026-01-04 03:53:24+00:00  Person-time V: 64,026,710.00 | U: 13,862,151,869.06
+2026-01-04 03:53:24+00:00  Deaths V: 2,590.00 | U: 1,418,727.97
+2026-01-04 03:53:24+00:00  Crude rate V: 4.05 | U: 10.23 per 100,000 pd
+2026-01-04 03:53:24+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:53:24+00:00  Bootstrap rep 42: GLM converged=True
+2026-01-04 03:58:22+00:00  Person-time V: 64,062,673.00 | U: 13,822,093,676.54
+2026-01-04 03:58:22+00:00  Deaths V: 2,514.00 | U: 1,510,320.08
+2026-01-04 03:58:22+00:00  Crude rate V: 3.92 | U: 10.93 per 100,000 pd
+2026-01-04 03:58:22+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:58:22+00:00  Bootstrap rep 44: GLM converged=True
+2026-01-04 03:58:28+00:00  Person-time V: 63,888,747.00 | U: 13,911,949,732.35
+2026-01-04 03:58:28+00:00  Deaths V: 2,530.00 | U: 1,427,051.73
+2026-01-04 03:58:28+00:00  Crude rate V: 3.96 | U: 10.26 per 100,000 pd
+2026-01-04 03:58:28+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 03:58:28+00:00  Bootstrap rep 45: GLM converged=True
+2026-01-04 03:58:35+00:00  Person-time V: 64,025,357.00 | U: 13,871,803,325.89
+2026-01-04 03:58:35+00:00  Deaths V: 2,502.00 | U: 1,448,266.81
+2026-01-04 03:58:35+00:00  Crude rate V: 3.91 | U: 10.44 per 100,000 pd
+2026-01-04 03:58:36+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:58:36+00:00  Bootstrap rep 46: GLM converged=True
+2026-01-04 03:58:38+00:00  Person-time V: 64,174,415.00 | U: 13,851,416,304.16
+2026-01-04 03:58:38+00:00  Deaths V: 2,494.00 | U: 1,411,803.48
+2026-01-04 03:58:38+00:00  Crude rate V: 3.89 | U: 10.19 per 100,000 pd
+2026-01-04 03:58:38+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 03:58:38+00:00  Bootstrap rep 47: GLM converged=True
+2026-01-04 04:03:38+00:00  Person-time V: 63,940,720.00 | U: 13,874,188,796.34
+2026-01-04 04:03:38+00:00  Deaths V: 2,555.00 | U: 1,444,894.07
+2026-01-04 04:03:38+00:00  Crude rate V: 4.00 | U: 10.41 per 100,000 pd
+2026-01-04 04:03:38+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:03:38+00:00  Bootstrap rep 48: GLM converged=True
+2026-01-04 04:03:44+00:00  Person-time V: 64,138,505.00 | U: 13,842,305,373.09
+2026-01-04 04:03:44+00:00  Deaths V: 2,527.00 | U: 1,458,742.46
+2026-01-04 04:03:44+00:00  Crude rate V: 3.94 | U: 10.54 per 100,000 pd
+2026-01-04 04:03:44+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:03:44+00:00  Bootstrap rep 49: GLM converged=True
+2026-01-04 04:03:50+00:00  Person-time V: 63,996,536.00 | U: 13,873,284,128.03
+2026-01-04 04:03:50+00:00  Deaths V: 2,495.00 | U: 1,497,368.14
+2026-01-04 04:03:50+00:00  Crude rate V: 3.90 | U: 10.79 per 100,000 pd
+2026-01-04 04:03:50+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:03:50+00:00  Bootstrap rep 50: GLM converged=True
+2026-01-04 04:03:53+00:00  Person-time V: 63,968,818.00 | U: 13,879,140,423.87
+2026-01-04 04:03:53+00:00  Deaths V: 2,586.00 | U: 1,454,842.36
+2026-01-04 04:03:53+00:00  Crude rate V: 4.04 | U: 10.48 per 100,000 pd
+2026-01-04 04:03:53+00:00  IPW diagnostics: mean=2.59, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:03:53+00:00  Bootstrap rep 51: GLM converged=True
+2026-01-04 04:08:51+00:00  Person-time V: 63,982,735.00 | U: 13,858,780,626.39
+2026-01-04 04:08:51+00:00  Deaths V: 2,575.00 | U: 1,425,334.66
+2026-01-04 04:08:51+00:00  Crude rate V: 4.02 | U: 10.28 per 100,000 pd
+2026-01-04 04:08:51+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:08:52+00:00  Bootstrap rep 52: GLM converged=True
+2026-01-04 04:08:59+00:00  Person-time V: 63,889,288.00 | U: 13,902,486,118.03
+2026-01-04 04:08:59+00:00  Deaths V: 2,600.00 | U: 1,390,798.99
+2026-01-04 04:08:59+00:00  Crude rate V: 4.07 | U: 10.00 per 100,000 pd
+2026-01-04 04:08:59+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:09:00+00:00  Bootstrap rep 53: GLM converged=True
+2026-01-04 04:09:04+00:00  Person-time V: 64,011,525.00 | U: 13,888,195,743.71
+2026-01-04 04:09:04+00:00  Deaths V: 2,568.00 | U: 1,474,305.04
+2026-01-04 04:09:04+00:00  Crude rate V: 4.01 | U: 10.62 per 100,000 pd
+2026-01-04 04:09:04+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:09:04+00:00  Bootstrap rep 54: GLM converged=True
+2026-01-04 04:09:07+00:00  Person-time V: 64,024,746.00 | U: 13,874,685,231.49
+2026-01-04 04:09:07+00:00  Deaths V: 2,540.00 | U: 1,447,822.23
+2026-01-04 04:09:07+00:00  Crude rate V: 3.97 | U: 10.43 per 100,000 pd
+2026-01-04 04:09:07+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:09:07+00:00  Bootstrap rep 55: GLM converged=True
+2026-01-04 04:13:53+00:00  Person-time V: 64,026,495.00 | U: 13,845,728,106.43
+2026-01-04 04:13:53+00:00  Deaths V: 2,543.00 | U: 1,447,896.39
+2026-01-04 04:13:53+00:00  Crude rate V: 3.97 | U: 10.46 per 100,000 pd
+2026-01-04 04:13:53+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:13:53+00:00  Bootstrap rep 56: GLM converged=True
+2026-01-04 04:13:58+00:00  Person-time V: 63,974,225.00 | U: 13,908,226,524.95
+2026-01-04 04:13:58+00:00  Deaths V: 2,493.00 | U: 1,424,544.52
+2026-01-04 04:13:58+00:00  Crude rate V: 3.90 | U: 10.24 per 100,000 pd
+2026-01-04 04:13:58+00:00  IPW diagnostics: mean=2.59, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:13:58+00:00  Bootstrap rep 57: GLM converged=True
+2026-01-04 04:14:03+00:00  Person-time V: 63,924,595.00 | U: 13,855,358,136.00
+2026-01-04 04:14:03+00:00  Deaths V: 2,541.00 | U: 1,440,722.69
+2026-01-04 04:14:03+00:00  Crude rate V: 3.97 | U: 10.40 per 100,000 pd
+2026-01-04 04:14:03+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:14:03+00:00  Bootstrap rep 58: GLM converged=True
+2026-01-04 04:14:06+00:00  Person-time V: 63,857,290.00 | U: 13,915,140,576.24
+2026-01-04 04:14:06+00:00  Deaths V: 2,554.00 | U: 1,420,667.61
+2026-01-04 04:14:06+00:00  Crude rate V: 4.00 | U: 10.21 per 100,000 pd
+2026-01-04 04:14:06+00:00  IPW diagnostics: mean=2.58, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:14:06+00:00  Bootstrap rep 59: GLM converged=True
+2026-01-04 04:18:43+00:00  Person-time V: 64,093,993.00 | U: 13,869,366,089.54
+2026-01-04 04:18:43+00:00  Deaths V: 2,504.00 | U: 1,407,006.94
+2026-01-04 04:18:43+00:00  Crude rate V: 3.91 | U: 10.14 per 100,000 pd
+2026-01-04 04:18:43+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:18:43+00:00  Bootstrap rep 60: GLM converged=True
+2026-01-04 04:18:47+00:00  Person-time V: 64,003,450.00 | U: 13,874,654,539.39
+2026-01-04 04:18:47+00:00  Deaths V: 2,554.00 | U: 1,387,969.29
+2026-01-04 04:18:47+00:00  Crude rate V: 3.99 | U: 10.00 per 100,000 pd
+2026-01-04 04:18:47+00:00  IPW diagnostics: mean=2.61, median=1.34, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:18:47+00:00  Bootstrap rep 61: GLM converged=True
+2026-01-04 04:18:54+00:00  Person-time V: 63,990,487.00 | U: 13,850,583,000.94
+2026-01-04 04:18:54+00:00  Deaths V: 2,580.00 | U: 1,521,483.45
+2026-01-04 04:18:54+00:00  Crude rate V: 4.03 | U: 10.98 per 100,000 pd
+2026-01-04 04:18:54+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:18:54+00:00  Bootstrap rep 62: GLM converged=True
+2026-01-04 04:18:57+00:00  Person-time V: 63,967,963.00 | U: 13,864,231,212.65
+2026-01-04 04:18:57+00:00  Deaths V: 2,628.00 | U: 1,509,356.42
+2026-01-04 04:18:57+00:00  Crude rate V: 4.11 | U: 10.89 per 100,000 pd
+2026-01-04 04:18:57+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:18:57+00:00  Bootstrap rep 63: GLM converged=True
+2026-01-04 04:23:37+00:00  Person-time V: 63,968,629.00 | U: 13,884,471,697.65
+2026-01-04 04:23:37+00:00  Deaths V: 2,479.00 | U: 1,490,115.98
+2026-01-04 04:23:37+00:00  Crude rate V: 3.88 | U: 10.73 per 100,000 pd
+2026-01-04 04:23:37+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:23:37+00:00  Bootstrap rep 64: GLM converged=True
+2026-01-04 04:23:40+00:00  Person-time V: 63,962,867.00 | U: 13,909,580,660.02
+2026-01-04 04:23:40+00:00  Deaths V: 2,524.00 | U: 1,438,573.84
+2026-01-04 04:23:40+00:00  Crude rate V: 3.95 | U: 10.34 per 100,000 pd
+2026-01-04 04:23:40+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:23:40+00:00  Bootstrap rep 65: GLM converged=True
+2026-01-04 04:23:45+00:00  Person-time V: 64,004,296.00 | U: 13,847,877,216.94
+2026-01-04 04:23:45+00:00  Deaths V: 2,491.00 | U: 1,519,911.16
+2026-01-04 04:23:45+00:00  Crude rate V: 3.89 | U: 10.98 per 100,000 pd
+2026-01-04 04:23:45+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:23:45+00:00  Bootstrap rep 66: GLM converged=True
+2026-01-04 04:23:48+00:00  Person-time V: 63,993,989.00 | U: 13,872,243,672.67
+2026-01-04 04:23:48+00:00  Deaths V: 2,539.00 | U: 1,463,997.87
+2026-01-04 04:23:48+00:00  Crude rate V: 3.97 | U: 10.55 per 100,000 pd
+2026-01-04 04:23:48+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:23:48+00:00  Bootstrap rep 67: GLM converged=True
+2026-01-04 04:28:28+00:00  Person-time V: 63,952,510.00 | U: 13,887,858,509.33
+2026-01-04 04:28:28+00:00  Deaths V: 2,594.00 | U: 1,478,850.28
+2026-01-04 04:28:28+00:00  Crude rate V: 4.06 | U: 10.65 per 100,000 pd
+2026-01-04 04:28:28+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:28:28+00:00  Bootstrap rep 68: GLM converged=True
+2026-01-04 04:28:31+00:00  Person-time V: 64,093,669.00 | U: 13,826,874,396.65
+2026-01-04 04:28:31+00:00  Deaths V: 2,586.00 | U: 1,466,042.71
+2026-01-04 04:28:31+00:00  Crude rate V: 4.03 | U: 10.60 per 100,000 pd
+2026-01-04 04:28:31+00:00  IPW diagnostics: mean=2.62, median=1.34, max=7.1e+00, % trimmed=0.0%
+2026-01-04 04:28:31+00:00  Bootstrap rep 69: GLM converged=True
+2026-01-04 04:28:38+00:00  Person-time V: 63,924,439.00 | U: 13,889,575,699.35
+2026-01-04 04:28:38+00:00  Deaths V: 2,587.00 | U: 1,434,397.85
+2026-01-04 04:28:38+00:00  Crude rate V: 4.05 | U: 10.33 per 100,000 pd
+2026-01-04 04:28:39+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:28:39+00:00  Bootstrap rep 70: GLM converged=True
+2026-01-04 04:28:39+00:00  Person-time V: 64,028,781.00 | U: 13,852,620,219.39
+2026-01-04 04:28:39+00:00  Deaths V: 2,559.00 | U: 1,491,321.70
+2026-01-04 04:28:39+00:00  Crude rate V: 4.00 | U: 10.77 per 100,000 pd
+2026-01-04 04:28:39+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:28:39+00:00  Bootstrap rep 71: GLM converged=True
+2026-01-04 04:33:18+00:00  Person-time V: 64,149,849.00 | U: 13,807,206,441.06
+2026-01-04 04:33:18+00:00  Deaths V: 2,599.00 | U: 1,467,992.22
+2026-01-04 04:33:18+00:00  Crude rate V: 4.05 | U: 10.63 per 100,000 pd
+2026-01-04 04:33:18+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.1e+00, % trimmed=0.0%
+2026-01-04 04:33:18+00:00  Bootstrap rep 72: GLM converged=True
+2026-01-04 04:33:22+00:00  Person-time V: 64,055,387.00 | U: 13,852,865,333.87
+2026-01-04 04:33:22+00:00  Deaths V: 2,451.00 | U: 1,437,182.47
+2026-01-04 04:33:22+00:00  Crude rate V: 3.83 | U: 10.37 per 100,000 pd
+2026-01-04 04:33:22+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:33:22+00:00  Bootstrap rep 73: GLM converged=True
+2026-01-04 04:33:28+00:00  Person-time V: 64,157,282.00 | U: 13,876,109,023.06
+2026-01-04 04:33:28+00:00  Deaths V: 2,591.00 | U: 1,401,062.56
+2026-01-04 04:33:28+00:00  Crude rate V: 4.04 | U: 10.10 per 100,000 pd
+2026-01-04 04:33:28+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.1e+00, % trimmed=0.0%
+2026-01-04 04:33:28+00:00  Bootstrap rep 74: GLM converged=True
+2026-01-04 04:33:31+00:00  Person-time V: 64,022,447.00 | U: 13,864,014,074.31
+2026-01-04 04:33:31+00:00  Deaths V: 2,647.00 | U: 1,454,041.67
+2026-01-04 04:33:31+00:00  Crude rate V: 4.13 | U: 10.49 per 100,000 pd
+2026-01-04 04:33:31+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:33:31+00:00  Bootstrap rep 75: GLM converged=True
+2026-01-04 04:38:10+00:00  Person-time V: 64,109,139.00 | U: 13,861,692,113.55
+2026-01-04 04:38:10+00:00  Deaths V: 2,598.00 | U: 1,366,085.84
+2026-01-04 04:38:10+00:00  Crude rate V: 4.05 | U: 9.86 per 100,000 pd
+2026-01-04 04:38:10+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:38:10+00:00  Bootstrap rep 76: GLM converged=True
+2026-01-04 04:38:15+00:00  Person-time V: 64,092,405.00 | U: 13,846,857,188.56
+2026-01-04 04:38:15+00:00  Deaths V: 2,476.00 | U: 1,508,500.96
+2026-01-04 04:38:15+00:00  Crude rate V: 3.86 | U: 10.89 per 100,000 pd
+2026-01-04 04:38:15+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:38:15+00:00  Bootstrap rep 77: GLM converged=True
+2026-01-04 04:38:19+00:00  Person-time V: 64,134,302.00 | U: 13,808,905,698.30
+2026-01-04 04:38:19+00:00  Deaths V: 2,638.00 | U: 1,450,328.84
+2026-01-04 04:38:19+00:00  Crude rate V: 4.11 | U: 10.50 per 100,000 pd
+2026-01-04 04:38:19+00:00  IPW diagnostics: mean=2.63, median=1.33, max=7.1e+00, % trimmed=0.0%
+2026-01-04 04:38:19+00:00  Bootstrap rep 78: GLM converged=True
+2026-01-04 04:38:23+00:00  Person-time V: 63,968,826.00 | U: 13,832,460,940.24
+2026-01-04 04:38:23+00:00  Deaths V: 2,552.00 | U: 1,583,990.18
+2026-01-04 04:38:23+00:00  Crude rate V: 3.99 | U: 11.45 per 100,000 pd
+2026-01-04 04:38:24+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:38:24+00:00  Bootstrap rep 79: GLM converged=True
+2026-01-04 04:43:01+00:00  Person-time V: 63,973,845.00 | U: 13,860,940,044.03
+2026-01-04 04:43:01+00:00  Deaths V: 2,583.00 | U: 1,455,437.73
+2026-01-04 04:43:01+00:00  Crude rate V: 4.04 | U: 10.50 per 100,000 pd
+2026-01-04 04:43:01+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:43:01+00:00  Bootstrap rep 80: GLM converged=True
+2026-01-04 04:43:06+00:00  Person-time V: 63,967,924.00 | U: 13,872,377,631.99
+2026-01-04 04:43:06+00:00  Deaths V: 2,563.00 | U: 1,470,377.70
+2026-01-04 04:43:06+00:00  Crude rate V: 4.01 | U: 10.60 per 100,000 pd
+2026-01-04 04:43:06+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:43:06+00:00  Bootstrap rep 81: GLM converged=True
+2026-01-04 04:43:10+00:00  Person-time V: 63,830,300.00 | U: 13,902,113,998.02
+2026-01-04 04:43:10+00:00  Deaths V: 2,610.00 | U: 1,447,824.69
+2026-01-04 04:43:10+00:00  Crude rate V: 4.09 | U: 10.41 per 100,000 pd
+2026-01-04 04:43:10+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:43:10+00:00  Bootstrap rep 82: GLM converged=True
+2026-01-04 04:43:15+00:00  Person-time V: 64,129,415.00 | U: 13,844,831,974.77
+2026-01-04 04:43:15+00:00  Deaths V: 2,529.00 | U: 1,469,044.28
+2026-01-04 04:43:15+00:00  Crude rate V: 3.94 | U: 10.61 per 100,000 pd
+2026-01-04 04:43:15+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:43:15+00:00  Bootstrap rep 83: GLM converged=True
+2026-01-04 04:47:54+00:00  Person-time V: 64,147,269.00 | U: 13,804,518,642.05
+2026-01-04 04:47:54+00:00  Deaths V: 2,611.00 | U: 1,488,696.30
+2026-01-04 04:47:54+00:00  Crude rate V: 4.07 | U: 10.78 per 100,000 pd
+2026-01-04 04:47:54+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:47:54+00:00  Bootstrap rep 84: GLM converged=True
+2026-01-04 04:47:57+00:00  Person-time V: 63,986,042.00 | U: 13,887,294,441.51
+2026-01-04 04:47:57+00:00  Deaths V: 2,519.00 | U: 1,374,084.16
+2026-01-04 04:47:57+00:00  Crude rate V: 3.94 | U: 9.89 per 100,000 pd
+2026-01-04 04:47:57+00:00  IPW diagnostics: mean=2.59, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:47:57+00:00  Bootstrap rep 85: GLM converged=True
+2026-01-04 04:48:03+00:00  Person-time V: 64,075,663.00 | U: 13,833,195,721.82
+2026-01-04 04:48:03+00:00  Deaths V: 2,557.00 | U: 1,474,451.48
+2026-01-04 04:48:03+00:00  Crude rate V: 3.99 | U: 10.66 per 100,000 pd
+2026-01-04 04:48:03+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:48:03+00:00  Bootstrap rep 86: GLM converged=True
+2026-01-04 04:48:06+00:00  Person-time V: 63,958,639.00 | U: 13,872,155,229.43
+2026-01-04 04:48:06+00:00  Deaths V: 2,554.00 | U: 1,461,452.28
+2026-01-04 04:48:06+00:00  Crude rate V: 3.99 | U: 10.54 per 100,000 pd
+2026-01-04 04:48:06+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:48:06+00:00  Bootstrap rep 87: GLM converged=True
+2026-01-04 04:52:47+00:00  Person-time V: 63,879,797.00 | U: 13,891,805,942.63
+2026-01-04 04:52:47+00:00  Deaths V: 2,548.00 | U: 1,475,002.03
+2026-01-04 04:52:47+00:00  Crude rate V: 3.99 | U: 10.62 per 100,000 pd
+2026-01-04 04:52:47+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 04:52:47+00:00  Bootstrap rep 88: GLM converged=True
+2026-01-04 04:52:50+00:00  Person-time V: 64,019,780.00 | U: 13,864,348,439.83
+2026-01-04 04:52:50+00:00  Deaths V: 2,502.00 | U: 1,416,418.93
+2026-01-04 04:52:50+00:00  Crude rate V: 3.91 | U: 10.22 per 100,000 pd
+2026-01-04 04:52:50+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:52:50+00:00  Bootstrap rep 89: GLM converged=True
+2026-01-04 04:52:55+00:00  Person-time V: 64,020,757.00 | U: 13,882,051,274.60
+2026-01-04 04:52:55+00:00  Deaths V: 2,604.00 | U: 1,413,860.60
+2026-01-04 04:52:55+00:00  Crude rate V: 4.07 | U: 10.18 per 100,000 pd
+2026-01-04 04:52:55+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:52:55+00:00  Bootstrap rep 90: GLM converged=True
+2026-01-04 04:52:58+00:00  Person-time V: 64,028,945.00 | U: 13,870,168,417.13
+2026-01-04 04:52:58+00:00  Deaths V: 2,464.00 | U: 1,444,102.69
+2026-01-04 04:52:58+00:00  Crude rate V: 3.85 | U: 10.41 per 100,000 pd
+2026-01-04 04:52:58+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:52:58+00:00  Bootstrap rep 91: GLM converged=True
+2026-01-04 04:57:38+00:00  Person-time V: 64,201,366.00 | U: 13,830,272,378.37
+2026-01-04 04:57:38+00:00  Deaths V: 2,576.00 | U: 1,428,067.28
+2026-01-04 04:57:38+00:00  Crude rate V: 4.01 | U: 10.33 per 100,000 pd
+2026-01-04 04:57:38+00:00  IPW diagnostics: mean=2.63, median=1.34, max=7.1e+00, % trimmed=0.0%
+2026-01-04 04:57:38+00:00  Bootstrap rep 92: GLM converged=True
+2026-01-04 04:57:44+00:00  Person-time V: 63,932,987.00 | U: 13,837,557,647.36
+2026-01-04 04:57:44+00:00  Deaths V: 2,541.00 | U: 1,530,471.43
+2026-01-04 04:57:44+00:00  Crude rate V: 3.97 | U: 11.06 per 100,000 pd
+2026-01-04 04:57:44+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:57:44+00:00  Bootstrap rep 93: GLM converged=True
+2026-01-04 04:57:46+00:00  Person-time V: 64,002,104.00 | U: 13,867,636,285.45
+2026-01-04 04:57:46+00:00  Deaths V: 2,610.00 | U: 1,397,062.56
+2026-01-04 04:57:46+00:00  Crude rate V: 4.08 | U: 10.07 per 100,000 pd
+2026-01-04 04:57:46+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:57:46+00:00  Bootstrap rep 94: GLM converged=True
+2026-01-04 04:57:50+00:00  Person-time V: 63,978,574.00 | U: 13,855,428,268.14
+2026-01-04 04:57:50+00:00  Deaths V: 2,587.00 | U: 1,430,655.82
+2026-01-04 04:57:50+00:00  Crude rate V: 4.04 | U: 10.33 per 100,000 pd
+2026-01-04 04:57:50+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 04:57:50+00:00  Bootstrap rep 95: GLM converged=True
+2026-01-04 05:02:33+00:00  Person-time V: 63,985,625.00 | U: 13,882,351,676.79
+2026-01-04 05:02:33+00:00  Deaths V: 2,616.00 | U: 1,449,785.51
+2026-01-04 05:02:33+00:00  Crude rate V: 4.09 | U: 10.44 per 100,000 pd
+2026-01-04 05:02:33+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:02:33+00:00  Bootstrap rep 96: GLM converged=True
+2026-01-04 05:02:37+00:00  Person-time V: 63,970,464.00 | U: 13,860,353,511.20
+2026-01-04 05:02:37+00:00  Deaths V: 2,537.00 | U: 1,514,055.05
+2026-01-04 05:02:37+00:00  Crude rate V: 3.97 | U: 10.92 per 100,000 pd
+2026-01-04 05:02:37+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:02:37+00:00  Bootstrap rep 97: GLM converged=True
+2026-01-04 05:02:39+00:00  Person-time V: 64,029,061.00 | U: 13,877,031,451.76
+2026-01-04 05:02:39+00:00  Deaths V: 2,563.00 | U: 1,474,911.88
+2026-01-04 05:02:39+00:00  Crude rate V: 4.00 | U: 10.63 per 100,000 pd
+2026-01-04 05:02:39+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:02:39+00:00  Bootstrap rep 98: GLM converged=True
+2026-01-04 05:02:44+00:00  Person-time V: 64,060,850.00 | U: 13,834,354,177.66
+2026-01-04 05:02:44+00:00  Deaths V: 2,535.00 | U: 1,487,268.79
+2026-01-04 05:02:44+00:00  Crude rate V: 3.96 | U: 10.75 per 100,000 pd
+2026-01-04 05:02:44+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:02:44+00:00  Bootstrap rep 99: GLM converged=True
+2026-01-04 05:07:24+00:00  Person-time V: 64,066,220.00 | U: 13,831,071,239.15
+2026-01-04 05:07:24+00:00  Deaths V: 2,526.00 | U: 1,484,810.14
+2026-01-04 05:07:24+00:00  Crude rate V: 3.94 | U: 10.74 per 100,000 pd
+2026-01-04 05:07:24+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:07:24+00:00  Bootstrap rep 100: GLM converged=True
+2026-01-04 05:07:29+00:00  Person-time V: 63,933,416.00 | U: 13,871,348,298.65
+2026-01-04 05:07:29+00:00  Deaths V: 2,533.00 | U: 1,484,465.46
+2026-01-04 05:07:29+00:00  Crude rate V: 3.96 | U: 10.70 per 100,000 pd
+2026-01-04 05:07:29+00:00  IPW diagnostics: mean=2.59, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:07:29+00:00  Bootstrap rep 101: GLM converged=True
+2026-01-04 05:07:33+00:00  Person-time V: 64,097,573.00 | U: 13,842,116,168.18
+2026-01-04 05:07:33+00:00  Deaths V: 2,553.00 | U: 1,460,267.35
+2026-01-04 05:07:33+00:00  Crude rate V: 3.98 | U: 10.55 per 100,000 pd
+2026-01-04 05:07:33+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:07:33+00:00  Bootstrap rep 102: GLM converged=True
+2026-01-04 05:07:35+00:00  Person-time V: 64,199,156.00 | U: 13,817,921,174.47
+2026-01-04 05:07:35+00:00  Deaths V: 2,489.00 | U: 1,425,655.49
+2026-01-04 05:07:35+00:00  Crude rate V: 3.88 | U: 10.32 per 100,000 pd
+2026-01-04 05:07:35+00:00  IPW diagnostics: mean=2.63, median=1.33, max=7.1e+00, % trimmed=0.0%
+2026-01-04 05:07:35+00:00  Bootstrap rep 103: GLM converged=True
+2026-01-04 05:12:16+00:00  Person-time V: 63,936,264.00 | U: 13,868,309,795.02
+2026-01-04 05:12:16+00:00  Deaths V: 2,630.00 | U: 1,425,542.20
+2026-01-04 05:12:16+00:00  Crude rate V: 4.11 | U: 10.28 per 100,000 pd
+2026-01-04 05:12:16+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:12:16+00:00  Bootstrap rep 104: GLM converged=True
+2026-01-04 05:12:19+00:00  Person-time V: 64,052,409.00 | U: 13,828,482,248.96
+2026-01-04 05:12:19+00:00  Deaths V: 2,617.00 | U: 1,463,418.13
+2026-01-04 05:12:19+00:00  Crude rate V: 4.09 | U: 10.58 per 100,000 pd
+2026-01-04 05:12:19+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:12:19+00:00  Bootstrap rep 105: GLM converged=True
+2026-01-04 05:12:22+00:00  Person-time V: 64,178,767.00 | U: 13,837,298,634.62
+2026-01-04 05:12:22+00:00  Deaths V: 2,531.00 | U: 1,403,784.55
+2026-01-04 05:12:22+00:00  Crude rate V: 3.94 | U: 10.14 per 100,000 pd
+2026-01-04 05:12:22+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.1e+00, % trimmed=0.0%
+2026-01-04 05:12:22+00:00  Bootstrap rep 106: GLM converged=True
+2026-01-04 05:12:27+00:00  Person-time V: 63,966,150.00 | U: 13,906,439,322.38
+2026-01-04 05:12:27+00:00  Deaths V: 2,588.00 | U: 1,423,206.76
+2026-01-04 05:12:27+00:00  Crude rate V: 4.05 | U: 10.23 per 100,000 pd
+2026-01-04 05:12:27+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:12:27+00:00  Bootstrap rep 107: GLM converged=True
+2026-01-04 05:17:08+00:00  Person-time V: 64,043,029.00 | U: 13,843,918,590.44
+2026-01-04 05:17:08+00:00  Deaths V: 2,548.00 | U: 1,468,151.55
+2026-01-04 05:17:08+00:00  Crude rate V: 3.98 | U: 10.61 per 100,000 pd
+2026-01-04 05:17:08+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:17:08+00:00  Bootstrap rep 108: GLM converged=True
+2026-01-04 05:17:11+00:00  Person-time V: 63,905,446.00 | U: 13,895,267,313.84
+2026-01-04 05:17:11+00:00  Deaths V: 2,469.00 | U: 1,422,912.20
+2026-01-04 05:17:11+00:00  Crude rate V: 3.86 | U: 10.24 per 100,000 pd
+2026-01-04 05:17:11+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:17:11+00:00  Bootstrap rep 109: GLM converged=True
+2026-01-04 05:17:15+00:00  Person-time V: 63,849,424.00 | U: 13,880,011,724.59
+2026-01-04 05:17:15+00:00  Deaths V: 2,650.00 | U: 1,486,989.19
+2026-01-04 05:17:15+00:00  Crude rate V: 4.15 | U: 10.71 per 100,000 pd
+2026-01-04 05:17:15+00:00  IPW diagnostics: mean=2.58, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:17:15+00:00  Bootstrap rep 110: GLM converged=True
+2026-01-04 05:17:20+00:00  Person-time V: 63,928,612.00 | U: 13,857,640,556.61
+2026-01-04 05:17:20+00:00  Deaths V: 2,623.00 | U: 1,546,361.46
+2026-01-04 05:17:20+00:00  Crude rate V: 4.10 | U: 11.16 per 100,000 pd
+2026-01-04 05:17:20+00:00  IPW diagnostics: mean=2.59, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:17:20+00:00  Bootstrap rep 111: GLM converged=True
+2026-01-04 05:21:58+00:00  Person-time V: 64,029,559.00 | U: 13,839,850,531.35
+2026-01-04 05:21:58+00:00  Deaths V: 2,578.00 | U: 1,467,915.13
+2026-01-04 05:21:58+00:00  Crude rate V: 4.03 | U: 10.61 per 100,000 pd
+2026-01-04 05:21:58+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:21:59+00:00  Bootstrap rep 112: GLM converged=True
+2026-01-04 05:22:03+00:00  Person-time V: 63,955,341.00 | U: 13,898,292,619.54
+2026-01-04 05:22:03+00:00  Deaths V: 2,585.00 | U: 1,442,378.05
+2026-01-04 05:22:03+00:00  Crude rate V: 4.04 | U: 10.38 per 100,000 pd
+2026-01-04 05:22:03+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:22:03+00:00  Bootstrap rep 113: GLM converged=True
+2026-01-04 05:22:06+00:00  Person-time V: 63,937,606.00 | U: 13,930,486,382.49
+2026-01-04 05:22:06+00:00  Deaths V: 2,587.00 | U: 1,368,295.98
+2026-01-04 05:22:06+00:00  Crude rate V: 4.05 | U: 9.82 per 100,000 pd
+2026-01-04 05:22:06+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:22:06+00:00  Bootstrap rep 114: GLM converged=True
+2026-01-04 05:22:11+00:00  Person-time V: 64,056,319.00 | U: 13,869,123,318.02
+2026-01-04 05:22:11+00:00  Deaths V: 2,522.00 | U: 1,476,937.51
+2026-01-04 05:22:11+00:00  Crude rate V: 3.94 | U: 10.65 per 100,000 pd
+2026-01-04 05:22:11+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:22:11+00:00  Bootstrap rep 115: GLM converged=True
+2026-01-04 05:26:50+00:00  Person-time V: 64,007,243.00 | U: 13,861,111,655.74
+2026-01-04 05:26:50+00:00  Deaths V: 2,660.00 | U: 1,480,442.47
+2026-01-04 05:26:50+00:00  Crude rate V: 4.16 | U: 10.68 per 100,000 pd
+2026-01-04 05:26:50+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:26:50+00:00  Bootstrap rep 116: GLM converged=True
+2026-01-04 05:26:55+00:00  Person-time V: 64,055,757.00 | U: 13,848,698,474.17
+2026-01-04 05:26:55+00:00  Deaths V: 2,527.00 | U: 1,512,670.43
+2026-01-04 05:26:55+00:00  Crude rate V: 3.95 | U: 10.92 per 100,000 pd
+2026-01-04 05:26:55+00:00  IPW diagnostics: mean=2.59, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:26:55+00:00  Bootstrap rep 117: GLM converged=True
+2026-01-04 05:26:58+00:00  Person-time V: 64,067,036.00 | U: 13,859,382,463.65
+2026-01-04 05:26:58+00:00  Deaths V: 2,546.00 | U: 1,385,969.75
+2026-01-04 05:26:58+00:00  Crude rate V: 3.97 | U: 10.00 per 100,000 pd
+2026-01-04 05:26:58+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:26:58+00:00  Bootstrap rep 118: GLM converged=True
+2026-01-04 05:27:01+00:00  Person-time V: 63,970,916.00 | U: 13,901,478,310.36
+2026-01-04 05:27:01+00:00  Deaths V: 2,523.00 | U: 1,390,837.06
+2026-01-04 05:27:01+00:00  Crude rate V: 3.94 | U: 10.00 per 100,000 pd
+2026-01-04 05:27:01+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:27:01+00:00  Bootstrap rep 119: GLM converged=True
+2026-01-04 05:31:40+00:00  Person-time V: 63,948,577.00 | U: 13,937,676,656.37
+2026-01-04 05:31:40+00:00  Deaths V: 2,482.00 | U: 1,416,364.04
+2026-01-04 05:31:40+00:00  Crude rate V: 3.88 | U: 10.16 per 100,000 pd
+2026-01-04 05:31:40+00:00  IPW diagnostics: mean=2.58, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:31:40+00:00  Bootstrap rep 120: GLM converged=True
+2026-01-04 05:31:46+00:00  Person-time V: 63,979,678.00 | U: 13,857,638,123.60
+2026-01-04 05:31:46+00:00  Deaths V: 2,548.00 | U: 1,503,356.64
+2026-01-04 05:31:46+00:00  Crude rate V: 3.98 | U: 10.85 per 100,000 pd
+2026-01-04 05:31:46+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:31:46+00:00  Bootstrap rep 121: GLM converged=True
+2026-01-04 05:31:49+00:00  Person-time V: 63,925,928.00 | U: 13,869,106,217.80
+2026-01-04 05:31:49+00:00  Deaths V: 2,590.00 | U: 1,486,407.08
+2026-01-04 05:31:49+00:00  Crude rate V: 4.05 | U: 10.72 per 100,000 pd
+2026-01-04 05:31:49+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:31:49+00:00  Bootstrap rep 122: GLM converged=True
+2026-01-04 05:31:53+00:00  Person-time V: 63,987,300.00 | U: 13,842,776,643.46
+2026-01-04 05:31:53+00:00  Deaths V: 2,559.00 | U: 1,452,738.71
+2026-01-04 05:31:53+00:00  Crude rate V: 4.00 | U: 10.49 per 100,000 pd
+2026-01-04 05:31:53+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:31:53+00:00  Bootstrap rep 123: GLM converged=True
+2026-01-04 05:36:31+00:00  Person-time V: 63,896,621.00 | U: 13,852,421,185.70
+2026-01-04 05:36:31+00:00  Deaths V: 2,572.00 | U: 1,488,202.68
+2026-01-04 05:36:31+00:00  Crude rate V: 4.03 | U: 10.74 per 100,000 pd
+2026-01-04 05:36:31+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:36:31+00:00  Bootstrap rep 124: GLM converged=True
+2026-01-04 05:36:37+00:00  Person-time V: 63,974,514.00 | U: 13,909,213,600.48
+2026-01-04 05:36:37+00:00  Deaths V: 2,556.00 | U: 1,385,771.64
+2026-01-04 05:36:37+00:00  Crude rate V: 4.00 | U: 9.96 per 100,000 pd
+2026-01-04 05:36:37+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:36:37+00:00  Bootstrap rep 125: GLM converged=True
+2026-01-04 05:36:42+00:00  Person-time V: 63,940,076.00 | U: 13,937,830,499.24
+2026-01-04 05:36:42+00:00  Deaths V: 2,573.00 | U: 1,389,059.59
+2026-01-04 05:36:42+00:00  Crude rate V: 4.02 | U: 9.97 per 100,000 pd
+2026-01-04 05:36:42+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:36:42+00:00  Bootstrap rep 126: GLM converged=True
+2026-01-04 05:36:44+00:00  Person-time V: 63,936,103.00 | U: 13,907,279,116.21
+2026-01-04 05:36:44+00:00  Deaths V: 2,521.00 | U: 1,447,433.51
+2026-01-04 05:36:44+00:00  Crude rate V: 3.94 | U: 10.41 per 100,000 pd
+2026-01-04 05:36:44+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:36:44+00:00  Bootstrap rep 127: GLM converged=True
+2026-01-04 05:41:23+00:00  Person-time V: 64,009,055.00 | U: 13,853,748,010.00
+2026-01-04 05:41:23+00:00  Deaths V: 2,512.00 | U: 1,509,116.62
+2026-01-04 05:41:23+00:00  Crude rate V: 3.92 | U: 10.89 per 100,000 pd
+2026-01-04 05:41:23+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:41:23+00:00  Bootstrap rep 128: GLM converged=True
+2026-01-04 05:41:30+00:00  Person-time V: 64,064,028.00 | U: 13,887,235,593.21
+2026-01-04 05:41:30+00:00  Deaths V: 2,552.00 | U: 1,421,415.05
+2026-01-04 05:41:30+00:00  Crude rate V: 3.98 | U: 10.24 per 100,000 pd
+2026-01-04 05:41:31+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:41:31+00:00  Bootstrap rep 129: GLM converged=True
+2026-01-04 05:41:33+00:00  Person-time V: 63,957,754.00 | U: 13,861,197,614.84
+2026-01-04 05:41:33+00:00  Deaths V: 2,649.00 | U: 1,441,415.42
+2026-01-04 05:41:33+00:00  Crude rate V: 4.14 | U: 10.40 per 100,000 pd
+2026-01-04 05:41:34+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:41:34+00:00  Bootstrap rep 130: GLM converged=True
+2026-01-04 05:41:36+00:00  Person-time V: 63,941,212.00 | U: 13,893,165,383.72
+2026-01-04 05:41:36+00:00  Deaths V: 2,601.00 | U: 1,431,462.79
+2026-01-04 05:41:36+00:00  Crude rate V: 4.07 | U: 10.30 per 100,000 pd
+2026-01-04 05:41:36+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:41:36+00:00  Bootstrap rep 131: GLM converged=True
+2026-01-04 05:46:14+00:00  Person-time V: 64,003,068.00 | U: 13,862,482,567.18
+2026-01-04 05:46:14+00:00  Deaths V: 2,509.00 | U: 1,441,235.74
+2026-01-04 05:46:14+00:00  Crude rate V: 3.92 | U: 10.40 per 100,000 pd
+2026-01-04 05:46:14+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:46:14+00:00  Bootstrap rep 132: GLM converged=True
+2026-01-04 05:46:21+00:00  Person-time V: 64,053,680.00 | U: 13,832,567,231.18
+2026-01-04 05:46:21+00:00  Deaths V: 2,575.00 | U: 1,507,008.76
+2026-01-04 05:46:21+00:00  Crude rate V: 4.02 | U: 10.89 per 100,000 pd
+2026-01-04 05:46:21+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:46:21+00:00  Bootstrap rep 133: GLM converged=True
+2026-01-04 05:46:25+00:00  Person-time V: 64,112,572.00 | U: 13,842,066,447.94
+2026-01-04 05:46:25+00:00  Deaths V: 2,553.00 | U: 1,495,810.23
+2026-01-04 05:46:25+00:00  Crude rate V: 3.98 | U: 10.81 per 100,000 pd
+2026-01-04 05:46:25+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:46:25+00:00  Bootstrap rep 134: GLM converged=True
+2026-01-04 05:46:28+00:00  Person-time V: 63,917,448.00 | U: 13,894,822,231.14
+2026-01-04 05:46:28+00:00  Deaths V: 2,526.00 | U: 1,406,133.35
+2026-01-04 05:46:28+00:00  Crude rate V: 3.95 | U: 10.12 per 100,000 pd
+2026-01-04 05:46:28+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:46:28+00:00  Bootstrap rep 135: GLM converged=True
+2026-01-04 05:51:08+00:00  Person-time V: 63,913,413.00 | U: 13,898,369,841.75
+2026-01-04 05:51:08+00:00  Deaths V: 2,525.00 | U: 1,419,070.80
+2026-01-04 05:51:08+00:00  Crude rate V: 3.95 | U: 10.21 per 100,000 pd
+2026-01-04 05:51:08+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:51:08+00:00  Bootstrap rep 136: GLM converged=True
+2026-01-04 05:51:15+00:00  Person-time V: 64,076,349.00 | U: 13,816,725,167.01
+2026-01-04 05:51:15+00:00  Deaths V: 2,544.00 | U: 1,477,202.11
+2026-01-04 05:51:15+00:00  Crude rate V: 3.97 | U: 10.69 per 100,000 pd
+2026-01-04 05:51:15+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:51:15+00:00  Bootstrap rep 137: GLM converged=True
+2026-01-04 05:51:18+00:00  Person-time V: 64,035,435.00 | U: 13,871,875,457.02
+2026-01-04 05:51:18+00:00  Deaths V: 2,631.00 | U: 1,344,729.27
+2026-01-04 05:51:18+00:00  Crude rate V: 4.11 | U: 9.69 per 100,000 pd
+2026-01-04 05:51:18+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:51:18+00:00  Bootstrap rep 138: GLM converged=True
+2026-01-04 05:51:21+00:00  Person-time V: 64,192,884.00 | U: 13,827,446,435.88
+2026-01-04 05:51:21+00:00  Deaths V: 2,500.00 | U: 1,391,966.21
+2026-01-04 05:51:21+00:00  Crude rate V: 3.89 | U: 10.07 per 100,000 pd
+2026-01-04 05:51:21+00:00  IPW diagnostics: mean=2.63, median=1.33, max=7.1e+00, % trimmed=0.0%
+2026-01-04 05:51:21+00:00  Bootstrap rep 139: GLM converged=True
+2026-01-04 05:55:59+00:00  Person-time V: 64,077,879.00 | U: 13,815,372,101.23
+2026-01-04 05:55:59+00:00  Deaths V: 2,518.00 | U: 1,453,623.22
+2026-01-04 05:55:59+00:00  Crude rate V: 3.93 | U: 10.52 per 100,000 pd
+2026-01-04 05:55:59+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:55:59+00:00  Bootstrap rep 140: GLM converged=True
+2026-01-04 05:56:07+00:00  Person-time V: 63,910,202.00 | U: 13,892,173,507.84
+2026-01-04 05:56:07+00:00  Deaths V: 2,580.00 | U: 1,476,636.44
+2026-01-04 05:56:07+00:00  Crude rate V: 4.04 | U: 10.63 per 100,000 pd
+2026-01-04 05:56:07+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:56:07+00:00  Bootstrap rep 141: GLM converged=True
+2026-01-04 05:56:10+00:00  Person-time V: 64,073,281.00 | U: 13,837,929,076.18
+2026-01-04 05:56:10+00:00  Deaths V: 2,523.00 | U: 1,446,558.73
+2026-01-04 05:56:10+00:00  Crude rate V: 3.94 | U: 10.45 per 100,000 pd
+2026-01-04 05:56:10+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 05:56:10+00:00  Bootstrap rep 142: GLM converged=True
+2026-01-04 05:56:12+00:00  Person-time V: 63,909,102.00 | U: 13,899,439,414.13
+2026-01-04 05:56:12+00:00  Deaths V: 2,555.00 | U: 1,451,048.37
+2026-01-04 05:56:12+00:00  Crude rate V: 4.00 | U: 10.44 per 100,000 pd
+2026-01-04 05:56:12+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 05:56:12+00:00  Bootstrap rep 143: GLM converged=True
+2026-01-04 06:00:54+00:00  Person-time V: 64,014,089.00 | U: 13,873,432,669.27
+2026-01-04 06:00:54+00:00  Deaths V: 2,509.00 | U: 1,423,687.00
+2026-01-04 06:00:54+00:00  Crude rate V: 3.92 | U: 10.26 per 100,000 pd
+2026-01-04 06:00:54+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:00:54+00:00  Bootstrap rep 144: GLM converged=True
+2026-01-04 06:00:59+00:00  Person-time V: 64,013,821.00 | U: 13,900,216,879.12
+2026-01-04 06:00:59+00:00  Deaths V: 2,590.00 | U: 1,387,256.75
+2026-01-04 06:00:59+00:00  Crude rate V: 4.05 | U: 9.98 per 100,000 pd
+2026-01-04 06:00:59+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:00:59+00:00  Bootstrap rep 145: GLM converged=True
+2026-01-04 06:01:03+00:00  Person-time V: 63,864,437.00 | U: 13,889,067,635.18
+2026-01-04 06:01:03+00:00  Deaths V: 2,597.00 | U: 1,375,461.03
+2026-01-04 06:01:03+00:00  Crude rate V: 4.07 | U: 9.90 per 100,000 pd
+2026-01-04 06:01:03+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:01:03+00:00  Bootstrap rep 146: GLM converged=True
+2026-01-04 06:01:07+00:00  Person-time V: 64,047,164.00 | U: 13,837,071,725.38
+2026-01-04 06:01:07+00:00  Deaths V: 2,605.00 | U: 1,395,169.35
+2026-01-04 06:01:07+00:00  Crude rate V: 4.07 | U: 10.08 per 100,000 pd
+2026-01-04 06:01:07+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:01:07+00:00  Bootstrap rep 147: GLM converged=True
+2026-01-04 06:05:46+00:00  Person-time V: 63,919,492.00 | U: 13,897,691,152.51
+2026-01-04 06:05:46+00:00  Deaths V: 2,498.00 | U: 1,445,414.24
+2026-01-04 06:05:46+00:00  Crude rate V: 3.91 | U: 10.40 per 100,000 pd
+2026-01-04 06:05:46+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:05:46+00:00  Bootstrap rep 148: GLM converged=True
+2026-01-04 06:05:52+00:00  Person-time V: 64,073,325.00 | U: 13,831,564,078.07
+2026-01-04 06:05:52+00:00  Deaths V: 2,491.00 | U: 1,442,375.46
+2026-01-04 06:05:52+00:00  Crude rate V: 3.89 | U: 10.43 per 100,000 pd
+2026-01-04 06:05:52+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:05:52+00:00  Bootstrap rep 149: GLM converged=True
+2026-01-04 06:05:56+00:00  Person-time V: 63,893,792.00 | U: 13,903,667,714.83
+2026-01-04 06:05:56+00:00  Deaths V: 2,526.00 | U: 1,454,405.93
+2026-01-04 06:05:56+00:00  Crude rate V: 3.95 | U: 10.46 per 100,000 pd
+2026-01-04 06:05:56+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:05:56+00:00  Bootstrap rep 150: GLM converged=True
+2026-01-04 06:05:59+00:00  Person-time V: 64,057,394.00 | U: 13,848,770,339.13
+2026-01-04 06:05:59+00:00  Deaths V: 2,627.00 | U: 1,445,267.85
+2026-01-04 06:05:59+00:00  Crude rate V: 4.10 | U: 10.44 per 100,000 pd
+2026-01-04 06:05:59+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:05:59+00:00  Bootstrap rep 151: GLM converged=True
+2026-01-04 06:10:39+00:00  Person-time V: 64,021,385.00 | U: 13,858,528,941.25
+2026-01-04 06:10:39+00:00  Deaths V: 2,501.00 | U: 1,482,631.61
+2026-01-04 06:10:39+00:00  Crude rate V: 3.91 | U: 10.70 per 100,000 pd
+2026-01-04 06:10:39+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:10:39+00:00  Bootstrap rep 152: GLM converged=True
+2026-01-04 06:10:44+00:00  Person-time V: 63,969,799.00 | U: 13,907,328,701.49
+2026-01-04 06:10:44+00:00  Deaths V: 2,617.00 | U: 1,414,283.54
+2026-01-04 06:10:44+00:00  Crude rate V: 4.09 | U: 10.17 per 100,000 pd
+2026-01-04 06:10:45+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:10:45+00:00  Bootstrap rep 153: GLM converged=True
+2026-01-04 06:10:50+00:00  Person-time V: 64,132,652.00 | U: 13,846,769,275.65
+2026-01-04 06:10:50+00:00  Deaths V: 2,521.00 | U: 1,432,325.12
+2026-01-04 06:10:50+00:00  Crude rate V: 3.93 | U: 10.34 per 100,000 pd
+2026-01-04 06:10:50+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:10:50+00:00  Bootstrap rep 154: GLM converged=True
+2026-01-04 06:10:51+00:00  Person-time V: 64,056,994.00 | U: 13,841,217,498.12
+2026-01-04 06:10:51+00:00  Deaths V: 2,577.00 | U: 1,416,595.87
+2026-01-04 06:10:51+00:00  Crude rate V: 4.02 | U: 10.23 per 100,000 pd
+2026-01-04 06:10:51+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:10:51+00:00  Bootstrap rep 155: GLM converged=True
+2026-01-04 06:15:31+00:00  Person-time V: 64,053,613.00 | U: 13,830,837,269.90
+2026-01-04 06:15:31+00:00  Deaths V: 2,598.00 | U: 1,534,313.89
+2026-01-04 06:15:31+00:00  Crude rate V: 4.06 | U: 11.09 per 100,000 pd
+2026-01-04 06:15:31+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:15:31+00:00  Bootstrap rep 156: GLM converged=True
+2026-01-04 06:15:36+00:00  Person-time V: 63,923,590.00 | U: 13,920,942,435.38
+2026-01-04 06:15:36+00:00  Deaths V: 2,499.00 | U: 1,439,114.11
+2026-01-04 06:15:36+00:00  Crude rate V: 3.91 | U: 10.34 per 100,000 pd
+2026-01-04 06:15:36+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:15:36+00:00  Bootstrap rep 157: GLM converged=True
+2026-01-04 06:15:42+00:00  Person-time V: 64,030,409.00 | U: 13,889,498,948.11
+2026-01-04 06:15:42+00:00  Deaths V: 2,534.00 | U: 1,390,114.71
+2026-01-04 06:15:42+00:00  Crude rate V: 3.96 | U: 10.01 per 100,000 pd
+2026-01-04 06:15:42+00:00  IPW diagnostics: mean=2.61, median=1.34, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:15:42+00:00  Bootstrap rep 158: GLM converged=True
+2026-01-04 06:15:44+00:00  Person-time V: 63,918,571.00 | U: 13,875,635,261.04
+2026-01-04 06:15:44+00:00  Deaths V: 2,454.00 | U: 1,463,469.84
+2026-01-04 06:15:44+00:00  Crude rate V: 3.84 | U: 10.55 per 100,000 pd
+2026-01-04 06:15:44+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:15:44+00:00  Bootstrap rep 159: GLM converged=True
+2026-01-04 06:20:24+00:00  Person-time V: 63,996,847.00 | U: 13,898,186,891.31
+2026-01-04 06:20:24+00:00  Deaths V: 2,538.00 | U: 1,432,298.97
+2026-01-04 06:20:24+00:00  Crude rate V: 3.97 | U: 10.31 per 100,000 pd
+2026-01-04 06:20:24+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:20:24+00:00  Bootstrap rep 160: GLM converged=True
+2026-01-04 06:20:28+00:00  Person-time V: 63,968,192.00 | U: 13,897,599,736.93
+2026-01-04 06:20:28+00:00  Deaths V: 2,505.00 | U: 1,448,453.94
+2026-01-04 06:20:28+00:00  Crude rate V: 3.92 | U: 10.42 per 100,000 pd
+2026-01-04 06:20:28+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:20:28+00:00  Bootstrap rep 161: GLM converged=True
+2026-01-04 06:20:32+00:00  Person-time V: 63,920,674.00 | U: 13,932,944,955.05
+2026-01-04 06:20:32+00:00  Deaths V: 2,549.00 | U: 1,438,639.56
+2026-01-04 06:20:32+00:00  Crude rate V: 3.99 | U: 10.33 per 100,000 pd
+2026-01-04 06:20:32+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:20:32+00:00  Bootstrap rep 162: GLM converged=True
+2026-01-04 06:20:37+00:00  Person-time V: 63,874,563.00 | U: 13,877,158,465.76
+2026-01-04 06:20:37+00:00  Deaths V: 2,527.00 | U: 1,494,458.58
+2026-01-04 06:20:37+00:00  Crude rate V: 3.96 | U: 10.77 per 100,000 pd
+2026-01-04 06:20:37+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:20:37+00:00  Bootstrap rep 163: GLM converged=True
+2026-01-04 06:25:15+00:00  Person-time V: 64,042,641.00 | U: 13,867,310,687.80
+2026-01-04 06:25:15+00:00  Deaths V: 2,490.00 | U: 1,450,731.83
+2026-01-04 06:25:15+00:00  Crude rate V: 3.89 | U: 10.46 per 100,000 pd
+2026-01-04 06:25:15+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:25:15+00:00  Bootstrap rep 164: GLM converged=True
+2026-01-04 06:25:21+00:00  Person-time V: 63,907,147.00 | U: 13,892,963,458.64
+2026-01-04 06:25:21+00:00  Deaths V: 2,616.00 | U: 1,457,735.07
+2026-01-04 06:25:21+00:00  Crude rate V: 4.09 | U: 10.49 per 100,000 pd
+2026-01-04 06:25:21+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:25:21+00:00  Bootstrap rep 165: GLM converged=True
+2026-01-04 06:25:24+00:00  Person-time V: 64,021,891.00 | U: 13,892,611,671.90
+2026-01-04 06:25:24+00:00  Deaths V: 2,475.00 | U: 1,438,838.70
+2026-01-04 06:25:24+00:00  Crude rate V: 3.87 | U: 10.36 per 100,000 pd
+2026-01-04 06:25:24+00:00  IPW diagnostics: mean=2.59, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:25:24+00:00  Bootstrap rep 166: GLM converged=True
+2026-01-04 06:25:29+00:00  Person-time V: 63,957,567.00 | U: 13,921,241,285.69
+2026-01-04 06:25:29+00:00  Deaths V: 2,536.00 | U: 1,375,315.40
+2026-01-04 06:25:29+00:00  Crude rate V: 3.97 | U: 9.88 per 100,000 pd
+2026-01-04 06:25:29+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:25:29+00:00  Bootstrap rep 167: GLM converged=True
+2026-01-04 06:30:05+00:00  Person-time V: 64,005,568.00 | U: 13,917,122,662.66
+2026-01-04 06:30:05+00:00  Deaths V: 2,514.00 | U: 1,448,561.86
+2026-01-04 06:30:05+00:00  Crude rate V: 3.93 | U: 10.41 per 100,000 pd
+2026-01-04 06:30:05+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:30:05+00:00  Bootstrap rep 168: GLM converged=True
+2026-01-04 06:30:13+00:00  Person-time V: 63,938,026.00 | U: 13,901,840,473.38
+2026-01-04 06:30:13+00:00  Deaths V: 2,534.00 | U: 1,472,743.34
+2026-01-04 06:30:13+00:00  Crude rate V: 3.96 | U: 10.59 per 100,000 pd
+2026-01-04 06:30:13+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:30:13+00:00  Bootstrap rep 169: GLM converged=True
+2026-01-04 06:30:17+00:00  Person-time V: 64,011,297.00 | U: 13,881,406,288.70
+2026-01-04 06:30:17+00:00  Deaths V: 2,518.00 | U: 1,415,224.64
+2026-01-04 06:30:17+00:00  Crude rate V: 3.93 | U: 10.20 per 100,000 pd
+2026-01-04 06:30:17+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:30:17+00:00  Bootstrap rep 170: GLM converged=True
+2026-01-04 06:30:20+00:00  Person-time V: 63,904,294.00 | U: 13,890,613,440.93
+2026-01-04 06:30:20+00:00  Deaths V: 2,514.00 | U: 1,477,714.67
+2026-01-04 06:30:20+00:00  Crude rate V: 3.93 | U: 10.64 per 100,000 pd
+2026-01-04 06:30:20+00:00  IPW diagnostics: mean=2.58, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:30:20+00:00  Bootstrap rep 171: GLM converged=True
+2026-01-04 06:35:01+00:00  Person-time V: 64,067,151.00 | U: 13,855,765,819.54
+2026-01-04 06:35:01+00:00  Deaths V: 2,510.00 | U: 1,417,633.47
+2026-01-04 06:35:01+00:00  Crude rate V: 3.92 | U: 10.23 per 100,000 pd
+2026-01-04 06:35:01+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:35:01+00:00  Bootstrap rep 172: GLM converged=True
+2026-01-04 06:35:05+00:00  Person-time V: 64,104,277.00 | U: 13,823,440,553.84
+2026-01-04 06:35:05+00:00  Deaths V: 2,496.00 | U: 1,463,227.49
+2026-01-04 06:35:05+00:00  Crude rate V: 3.89 | U: 10.59 per 100,000 pd
+2026-01-04 06:35:05+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:35:05+00:00  Bootstrap rep 173: GLM converged=True
+2026-01-04 06:35:10+00:00  Person-time V: 63,861,374.00 | U: 13,878,965,732.61
+2026-01-04 06:35:10+00:00  Deaths V: 2,488.00 | U: 1,448,509.94
+2026-01-04 06:35:10+00:00  Crude rate V: 3.90 | U: 10.44 per 100,000 pd
+2026-01-04 06:35:10+00:00  IPW diagnostics: mean=2.58, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:35:10+00:00  Bootstrap rep 174: GLM converged=True
+2026-01-04 06:35:15+00:00  Person-time V: 63,888,243.00 | U: 13,899,822,294.36
+2026-01-04 06:35:15+00:00  Deaths V: 2,583.00 | U: 1,449,779.35
+2026-01-04 06:35:15+00:00  Crude rate V: 4.04 | U: 10.43 per 100,000 pd
+2026-01-04 06:35:15+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:35:15+00:00  Bootstrap rep 175: GLM converged=True
+2026-01-04 06:39:53+00:00  Person-time V: 63,963,456.00 | U: 13,877,956,816.98
+2026-01-04 06:39:53+00:00  Deaths V: 2,560.00 | U: 1,418,748.84
+2026-01-04 06:39:53+00:00  Crude rate V: 4.00 | U: 10.22 per 100,000 pd
+2026-01-04 06:39:53+00:00  IPW diagnostics: mean=2.59, median=1.32, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:39:53+00:00  Bootstrap rep 176: GLM converged=True
+2026-01-04 06:39:57+00:00  Person-time V: 64,010,966.00 | U: 13,836,057,704.16
+2026-01-04 06:39:57+00:00  Deaths V: 2,545.00 | U: 1,488,468.24
+2026-01-04 06:39:57+00:00  Crude rate V: 3.98 | U: 10.76 per 100,000 pd
+2026-01-04 06:39:57+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:39:57+00:00  Bootstrap rep 177: GLM converged=True
+2026-01-04 06:40:03+00:00  Person-time V: 63,973,300.00 | U: 13,855,326,928.50
+2026-01-04 06:40:03+00:00  Deaths V: 2,509.00 | U: 1,462,775.25
+2026-01-04 06:40:03+00:00  Crude rate V: 3.92 | U: 10.56 per 100,000 pd
+2026-01-04 06:40:03+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:40:03+00:00  Bootstrap rep 178: GLM converged=True
+2026-01-04 06:40:06+00:00  Person-time V: 64,100,196.00 | U: 13,849,966,791.19
+2026-01-04 06:40:06+00:00  Deaths V: 2,520.00 | U: 1,432,446.76
+2026-01-04 06:40:07+00:00  Crude rate V: 3.93 | U: 10.34 per 100,000 pd
+2026-01-04 06:40:07+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:40:07+00:00  Bootstrap rep 179: GLM converged=True
+2026-01-04 06:44:44+00:00  Person-time V: 64,029,623.00 | U: 13,857,017,457.48
+2026-01-04 06:44:44+00:00  Deaths V: 2,507.00 | U: 1,473,170.12
+2026-01-04 06:44:44+00:00  Crude rate V: 3.92 | U: 10.63 per 100,000 pd
+2026-01-04 06:44:44+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:44:44+00:00  Bootstrap rep 180: GLM converged=True
+2026-01-04 06:44:50+00:00  Person-time V: 64,086,372.00 | U: 13,893,245,465.50
+2026-01-04 06:44:50+00:00  Deaths V: 2,517.00 | U: 1,400,087.94
+2026-01-04 06:44:50+00:00  Crude rate V: 3.93 | U: 10.08 per 100,000 pd
+2026-01-04 06:44:50+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:44:50+00:00  Bootstrap rep 181: GLM converged=True
+2026-01-04 06:44:54+00:00  Person-time V: 63,958,037.00 | U: 13,894,801,448.23
+2026-01-04 06:44:54+00:00  Deaths V: 2,596.00 | U: 1,467,766.04
+2026-01-04 06:44:54+00:00  Crude rate V: 4.06 | U: 10.56 per 100,000 pd
+2026-01-04 06:44:54+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:44:54+00:00  Bootstrap rep 182: GLM converged=True
+2026-01-04 06:44:57+00:00  Person-time V: 64,111,765.00 | U: 13,811,407,789.90
+2026-01-04 06:44:57+00:00  Deaths V: 2,476.00 | U: 1,463,396.95
+2026-01-04 06:44:57+00:00  Crude rate V: 3.86 | U: 10.60 per 100,000 pd
+2026-01-04 06:44:57+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:44:57+00:00  Bootstrap rep 183: GLM converged=True
+2026-01-04 06:49:37+00:00  Person-time V: 64,068,625.00 | U: 13,848,225,619.29
+2026-01-04 06:49:37+00:00  Deaths V: 2,515.00 | U: 1,478,534.82
+2026-01-04 06:49:37+00:00  Crude rate V: 3.93 | U: 10.68 per 100,000 pd
+2026-01-04 06:49:37+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:49:37+00:00  Bootstrap rep 184: GLM converged=True
+2026-01-04 06:49:42+00:00  Person-time V: 64,116,170.00 | U: 13,823,261,849.46
+2026-01-04 06:49:42+00:00  Deaths V: 2,637.00 | U: 1,431,118.48
+2026-01-04 06:49:42+00:00  Crude rate V: 4.11 | U: 10.35 per 100,000 pd
+2026-01-04 06:49:42+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:49:42+00:00  Bootstrap rep 185: GLM converged=True
+2026-01-04 06:49:47+00:00  Person-time V: 63,910,118.00 | U: 13,895,330,380.65
+2026-01-04 06:49:47+00:00  Deaths V: 2,517.00 | U: 1,463,894.88
+2026-01-04 06:49:47+00:00  Crude rate V: 3.94 | U: 10.54 per 100,000 pd
+2026-01-04 06:49:47+00:00  IPW diagnostics: mean=2.59, median=1.33, max=6.9e+00, % trimmed=0.0%
+2026-01-04 06:49:47+00:00  Bootstrap rep 186: GLM converged=True
+2026-01-04 06:49:49+00:00  Person-time V: 64,010,542.00 | U: 13,836,467,411.23
+2026-01-04 06:49:49+00:00  Deaths V: 2,623.00 | U: 1,431,220.52
+2026-01-04 06:49:49+00:00  Crude rate V: 4.10 | U: 10.34 per 100,000 pd
+2026-01-04 06:49:49+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:49:49+00:00  Bootstrap rep 187: GLM converged=True
+2026-01-04 06:54:29+00:00  Person-time V: 63,992,535.00 | U: 13,862,553,941.34
+2026-01-04 06:54:29+00:00  Deaths V: 2,567.00 | U: 1,434,753.93
+2026-01-04 06:54:29+00:00  Crude rate V: 4.01 | U: 10.35 per 100,000 pd
+2026-01-04 06:54:29+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:54:29+00:00  Bootstrap rep 188: GLM converged=True
+2026-01-04 06:54:34+00:00  Person-time V: 63,999,031.00 | U: 13,885,652,495.43
+2026-01-04 06:54:34+00:00  Deaths V: 2,598.00 | U: 1,399,328.27
+2026-01-04 06:54:34+00:00  Crude rate V: 4.06 | U: 10.08 per 100,000 pd
+2026-01-04 06:54:34+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:54:34+00:00  Bootstrap rep 189: GLM converged=True
+2026-01-04 06:54:38+00:00  Person-time V: 64,112,315.00 | U: 13,846,286,315.24
+2026-01-04 06:54:38+00:00  Deaths V: 2,582.00 | U: 1,440,744.20
+2026-01-04 06:54:38+00:00  Crude rate V: 4.03 | U: 10.41 per 100,000 pd
+2026-01-04 06:54:38+00:00  IPW diagnostics: mean=2.62, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:54:38+00:00  Bootstrap rep 190: GLM converged=True
+2026-01-04 06:54:41+00:00  Person-time V: 64,077,491.00 | U: 13,842,196,566.76
+2026-01-04 06:54:41+00:00  Deaths V: 2,571.00 | U: 1,406,704.34
+2026-01-04 06:54:41+00:00  Crude rate V: 4.01 | U: 10.16 per 100,000 pd
+2026-01-04 06:54:41+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:54:41+00:00  Bootstrap rep 191: GLM converged=True
+2026-01-04 06:59:19+00:00  Person-time V: 64,012,056.00 | U: 13,883,173,961.16
+2026-01-04 06:59:19+00:00  Deaths V: 2,515.00 | U: 1,442,032.52
+2026-01-04 06:59:19+00:00  Crude rate V: 3.93 | U: 10.39 per 100,000 pd
+2026-01-04 06:59:19+00:00  IPW diagnostics: mean=2.59, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:59:19+00:00  Bootstrap rep 192: GLM converged=True
+2026-01-04 06:59:24+00:00  Person-time V: 64,174,440.00 | U: 13,844,240,947.78
+2026-01-04 06:59:24+00:00  Deaths V: 2,518.00 | U: 1,401,597.79
+2026-01-04 06:59:24+00:00  Crude rate V: 3.92 | U: 10.12 per 100,000 pd
+2026-01-04 06:59:24+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:59:24+00:00  Bootstrap rep 193: GLM converged=True
+2026-01-04 06:59:30+00:00  Person-time V: 64,032,391.00 | U: 13,866,089,872.54
+2026-01-04 06:59:30+00:00  Deaths V: 2,455.00 | U: 1,464,394.48
+2026-01-04 06:59:30+00:00  Crude rate V: 3.83 | U: 10.56 per 100,000 pd
+2026-01-04 06:59:30+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 06:59:30+00:00  Bootstrap rep 194: GLM converged=True
+2026-01-04 06:59:32+00:00  Person-time V: 64,111,479.00 | U: 13,849,242,883.62
+2026-01-04 06:59:32+00:00  Deaths V: 2,547.00 | U: 1,421,909.37
+2026-01-04 06:59:32+00:00  Crude rate V: 3.97 | U: 10.27 per 100,000 pd
+2026-01-04 06:59:32+00:00  IPW diagnostics: mean=2.62, median=1.33, max=7.1e+00, % trimmed=0.0%
+2026-01-04 06:59:33+00:00  Bootstrap rep 195: GLM converged=True
+2026-01-04 07:04:14+00:00  Person-time V: 64,062,852.00 | U: 13,864,842,193.69
+2026-01-04 07:04:14+00:00  Deaths V: 2,509.00 | U: 1,457,291.09
+2026-01-04 07:04:14+00:00  Crude rate V: 3.92 | U: 10.51 per 100,000 pd
+2026-01-04 07:04:14+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 07:04:14+00:00  Bootstrap rep 196: GLM converged=True
+2026-01-04 07:04:18+00:00  Person-time V: 64,034,290.00 | U: 13,830,892,843.18
+2026-01-04 07:04:18+00:00  Deaths V: 2,474.00 | U: 1,516,258.31
+2026-01-04 07:04:18+00:00  Crude rate V: 3.86 | U: 10.96 per 100,000 pd
+2026-01-04 07:04:18+00:00  IPW diagnostics: mean=2.60, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 07:04:18+00:00  Bootstrap rep 197: GLM converged=True
+2026-01-04 07:04:23+00:00  Person-time V: 63,975,346.00 | U: 13,848,029,387.97
+2026-01-04 07:04:23+00:00  Deaths V: 2,594.00 | U: 1,465,125.52
+2026-01-04 07:04:23+00:00  Crude rate V: 4.05 | U: 10.58 per 100,000 pd
+2026-01-04 07:04:23+00:00  IPW diagnostics: mean=2.61, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 07:04:23+00:00  Bootstrap rep 198: GLM converged=True
+2026-01-04 07:04:26+00:00  Person-time V: 63,993,758.00 | U: 13,842,427,626.41
+2026-01-04 07:04:26+00:00  Deaths V: 2,519.00 | U: 1,460,433.67
+2026-01-04 07:04:26+00:00  Crude rate V: 3.94 | U: 10.55 per 100,000 pd
+2026-01-04 07:04:26+00:00  IPW diagnostics: mean=2.61, median=1.32, max=7.0e+00, % trimmed=0.0%
+2026-01-04 07:04:26+00:00  Bootstrap rep 199: GLM converged=True
+2026-01-04 07:04:26+00:00  Bootstrap: 200/200 successful
+2026-01-04 07:04:49+00:00  All plots saved as HTML.
+2026-01-04 07:04:49+00:00  Analysis complete.

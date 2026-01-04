@@ -5,7 +5,7 @@
 Hernán-style sequential target-trial emulation (Design B) - Fully fixed version
 Implements calendar-time sequential trials with grace period, pooled logistic regression,
 RMST estimation, cluster bootstrap, and IPW for artificial censoring.
-Exploratory analysis — no confounder (HVE) adjustment by design.
+Exploratory analysis — no confounder adjustment by design.
 
 Scientific notes (for methods/documentation):
 - Estimand: Pooled effect of initiating vaccination at calendar day t vs not initiating,
@@ -15,23 +15,9 @@ Scientific notes (for methods/documentation):
   bias, indication, or other confounders.
 - Grace period: Deaths during grace attributed to unvaccinated (A=0).
 - IPW: Marginal (empirical) p_init; positivity monitored via weight diagnostics.
-
-Author: AI / Drifting assistence   Date: January 2026 Version 1.1
 """
 
 from __future__ import annotations
-
-# ==================== SLEEP PREVENTION  Windows11 ====================
-import ctypes
-import os
-if os.name == 'nt': 
-    try:
-        ctypes.windll.kernel32.SetThreadExecutionState(0x80000001)
-        print(">>> Windows Sleep Prevention: ACTIVE")
-    except Exception as e:
-        print(f">>> Could not set Sleep Prevention: {e}")
-# ==================== END SLEEP PREVENTION  ====================
-
 import random
 import warnings
 from pathlib import Path
@@ -44,6 +30,7 @@ from scipy.special import expit
 from scipy.integrate import simpson
 from joblib import Parallel, delayed
 from tqdm.auto import tqdm
+from tqdm_joblib import tqdm_joblib
 import logging
 from statsmodels.tools.sm_exceptions import ConvergenceWarning
 import plotly.graph_objects as go
@@ -51,7 +38,7 @@ import plotly.graph_objects as go
 # ===================== TOP-LEVEL PARAMETERS =====================
 
 AGE = 70
-DATA_SET = "sim"
+DATA_SET = "real"
 
 DATA_CONFIG = {
     "real": {
@@ -80,8 +67,8 @@ CONFIG = {
     "study_start": pd.Timestamp("2020-01-01"),
     "input_path": INPUT,
     "output_base": OUTPUT_BASE,
-    "n_boot": 200,  # Increase to 200+ for final runs
-    "boot_subsample": 1.0,  # Changed to full sample for standard bootstrap
+    "n_boot": 2,  # Increase to 200+ for final runs
+    "boot_subsample": 0.4,
     "random_seed": 12345,
     "n_cores": 4,
     "safety_buffer": 30,
@@ -90,8 +77,6 @@ CONFIG = {
     "debug_single_rep": False,
     "tau": 90,
     "grace_period": 0,  # days
-    "ipw_max": 1e6,  # For capping
-    "ipw_trim_quantile": 0.99,  # For trimming (e.g., truncate at 99th percentile)
 }
 
 CONFIG["output_base"].parent.mkdir(parents=True, exist_ok=True)
@@ -285,9 +270,8 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
                 ).astype(int)
                 events_v_trial, risk_v_trial = compute_daily_events(df_vax, start_day, end_for_compute)
 
-        # Safe IPW accumulation with trimming
+        # Safe IPW accumulation
         idx0 = start_day - first
-        ipws = []  # Collect for trimming
         for k in range(max_k):
             if k == 0:
                 ipw = 1.0
@@ -303,16 +287,7 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
                     if surv < 1e-12:
                         ipw = 0.0
                     else:
-                        ipw = 1.0 / surv
-            ipws.append(ipw)
-
-        # Trim weights at quantile
-        ipws_arr = np.array(ipws)
-        trim_threshold = np.quantile(ipws_arr[ipws_arr > 1.0], CONFIG["ipw_trim_quantile"]) if np.any(ipws_arr > 1.0) else np.inf
-        ipws_arr = np.clip(ipws_arr, None, min(trim_threshold, CONFIG["ipw_max"]))
-
-        for k in range(max_k):
-            ipw = ipws_arr[k]
+                        ipw = min(1.0 / surv, 1e6)
             if ipw > 1.0:
                 weights_used.append(ipw)
 
@@ -337,7 +312,7 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
     if weights_used:
         w = np.array(weights_used)
         log(f"IPW diagnostics: mean={w.mean():.2f}, median={np.median(w):.2f}, "
-            f"max={w.max():.1e}, % trimmed={(w == min(trim_threshold, CONFIG['ipw_max'])).mean()*100:.1f}%")
+            f"max={w.max():.1e}, % capped={(w >= 1e6).mean()*100:.1f}%")
     else:
         log("No IPW weights >1 applied")
 
@@ -393,7 +368,6 @@ def predict_survival(model: sm.GLM, t: np.ndarray, A: int, spline: pd.DataFrame)
     hazard = expit(X.to_numpy(dtype=np.float32) @ model.params.to_numpy(dtype=np.float32))
     hazard = np.clip(hazard, 1e-9, 1 - 1e-9)
     return np.cumprod(1 - hazard)
-
 # ===================== BOOTSTRAP =====================
 
 def bootstrap_once(i: int, raw: pd.DataFrame, t: np.ndarray, spline: pd.DataFrame, first: int, last_obs: float, grace: int, start_params=None) -> tuple | None:
@@ -405,7 +379,7 @@ def bootstrap_once(i: int, raw: pd.DataFrame, t: np.ndarray, spline: pd.DataFram
         # Preserve multiplicity with concat
         raw_b = pd.concat([raw.loc[raw['subject_id'] == sid].copy() for sid in samp], ignore_index=True)
 
-        # Recompute p_init for bootstrap sample (marginal)
+        # Recompute p_init for bootstrap sample
         p_init_b = np.zeros(len(t), dtype=float)
         for j, s in enumerate(range(first, int(last_obs))):
             eligible_mask = (raw_b['death_day'].isna() | (raw_b['death_day'] >= s)) & \
@@ -416,7 +390,7 @@ def bootstrap_once(i: int, raw: pd.DataFrame, t: np.ndarray, spline: pd.DataFram
 
         agg_b = aggregate_daily_updated(raw_b, first, last_obs, p_init_b, grace, t)
         m = fit_pooled_logistic(agg_b, spline, log_details=False, start_params=start_params)
-        log(f"Bootstrap rep {i}: GLM converged={m.converged}")
+        log(f"Bootstrap rep {i}: GLM converged={m.converged}")  # Added diagnostic
         Sv_b = predict_survival(m, t, 1, spline)
         Su_b = predict_survival(m, t, 0, spline)
         return Sv_b, Su_b

@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Hernán-style sequential target-trial emulation (Design B) - Fully fixed version
+Hernán-style sequential target-trial emulation (Design B) - Sandwich Variance Version
 Implements calendar-time sequential trials with grace period, pooled logistic regression,
-RMST estimation, cluster bootstrap, and IPW for artificial censoring.
+RMST estimation, empirical sandwich variance + delta method, and IPW for artificial censoring.
 Exploratory analysis — no confounder (HVE) adjustment by design.
 
 Scientific notes (for methods/documentation):
@@ -15,24 +15,12 @@ Scientific notes (for methods/documentation):
   bias, indication, or other confounders.
 - Grace period: Deaths during grace attributed to unvaccinated (A=0).
 - IPW: Marginal (empirical) p_init; positivity monitored via weight diagnostics.
+- Variance: Empirical sandwich (HC0) for GLM params, delta method for ΔRMST CI.
 
 Author: AI / Drifting assistence   Date: January 2026 Version 1.1
 """
 
 from __future__ import annotations
-
-# ==================== SLEEP PREVENTION  Windows11 ====================
-import ctypes
-import os
-if os.name == 'nt': 
-    try:
-        ctypes.windll.kernel32.SetThreadExecutionState(0x80000001)
-        print(">>> Windows Sleep Prevention: ACTIVE")
-    except Exception as e:
-        print(f">>> Could not set Sleep Prevention: {e}")
-# ==================== END SLEEP PREVENTION  ====================
-
-import random
 import warnings
 from pathlib import Path
 from datetime import datetime, timezone
@@ -42,16 +30,16 @@ import statsmodels.api as sm
 from statsmodels.gam.api import BSplines
 from scipy.special import expit
 from scipy.integrate import simpson
-from joblib import Parallel, delayed
 from tqdm.auto import tqdm
 import logging
-from statsmodels.tools.sm_exceptions import ConvergenceWarning
 import plotly.graph_objects as go
+from scipy import stats
+from statsmodels.tools.sm_exceptions import ConvergenceWarning
 
 # ===================== TOP-LEVEL PARAMETERS =====================
 
 AGE = 70
-DATA_SET = "sim"
+DATA_SET = "real"
 
 DATA_CONFIG = {
     "real": {
@@ -68,38 +56,29 @@ DATA_CONFIG = {
     }
 }
 
-if DATA_SET not in DATA_CONFIG:
-    raise ValueError(f"Unknown DATA_SET '{DATA_SET}'")
-
 selected = DATA_CONFIG[DATA_SET]
 INPUT = Path(selected["input"].format(age=AGE))
-OUTPUT_BASE = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan style sequential trial poold logistics RMST") / f"AC) hernan style sequential trial poold logistics RMST{selected['suffix']}"
+OUTPUT_BASE = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan style sequential trial poold logistics RMST") / f"AC) hernan style sequential trial poold logistics RMST Fast {selected['suffix']}"
 
 CONFIG = {
     "age_ref_year": 2023,
     "study_start": pd.Timestamp("2020-01-01"),
     "input_path": INPUT,
     "output_base": OUTPUT_BASE,
-    "n_boot": 200,  # Increase to 200+ for final runs
-    "boot_subsample": 1.0,  # Changed to full sample for standard bootstrap
     "random_seed": 12345,
-    "n_cores": 4,
     "safety_buffer": 30,
     "time_df": 4,
     "spline_degree": 3,
-    "debug_single_rep": False,
     "tau": 90,
     "grace_period": 0,  # days
     "ipw_max": 1e6,  # For capping
     "ipw_trim_quantile": 0.99,  # For trimming (e.g., truncate at 99th percentile)
+    "delta_eps_scale": 1e-6,  # For delta method
 }
 
 CONFIG["output_base"].parent.mkdir(parents=True, exist_ok=True)
 MAIN_LOG = CONFIG["output_base"].parent / f"{CONFIG['output_base'].name}_AG{AGE}.txt"
-BOOT_LOG_DIR = CONFIG["output_base"].parent / "bootstrap_logs"
-BOOT_LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-random.seed(CONFIG["random_seed"])
 np.random.seed(CONFIG["random_seed"])
 
 # ===================== LOGGING =====================
@@ -183,17 +162,14 @@ def load_and_prepare_data(input_path: Path) -> pd.DataFrame:
     raw["death_day"] = (raw["DatumUmrti"] - CONFIG["study_start"]).dt.days
     raw["first_dose_day"] = (raw["Datum_1"] - CONFIG["study_start"]).dt.days
 
-    # CRITICAL: Coerce to float early to avoid object dtype issues
     raw["death_day"] = pd.to_numeric(raw["death_day"], errors="coerce").astype(float)
     raw["first_dose_day"] = pd.to_numeric(raw["first_dose_day"], errors="coerce").astype(float)
 
     log(f"Subjects after age filter: {len(raw)}")
     log(f"Deaths: {raw['death_day'].notna().sum()}, Vaccinated: {raw['first_dose_day'].notna().sum()}")
-    if len(raw) == 0:
-        raise ValueError("No subjects after age filtering")
     return raw
 
-# ===================== AGGREGATION - FULLY FIXED VERSION =====================
+# ===================== AGGREGATION =====================
 
 def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_init: np.ndarray, grace: int, t_grid: np.ndarray) -> pd.DataFrame:
     max_window = len(t_grid)
@@ -203,12 +179,9 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
     risk_v_total = np.zeros(max_window, dtype=float)
 
     last_day_int = int(last_obs)
-    if len(p_init) < (last_day_int - first):
-        raise ValueError("p_init length must be at least last_obs - first")
 
-    weights_used = []  # for diagnostics
+    weights_used = []
 
-    # Precompute NumPy arrays for vectorized eligibility
     death_np = raw['death_day'].to_numpy()
     first_np = raw['first_dose_day'].to_numpy()
     id_np = raw['subject_id'].to_numpy()
@@ -220,15 +193,10 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
 
         end_for_compute = start_day + max_k
 
-        # Vectorized eligibility
         eligible_mask = (
             (np.isnan(death_np) | (death_np >= start_day)) &
             (np.isnan(first_np) | (first_np >= start_day))
         )
-        eligible_ids = id_np[eligible_mask]
-        if len(eligible_ids) == 0:
-            continue
-
         eligible = raw[eligible_mask]
 
         initiators_mask = (eligible['first_dose_day'] == start_day)
@@ -249,13 +217,10 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
             ).astype(int)
             events_non, risk_non = compute_daily_events(df_non, start_day, end_for_compute)
         else:
-            events_non = np.zeros(max_k, dtype=float)
-            risk_non = np.zeros(max_k, dtype=float)
+            events_non = risk_non = np.zeros(max_k, dtype=float)
 
         # A=0: Grace period from initiators
-        events_grace = np.zeros(max_k, dtype=float)
-        risk_grace = np.zeros(max_k, dtype=float)
-
+        events_grace = risk_grace = np.zeros(max_k, dtype=float)
         if grace > 0 and not initiators.empty:
             df_grace = initiators.copy()
             df_grace['start'] = float(start_day)
@@ -269,9 +234,7 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
             events_grace, risk_grace = compute_daily_events(df_grace, start_day, end_for_compute)
 
         # A=1: Vaccinated after grace
-        events_v_trial = np.zeros(max_k, dtype=float)
-        risk_v_trial = np.zeros(max_k, dtype=float)
-
+        events_v_trial = risk_v_trial = np.zeros(max_k, dtype=float)
         vax_start = start_day + grace
         if not initiators.empty and vax_start <= last_day_int:
             vax_mask = (initiators['death_day'].isna() | (initiators['death_day'] >= vax_start))
@@ -285,31 +248,28 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
                 ).astype(int)
                 events_v_trial, risk_v_trial = compute_daily_events(df_vax, start_day, end_for_compute)
 
-        # Safe IPW accumulation with trimming
+        # IPW with trimming
         idx0 = start_day - first
-        ipws = []  # Collect for trimming
+        ipws = []
         for k in range(max_k):
             if k == 0:
                 ipw = 1.0
             else:
                 s_idx = max(0, idx0)
-                e_idx = min(len(p_init), idx0 + k)  # exclusive
+                e_idx = min(len(p_init), idx0 + k)
                 if s_idx >= e_idx:
                     ipw = 1.0
                 else:
                     probs = 1.0 - p_init[s_idx:e_idx]
                     log_probs = np.sum(np.log(np.clip(probs, 1e-12, 1.0)))
                     surv = float(np.exp(log_probs))
-                    if surv < 1e-12:
-                        ipw = 0.0
-                    else:
-                        ipw = 1.0 / surv
+                    ipw = 1.0 / surv if surv > 1e-12 else 0.0
             ipws.append(ipw)
 
-        # Trim weights at quantile
         ipws_arr = np.array(ipws)
-        trim_threshold = np.quantile(ipws_arr[ipws_arr > 1.0], CONFIG["ipw_trim_quantile"]) if np.any(ipws_arr > 1.0) else np.inf
-        ipws_arr = np.clip(ipws_arr, None, min(trim_threshold, CONFIG["ipw_max"]))
+        if np.any(ipws_arr > 1.0):
+            trim_threshold = np.quantile(ipws_arr[ipws_arr > 1.0], CONFIG["ipw_trim_quantile"])
+            ipws_arr = np.clip(ipws_arr, None, min(trim_threshold, CONFIG["ipw_max"]))
 
         for k in range(max_k):
             ipw = ipws_arr[k]
@@ -321,37 +281,22 @@ def aggregate_daily_updated(raw: pd.DataFrame, first: int, last_obs: float, p_in
             events_v_total[k] += events_v_trial[k]
             risk_v_total[k] += risk_v_trial[k]
 
-    # Summaries + diagnostics
-    pt_v = risk_v_total.sum()
-    pt_u = risk_u_total.sum()
-    e_v = events_v_total.sum()
-    e_u = events_u_total.sum()
-
-    rate_v = e_v / pt_v * 100_000 if pt_v > 0 else np.nan
-    rate_u = e_u / pt_u * 100_000 if pt_u > 0 else np.nan
-
-    log(f"Person-time V: {pt_v:,.2f} | U: {pt_u:,.2f}")
-    log(f"Deaths V: {e_v:,.2f} | U: {e_u:,.2f}")
-    log(f"Crude rate V: {rate_v:.2f} | U: {rate_u:.2f} per 100,000 pd")
-
-    if weights_used:
-        w = np.array(weights_used)
-        log(f"IPW diagnostics: mean={w.mean():.2f}, median={np.median(w):.2f}, "
-            f"max={w.max():.1e}, % trimmed={(w == min(trim_threshold, CONFIG['ipw_max'])).mean()*100:.1f}%")
-    else:
-        log("No IPW weights >1 applied")
-
     agg = pd.DataFrame({
         "day": np.concatenate([t_grid, t_grid]),
         "vaccinated": np.concatenate([np.ones_like(t_grid), np.zeros_like(t_grid)]),
         "events": np.concatenate([events_v_total, events_u_total]),
         "risk": np.concatenate([risk_v_total, risk_u_total]),
     })
+
+    if weights_used:
+        w = np.array(weights_used)
+        log(f"IPW diagnostics: mean={w.mean():.2f}, median={np.median(w):.2f}, max={w.max():.1e}")
+
     return agg
 
 # ===================== MODELING =====================
 
-def fit_pooled_logistic(agg: pd.DataFrame, spline: pd.DataFrame, log_details: bool = True, start_params=None) -> sm.GLM:
+def fit_pooled_logistic(agg: pd.DataFrame, spline: pd.DataFrame, log_details: bool = True) -> sm.GLM:
     df = agg[agg.risk > 0].copy().reset_index(drop=True)
     if len(df) == 0:
         raise ValueError("No positive-risk days")
@@ -372,12 +317,34 @@ def fit_pooled_logistic(agg: pd.DataFrame, spline: pd.DataFrame, log_details: bo
     if log_details:
         log(f"GLM rows: {len(X)}, predictors: {X.shape[1]}")
 
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore", ConvergenceWarning)
-        model = sm.GLM(p, X, family=sm.families.Binomial(), freq_weights=w).fit(start_params=start_params)
+    model = None
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", ConvergenceWarning)
+            model = sm.GLM(p, X, family=sm.families.Binomial(), freq_weights=w).fit()
+
+        # Apply robust sandwich covariance (fixed for newer statsmodels)
+        if model is not None:
+            try:
+                model = model._get_robustcov_results(cov_type='HC0')
+            except AttributeError:
+                # Fallback for older versions
+                try:
+                    model = model.get_robustcov_results(cov_type='HC0')
+                except Exception as e:
+                    log(f"Warning: Could not apply robust covariance: {str(e)}")
+                    # Continue with non-robust model
+
+    except Exception as e:
+        log(f"Critical error in GLM fitting: {str(e)}")
+        raise RuntimeError("GLM fitting failed completely. Check data for NaN/Inf values or zero variance.")
+
+    if model is None:
+        raise RuntimeError("No valid GLM model was fitted. All attempts failed.")
 
     if log_details:
         log(f"GLM converged: {model.converged}")
+
     return model
 
 def predict_survival(model: sm.GLM, t: np.ndarray, A: int, spline: pd.DataFrame) -> np.ndarray:
@@ -393,50 +360,6 @@ def predict_survival(model: sm.GLM, t: np.ndarray, A: int, spline: pd.DataFrame)
     hazard = expit(X.to_numpy(dtype=np.float32) @ model.params.to_numpy(dtype=np.float32))
     hazard = np.clip(hazard, 1e-9, 1 - 1e-9)
     return np.cumprod(1 - hazard)
-
-# ===================== BOOTSTRAP =====================
-
-def bootstrap_once(i: int, raw: pd.DataFrame, t: np.ndarray, spline: pd.DataFrame, first: int, last_obs: float, grace: int, start_params=None) -> tuple | None:
-    try:
-        rng = np.random.default_rng(CONFIG["random_seed"] + i)
-        ids = raw["subject_id"].to_numpy()
-        n_draw = len(ids) if CONFIG["boot_subsample"] >= 1.0 else int(round(len(ids) * CONFIG["boot_subsample"]))
-        samp = rng.choice(ids, n_draw, replace=True)
-        # Preserve multiplicity with concat
-        raw_b = pd.concat([raw.loc[raw['subject_id'] == sid].copy() for sid in samp], ignore_index=True)
-
-        # Recompute p_init for bootstrap sample (marginal)
-        p_init_b = np.zeros(len(t), dtype=float)
-        for j, s in enumerate(range(first, int(last_obs))):
-            eligible_mask = (raw_b['death_day'].isna() | (raw_b['death_day'] >= s)) & \
-                            (raw_b['first_dose_day'].isna() | (raw_b['first_dose_day'] >= s))
-            eligible = eligible_mask.sum()
-            initiates = (raw_b['first_dose_day'] == s).sum()
-            p_init_b[j] = initiates / eligible if eligible > 0 else 0.0
-
-        agg_b = aggregate_daily_updated(raw_b, first, last_obs, p_init_b, grace, t)
-        m = fit_pooled_logistic(agg_b, spline, log_details=False, start_params=start_params)
-        log(f"Bootstrap rep {i}: GLM converged={m.converged}")
-        Sv_b = predict_survival(m, t, 1, spline)
-        Su_b = predict_survival(m, t, 0, spline)
-        return Sv_b, Su_b
-    except Exception as e:
-        log(f"Bootstrap replicate {i} failed: {str(e)}")
-        return None
-
-def run_bootstrap(raw: pd.DataFrame, t: np.ndarray, spline: pd.DataFrame, first: int, last_obs: float, grace: int, start_params=None) -> list:
-    log(f"Starting bootstrap ({CONFIG['n_boot']} reps, subsample={CONFIG['boot_subsample']:.2f})")
-    if CONFIG["debug_single_rep"]:
-        test = bootstrap_once(0, raw, t, spline, first, last_obs, grace, start_params)
-        return [test] if test else []
-
-    boot_raw = Parallel(n_jobs=CONFIG["n_cores"], backend="loky")(
-        delayed(bootstrap_once)(i, raw, t, spline, first, last_obs, grace, start_params)
-        for i in range(CONFIG["n_boot"])
-    )
-    successful = [b for b in boot_raw if b is not None]
-    log(f"Bootstrap: {len(successful)}/{CONFIG['n_boot']} successful")
-    return successful
 
 # ===================== RESULTS & PLOTS =====================
 
@@ -458,7 +381,7 @@ def compute_estimands(Sv: np.ndarray, Su: np.ndarray, t: np.ndarray) -> dict:
         "su": Su,
     }
 
-def plot_and_save(estimands: dict, boot_results: list, output_base: Path):
+def plot_and_save(estimands: dict, asymp_results: dict, output_base: Path):
     t = np.arange(len(estimands["delta"]))
     delta = estimands["delta"]
     rmst_v = estimands["rmst_v"]
@@ -467,64 +390,93 @@ def plot_and_save(estimands: dict, boot_results: list, output_base: Path):
     su = estimands["su"]
     tau = estimands["tau"]
     delta_tau = estimands["delta_tau"]
+    delta_lo = asymp_results["ci_low"]
+    delta_hi = asymp_results["ci_high"]
 
-    if len(boot_results) == 0:
-        boot_Sv = np.array([sv])
-        boot_Su = np.array([su])
-    else:
-        boot_Sv = np.array([r[0] for r in boot_results])
-        boot_Su = np.array([r[1] for r in boot_results])
-
-    boot_rmst_v = np.array([rmst_curve(Sv_b, t) for Sv_b in boot_Sv])
-    boot_rmst_u = np.array([rmst_curve(Su_b, t) for Su_b in boot_Su])
-    boot_delta = boot_rmst_v - boot_rmst_u
-
-    delta_lo, delta_hi = np.percentile(boot_delta, [2.5, 97.5], axis=0)
-    rmst_v_lo, rmst_v_hi = np.percentile(boot_rmst_v, [2.5, 97.5], axis=0)
-    rmst_u_lo, rmst_u_hi = np.percentile(boot_rmst_u, [2.5, 97.5], axis=0)
-    sv_lo, sv_hi = np.percentile(boot_Sv, [2.5, 97.5], axis=0)
-    su_lo, su_hi = np.percentile(boot_Su, [2.5, 97.5], axis=0)
-
-    # Plot 1: ΔRMST(t)
+    # Plot 1: ΔRMST(t) - point curve, CI only at tau
     fig_delta = go.Figure()
-    fig_delta.add_trace(go.Scatter(x=t, y=delta_hi, line=dict(width=0), showlegend=False))
-    fig_delta.add_trace(go.Scatter(x=t, y=delta_lo, fill="tonexty", fillcolor="rgba(0,100,200,0.2)", line=dict(width=0), showlegend=False))
     fig_delta.add_trace(go.Scatter(x=t, y=delta, mode="lines", line=dict(color="black", width=2), name="ΔRMST(t)"))
     fig_delta.add_hline(y=0, line=dict(color="gray", dash="dash"))
     fig_delta.add_annotation(x=tau, y=delta_tau,
-                            text=f"ΔRMST(τ={tau}) = {delta_tau:.2f} days<br>95% CI [{delta_lo[-1]:.2f}, {delta_hi[-1]:.2f}]",
+                            text=f"ΔRMST(τ={tau}) = {delta_tau:.2f} days<br>95% CI [{delta_lo:.2f}, {delta_hi:.2f}]",
                             showarrow=True, arrowhead=2, ax=-40, ay=-40, bgcolor="white")
     fig_delta.update_layout(title="ΔRMST(t)", xaxis_title="Days", yaxis_title="ΔRMST(t) (days)", template="plotly_white")
     fig_delta.write_html(output_base.parent / f"{output_base.name}_DeltaRMST.html")
 
-    # Plot 2: RMST curves
+    # Plot 2: RMST curves - points only
     fig_rmst = go.Figure()
-    fig_rmst.add_trace(go.Scatter(x=t, y=rmst_v_hi, line=dict(width=0), showlegend=False))
-    fig_rmst.add_trace(go.Scatter(x=t, y=rmst_v_lo, fill="tonexty", fillcolor="rgba(0,150,0,0.2)", line=dict(width=0), showlegend=False))
-    fig_rmst.add_trace(go.Scatter(x=t, y=rmst_u_hi, line=dict(width=0), showlegend=False))
-    fig_rmst.add_trace(go.Scatter(x=t, y=rmst_u_lo, fill="tonexty", fillcolor="rgba(200,0,0,0.2)", line=dict(width=0), showlegend=False))
     fig_rmst.add_trace(go.Scatter(x=t, y=rmst_v, mode="lines", line=dict(color="green", width=2), name="RMST_v(t)"))
     fig_rmst.add_trace(go.Scatter(x=t, y=rmst_u, mode="lines", line=dict(color="red", width=2), name="RMST_u(t)"))
     fig_rmst.update_layout(title="Restricted Mean Survival Time", xaxis_title="Days", yaxis_title="RMST(t) (days)", template="plotly_white")
     fig_rmst.write_html(output_base.parent / f"{output_base.name}_RMST_curves.html")
 
-    # Plot 3: Survival curves
+    # Plot 3: Survival curves - points only
     fig_surv = go.Figure()
-    fig_surv.add_trace(go.Scatter(x=t, y=sv_hi, line=dict(width=0), showlegend=False))
-    fig_surv.add_trace(go.Scatter(x=t, y=sv_lo, fill="tonexty", fillcolor="rgba(0,150,0,0.2)", line=dict(width=0), showlegend=False))
-    fig_surv.add_trace(go.Scatter(x=t, y=su_hi, line=dict(width=0), showlegend=False))
-    fig_surv.add_trace(go.Scatter(x=t, y=su_lo, fill="tonexty", fillcolor="rgba(200,0,0,0.2)", line=dict(width=0), showlegend=False))
     fig_surv.add_trace(go.Scatter(x=t, y=sv, mode="lines", line=dict(color="green", width=2), name="Vaccinated"))
     fig_surv.add_trace(go.Scatter(x=t, y=su, mode="lines", line=dict(color="red", width=2), name="Unvaccinated"))
     fig_surv.update_layout(title="Standardized Survival Curves", xaxis_title="Days", yaxis_title="Survival", template="plotly_white")
     fig_surv.write_html(output_base.parent / f"{output_base.name}_Survival.html")
 
-    log("All plots saved as HTML.")
+    log("All plots saved as HTML (point estimates; CI for ΔRMST(τ) only).")
 
 # ===================== MAIN EXECUTION =====================
+# ===================== DELTA METHOD FOR RMST CI =====================
+
+def delta_method_rmst_ci(model: sm.GLM, t: np.ndarray, spline: pd.DataFrame, 
+                         eps_scale: float = 1e-6) -> dict:
+    """
+    Compute asymptotic SE and CI for ΔRMST using delta method + numerical gradient.
+    Uses the robust covariance from sandwich estimator.
+    """
+    params = model.params.copy()
+    cov = model.cov_params()  # This uses the HC0 robust cov we applied earlier
+    n_params = len(params)
+    
+    def compute_delta_rmst(p: np.ndarray) -> float:
+        original_params = model.params.copy()
+        model.params = pd.Series(p, index=model.params.index)
+        
+        Sv = predict_survival(model, t, 1, spline)
+        Su = predict_survival(model, t, 0, spline)
+        rmst_v = compute_rmst(t, Sv)
+        rmst_u = compute_rmst(t, Su)
+        delta = rmst_v - rmst_u
+        
+        model.params = original_params
+        return delta
+    
+    delta_hat = compute_delta_rmst(params.values)
+    
+    # Numerical central difference gradient
+    grad = np.zeros(n_params)
+    for i in range(n_params):
+        eps = eps_scale * max(1e-8, abs(params.iloc[i]))  # Adaptive eps for stability
+        p_plus = params.values.copy()
+        p_plus[i] += eps
+        delta_plus = compute_delta_rmst(p_plus)
+        
+        p_minus = params.values.copy()
+        p_minus[i] -= eps
+        delta_minus = compute_delta_rmst(p_minus)
+        
+        grad[i] = (delta_plus - delta_minus) / (2 * eps)
+    
+    var_delta = np.dot(grad, np.dot(cov, grad))
+    se_delta = np.sqrt(max(0.0, var_delta))
+    
+    z = stats.norm.ppf(0.975)  # ~1.96 for 95%
+    ci_low = delta_hat - z * se_delta
+    ci_high = delta_hat + z * se_delta
+    
+    return {
+        'delta_tau': delta_hat,
+        'se_delta': se_delta,
+        'ci_low': ci_low,
+        'ci_high': ci_high
+    }
 
 def main():
-    log("Starting Hernán-style target trial emulation (fixed version)")
+    log("Starting Hernán-style target trial emulation (sandwich variance version)")
     log(f"Dataset: {DATA_SET} | Age: {AGE} | Grace: {CONFIG['grace_period']} days")
 
     raw = load_and_prepare_data(CONFIG["input_path"])
@@ -553,7 +505,6 @@ def main():
     agg = aggregate_daily_updated(raw, first, last_obs, p_init, CONFIG["grace_period"], t_grid)
 
     model = fit_pooled_logistic(agg, spline)
-    start_params = model.params  # For bootstrap warm start
 
     Sv = predict_survival(model, t_grid, 1, spline)
     Su = predict_survival(model, t_grid, 0, spline)
@@ -562,11 +513,16 @@ def main():
     log(f"Main results: ΔRMST(τ={estimands['tau']}) = {estimands['delta_tau']:.2f} days")
     log(f"VE(τ={estimands['tau']}): {estimands['ve_tau']:+.3%}")
 
-    boot_results = run_bootstrap(raw, t_grid, spline, first, last_obs, CONFIG["grace_period"], start_params)
+    asymp_results = delta_method_rmst_ci(model, t_grid, spline, CONFIG["delta_eps_scale"])
 
-    plot_and_save(estimands, boot_results, CONFIG["output_base"])
+    log("Sandwich + delta method results:")
+    log(f"ΔRMST(τ) = {asymp_results['delta_tau']:.2f} days")
+    log(f"SE = {asymp_results['se_delta']:.2f}")
+    log(f"95% asymptotic CI: [{asymp_results['ci_low']:.2f}, {asymp_results['ci_high']:.2f}]")
 
-    log("Analysis complete.")
+    plot_and_save(estimands, asymp_results, CONFIG["output_base"])
+
+    log("Analysis complete (sandwich variance adapted).")
 
 if __name__ == "__main__":
     main()
