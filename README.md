@@ -2,30 +2,31 @@
 
 This repository is divided into two complementary domains:
 
-- **Robust bias-diagnostic target trial emulation** - test compatibility of observed mortality patterns
+- **Bias-diagnostic target trial emulation** - test compatibility of observed mortality patterns
 - **RMST Methodological Research** — evaluates and compares survival estimation techniques
 
 ---
 
-## PART I: Robust Target Trial Emulation Diagnostics – Czech Mortality Data
+## PART I: Explorative Target Trial Emulation Diagnostics – Czech Mortality Data (Age & Sex Only)
 
+**Framework**: Hernán-style target trial emulation with restricted mean survival time (RMST) estimation  
+**Data**: Czech national mortality registry (age, sex, death date, first-dose date)  
+**Core Goal**: Perform rigorous diagnostic testing of observed all-cause mortality patterns around first-dose vaccination dates, specifically to evaluate whether the data are compatible with the **sharp null hypothesis** — i.e., no causal effect of vaccination on overall mortality (conditional on age and sex).
 
-**Framework**: Modern Hernán-style target trial emulation using restricted mean survival time (RMST)  
-**Data**: Czech national administrative mortality records (age, sex, death date, first-dose date)  
-**Primary goal**: Test compatibility of observed mortality patterns with a **sharp null** (no causal effect of first-dose vaccination on all-cause mortality, conditional on age and sex)
+The pipeline systematically investigates both **positive lags** (post-vaccination mortality patterns) and **negative lags** (pre-vaccination mortality patterns). Negative lags serve as a powerful falsification test: under the sharp null, mortality patterns before the actual vaccination date should show no systematic difference compared to placebo-matched or simulated controls. Any significant deviation in negative lags strongly suggests residual selection bias (e.g., healthy vaccinee effect) rather than a true vaccine effect.
 
+**Important Note**: This is purely an exploratory diagnostic tool — results are not causal estimates due to limited confounding control (age & sex only). Strong deviations in negative lags indicate the presence of unmeasured confounding and undermine causal interpretation of any positive-lag findings.
 
-All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20HVE%20Target%20Trial%20RMST%20Diagnostic%20Core.py) 
-<br>Data: [Czech-FOI Dataset Vesely_106_202403141131.csv](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) ~1.9 GB not included in this repository.
+All code: [AG) HVE Target Trial RMST Diagnostic Core.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20HVE%20Target%20Trial%20RMST%20Diagnostic%20Core.py)  
+Data source: [Czech-FOI Dataset Vesely_106_202403141131.csv](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) (~1.9 GB, not included in repo)
 
-> **Further Detail:** Full methodology, robustness checks see:  
-> [Technical Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki).
+Further methodology, robustness checks, and interpretation:  
+[Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
 
 <br>
 <br>
 
 ---
-
 
 ## PART II: RMST Research & Methodological Comparisons
 
