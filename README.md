@@ -156,7 +156,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   While standard models treat every day of data as equal, this script weights daily results by their statistical certainty $$I(t) = \text{sign}(\Delta S(t)) \times -\ln(p(t))$$, prioritizing high-evidence days over sparse-data flukes.
 
   It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
-  **Related Wiki Pages:**  [Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
+  <br>[Wiki -> Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
 
 
 
@@ -181,10 +181,6 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   under epidemiologically plausible departures from ideal conditions — providing strong support for its use as a diagnostic tool in observational vaccine effectiveness studies with limited measured confounders.
   [Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test)
 
-
-<br>
-<br>
-
 ---
 
 ### Data
@@ -196,8 +192,6 @@ This repository includes three distinct datafiles (only for Age-Group 70) used a
 * **Real-World Data:** Age-specific mortality CSV files containing the raw, official Czech FOI data.
 * **Null Hypothesis (HR=1) Simulation:** A synthetic dataset with a constant Hazard Ratio of 1.0 and simulated real dose schedule , used to validate that the methodologies do not produce false-positive signals.
 * **Stress-Test (Bias Simulation):** The reclassified real dataset where **5% of the Unvaccinated (UVX)** cohort is intentionally shifted to the **Vaccinated (VX)** cohort to measure the impact (sensitivity) of potential misclassification bias.
-
----
 
 **Raw Czech-FOI Dataset (not included repository):**  
 Vesely_106_202403141131.csv (~1.9 GB) [Download via Freedom of Information request](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz) 
@@ -229,5 +223,3 @@ To reproduce the analysis environment, install the dependencies listed in the [r
 **Disclaimer:**  
 This repository is for methodological exploration only and is not intended for making causal claims.
 <br>May contain subtle errors of a methodological, logical, mathematical, or coding nature.
-**Disclaimer:**  
-Methodological exploration only; no causal claims. May contain coding, mathematical, or logical limitations.
