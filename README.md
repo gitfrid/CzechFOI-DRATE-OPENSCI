@@ -2,32 +2,12 @@
 
 This repository is divided into two complementary domains:
 
-- **Bias-diagnostic ** - test compatibility of observed mortality patterns
+- **Bias-diagnostic** - test compatibility of observed mortality patterns
 - **RMST Methodological Research** — evaluates and compares survival estimation techniques
 
 ---
 
 ## PART I: Bias Diagnostics on AC-Mortality
-
-### Bias Dianostic Sequential trial emulation with pooled logistic regression and RMST
-
-**Framework**: Sequential trial emulation with pooled logistic regression and restricted mean survival time (RMST)  
-**Data**: Czech national mortality registry (age, death date, first-dose date)  
-**Core Goal**: Diagnose all-cause mortality patterns around first-dose vaccination dates and assess compatibility with the **sharp null hypothesis** of no causal effect under minimal adjustment.
-
-Calendar-time trials compare vaccination initiation at day \( t \) versus non-initiation. Artificial censoring induced by the sequential design is handled via inverse probability weighting, and survival differences are summarized using RMST up to horizon \( \tau \).
-
-Both **positive-lag (post-vaccination)** and **negative-lag (pre-vaccination)** mortality patterns are examined. Negative lags act as a **falsification diagnostic**: under the sharp null, pre-vaccination mortality should not differ systematically between future vaccinees and non-vaccinees. Non-null negative-lag effects indicate residual selection bias (e.g., healthy-vaccinee or frailty effects).
-
-**Important Note**: This analysis is **exploratory and non-causal**. No adjustment is made for comorbidities or time-varying health status beyond basic time trends; post-vaccination contrasts are descriptive only.
-
-All code:  
-[Hernán-style Sequential Trial RMST Diagnostic Script](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI)
-
-Data source:  
-[Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
-
-<br>
 
 ### Bias-Necessity RMST Audit
 
@@ -48,6 +28,24 @@ then **biology-only explanations are falsified**.
  **Methodology & Identification**: see the [Wiki ->](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology%E2%80%90Only-Falsification)
 
 > This code performs falsification, not adjustment. No causal effect sizes are claimed.
+> <br>Data source:  [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
+
+<br>
+
+### Bias Dianostic Sequential trial emulation with pooled logistic regression and RMST
+
+**Framework**: Sequential trial emulation with pooled logistic regression and restricted mean survival time (RMST)  
+**Data**: Czech national mortality registry (age, death date, first-dose date)  
+**Core Goal**: Diagnose all-cause mortality patterns around first-dose vaccination dates and assess compatibility with the **sharp null hypothesis** of no causal effect under minimal adjustment.
+
+Calendar-time trials compare vaccination initiation at day \( t \) versus non-initiation. Artificial censoring induced by the sequential design is handled via inverse probability weighting, and survival differences are summarized using RMST up to horizon \( \tau \).
+
+Both **positive-lag (post-vaccination)** and **negative-lag (pre-vaccination)** mortality patterns are examined. Negative lags act as a **falsification diagnostic**: under the sharp null, pre-vaccination mortality should not differ systematically between future vaccinees and non-vaccinees. Non-null negative-lag effects indicate residual selection bias (e.g., healthy-vaccinee or frailty effects).
+
+**Important Note**: This analysis is **exploratory and non-causal**. No adjustment is made for comorbidities or time-varying health status beyond basic time trends; post-vaccination contrasts are descriptive only.
+
+All code:  
+[Hernán-style Sequential Trial RMST Diagnostic Script](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI)
 
 
 <br>
