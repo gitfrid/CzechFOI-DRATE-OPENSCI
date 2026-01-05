@@ -27,9 +27,6 @@ All code:
 Data source:  
 [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
 
-Further details:  
-[Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
-
 <br>
 
 ### Bias-Necessity RMST Audit
@@ -48,7 +45,7 @@ The pipeline uses:
 If mortality differences appear **before vaccination**, or are reproduced by placebo,
 then **biology-only explanations are falsified**.
 
-📄 **Methodology & Identification**: see the [GitHub Wiki](../../wiki/Bias-Necessity-Methodology)
+ **Methodology & Identification**: see the [Wiki ->](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology%E2%80%90Only-Falsification)
 
 > This code performs falsification, not adjustment. No causal effect sizes are claimed.
 
