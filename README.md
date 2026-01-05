@@ -28,6 +28,7 @@ then **biology-only explanations are falsified**.
  **Methodology & Identification**: see the [Wiki ->](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology-only-Falsification)
 
 > This code performs falsification, not adjustment. No causal effect sizes are claimed.
+> <br>**Py code:**  []()
 > <br>Data source:  [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
 
 <br>
@@ -44,8 +45,7 @@ Both **positive-lag (post-vaccination)** and **negative-lag (pre-vaccination)** 
 
 **Important Note**: This analysis is **exploratory and non-causal**. No adjustment is made for comorbidities or time-varying health status beyond basic time trends; post-vaccination contrasts are descriptive only.
 
-All code:  
-[Hernán-style Sequential Trial RMST Diagnostic Script](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI)
+**Py code:**  [Hernán-style Sequential Trial RMST Diagnostic Script](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI)
 
 
 <br>
@@ -64,7 +64,7 @@ Traditional VE metrics (such as hazard ratios) rely on strong assumptions and ca
 Simulations complement this by testing how misclassification, timing artifacts, or structural biases could influence RMST‑based estimates.
 **The scripts can be easily modified to obtain results for all age groups 0-113.
 
-**Results see Related:**  [WiKi](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+[Results WiKi->](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
 
 
 ---
