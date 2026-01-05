@@ -2,12 +2,14 @@
 
 This repository is divided into two complementary domains:
 
-- **Bias-diagnostic target trial emulation** - test compatibility of observed mortality patterns
+- **Bias-diagnostic ** - test compatibility of observed mortality patterns
 - **RMST Methodological Research** — evaluates and compares survival estimation techniques
 
 ---
 
-## PART I: Sequential Target-Trial–Inspired Mortality Diagnostics
+## PART I: Bias Diagnostics on AC-Mortality
+
+### Bias Dianostic Sequential trial emulation with pooled logistic regression and RMST
 
 **Framework**: Sequential trial emulation with pooled logistic regression and restricted mean survival time (RMST)  
 **Data**: Czech national mortality registry (age, death date, first-dose date)  
@@ -27,6 +29,28 @@ Data source:
 
 Further details:  
 [Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+
+<br>
+
+### Bias-Necessity RMST Audit
+
+This repository implements a **bias-necessity falsification pipeline** for vaccination–mortality registry data.
+
+The goal is **not causal effect estimation**, but to test whether observed mortality reductions are
+**logically compatible with biology alone**, or whether **selection on latent health must exist**.
+
+The pipeline uses:
+- exact vaccination and death timing
+- negative-lag RMST analysis
+- pre-vaccination mortality checks
+- placebo vaccination drawn from empirical uptake hazards
+
+If mortality differences appear **before vaccination**, or are reproduced by placebo,
+then **biology-only explanations are falsified**.
+
+📄 **Methodology & Identification**: see the [GitHub Wiki](../../wiki/Bias-Necessity-Methodology)
+
+> This code performs falsification, not adjustment. No causal effect sizes are claimed.
 
 
 <br>
