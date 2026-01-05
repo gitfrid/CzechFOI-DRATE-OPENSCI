@@ -25,7 +25,7 @@ The pipeline uses:
 If mortality differences appear **before vaccination**, or are reproduced by placebo,
 then **biology-only explanations are falsified**.
 
- **Methodology & Identification**: see the [Wiki ->](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology-only-Falsification)
+ **Methodology & Identification**: [Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology-only-Falsification)
 
 > This code performs falsification, not adjustment. No causal effect sizes are claimed.
 > <br>**Py code:**  []()
@@ -64,7 +64,7 @@ Traditional VE metrics (such as hazard ratios) rely on strong assumptions and ca
 Simulations complement this by testing how misclassification, timing artifacts, or structural biases could influence RMST‑based estimates.
 **The scripts can be easily modified to obtain results for all age groups 0-113.
 
-[Results WiKi->](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+**Results**  [WiKi](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
 
 
 ---
@@ -175,7 +175,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   While standard models treat every day of data as equal, this script weights daily results by their statistical certainty $$I(t) = \text{sign}(\Delta S(t)) \times -\ln(p(t))$$, prioritizing high-evidence days over sparse-data flukes.
 
   It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
-  <br>[Wiki -> Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
+  <br>**Simple Explanation** [Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  **Methodical Explanation** [Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
 
 
 
@@ -198,7 +198,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
   The stress test demonstrates if CCW-RMST **fails gracefully** (directionally informative, stable diagnostics, negative lags ≈ 0, placebo centered near 0)
   under epidemiologically plausible departures from ideal conditions — providing strong support for its use as a diagnostic tool in observational vaccine effectiveness studies with limited measured confounders.
-  [Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test)
+  *IPW RMST Simulation Stress-Test *[Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test)
 
 ---
 
