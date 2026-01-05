@@ -29,7 +29,7 @@ then **biology-only explanations are falsified**.
 
 > This code performs falsification, not adjustment. No causal effect sizes are claimed.
 > <br>**Py code:**  []()
-> <br>Data source:  [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
+> <br>Data source:  [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
 
 <br>
 
