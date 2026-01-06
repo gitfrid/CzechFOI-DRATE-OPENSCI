@@ -1,0 +1,8 @@
+[2026-01-06T05:22:47.329445] Some Datum_1 > study_end — may be censored early
+[2026-01-06T05:22:52.603013] No events at rel_day -30: using mean(obs_time)
+[2026-01-06T05:22:52.975725] No events at rel_day -29: using mean(obs_time)
+[2026-01-06T05:30:10.967435] Vectorized assignment too large (cells=138112232), using chunked fallback
+[2026-01-06T05:30:14.614306] Vectorized assignment too large (cells=138112232), using chunked fallback
+[2026-01-06T05:30:18.495254] Vectorized assignment too large (cells=138112232), using chunked fallback
+[2026-01-06T05:30:22.130091] Vectorized assignment too large (cells=138112232), using chunked fallback
+[2026-01-06T05:30:26.110569] Vectorized assignment too large (cells=138112232), using chunked fallback

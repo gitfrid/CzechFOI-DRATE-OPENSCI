@@ -65,7 +65,8 @@ import statsmodels.api as sm
 from statsmodels.gam.api import BSplines
 from statsmodels.tools.sm_exceptions import ConvergenceWarning
 from glob import glob
-from scipy.special import logit, expit
+import scipy.special as sc
+
 
 # ==================== CONFIGURATION ====================
 CONFIG = {
@@ -759,16 +760,16 @@ def generate_null_data(single_ages: List[int], scenario: str = 'null') -> pd.Dat
             U = rng.normal(0, 1) if 'confound' in scenario else 0
             days = np.arange(CONFIG["sim_max_days"])
             logit_p = -5 + 0.01 * days / 365 + 0.2 * sex + confound_strength * U
-            p_day = expit(logit_p)
+            p_day = sc.expit(logit_p)
             cum_s = np.cumprod(1 - p_day)
             u = rng.uniform()
             vax_idx = np.searchsorted(-cum_s, -u)
             first_dose_day = days[vax_idx] if vax_idx < len(days) else np.nan
 
-            logit_h = logit(0.001) + 0.01 * (age - 60) / 30 + CONFIG["sim_hazard_wave_amp"] * np.sin(2 * np.pi * days / 365)
+            logit_h = sc.logit(0.001) + 0.01 * (age - 60) / 30 + CONFIG["sim_hazard_wave_amp"] * np.sin(2 * np.pi * days / 365)
             if 'confound' in scenario:
                 logit_h -= confound_strength * U
-            h_day = expit(logit_h + 0.001 * days / 365)
+            h_day = sc.expit(logit_h + 0.001 * days / 365)
             cum_s_death = np.cumprod(1 - h_day)
             u_death = rng.uniform()
             death_idx = np.searchsorted(-cum_s_death, -u_death)

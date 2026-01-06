@@ -51,19 +51,19 @@ import plotly.graph_objects as go
 # ===================== TOP-LEVEL PARAMETERS =====================
 
 AGE = 70
-DATA_SET = "sim"
+DATA_SET = "real"
 
 DATA_CONFIG = {
     "real": {
-        "input": r"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{age}.csv",
+        "input": fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG{AGE}.csv",
         "suffix": ""
     },
     "sim": {
-        "input": r"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{age}.csv",
+        "input": fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) case3_sim_deaths_sim_real_doses_with_constraint_AG{AGE}.csv",
         "suffix": "_SIM"
     },
     "reclassified": {
-        "input": r"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{age}.csv",
+        "input": fr"C:\github\CzechFOI-DRATE-OPENSCI\Terra\AA) real_data_sim_dose_DeathOrAlive_reclassified_PCT5_uvx_as_vx_AG{AGE}.csv",
         "suffix": "_RECLASSIFIED"
     }
 }
@@ -72,8 +72,8 @@ if DATA_SET not in DATA_CONFIG:
     raise ValueError(f"Unknown DATA_SET '{DATA_SET}'")
 
 selected = DATA_CONFIG[DATA_SET]
-INPUT = Path(selected["input"].format(age=AGE))
-OUTPUT_BASE = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan style sequential trial poold logistics RMST") / f"AC) hernan style sequential trial poold logistics RMST{selected['suffix']}"
+INPUT = Path(selected["input"])
+OUTPUT_BASE = Path(fr"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AC) hernan style sequential trial poold logistics RMST\AC) hernan style sequential trial poold logistics RMST{selected['suffix']}")
 
 CONFIG = {
     "age_ref_year": 2023,
@@ -495,7 +495,7 @@ def plot_and_save(estimands: dict, boot_results: list, output_base: Path):
                             text=f"ΔRMST(τ={tau}) = {delta_tau:.2f} days<br>95% CI [{delta_lo[-1]:.2f}, {delta_hi[-1]:.2f}]",
                             showarrow=True, arrowhead=2, ax=-40, ay=-40, bgcolor="white")
     fig_delta.update_layout(title="ΔRMST(t)", xaxis_title="Days", yaxis_title="ΔRMST(t) (days)", template="plotly_white")
-    fig_delta.write_html(output_base.parent / f"{output_base.name}_DeltaRMST.html")
+    fig_delta.write_html(output_base.parent / f"{output_base.name}_DeltaRMST_AG{AGE}.html")
 
     # Plot 2: RMST curves
     fig_rmst = go.Figure()
@@ -506,7 +506,7 @@ def plot_and_save(estimands: dict, boot_results: list, output_base: Path):
     fig_rmst.add_trace(go.Scatter(x=t, y=rmst_v, mode="lines", line=dict(color="green", width=2), name="RMST_v(t)"))
     fig_rmst.add_trace(go.Scatter(x=t, y=rmst_u, mode="lines", line=dict(color="red", width=2), name="RMST_u(t)"))
     fig_rmst.update_layout(title="Restricted Mean Survival Time", xaxis_title="Days", yaxis_title="RMST(t) (days)", template="plotly_white")
-    fig_rmst.write_html(output_base.parent / f"{output_base.name}_RMST_curves.html")
+    fig_rmst.write_html(output_base.parent / f"{output_base.name}_RMST_curves_AG{AGE}.html")
 
     # Plot 3: Survival curves
     fig_surv = go.Figure()
@@ -517,9 +517,31 @@ def plot_and_save(estimands: dict, boot_results: list, output_base: Path):
     fig_surv.add_trace(go.Scatter(x=t, y=sv, mode="lines", line=dict(color="green", width=2), name="Vaccinated"))
     fig_surv.add_trace(go.Scatter(x=t, y=su, mode="lines", line=dict(color="red", width=2), name="Unvaccinated"))
     fig_surv.update_layout(title="Standardized Survival Curves", xaxis_title="Days", yaxis_title="Survival", template="plotly_white")
-    fig_surv.write_html(output_base.parent / f"{output_base.name}_Survival.html")
+    fig_surv.write_html(output_base.parent / f"{output_base.name}_Survival_AG{AGE}.html")
 
     log("All plots saved as HTML.")
+
+    # Additional final summary block
+    Delta_tau = delta_tau
+    Delta_lo_tau = delta_lo[-1]
+    Delta_hi_tau = delta_hi[-1]
+    VE_tau = estimands['ve_tau']
+    boot_VE = 1 - (1 - boot_Sv[:, -1]) / (1 - boot_Su[:, -1])
+    VE_lo_tau, VE_hi_tau = np.percentile(boot_VE, [2.5, 97.5])
+    NNT_year = 365 / Delta_tau if Delta_tau > 0 else np.nan
+    boot_NNT = 365 / boot_delta[:, -1]
+    NNT_lo, NNT_hi = np.percentile(boot_NNT, [2.5, 97.5]) if not np.isnan(NNT_year) else (np.nan, np.nan)
+
+    log("Summary:")
+    log(f"  ΔRMST(τ={tau} days) = {Delta_tau:.2f} days "
+        f"[95% CI: {Delta_lo_tau:.2f}, {Delta_hi_tau:.2f}]")
+    log(f"  VE(τ={tau} days)    = {VE_tau:+.1%} "
+        f"[95% CI: {VE_lo_tau:.1%}, {VE_hi_tau:.1%}]" if not np.isnan(VE_lo_tau) else "  VE: NA")
+    if not np.isnan(NNT_year):
+        log(f"  NNT (per life-year) = {NNT_year:.2f} "
+            f"[95% CI: {NNT_lo:.2f}, {NNT_hi:.2f}]")
+    else:
+        log("  NNT (per life-year): NA")
 
 # ===================== MAIN EXECUTION =====================
 

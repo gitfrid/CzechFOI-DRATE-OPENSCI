@@ -1,0 +1,74 @@
+2026-01-04 18:41:33+00:00  Starting Hernán-style target trial emulation (IF-based variance version)
+2026-01-04 18:41:33+00:00  Dataset: real | Age: 70 | Grace: 0 days
+2026-01-04 18:41:33+00:00  Loading CSV: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2026-01-04 18:41:34+00:00  Subjects after age filter: 136530
+2026-01-04 18:41:34+00:00  Deaths: 7837, Vaccinated: 113641
+2026-01-04 18:41:34+00:00  Study window: first=361, last_obs=1065.0
+2026-01-04 18:41:36+00:00  Computed marginal p_init for IPW
+2026-01-04 18:42:04+00:00  Person-time V: 64,012,574.00 | U: 13,865,206,433.33
+2026-01-04 18:42:04+00:00  Deaths V: 2,539.00 | U: 1,449,093.07
+2026-01-04 18:42:04+00:00  Crude rate V: 3.97 | U: 10.45 per 100,000 pd
+2026-01-04 18:42:04+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 18:42:04+00:00  GLM rows: 1408, predictors: 14
+2026-01-04 18:42:04+00:00  GLM converged: True
+2026-01-04 18:42:04+00:00  Main results: ΔRMST(τ=703) = 16.39 days
+2026-01-04 18:42:04+00:00  VE(τ=703): +55.541%
+2026-01-04 18:56:10+00:00  Starting Hernán-style target trial emulation (IF-based variance version)
+2026-01-04 18:56:10+00:00  Dataset: real | Age: 70 | Grace: 0 days
+2026-01-04 18:56:10+00:00  Loading CSV: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2026-01-04 18:56:10+00:00  Subjects after age filter: 136530
+2026-01-04 18:56:10+00:00  Deaths: 7837, Vaccinated: 113641
+2026-01-04 18:56:10+00:00  Study window: first=361, last_obs=1065.0
+2026-01-04 18:56:11+00:00  Computed marginal p_init for IPW
+2026-01-04 18:56:37+00:00  Person-time V: 64,012,574.00 | U: 13,865,206,433.33
+2026-01-04 18:56:37+00:00  Deaths V: 2,539.00 | U: 1,449,093.07
+2026-01-04 18:56:37+00:00  Crude rate V: 3.97 | U: 10.45 per 100,000 pd
+2026-01-04 18:56:37+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 18:56:37+00:00  GLM rows: 1408, predictors: 14
+2026-01-04 18:56:37+00:00  GLM converged: True
+2026-01-04 18:56:37+00:00  Main results: ΔRMST(τ=703) = 16.39 days
+2026-01-04 18:56:37+00:00  VE(τ=703): +55.541%
+2026-01-04 18:56:37+00:00  Starting proper IF-multiplier bootstrap for RMST variance
+2026-01-04 18:56:43+00:00  ΔRMST(τ=703) 95% IF-bootstrap CI: [-21.82, 23.47] days
+2026-01-04 18:56:44+00:00  All plots saved as HTML.
+2026-01-04 19:02:39+00:00  Starting Hernán-style target trial emulation (IF-based variance version)
+2026-01-04 19:02:39+00:00  Dataset: real | Age: 70 | Grace: 0 days
+2026-01-04 19:02:39+00:00  Loading CSV: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2026-01-04 19:02:39+00:00  Subjects after age filter: 136530
+2026-01-04 19:02:39+00:00  Deaths: 7837, Vaccinated: 113641
+2026-01-04 19:02:39+00:00  Study window: first=361, last_obs=1065.0
+2026-01-04 19:02:40+00:00  Computed marginal p_init for IPW
+2026-01-04 19:03:03+00:00  Person-time V: 64,012,574.00 | U: 13,865,206,433.33
+2026-01-04 19:03:03+00:00  Deaths V: 2,539.00 | U: 1,449,093.07
+2026-01-04 19:03:03+00:00  Crude rate V: 3.97 | U: 10.45 per 100,000 pd
+2026-01-04 19:03:03+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 19:03:03+00:00  GLM rows: 1408, predictors: 14
+2026-01-04 19:03:03+00:00  GLM converged: True
+2026-01-04 19:03:03+00:00  Main results: ΔRMST(τ=703) = 16.39 days
+2026-01-04 19:03:03+00:00  VE(τ=703): +55.541%
+2026-01-04 19:03:03+00:00  Starting proper IF-multiplier bootstrap for RMST variance
+2026-01-04 19:03:07+00:00  ΔRMST(τ=703) 95% IF-bootstrap CI: [-21.82, 23.47] days
+2026-01-04 19:03:09+00:00  All plots saved as HTML.
+2026-01-04 19:07:11+00:00  Starting Hernán-style target trial emulation (IF-based variance version)
+2026-01-04 19:07:11+00:00  Dataset: real | Age: 70 | Grace: 0 days
+2026-01-04 19:07:11+00:00  Loading CSV: C:\github\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131_AG70.csv
+2026-01-04 19:07:11+00:00  Subjects after age filter: 136530
+2026-01-04 19:07:11+00:00  Deaths: 7837, Vaccinated: 113641
+2026-01-04 19:07:11+00:00  Study window: first=361, last_obs=1065.0
+2026-01-04 19:07:12+00:00  Computed marginal p_init for IPW
+2026-01-04 19:07:35+00:00  Person-time V: 64,012,574.00 | U: 13,865,206,433.33
+2026-01-04 19:07:35+00:00  Deaths V: 2,539.00 | U: 1,449,093.07
+2026-01-04 19:07:35+00:00  Crude rate V: 3.97 | U: 10.45 per 100,000 pd
+2026-01-04 19:07:35+00:00  IPW diagnostics: mean=2.60, median=1.33, max=7.0e+00, % trimmed=0.0%
+2026-01-04 19:07:35+00:00  GLM rows: 1408, predictors: 14
+2026-01-04 19:07:35+00:00  GLM converged: True
+2026-01-04 19:07:35+00:00  Main results: ΔRMST(τ=703) = 16.39 days
+2026-01-04 19:07:35+00:00  VE(τ=703): +55.541%
+2026-01-04 19:07:35+00:00  Starting proper IF-multiplier bootstrap for RMST variance
+2026-01-04 19:07:39+00:00  ΔRMST(τ=703) 95% IF-bootstrap CI: [-21.82, 23.47] days
+2026-01-04 19:07:40+00:00  All plots saved as HTML.
+2026-01-04 19:07:40+00:00  Summary:
+2026-01-04 19:07:40+00:00    ΔRMST(τ=703 days) = 16.39 days [95% CI: -21.82, 23.47]
+2026-01-04 19:07:40+00:00    VE(τ=703 days)    = +55.5% [95% CI: +55.5%, +55.5%]
+2026-01-04 19:07:40+00:00    NNT (per life-year) = 22.27 [95% CI: -16.73, 15.55]
+2026-01-04 19:07:40+00:00  Analysis complete.
