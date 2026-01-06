@@ -2,34 +2,37 @@
 
 This repository is divided into two complementary domains:
 
-- **Bias-diagnostic target trial emulation** - test compatibility of observed mortality patterns
+- **Bias-diagnostic** - test compatibility of observed mortality patterns
 - **RMST Methodological Research** — evaluates and compares survival estimation techniques
 
 ---
 
-## PART I: Sequential Target-Trial–Inspired Mortality Diagnostics
+# PART I: Bias Diagnostics on AC-Mortality
 
-**Framework**: Sequential trial emulation with pooled logistic regression and restricted mean survival time (RMST)  
-**Data**: Czech national mortality registry (age, death date, first-dose date)  
-**Core Goal**: Diagnose all-cause mortality patterns around first-dose vaccination dates and assess compatibility with the **sharp null hypothesis** of no causal effect under minimal adjustment.
+## Bias-Necessity RMST Audit
 
-Calendar-time trials compare vaccination initiation at day \( t \) versus non-initiation. Artificial censoring induced by the sequential design is handled via inverse probability weighting, and survival differences are summarized using RMST up to horizon \( \tau \).
+This repository implements a **bias-necessity falsification pipeline** for vaccination–mortality registry data.
 
-Both **positive-lag (post-vaccination)** and **negative-lag (pre-vaccination)** mortality patterns are examined. Negative lags act as a **falsification diagnostic**: under the sharp null, pre-vaccination mortality should not differ systematically between future vaccinees and non-vaccinees. Non-null negative-lag effects indicate residual selection bias (e.g., healthy-vaccinee or frailty effects).
+The goal is **not causal effect estimation**, but to test whether observed mortality reductions are  
+**logically compatible with biology alone**, or whether **selection on latent health must exist**.
 
-**Important Note**: This analysis is **exploratory and non-causal**. No adjustment is made for comorbidities or time-varying health status beyond basic time trends; post-vaccination contrasts are descriptive only.
+The pipeline uses:
+- exact vaccination and death timing
+- negative-lag RMST analysis
+- pre-vaccination mortality checks
+- placebo vaccination drawn from empirical uptake hazards
 
-All code:  
-[Hernán-style Sequential Trial RMST Diagnostic Script](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI)
+If mortality differences appear **before vaccination**, or are reproduced by placebo,  
+then **biology-only explanations are falsified**.
 
-Data source:  
-[Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis)
+**Methodology & Identification**: [Wiki – Methodological Framework](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology-only-Falsification)
 
-Further details:  
-[Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+> This code performs **falsification**, not adjustment.  
+> **No causal effect sizes are claimed.**  
+>  
+> **Python code**: [AG) bias necessity falsification rmst.py]()  
+> **Data source**: [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
 
-
-<br>
 <br>
 
 ---
@@ -45,7 +48,7 @@ Traditional VE metrics (such as hazard ratios) rely on strong assumptions and ca
 Simulations complement this by testing how misclassification, timing artifacts, or structural biases could influence RMST‑based estimates.
 **The scripts can be easily modified to obtain results for all age groups 0-113.
 
-**Results see Related:**  [WiKi](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
+**Results**  [WiKi](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki)
 
 
 ---
@@ -80,7 +83,7 @@ Analogy: *“On average, how many days did each person live during the study?”
 
 All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/tree/main/Py%20Scripts):
 
-### Helper Scripts
+### Data processing Scripts
 
 - [AA) Export AG ALL from Czech FOI.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AA%29%20Export%20AG%20ALL%20from%20Czech%20FOI.py)  
   Exports raw age‑group‑specific mortality data into individual CSV files.
@@ -155,8 +158,8 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
   Uses an Information-Theoretic Surprisal-Filter to separate real survival signals from statistical noise.
   While standard models treat every day of data as equal, this script weights daily results by their statistical certainty $$I(t) = \text{sign}(\Delta S(t)) \times -\ln(p(t))$$, prioritizing high-evidence days over sparse-data flukes.
 
-  It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?
-  <br>[Wiki -> Simple Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation)  [Methodical Explanation](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
+  **It answers: How much of the observed survival benefit is a robust, proven signal rather than a statistical coincidence?**
+  <br>Simple Explanation [Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Simple-Explanation) Methodical Explanation [Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Peircean-Evidence%E2%80%91Weighted-RMST-%E2%80%90-Methode-Paper)
 
 
 
@@ -179,7 +182,7 @@ All scripts are located in the [Py Scripts folder](https://github.com/gitfrid/Cz
 
   The stress test demonstrates if CCW-RMST **fails gracefully** (directionally informative, stable diagnostics, negative lags ≈ 0, placebo centered near 0)
   under epidemiologically plausible departures from ideal conditions — providing strong support for its use as a diagnostic tool in observational vaccine effectiveness studies with limited measured confounders.
-  [Technical Wiki →](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test)
+  [Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/IPW-RMST-Validation-Stress%E2%80%90Test)
 
 ---
 
