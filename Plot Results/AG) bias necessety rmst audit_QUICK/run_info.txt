@@ -1,0 +1,19 @@
+Run started: 2026-01-06T18:30:00.921577
+Input file: C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv
+Rows after sampling & cleaning: 220,567
+Quick test mode: True
+Sample fraction: 0.02
+Lag range: -30 to 60 days
+RMST tau: 30 days
+Age reference year: 2023
+Placebo age offset (years, integer applied): 2
+Study end: dynamic (max death/vacc + buffer)
+Study end buffer days: 90
+Placebo simulations: 20
+Bootstrap reps: 100
+Seed: 12345
+Impute hazard missing: True
+IF max cells: 50000000
+Diag bootstrap reps: 50
+
+Placebo simulation seeds: 1070825490, 553166437, 1551203164, 1079038797, 236136249, 1939632042, 1538872462, 452266829, 1852219009, 70024502, 2064879492, 1427178211, 1058911348, 1338109328, 1668566897, 1630984072, 1542629576, 652811415, 1630204421, 597423597
