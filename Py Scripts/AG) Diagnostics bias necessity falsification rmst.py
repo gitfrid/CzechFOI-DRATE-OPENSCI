@@ -1,14 +1,29 @@
 #!/usr/bin/env python3
 """
-bias_necessity_rmst_vscode_gold_final_optimized_vectorized_patched.py
+Bias-Necessity RMST Audit Pipeline
 
-Patched vectorized RMST bias-necessity pipeline with defensive checks:
-- canonical date normalization
-- reproducible RNG for placebo sims
-- merged alignment checks and normalization
-- vectorized placebo memory logging and chunk fallback
-- safer IF denominator handling
-- other small robustness fixes
+This script implements a bias-necessity falsification pipeline for vaccination-mortality registry data.
+The goal is to test if observed mortality patterns are compatible with biology alone or require selection bias on latent health.
+
+Key Components:
+- Pre-vaccination mortality checks for temporal falsification
+- Lagged RMST with negative controls
+- Vectorized placebo simulation from empirical hazards to test selection sufficiency
+
+Important Notes:
+- This is falsification, not causal estimation. No effect sizes claimed.
+- Run in quick_test mode first; set to False for full data.
+- Outputs: CSVs (summaries, diagnostics), PNG plots, warnings.log
+- Dependencies: numpy, pandas, matplotlib, seaborn, tqdm, lifelines
+
+Patched Features:
+- Canonical date normalization
+- Reproducible RNG for placebo sims
+- Merged alignment checks and normalization
+- Vectorized placebo with memory logging and chunk fallback
+- Safer IF denominator handling
+
+Author: AI / Drifting assistence   Date: January 2026 Version 1.0
 """
 
 from pathlib import Path
@@ -25,6 +40,7 @@ import os
 import ctypes
 
 # ==================== SLEEP PREVENTION Windows11 ====================
+# Prevents Windows from sleeping during long runs
 if os.name == 'nt':
     try:
         ctypes.windll.kernel32.SetThreadExecutionState(0x80000001)
@@ -39,6 +55,7 @@ sns.set(style="whitegrid")
 # -------------------------
 # Configuration
 # -------------------------
+# Define configuration parameters as a dataclass for easy access
 @dataclass
 class Config:
     input_path: Path = Path(r"C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv")
@@ -60,7 +77,7 @@ class Config:
     sample_frac: float = 0.03
     lag_min: int = -30
     lag_max: int = 90
-    n_placebo_sims: int = 5
+    n_placebo_sims: int = 1
     bootstrap_reps: int = 100
 
 CFG = Config()
@@ -69,6 +86,7 @@ CFG.out_dir.mkdir(parents=True, exist_ok=True)
 # -------------------------
 # Logging + Reproducibility
 # -------------------------
+# Functions for logging messages and warnings to console and file
 def log(msg: str):
     print(f"[{pd.Timestamp.now().isoformat()}] {msg}")
 
@@ -95,6 +113,7 @@ Seed: {cfg.bootstrap_seed}
 # -------------------------
 # Data loading
 # -------------------------
+# Load, clean, and prepare the dataset
 def load_and_prepare_data(cfg: Config = CFG) -> pd.DataFrame:
     log(f"Loading CSV: {cfg.input_path}")
     raw = pd.read_csv(cfg.input_path, dtype=str)
@@ -148,6 +167,7 @@ def load_and_prepare_data(cfg: Config = CFG) -> pd.DataFrame:
 # -------------------------
 # Pre-vaccination mortality
 # -------------------------
+# Analyze mortality before vaccination to detect selection bias
 def pre_vaccination_mortality_analysis(df: pd.DataFrame, cfg: Config = CFG) -> pd.DataFrame:
     vacc_col = "Datum_1"
     death_col = "DatumUmrti"
@@ -210,6 +230,7 @@ def pre_vaccination_mortality_analysis(df: pd.DataFrame, cfg: Config = CFG) -> p
 # -------------------------
 # Streaming RMST computation (low memory)
 # -------------------------
+# Compute RMST with IF variance for real and placebo data
 def compute_rmst_if_or_bootstrap_with_km(df: pd.DataFrame, cfg: Config = CFG):
     df = df.reset_index(drop=True)  # Ensure clean, unique index
 
@@ -392,6 +413,7 @@ def compute_rmst_if_or_bootstrap_with_km(df: pd.DataFrame, cfg: Config = CFG):
 # -------------------------
 # Hazard estimation
 # -------------------------
+# Estimate daily vaccination hazards for placebo simulation
 def estimate_calendar_uptake_hazard(df: pd.DataFrame, cfg: Config = CFG) -> pd.DataFrame:
     if df["Datum_1"].isna().all():
         raise ValueError("No vaccination dates found — cannot estimate uptake hazard")
@@ -442,6 +464,7 @@ def estimate_calendar_uptake_hazard(df: pd.DataFrame, cfg: Config = CFG) -> pd.D
 # -------------------------
 # Vectorized Placebo simulation (compact, faster)
 # -------------------------
+# Simulate placebo vaccination dates using vectorized hazards
 def simulate_placebo_vectorized(df: pd.DataFrame, hazard_df: pd.DataFrame, cfg: Config = CFG, seed: int = None) -> pd.DataFrame:
     """
     Vectorized placebo assignment:
@@ -563,6 +586,7 @@ def simulate_placebo_vectorized(df: pd.DataFrame, hazard_df: pd.DataFrame, cfg: 
 # -------------------------
 # Main pipeline
 # -------------------------
+# Run the full bias-necessity audit pipeline
 def run_pipeline(cfg: Config = CFG):
     df = load_and_prepare_data(cfg)
     df = df.reset_index(drop=True)  # Ensure clean index
