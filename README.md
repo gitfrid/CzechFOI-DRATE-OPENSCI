@@ -7,13 +7,13 @@ This repository is divided into two complementary domains:
 
 ---
 
-## PART I: Bias Diagnostics on AC-Mortality
+# PART I: Bias Diagnostics on AC-Mortality
 
-### Bias-Necessity RMST Audit
+## Bias-Necessity RMST Audit
 
 This repository implements a **bias-necessity falsification pipeline** for vaccination–mortality registry data.
 
-The goal is **not causal effect estimation**, but to test whether observed mortality reductions are
+The goal is **not causal effect estimation**, but to test whether observed mortality reductions are  
 **logically compatible with biology alone**, or whether **selection on latent health must exist**.
 
 The pipeline uses:
@@ -22,14 +22,16 @@ The pipeline uses:
 - pre-vaccination mortality checks
 - placebo vaccination drawn from empirical uptake hazards
 
-If mortality differences appear **before vaccination**, or are reproduced by placebo,
+If mortality differences appear **before vaccination**, or are reproduced by placebo,  
 then **biology-only explanations are falsified**.
 
- **Methodology & Identification**: [Wiki](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology-only-Falsification)
+**Methodology & Identification**: [Wiki – Methodological Framework](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology-only-Falsification)
 
-> This code performs falsification, not adjustment. No causal effect sizes are claimed.
-> <br>**Py code:**  []()
-> <br>Data source:  [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
+> This code performs **falsification**, not adjustment.  
+> **No causal effect sizes are claimed.**  
+>  
+> **Python code**: [bias_necessity_rmst_vscode_gold_final_optimized_vectorized_patched.py](./bias_necessity_rmst_vscode_gold_final_optimized_vectorized_patched.py)  
+> **Data source**: [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
 
 <br>
 
