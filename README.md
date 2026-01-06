@@ -30,7 +30,7 @@ then **biology-only explanations are falsified**.
 > This code performs **falsification**, not adjustment.  
 > **No causal effect sizes are claimed.**  
 >  
-> **Python code**: [AG) bias necessity falsification rmst.py]()  
+> **Python code**: [AG) bias necessity falsification rmst.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/AG%29%20Diagnostics%20bias%20necessity%20falsification%20rmst.py)  
 > **Data source**: [Czech-FOI Mortality Dataset (Vesely_106_202403141131.csv)](https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz)
 
 <br>
