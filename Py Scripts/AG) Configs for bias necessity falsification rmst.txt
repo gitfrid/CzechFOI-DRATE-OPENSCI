@@ -1,0 +1,124 @@
+quick config:
+
+@dataclass
+class Config:
+    # ────────────────────────────────────────────────────────────────
+    # Input / Output
+    # ────────────────────────────────────────────────────────────────
+    input_path: Path = Path(r"C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv")
+    out_dir: Path = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AG) bias necessety rmst audit_QUICK")
+
+    # ────────────────────────────────────────────────────────────────
+    # Sampling → the biggest time saver
+    # ────────────────────────────────────────────────────────────────
+    quick_test: bool = True
+    sample_frac: float = 0.02          # ← 2% of data (~4–5k subjects if full is ~200k)
+                                       #   → ~10–15× faster than full
+
+    # ────────────────────────────────────────────────────────────────
+    # Keep core analysis meaningful but fast
+    # ────────────────────────────────────────────────────────────────
+    rmst_tau_days: int = 30
+    lag_min: int = -30
+    lag_max: int = 60                  # ← Shorten to 60 days (still covers key signal)
+
+    # ────────────────────────────────────────────────────────────────
+    # Placebo sims – minimal but still useful
+    # ────────────────────────────────────────────────────────────────
+    n_placebo_sims: int = 20           # ← 20 sims: fast (~2–4 min each), still gives rough CI
+
+    # ────────────────────────────────────────────────────────────────
+    # Bootstrap / IF – keep reasonable
+    # ────────────────────────────────────────────────────────────────
+    bootstrap_reps: int = 100          # ↓ from 200–300 → much faster SE
+    diag_bootstrap_reps: int = 50
+
+    # ────────────────────────────────────────────────────────────────
+    # Memory / performance – safe defaults
+    # ────────────────────────────────────────────────────────────────
+    placebo_max_cells: int = 200_000_000
+    if_max_cells: int = int(5e7)
+
+    # ────────────────────────────────────────────────────────────────
+    # Keep other settings as-is (they don't affect runtime much)
+    # ────────────────────────────────────────────────────────────────
+    study_start: pd.Timestamp = pd.Timestamp("2020-01-01")
+    fixed_study_end: pd.Timestamp = pd.Timestamp("2023-12-31")
+    use_dynamic_study_end: bool = True
+    study_end_buffer_days: int = 90
+
+    age_ref_year: int = 2023
+    age_offset_years: float = 2.0
+    pre_vax_window_days: int = 30
+    vacc_quantiles: int = 10
+    age_bins: tuple = (0, 40, 60, 80, 200)
+    restrict_pre_vax_comparator_to_eventual_vaccinators: bool = True
+    figsize: tuple = (10, 6)
+    bootstrap_seed: int = 12345
+    small_n_threshold: int = 50
+    min_y_threshold: int = 20
+    impute_hazard_missing: bool = True
+
+
+
+full config:
+
+@dataclass
+class Config:
+    # ────────────────────────────────────────────────────────────────
+    # Input / Output
+    # ────────────────────────────────────────────────────────────────
+    input_path: Path = Path(r"C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv")
+    out_dir: Path = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AG) bias necessety rmst audit_FULL")
+
+    # ────────────────────────────────────────────────────────────────
+    # Time window settings
+    # ────────────────────────────────────────────────────────────────
+    study_start: pd.Timestamp = pd.Timestamp("2020-01-01")
+    fixed_study_end: pd.Timestamp = pd.Timestamp("2023-12-31")
+    use_dynamic_study_end: bool = True
+    study_end_buffer_days: int = 90
+
+    # ────────────────────────────────────────────────────────────────
+    # Core analysis parameters
+    # ────────────────────────────────────────────────────────────────
+    rmst_tau_days: int = 30              # Keep 30 – most meaningful for short-term mortality
+    lag_min: int = -30
+    lag_max: int = 90                    # Covers pre- and post-vacc window well
+
+    # ────────────────────────────────────────────────────────────────
+    # Placebo / null simulation – key for runtime
+    # ────────────────────────────────────────────────────────────────
+    n_placebo_sims: int = 100            # ← Sweet spot: 100–200 gives decent CI width, 100 is ~2× faster than 200
+                                         # 200 would push toward 10–12 h, 100 toward 5–8 h
+
+    # ────────────────────────────────────────────────────────────────
+    # Bootstrap / IF settings
+    # ────────────────────────────────────────────────────────────────
+    bootstrap_reps: int = 300            # ↑ from 200 → better SE stability for RMST real
+    diag_bootstrap_reps: int = 100       # Keep low – only diagnostic
+
+    # ────────────────────────────────────────────────────────────────
+    # Performance & memory safety
+    # ────────────────────────────────────────────────────────────────
+    placebo_max_cells: int = 300_000_000  # Higher threshold → tries vectorized mode first (faster)
+    if_max_cells: int = int(5e7)          # Slightly higher – less fallback to bootstrap
+
+    # ────────────────────────────────────────────────────────────────
+    # Quick checks & sampling (leave off for full run)
+    # ────────────────────────────────────────────────────────────────
+    quick_test: bool = False             # ← MUST BE FALSE for full run
+    sample_frac: float = 1.0             # 1.0 = full data
+
+    # Other settings – keep as is
+    age_ref_year: int = 2023
+    age_offset_years: float = 2.0
+    pre_vax_window_days: int = 30
+    vacc_quantiles: int = 10
+    age_bins: tuple = (0, 40, 60, 80, 200)
+    restrict_pre_vax_comparator_to_eventual_vaccinators: bool = True
+    figsize: tuple = (10, 6)
+    bootstrap_seed: int = 12345
+    small_n_threshold: int = 50
+    min_y_threshold: int = 20
+    impute_hazard_missing: bool = True
