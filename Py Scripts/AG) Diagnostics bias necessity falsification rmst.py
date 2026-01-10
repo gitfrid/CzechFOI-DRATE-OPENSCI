@@ -247,11 +247,27 @@ def write_run_info(cfg: Config, row_count: int, seeds: list = None):
             }
         },
         "notes": [
-            "Conditioning on survival to index days is deliberate for falsification but opens collider (Vaccination ← U → Death). This strengthens selection detection but prevents causal estimation.",
-            "Pre-vax quantiles are uptake-order conditional (on survivors + realized rollout).",
-            "Negative-lag test uses placebo-centered difference (zero is NOT the null under conditioning).",
-            "Placebo mismatch is neutral (inconclusive) – does NOT falsify biology-only models.",
-            "Placebo sufficiency is suggestive of selection-type mechanisms under the simulated uptake process; it is conditional on uptake hazards estimated under real-world selection and does not prove quantitative sufficiency."
+            "We only study people who are still alive on the day of vaccination (or the simulated placebo day). "
+            "This choice is on purpose — it makes selection bias (healthy vaccinee effect) much easier to spot. "
+            "But it also creates a collider problem (Vaccination ← hidden health factors → Death), which means "
+            "we can detect bias strongly, but we cannot reliably say the vaccine causes any effect.",
+
+            "The pre-vaccination risk groups (quantiles) look at who actually survived long enough to reach each "
+            "vaccination time point in the real rollout. Early vaccinated people are compared to those who lived "
+            "long enough to get vaccinated later — so these groups already contain built-in health and timing differences.",
+
+            "In the negative-lag test (looking at survival before vaccination day), the expected difference is NOT zero. "
+            "Because we only include people who survived to that day, vaccinated people already look healthier beforehand. "
+            "The true benchmark for 'no real vaccine effect' is the simulated placebo curve, not the zero line.",
+
+            "If real data does NOT match the placebo simulations closely → this is neutral / inconclusive. "
+            "It does NOT prove the vaccine has a true biological effect; it just means real-world selection "
+            "might be more complicated than our simple age/sex simulation captures.",
+
+            "If real data matches the placebo simulations very closely → it suggests selection bias (healthy vaccinee effect, etc.) "
+            "is likely enough to explain most or all of the apparent benefit. "
+            "This is only suggestive — it depends on how well we estimated real vaccination patterns, "
+            "and the simulation is deliberately conservative (never-vaccinated only, no deaths affecting future uptake)."
         ]
     }
     tmp_fd, tmp_path = tempfile.mkstemp(dir=str(cfg.out_dir), prefix="run_info_", suffix=".json")
