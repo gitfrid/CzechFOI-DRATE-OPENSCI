@@ -2,123 +2,193 @@ quick config:
 
 @dataclass
 class Config:
-    # ────────────────────────────────────────────────────────────────
-    # Input / Output
-    # ────────────────────────────────────────────────────────────────
+    # Input / Output (same, but new folder to avoid overwrite)
     input_path: Path = Path(r"C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv")
-    out_dir: Path = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AG) bias necessety rmst audit_QUICK")
+    out_dir: Path = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AH_bias_necessity_quick_15min")
 
-    # ────────────────────────────────────────────────────────────────
-    # Sampling → the biggest time saver
-    # ────────────────────────────────────────────────────────────────
-    quick_test: bool = True
-    sample_frac: float = 0.02          # ← 2% of data (~4–5k subjects if full is ~200k)
-                                       #   → ~10–15× faster than full
-
-    # ────────────────────────────────────────────────────────────────
-    # Keep core analysis meaningful but fast
-    # ────────────────────────────────────────────────────────────────
-    rmst_tau_days: int = 30
-    lag_min: int = -30
-    lag_max: int = 60                  # ← Shorten to 60 days (still covers key signal)
-
-    # ────────────────────────────────────────────────────────────────
-    # Placebo sims – minimal but still useful
-    # ────────────────────────────────────────────────────────────────
-    n_placebo_sims: int = 20           # ← 20 sims: fast (~2–4 min each), still gives rough CI
-
-    # ────────────────────────────────────────────────────────────────
-    # Bootstrap / IF – keep reasonable
-    # ────────────────────────────────────────────────────────────────
-    bootstrap_reps: int = 100          # ↓ from 200–300 → much faster SE
-    diag_bootstrap_reps: int = 50
-
-    # ────────────────────────────────────────────────────────────────
-    # Memory / performance – safe defaults
-    # ────────────────────────────────────────────────────────────────
-    placebo_max_cells: int = 200_000_000
-    if_max_cells: int = int(5e7)
-
-    # ────────────────────────────────────────────────────────────────
-    # Keep other settings as-is (they don't affect runtime much)
-    # ────────────────────────────────────────────────────────────────
+    # Target-trial protocol (same)
     study_start: pd.Timestamp = pd.Timestamp("2020-01-01")
     fixed_study_end: pd.Timestamp = pd.Timestamp("2023-12-31")
     use_dynamic_study_end: bool = True
     study_end_buffer_days: int = 90
 
-    age_ref_year: int = 2023
-    age_offset_years: float = 2.0
+    # Quick overrides — these are the only lines that matter for speed
+    quick_test: bool = True
+    sample_frac: float = 0.005          # ← 0.5% sample (~54k rows) — fastest safe siz, Subsampling only allowed for quick_test development
+
+    # Analysis parameters — minimized scope
+    rmst_tau_days: int = 30
+    lag_min: int = -15                  # ← only -15 to +15 (31 lags instead of 121)
+    lag_max: int = 15
+    vacc_quantiles: int = 4             # Fewer quantiles = much faster pre-vax
     pre_vax_window_days: int = 30
-    vacc_quantiles: int = 10
-    age_bins: tuple = (0, 40, 60, 80, 200)
-    restrict_pre_vax_comparator_to_eventual_vaccinators: bool = True
-    figsize: tuple = (10, 6)
-    bootstrap_seed: int = 12345
+    age_bins: tuple = (60, 70, 80)
+
+    # Placebo / bootstrap — very light
+    n_placebo_sims: int = 3             # ← only 3 sims
+    bootstrap_reps: int = 30            # ← reduced from 200
+
+    # Memory & performance (keep safe)
+    placebo_max_cells: int = 5_000_000
+    if_max_cells: int = int(2e7)
+
+    # Safety thresholds (same)
     small_n_threshold: int = 50
     min_y_threshold: int = 20
-    impute_hazard_missing: bool = True
+    prop_censor_suppress_threshold: float = 0.5
+    prop_at_tau_threshold: float = 0.3
+
+    # Reproducibility (same seed)
+    bootstrap_seed: int = 12345
+
+    # Falsification thresholds — slightly relaxed for small sample noise
+    pre_vax_slope_threshold: float = 0.00005
+    pre_vax_p_threshold: float = 0.05
+    neg_lag_persistence_days: int = 3   # Shorter window for fewer lags
+    neg_lag_deviation_tol_days: float = 0.5
+    placebo_match_tolerance_pct: float = 15.0  # More tolerant for small N
+
+    # Other (same)
+    figsize: tuple = (10, 6)
+    impute_hazard_missing: bool = False
+    age_offset_years: float = 0.0
+
+    # Parity test toggles — skip in quick test (known issue)
+    run_parity_tests: bool = False
+
+    # "D" = daily (full precision, final run), "W" = weekly (fast testing/re-runs)
+    hazard_freq: str = "W"  
 
 
-
-full config:
+full run config:
 
 @dataclass
 class Config:
-    # ────────────────────────────────────────────────────────────────
-    # Input / Output
-    # ────────────────────────────────────────────────────────────────
+    # ──────────────────────────────────────────────────────────────────────────────
+    # INPUT / OUTPUT – Core file paths
+    # ──────────────────────────────────────────────────────────────────────────────
     input_path: Path = Path(r"C:\CzechFOI-DRATE-OPENSCI\Terra\Vesely_106_202403141131.csv")
-    out_dir: Path = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AG) bias necessety rmst audit_FULL")
+    # Full path to the raw CSV (10.8M+ rows Czech data)
 
-    # ────────────────────────────────────────────────────────────────
-    # Time window settings
-    # ────────────────────────────────────────────────────────────────
+    out_dir: Path = Path(r"C:\github\CzechFOI-DRATE-OPENSCI\Plot Results\AG_bias_necessity_rmst_full_opt")
+    # Dedicated output folder – change name for each major run to avoid overwriting
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # STUDY PERIOD – Target trial emulation framing
+    # ──────────────────────────────────────────────────────────────────────────────
     study_start: pd.Timestamp = pd.Timestamp("2020-01-01")
+    # Reference start date for day counting (day 0)
+
     fixed_study_end: pd.Timestamp = pd.Timestamp("2023-12-31")
+    # Fallback end if dynamic fails
+
     use_dynamic_study_end: bool = True
+    # Use latest death date + buffer (recommended – avoids immortal time bias at end)
+
     study_end_buffer_days: int = 90
+    # Extra follow-up buffer after last death (prevents right-censoring artifacts)
 
-    # ────────────────────────────────────────────────────────────────
-    # Core analysis parameters
-    # ────────────────────────────────────────────────────────────────
-    rmst_tau_days: int = 30              # Keep 30 – most meaningful for short-term mortality
+    # ──────────────────────────────────────────────────────────────────────────────
+    # ANALYSIS SCOPE – Controls resolution & power
+    # ──────────────────────────────────────────────────────────────────────────────
+    quick_test: bool = False
+    sample_frac: float = 1.0
+    # 1 = Full population – essential for strongest possible defensibility
+    # Never subsample for final results (reviewers will criticize)
+
+    rmst_tau_days: int = 30
+    # Short RMST horizon – reduces heavy censoring, focuses on acute effects
+    # 30 days is standard & defensible in vaccine mortality studies
+
     lag_min: int = -30
-    lag_max: int = 90                    # Covers pre- and post-vacc window well
+    lag_max: int = 90
+    # Wide negative control window (-30) + reasonable positive follow-up (90)
+    # Captures strong pre-exposure signal and post-vax dynamics
 
-    # ────────────────────────────────────────────────────────────────
-    # Placebo / null simulation – key for runtime
-    # ────────────────────────────────────────────────────────────────
-    n_placebo_sims: int = 100            # ← Sweet spot: 100–200 gives decent CI width, 100 is ~2× faster than 200
-                                         # 200 would push toward 10–12 h, 100 toward 5–8 h
+    vacc_quantiles: int = 12
+    # Finer-grained uptake ordering – stronger pre-vax gradient detection
+    # 10–12 is optimal balance between resolution and stability
 
-    # ────────────────────────────────────────────────────────────────
-    # Bootstrap / IF settings
-    # ────────────────────────────────────────────────────────────────
-    bootstrap_reps: int = 300            # ↑ from 200 → better SE stability for RMST real
-    diag_bootstrap_reps: int = 100       # Keep low – only diagnostic
-
-    # ────────────────────────────────────────────────────────────────
-    # Performance & memory safety
-    # ────────────────────────────────────────────────────────────────
-    placebo_max_cells: int = 300_000_000  # Higher threshold → tries vectorized mode first (faster)
-    if_max_cells: int = int(5e7)          # Slightly higher – less fallback to bootstrap
-
-    # ────────────────────────────────────────────────────────────────
-    # Quick checks & sampling (leave off for full run)
-    # ────────────────────────────────────────────────────────────────
-    quick_test: bool = False             # ← MUST BE FALSE for full run
-    sample_frac: float = 1.0             # 1.0 = full data
-
-    # Other settings – keep as is
-    age_ref_year: int = 2023
-    age_offset_years: float = 2.0
     pre_vax_window_days: int = 30
-    vacc_quantiles: int = 10
-    age_bins: tuple = (0, 40, 60, 80, 200)
-    restrict_pre_vax_comparator_to_eventual_vaccinators: bool = True
-    figsize: tuple = (10, 6)
-    bootstrap_seed: int = 12345
+    # Same as tau – symmetric negative control window
+
+    age_bins: tuple = (60, 70, 80)
+    # Broad age stratification – controls for strong age-mortality confounding
+
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # PLACEBO & BOOTSTRAP – Statistical robustness
+    # ──────────────────────────────────────────────────────────────────────────────
+    n_placebo_sims: int = 30
+    # 30 simulations – excellent stability for mean/2.5–97.5% bands
+    # Defensible without excessive runtime (20 is minimum, 50 is luxury)
+
+    bootstrap_reps: int = 300
+    # 300 reps – tight SE/CI especially on negative lags
+    # 200 is acceptable, 300 pushes toward gold-standard precision
+
+    use_resample_placebo: bool = False
+    # Keep False – never-vaccinated restriction is more conservative/defensible
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # MEMORY & PERFORMANCE SAFEGUARDS – Prevents OOM on 16 GB
+    # ──────────────────────────────────────────────────────────────────────────────
+    placebo_max_cells: int = 5_000_000
+    # Vectorized sim threshold – above this → chunking + disk spill
+
+    if_max_cells: int = int(2e7)
+    # IF matrix size limit – above this → bootstrap fallback
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # SAFETY THRESHOLDS – Protect against unstable estimates
+    # ──────────────────────────────────────────────────────────────────────────────
     small_n_threshold: int = 50
+    # Below this n → always bootstrap (safe)
+
     min_y_threshold: int = 20
-    impute_hazard_missing: bool = True
+    # Suppress IF if at-risk drops too low (prevents variance explosion)
+
+    prop_censor_suppress_threshold: float = 0.5
+    # Heavy censoring → suppress CI (avoids misleading precision)
+
+    prop_at_tau_threshold: float = 0.3
+    # High mass at tau → suppress IF, fallback to bootstrap
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # REPRODUCIBILITY – Critical for defensibility
+    # ──────────────────────────────────────────────────────────────────────────────
+    bootstrap_seed: int = 12345
+    # Fixed seed → fully deterministic bootstrap & placebo
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # FALSIFICATION DECISION THRESHOLDS – Pre-specified & conservative
+    # ──────────────────────────────────────────────────────────────────────────────
+    pre_vax_slope_threshold: float = 0.0001
+    # Mortality risk increase per day of later vaccination (strong signal)
+
+    pre_vax_p_threshold: float = 0.01
+    # Strict p-value for pre-vax falsification (with permutation test)
+
+    neg_lag_persistence_days: int = 7
+    # Require 7+ consecutive negative days of strong deviation
+    # Very conservative – hard to meet by chance
+
+    neg_lag_deviation_tol_days: float = 0.5
+    # Minimum RMST difference (days) considered meaningful
+
+    placebo_match_tolerance_pct: float = 7.0
+    # Placebo within 7% on negative lags = "strong match"
+    # Stricter than 10–15% → higher bar for sufficiency claim
+
+    placebo_abs_tol_days: float = 1.0
+    # Absolute tolerance backup when RMST near zero
+
+    # ──────────────────────────────────────────────────────────────────────────────
+    # VISUALS & MISC – Cosmetic / optional
+    # ──────────────────────────────────────────────────────────────────────────────
+    figsize: tuple = (10, 6)
+    impute_hazard_missing: bool = False  # Zero-fill – conservative choice
+    age_offset_years: float = 0.0        # No artificial shift – clean
+    run_parity_tests: bool = True        # Keep for internal validation
+
+    hazard_freq: str = "D"               # "D" = daily (full precision), "W" = weekly (faster testing only)

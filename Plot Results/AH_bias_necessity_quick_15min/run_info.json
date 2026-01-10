@@ -1,0 +1,36 @@
+{
+    "run_started": "2026-01-10T00:14:11.169280",
+    "input_path": "C:\\CzechFOI-DRATE-OPENSCI\\Terra\\Vesely_106_202403141131.csv",
+    "rows_after_sampling": 54065,
+    "quick_test": true,
+    "sample_frac": 0.005,
+    "lag_range": "-15..15",
+    "rmst_tau_days": 30,
+    "placebo_sims": 3,
+    "bootstrap_reps": 30,
+    "seed": 12345,
+    "placebo_max_cells": 5000000,
+    "if_max_cells": 20000000,
+    "impute_hazard_missing": false,
+    "placebo_seeds": [
+        1070825490,
+        553166437,
+        1551203164
+    ],
+    "environment": {
+        "python_version": "3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "packages": {
+            "numpy": "2.2.0",
+            "pandas": "2.2.3",
+            "lifelines": "0.30.0"
+        }
+    },
+    "notes": [
+        "Conditioning on survival to index days is deliberate for falsification but opens collider (Vaccination \u2190 U \u2192 Death). This strengthens selection detection but prevents causal estimation.",
+        "Pre-vax quantiles are uptake-order conditional (on survivors + realized rollout).",
+        "Negative-lag test uses placebo-centered difference (zero is NOT the null under conditioning).",
+        "Placebo mismatch is neutral (inconclusive) \u2013 does NOT falsify biology-only models.",
+        "Placebo sufficiency is suggestive of selection-type mechanisms under the simulated uptake process; it is conditional on uptake hazards estimated under real-world selection and does not prove quantitative sufficiency."
+    ]
+}

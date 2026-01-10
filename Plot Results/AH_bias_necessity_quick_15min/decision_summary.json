@@ -1,0 +1,15 @@
+{
+    "pre_vax_falsified": false,
+    "neg_lag_falsified": true,
+    "placebo_strong_match": true,
+    "overall_biology_only_rejected": true,
+    "selection_sufficiency_note": "suggestive evidence of selection-type mechanisms if placebo match; inconclusive otherwise. Placebo sufficiency is conditional on uptake hazards estimated under real-world selection.",
+    "placebo_interpretation": {
+        "status": "lower_bound_only",
+        "reason": [
+            "hazards estimated under real-world selection",
+            "placebo assigned to never-vaccinated only",
+            "no feedback from simulated deaths into hazard"
+        ]
+    }
+}
