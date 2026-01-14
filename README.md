@@ -26,7 +26,7 @@ If mortality differences appear **before vaccination**, or are reproduced by pla
 then **biology-only explanations are falsified**.
 
 **Methodology & Identification**: [Wiki->](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Methodological-Framework-Bias-Necessity-via-Biology-only-Falsification)
-**Quick Run & Results**: [Wiki–>](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Quick-Run-Results-%E2%80%93-Bias%E2%80%90Necessity-RMST-Audit)
+**Full Run & Results**: [Wiki–>](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Full-Run-Results-%E2%80%93-Bias%E2%80%90Necessity-RMST-Audit)
 
 > This code performs **falsification**, not adjustment.  
 > **No causal effect sizes are claimed.**  
