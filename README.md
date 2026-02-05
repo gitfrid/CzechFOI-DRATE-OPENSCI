@@ -50,7 +50,8 @@ Full population (0–112 years) analysis of all-cause mortality hazards in relat
 Descriptive only – not causal vaccine effect.
 **Full Run & Results**: [Wiki–>](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Results-Descriptive-Event%E2%80%90Time-Hazard-Study)
 
-Interactive plot: event_study.html
+> **Python code**: [Temporal Dose Response Discontinuity in Time Event cohort plt.py](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/blob/main/Py%20Scripts/Temporal%20Dose%20Response%20Discontinuity%20in%20Time%20Event%20cohort%20plt.py)
+> <br>Interactive plot: event_study.html
 Coefficients table: results.csv
 Metadata: run_info.json
 
