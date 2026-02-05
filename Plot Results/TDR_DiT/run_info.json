@@ -1,0 +1,19 @@
+{
+    "run_started": "2026-02-05T20:39:54.787877",
+    "input_path": "C:\\CzechFOI-DRATE-OPENSCI\\Terra\\Vesely_106_202403141131.csv",
+    "rows": 10926688,
+    "age_bins": "0-113",
+    "lag_range": "-60..120",
+    "bin_size_days": 7,
+    "notes": [
+        "Descriptive event-time hazard analysis around cohort-specific vaccination eligibility dates.",
+        "Not causal vaccination effect \u2013 eligibility \u2260 treatment.",
+        "Risk sets approximate survivors to bin start.",
+        "No explicit counterfactual after eligibility in single cohort; staggered across age groups.",
+        "Pre-trends tested via joint F-test on leads."
+    ],
+    "environment": {
+        "python_version": "3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0"
+    }
+}
