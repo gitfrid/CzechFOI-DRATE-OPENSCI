@@ -1,0 +1,63 @@
+{
+    "run_started": "2026-01-29T15:56:31.770495",
+    "input_path": "C:\\github\\CzechFOI-DRATE-OPENSCI\\Terra\\Vesely_106_202403141131.csv",
+    "rows_after_sampling": 10811849,
+    "quick_test": false,
+    "sample_frac": 1.0,
+    "lag_range": "-60..120",
+    "rmst_tau_days": 30,
+    "placebo_sims": 30,
+    "bootstrap_reps": 300,
+    "seed": 12345,
+    "placebo_max_cells": 5000000,
+    "if_max_cells": 20000000,
+    "impute_hazard_missing": false,
+    "placebo_seeds": [
+        1070825490,
+        553166437,
+        1551203164,
+        1079038797,
+        236136249,
+        1939632042,
+        1538872462,
+        452266829,
+        1852219009,
+        70024502,
+        2064879492,
+        1427178211,
+        1058911348,
+        1338109328,
+        1668566897,
+        1630984072,
+        1542629576,
+        652811415,
+        1630204421,
+        597423597,
+        729187553,
+        860949629,
+        1610604546,
+        1270273613,
+        1430235187,
+        1053619054,
+        227344755,
+        580892322,
+        1513799206,
+        222404064
+    ],
+    "environment": {
+        "python_version": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "packages": {
+            "numpy": "2.4.0",
+            "pandas": "2.3.3",
+            "lifelines": "0.30.0"
+        }
+    },
+    "notes": [
+        "Conditioning on survival to index days is deliberate for falsification but opens collider (Vaccination \u2190 U \u2192 Death). This strengthens selection detection but prevents causal estimation.",
+        "Pre-vax quantiles are uptake-order conditional (on survivors + realized rollout).",
+        "Negative-lag test uses placebo-centered difference (zero is NOT the null under conditioning).",
+        "Placebo mismatch is neutral (inconclusive) \u2013 does NOT falsify biology-only models.",
+        "Placebo sufficiency is suggestive of selection-type mechanisms under the simulated uptake process; it is conditional on uptake hazards estimated under real-world selection and does not prove quantitative sufficiency."
+    ]
+}
