@@ -48,6 +48,7 @@ Full population (0–112 years) analysis of all-cause mortality hazards in relat
 - Low-vax young groups flat/null → negative control.
 
 Descriptive only – not causal vaccine effect.
+**Full Run & Results**: [Wiki–>](https://github.com/gitfrid/CzechFOI-DRATE-OPENSCI/wiki/Results-Descriptive-Event%E2%80%90Time-Hazard-Study)
 
 Interactive plot: event_study.html
 Coefficients table: results.csv
