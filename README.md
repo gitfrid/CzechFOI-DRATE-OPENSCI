@@ -38,6 +38,25 @@ then **biology-only explanations are falsified**.
 
 ---
 
+## Descriptive Event-Time Hazard Study: Mortality Around Vaccination Eligibility in Czechia
+
+Full population (0–112 years) analysis of all-cause mortality hazards in relative time around cohort-specific eligibility dates.
+
+**Key results** (from full run):
+- Pre-trends rejected (p=0.0001) → strong selection bias.
+- Post-eligibility patterns variable/negative → consistent with bias-dominated association.
+- Low-vax young groups flat/null → negative control.
+
+Descriptive only – not causal vaccine effect.
+
+Interactive plot: event_study.html
+Coefficients table: results.csv
+Metadata: run_info.json
+
+
+---
+
+
 ## PART II: RMST Research & Methodological Comparisons
 
 ## Motivation
